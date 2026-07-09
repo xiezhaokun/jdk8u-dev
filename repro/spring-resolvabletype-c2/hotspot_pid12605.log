@@ -1,0 +1,2587 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='12605' time_ms='1783300192512'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  4 2026 18:13:54 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=10 -XX:BackEdgeThreshold=20 -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+PrintCompilation -XX:+StressGCM -XX:+StressLCM -XX:+StressReflectiveCode -XX:+TraceOnStackReplacement -Drepro.iterations=12000 -Drepro.seconds=0 -Drepro.clearCacheEvery=65 -Drepro.deoptAfter=4000 -Drepro.target=mixedOsr 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=12000
+repro.seconds=0
+repro.clearCacheEvery=65
+repro.deoptAfter=4000
+repro.target=mixedOsr
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='9731'/>
+Requesting OSR entry for  sun.nio.cs.UTF_8$Decoder::decode at bci 20
+compilation failed
+Requesting OSR entry for  sun.nio.cs.UTF_8$Decoder::decode at bci 20
+compilation failed
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+compilation failed
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+compilation failed
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+compilation failed
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+compilation failed
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+compilation failed
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+compilation failed
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+compilation failed
+    291    1     n       java.lang.Thread::currentThread (native)   (static)
+<writer thread='22275'/>
+    308    2   !b        java.lang.Class::desiredAssertionStatus (54 bytes)
+    317    3    b        java.lang.Class::getClassLoader0 (5 bytes)
+<writer thread='9731'/>
+    318    4     n       java.lang.Class::desiredAssertionStatus0 (native)   (static)
+<writer thread='22275'/>
+    321    5    b        java.lang.StringBuilder::append (8 bytes)
+    323    6    b        java.lang.AbstractStringBuilder::append (50 bytes)
+    338    7    b        java.lang.AbstractStringBuilder::newCapacity (39 bytes)
+    342    8    b        java.lang.String::getChars (62 bytes)
+<writer thread='9731'/>
+    346    9     n       java.lang.System::arraycopy (native)   (static)
+<writer thread='22275'/>
+    347   10    b        java.lang.Object::&lt;init&gt; (1 bytes)
+    349   11    b        java.lang.Math::min (11 bytes)
+    350   12    b        java.lang.System::checkKey (34 bytes)
+    352   13    b        java.lang.String::equals (81 bytes)
+    363   14    b        java.lang.System::getSecurityManager (4 bytes)
+    363   15    b        java.util.Properties::getProperty (46 bytes)
+    365   16  s b        java.util.Hashtable::get (69 bytes)
+    376   17    b        java.lang.String::hashCode (55 bytes)
+    381   18    b        java.lang.Integer::&lt;init&gt; (10 bytes)
+    382   19    b        java.lang.Number::&lt;init&gt; (5 bytes)
+    385   20    b        java.lang.Class::getClassLoader (28 bytes)
+    386   21    b        java.lang.ref.Reference::&lt;init&gt; (7 bytes)
+<writer thread='9731'/>
+    388   22     n       java.lang.Object::getClass (native)   
+<writer thread='22275'/>
+    389   23    b        sun.misc.Unsafe::getUnsafe (28 bytes)
+<writer thread='9731'/>
+    390   24     n       sun.reflect.Reflection::getCallerClass (native)   (static)
+<writer thread='22275'/>
+    390   25    b        sun.misc.VM::isSystemDomainLoader (10 bytes)
+<writer thread='9731'/>
+    392   26     n       java.security.AccessController::doPrivileged (native)   (static)
+<writer thread='22275'/>
+    393   27    b        java.lang.System::getProperty (25 bytes)
+    396   28    b        java.lang.Class::checkInitted (19 bytes)
+    400   29    b        java.lang.Class::reflectionData (49 bytes)
+    404   30    b        java.lang.Class::newReflectionData (74 bytes)
+    422   31    b        java.lang.Class$ReflectionData::&lt;init&gt; (10 bytes)
+    422   32    b        java.lang.Class$Atomic::casReflectionData (13 bytes)
+<writer thread='9731'/>
+    423   33     n       sun.misc.Unsafe::compareAndSwapObject (native)   
+<writer thread='22275'/>
+    424   34    b        java.lang.Class::searchFields (41 bytes)
+    438   35    b        sun.reflect.ReflectionFactory::copyField (10 bytes)
+    440   36    b        java.lang.reflect.ReflectAccess::copyField (5 bytes)
+    440   37    b        java.lang.reflect.Field::copy (76 bytes)
+    444   38    b        java.lang.reflect.Field::&lt;init&gt; (44 bytes)
+<writer thread='9731'/>
+    446   39     n       sun.misc.Unsafe::objectFieldOffset (native)   
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+<writer thread='22275'/>
+    448   40    b        java.lang.Thread::checkAccess (14 bytes)
+    451   41    b        java.lang.StringCoding::deref (19 bytes)
+    458   42    b        java.lang.ThreadLocal::get (38 bytes)
+    461   43    b        java.lang.ThreadLocal::getMap (5 bytes)
+    462   44    b        java.lang.ref.SoftReference::get (29 bytes)
+    463   45    b        java.lang.ref.Reference::get (5 bytes)
+    463   46    b        java.lang.StringCoding::access$000 (6 bytes)
+    465   47    b        java.lang.StringCoding::scale (7 bytes)
+    465   48    b        sun.nio.cs.UTF_8$Decoder::decode (779 bytes)
+    474   49    b        java.lang.String::replace (127 bytes)
+    496   50    b        java.lang.String::lastIndexOf (52 bytes)
+    501   51   !b        java.util.concurrent.ConcurrentHashMap::putVal (362 bytes)
+    522   52    b        java.lang.String::indexOf (7 bytes)
+    526   53    b        java.lang.String::indexOf (70 bytes)
+    533   54    b        java.util.concurrent.ConcurrentHashMap::tabAt (21 bytes)
+<writer thread='9731'/>
+    534   55     n       sun.misc.Unsafe::getObjectVolatile (native)   
+<writer thread='22275'/>
+    534   56    b        java.util.concurrent.ConcurrentHashMap::casTabAt (20 bytes)
+    534   57    b        java.lang.String::length (6 bytes)
+    536   58  s b        java.util.Vector::size (5 bytes)
+    538   59    b        java.lang.StringBuilder::&lt;init&gt; (7 bytes)
+    540   60    b        java.lang.AbstractStringBuilder::&lt;init&gt; (12 bytes)
+    542   61    b        java.lang.String::toLowerCase (439 bytes)
+    574   62    b        java.lang.Character::toLowerCase (6 bytes)
+    575   63    b        java.lang.Character::toLowerCase (9 bytes)
+    576   64    b        java.lang.CharacterData::of (120 bytes)
+    577   65    b        java.lang.CharacterDataLatin1::toLowerCase (39 bytes)
+    579   66    b        java.lang.CharacterDataLatin1::getProperties (11 bytes)
+    580   67    b        java.lang.String::startsWith (72 bytes)
+    592   68    b        java.io.ObjectStreamField::&lt;init&gt; (8 bytes)
+    683   69    b        java.io.ObjectStreamField::&lt;init&gt; (53 bytes)
+    686   70    b        java.io.ObjectStreamField::getClassSignature (242 bytes)
+    768   71    b        java.lang.AbstractStringBuilder::ensureCapacityInternal (27 bytes)
+    773   72    b        java.lang.StringBuilder::toString (17 bytes)
+    781   73    b        java.lang.String::&lt;init&gt; (82 bytes)
+    788   74    b        java.util.Arrays::copyOfRange (63 bytes)
+<writer thread='9731'/>
+    794   68             java.io.ObjectStreamField::&lt;init&gt; (8 bytes)   made not entrant
+    795   75     n       java.lang.String::intern (native)   
+<writer thread='22275'/>
+    796   76    b        java.lang.String::lastIndexOf (13 bytes)
+<writer thread='9731'/>
+    797   77     n       java.lang.Class::getName0 (native)   
+<writer thread='22275'/>
+    797   78    b        java.lang.String::startsWith (7 bytes)
+    797   79    b        java.lang.String::regionMatches (149 bytes)
+    805   80    b        java.io.UnixFileSystem::normalize (75 bytes)
+    814   81    b        java.lang.String::charAt (29 bytes)
+    816   82    b        java.util.HashMap::hash (20 bytes)
+    818   83    b        java.io.File::exists (43 bytes)
+    820   84    b        java.io.File::getPath (5 bytes)
+    820   85    b        java.io.UnixFileSystem::getBooleanAttributes (49 bytes)
+<writer thread='9731'/>
+    822   86     n       java.io.UnixFileSystem::getBooleanAttributes0 (native)   
+<writer thread='22275'/>
+    822   87    b        java.lang.StringCoding$StringEncoder::requestedCharsetName (5 bytes)
+    823   88    b        sun.nio.cs.UTF_8$Encoder::encode (359 bytes)
+    841   89    b        java.util.Arrays::copyOf (19 bytes)
+    848   90    b        java.lang.String::substring (56 bytes)
+    853   91    b        java.io.File::&lt;init&gt; (47 bytes)
+    856   92    b        java.io.UnixFileSystem::prefixLength (25 bytes)
+    857   93    b        sun.util.PreHashedMap::get (73 bytes)
+    868   94    b        sun.nio.cs.FastCharsetProvider::toLower (122 bytes)
+    894   95    b        java.util.Arrays::copyOf (19 bytes)
+    902   96    b        java.lang.Class::getReflectionFactory (26 bytes)
+    908   97    b        sun.reflect.ReflectionFactory::langReflectAccess (15 bytes)
+    909   98    b        java.lang.reflect.AccessibleObject::&lt;init&gt; (5 bytes)
+    910   99    b        java.lang.Class::getName (21 bytes)
+    913  100    b        java.lang.reflect.Modifier::isPublic (12 bytes)
+    914  101    b        sun.reflect.Reflection::isSubclassOf (21 bytes)
+    917  102    b        java.nio.charset.Charset::&lt;init&gt; (60 bytes)
+    922  103    b        java.nio.charset.Charset::checkName (165 bytes)
+    935  104    b        java.nio.charset.Charset::atBugLevel (44 bytes)
+<writer thread='9731'/>
+    946   13             java.lang.String::equals (81 bytes)   made not entrant
+<writer thread='22275'/>
+    947  105    b        java.nio.charset.Charset::lookup (44 bytes)
+    952  106    b        java.lang.String::equals (81 bytes)
+    965  107    b        sun.nio.cs.FastCharsetProvider::canonicalize (24 bytes)
+<writer thread='9731'/>
+    968  108     n       java.lang.Class::getModifiers (native)   
+<writer thread='22275'/>
+    969  109    b        java.lang.reflect.Constructor::getDeclaringClass (5 bytes)
+    969  110    b        sun.reflect.ConstructorAccessorImpl::&lt;init&gt; (5 bytes)
+    969  111    b        sun.reflect.MagicAccessorImpl::&lt;init&gt; (5 bytes)
+    970  112    b        java.lang.reflect.Constructor::setConstructorAccessor (21 bytes)
+<writer thread='9731'/>
+    973  113     n       sun.reflect.Reflection::getClassAccessFlags (native)   (static)
+<writer thread='22275'/>
+    973  114    b        java.nio.charset.Charset::forName (20 bytes)
+<writer thread='9731'/>
+    974  115     n       java.lang.Class::forName0 (native)   (static)
+<writer thread='22275'/>
+    975  116    b        sun.util.PreHashedMap::put (103 bytes)
+    986  117    b        sun.util.PreHashedMap::toV (2 bytes)
+    987  118    b        java.lang.ref.Reference::&lt;init&gt; (25 bytes)
+    988  119    b        java.util.WeakHashMap::&lt;init&gt; (133 bytes)
+    997  120    b        java.util.AbstractMap::&lt;init&gt; (5 bytes)
+    997  121    b        java.lang.ref.ReferenceQueue::&lt;init&gt; (27 bytes)
+   1000  122    b        java.lang.ref.ReferenceQueue$Lock::&lt;init&gt; (5 bytes)
+   1000  123    b        java.lang.ref.ReferenceQueue$Lock::&lt;init&gt; (5 bytes)
+<writer thread='9731'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/nio/ByteBuffer' x='java/nio/HeapByteBuffer' witness='java/nio/DirectByteBuffer' stamp='1.007'/>
+<writer thread='16899'/>
+   1007   48             sun.nio.cs.UTF_8$Decoder::decode (779 bytes)   made not entrant
+<writer thread='22275'/>
+   1008  124    b        sun.security.action.GetPropertyAction::run (5 bytes)
+   1010  125    b        sun.security.action.GetPropertyAction::run (21 bytes)
+   1015  126    b        java.nio.Bits::byteOrder (20 bytes)
+   1016  127    b        java.nio.Buffer::&lt;init&gt; (121 bytes)
+   1017  128    b        java.nio.Buffer::limit (53 bytes)
+   1018  129    b        java.nio.Buffer::position (40 bytes)
+   1020  130   !b        java.lang.ClassLoader::findNative (86 bytes)
+   1028  131    b        java.lang.String::toCharArray (25 bytes)
+   1031  132    b        java.nio.charset.CharsetEncoder::maxBytesPerChar (5 bytes)
+   1032  133  s b        java.util.Vector::elementAt (48 bytes)
+   1034  134    b        java.util.Vector::elementData (7 bytes)
+   1036  135    b        java.lang.String::endsWith (17 bytes)
+   1039  136    b        sun.nio.cs.UTF_8$Decoder::decode (779 bytes)
+<writer thread='9731'/>
+   1050  137     n       java.lang.ClassLoader$NativeLibrary::find (native)   
+<writer thread='22275'/>
+   1054  138    b        java.lang.Character::toUpperCaseEx (30 bytes)
+   1055  139    b        java.lang.CharacterDataLatin1::toUpperCaseEx (71 bytes)
+   1058  140   !b        java.lang.ref.ReferenceQueue::poll (28 bytes)
+   1062  141    b        java.util.WeakHashMap::maskNull (12 bytes)
+   1062  142    b        java.util.WeakHashMap::hash (28 bytes)
+<writer thread='9731'/>
+   1064  143     n       java.lang.Object::hashCode (native)   
+<writer thread='22275'/>
+   1064  144    b        java.util.WeakHashMap::getTable (9 bytes)
+   1065  145   !b        java.util.WeakHashMap::expungeStaleEntries (139 bytes)
+   1075  146    b        java.util.WeakHashMap::indexFor (6 bytes)
+   1076  147    b        java.lang.Math::max (11 bytes)
+   1077  148    b        java.util.HashMap::put (13 bytes)
+   1079  149    b        java.util.HashMap::putVal (300 bytes)
+   1106  150    b        java.util.HashMap$Node::&lt;init&gt; (26 bytes)
+   1108  151    b        java.lang.String::toLowerCase (8 bytes)
+   1109  152    b        java.util.Locale::getDefault (4 bytes)
+   1109  153    b        java.net.URL::getHost (5 bytes)
+   1110  154    b        java.util.HashMap::getNode (148 bytes)
+   1119  155    b        java.lang.String::&lt;init&gt; (10 bytes)
+   1120  156    b        java.lang.String::equalsIgnoreCase (48 bytes)
+   1123  157    b        java.util.HashMap::get (23 bytes)
+   1125  158    b        java.net.URL::getProtocol (5 bytes)
+   1125  159    b        java.io.UnixFileSystem::isInvalid (17 bytes)
+   1126  160    b        java.lang.String::getBytes (27 bytes)
+   1127  161   !b        java.lang.StringCoding::encode (120 bytes)
+   1138  162   !b        java.lang.StringCoding$StringEncoder::encode (179 bytes)
+   1146  163    b        java.lang.StringCoding::access$300 (8 bytes)
+   1147  164    b        java.lang.StringCoding::safeTrim (24 bytes)
+   1149  165    b        java.util.AbstractCollection::&lt;init&gt; (5 bytes)
+   1149  166    b        java.io.File::isInvalid (47 bytes)
+   1155  167    b        java.util.jar.JarFile::isKnownNotToHaveSpecialAttributes (358 bytes)
+   1251  168    b        java.nio.charset.CharsetDecoder::maxCharsPerByte (5 bytes)
+   1251  169    b        java.util.zip.ZipCoder::getBytes (192 bytes)
+   1263  170    b        java.util.zip.ZipCoder::encoder (35 bytes)
+   1265  171    b        java.nio.charset.CharsetEncoder::reset (11 bytes)
+   1266  172    b        java.nio.charset.CharsetEncoder::implReset (1 bytes)
+<writer thread='9731'/>
+   1267  173     n       java.util.zip.ZipFile::getEntry (native)   (static)
+<writer thread='22275'/>
+   1267  174    b        java.lang.ref.Finalizer::register (10 bytes)
+   1272  175    b        java.lang.ref.Finalizer::&lt;init&gt; (23 bytes)
+   1274  176    b        java.lang.ref.FinalReference::&lt;init&gt; (7 bytes)
+   1276  177   !b        java.lang.ref.Finalizer::add (41 bytes)
+   1280  178    b        java.util.zip.ZStreamRef::address (5 bytes)
+   1282  179    b        java.util.jar.JarFile::match (116 bytes)
+   1289  180    b        java.net.URL::getFile (5 bytes)
+   1290  181    b        java.net.URL::getAuthority (5 bytes)
+   1290  182    b        java.net.URL::getPath (5 bytes)
+   1292  183    b        java.nio.Buffer::checkIndex (22 bytes)
+   1293  184    b        java.nio.DirectLongBufferU::ix (10 bytes)
+   1296  185    b        java.util.zip.ZipFile::ensureOpen (37 bytes)
+   1297  186    b        java.util.WeakHashMap::put (162 bytes)
+   1312  187    b        java.util.zip.ZipFile::access$000 (5 bytes)
+   1313  188    b        java.util.zip.Inflater::ensureOpen (47 bytes)
+   1314  189    b        java.util.ArrayList::size (5 bytes)
+<writer thread='9731'/>
+   1317  190     n       java.lang.System::nanoTime (native)   (static)
+<writer thread='22275'/>
+   1318  191  s b        java.lang.StringBuffer::append (13 bytes)
+   1320  192    b        java.io.UnixFileSystem::resolve (27 bytes)
+   1321  193    b        java.io.UnixFileSystem::isAbsolute (13 bytes)
+   1322  194    b        java.io.File::getPrefixLength (5 bytes)
+   1323  195    b        java.util.ArrayList::add (29 bytes)
+   1326  196    b        java.util.ArrayList::ensureCapacityInternal (13 bytes)
+   1328  197    b        java.util.ArrayList::calculateCapacity (16 bytes)
+   1329  198    b        java.util.ArrayList::ensureExplicitCapacity (26 bytes)
+   1330  199    b        java.net.URL::getUserInfo (5 bytes)
+   1331  200    b        java.lang.String::substring (79 bytes)
+   1334  201    b        java.lang.String::indexOf (166 bytes)
+<writer thread='9731'/>
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+<writer thread='22275'/>
+   1356  202 %  b        java.lang.String::indexOf @ 69 (166 bytes)
+<writer thread='9731'/>
+nmethod 0x0000000111d05c90
+OSR entry @ pc: 0x0000000111d05e30: Compiled method (c2)    1374  202 %           java.lang.String::indexOf @ 69 (166 bytes)
+ total in heap  [0x0000000111d05c90,0x0000000111d06ad0] = 3648
+ relocation     [0x0000000111d05dc0,0x0000000111d05e10] = 80
+ main code      [0x0000000111d05e20,0x0000000111d06420] = 1536
+ stub code      [0x0000000111d06420,0x0000000111d06438] = 24
+ metadata       [0x0000000111d06438,0x0000000111d06448] = 16
+ scopes data    [0x0000000111d06448,0x0000000111d06618] = 464
+ scopes pcs     [0x0000000111d06618,0x0000000111d06aa8] = 1168
+ dependencies   [0x0000000111d06aa8,0x0000000111d06ab0] = 8
+ nul chk table  [0x0000000111d06ab0,0x0000000111d06ad0] = 32
+<writer thread='22275'/>
+   1375  203    b        java.lang.String::indexOf (25 bytes)
+   1377  204    b        java.net.URL::isBuiltinStreamHandler (32 bytes)
+   1380  205    b        java.net.URL::isBuiltinStreamHandler (7 bytes)
+   1381  206    b        sun.net.util.IPAddressUtil::checkHostString (53 bytes)
+   1382  207    b        sun.net.util.IPAddressUtil::scan (92 bytes)
+   1387  208    b        sun.net.www.ParseUtil::encodePath (336 bytes)
+   1400  209    b        java.io.File::&lt;init&gt; (113 bytes)
+   1406  210    b        java.lang.StringBuilder::append (8 bytes)
+   1407  211    b        java.lang.AbstractStringBuilder::append (29 bytes)
+   1409  212    b        java.io.File::getName (42 bytes)
+   1414  213    b        java.lang.Float::isNaN (12 bytes)
+<writer thread='9731'/>
+   1414   49             java.lang.String::replace (127 bytes)   made not entrant
+<writer thread='22275'/>
+   1418  214    b        java.lang.String::replace (127 bytes)
+   1443  215    b        java.util.HashMap::&lt;init&gt; (11 bytes)
+   1446  216    b        sun.security.action.GetPropertyAction::&lt;init&gt; (10 bytes)
+   1452  217    b        sun.nio.fs.UnixPath::checkNotNul (16 bytes)
+   1453  218    b        java.nio.charset.Charset::lookup2 (78 bytes)
+   1469  219    b        java.io.UnixFileSystem::parentOrNull (118 bytes)
+   1482  220    b        java.io.ExpiringCache::entryFor (57 bytes)
+   1488  221    b        java.util.LinkedHashMap::get (33 bytes)
+   1490  222  s b        java.io.ExpiringCache::put (70 bytes)
+<writer thread='9731'/>
+   1501  223     n       java.lang.System::currentTimeMillis (native)   (static)
+<writer thread='22275'/>
+   1501  224    b        java.io.ExpiringCache$Entry::&lt;init&gt; (15 bytes)
+   1501  225    b        java.util.LinkedHashMap::afterNodeInsertion (40 bytes)
+   1504  226    b        java.io.ExpiringCache$1::removeEldestEntry (20 bytes)
+   1505  227    b        java.io.ExpiringCache::access$000 (5 bytes)
+   1505  228  s b        java.util.Vector::addElement (38 bytes)
+   1517  229    b        sun.nio.fs.UnixPath::normalizeAndCheck (75 bytes)
+   1526  230    b        java.lang.ThreadLocal::access$400 (5 bytes)
+   1531  231    b        java.net.URI::highMask (60 bytes)
+   1538  232    b        java.net.URI::lowMask (46 bytes)
+   1544  233    b        java.net.URI::highMask (57 bytes)
+   1554  234    b        java.net.URI$Parser::charAt (9 bytes)
+<writer thread='9731'/>
+   1556  106             java.lang.String::equals (81 bytes)   made not entrant
+<writer thread='22275'/>
+   1556  235    b        java.lang.String::equals (81 bytes)
+   1561  236    b        java.nio.ByteBuffer::&lt;init&gt; (45 bytes)
+   1564  237    b        java.nio.Buffer::position (5 bytes)
+   1565  238    b        java.nio.Buffer::limit (5 bytes)
+   1566  239    b        java.io.File::getCanonicalPath (31 bytes)
+   1567  240    b        java.io.UnixFileSystem::canonicalize (232 bytes)
+   1592  241  s b        java.io.ExpiringCache::get (39 bytes)
+   1596  242    b        sun.nio.fs.MacOSXFileSystem::normalizeNativePath (42 bytes)
+   1601  243    b        sun.nio.cs.UTF_8$Encoder::encodeArrayLoop (489 bytes)
+   1632  244    b        java.nio.charset.CoderResult::isUnderflow (13 bytes)
+   1638  245    b        java.util.HashMap::newNode (13 bytes)
+<writer thread='9731'/>
+   1643   70             java.io.ObjectStreamField::getClassSignature (242 bytes)   made not entrant
+   1643  246     n       java.lang.Class::isArray (native)   
+<writer thread='22275'/>
+   1644  247    b        java.util.HashMap::resize (359 bytes)
+   1665  248    b        java.util.concurrent.ConcurrentHashMap::putIfAbsent (8 bytes)
+   1666  249    b        java.util.concurrent.ConcurrentHashMap::spread (10 bytes)
+<writer thread='9731'/>
+   1666  250     n       sun.misc.Unsafe::compareAndSwapInt (native)   
+<writer thread='22275'/>
+   1666  251    b        java.net.URL::getRef (5 bytes)
+   1667  252    b        java.net.URL::getQuery (5 bytes)
+   1668  253    b        java.util.concurrent.ConcurrentHashMap$Node::&lt;init&gt; (26 bytes)
+   1669  254    b        java.util.concurrent.ConcurrentHashMap::addCount (281 bytes)
+<writer thread='9731'/>
+   1672  255     n       sun.misc.Unsafe::compareAndSwapLong (native)   
+   1672   51   !         java.util.concurrent.ConcurrentHashMap::putVal (362 bytes)   made not entrant
+   1674  256     n       sun.misc.Unsafe::putLong (native)   
+<writer thread='22275'/>
+   1674  257  s b        sun.misc.PerfCounter::add (18 bytes)
+   1678  258  s b        sun.misc.PerfCounter::get (9 bytes)
+   1680  259    b        java.nio.DirectLongBufferU::get (16 bytes)
+<writer thread='9731'/>
+   1681  260     n       sun.misc.Unsafe::getLong (native)   
+<writer thread='22275'/>
+   1681  261    b        java.nio.DirectLongBufferU::put (18 bytes)
+<writer thread='9731'/>
+   1683  262     n       java.lang.Class::getSuperclass (native)   
+<writer thread='22275'/>
+   1685  263   !b        java.util.concurrent.ConcurrentHashMap::putVal (362 bytes)
+   1705  264    b        java.lang.ClassLoader::checkName (43 bytes)
+   1707  265    b        sun.misc.VM::allowArraySyntax (4 bytes)
+   1710  266   !b        java.lang.ClassLoader::loadClass (122 bytes)
+   1723  267    b        java.lang.ClassLoader::getClassLoadingLock (35 bytes)
+   1727  268    b        java.lang.ClassLoader::findLoadedClass (16 bytes)
+<writer thread='9731'/>
+   1727  269     n       java.lang.ClassLoader::findLoadedClass0 (native)   
+   1736  270     n       java.security.AccessController::doPrivileged (native)   (static)
+<writer thread='22275'/>
+   1736  271  s!b        sun.misc.URLClassPath::getLoader (243 bytes)
+   1765  272   !b        sun.misc.URLClassPath$JarLoader::ensureOpen (36 bytes)
+   1769  273    b        java.util.jar.JarFile::getJarEntry (9 bytes)
+   1776  274    b        java.util.jar.JarFile::getEntry (22 bytes)
+   1783  275   !b        java.util.zip.ZipFile::getEntry (149 bytes)
+   1799  276    b        sun.misc.URLClassPath::getResource (83 bytes)
+   1803  277  s b        sun.misc.URLClassPath::getNextLoader (88 bytes)
+<writer thread='9731'/>
+   1809  208             sun.net.www.ParseUtil::encodePath (336 bytes)   made not entrant
+<writer thread='22275'/>
+   1809  278    b        java.util.BitSet::get (69 bytes)
+   1812  279    b        java.util.BitSet::wordIndex (5 bytes)
+   1813  280   !b        java.net.URL::&lt;init&gt; (543 bytes)
+   1864  281    b        java.lang.Character::toUpperCase (9 bytes)
+   1866  282    b        java.lang.CharacterDataLatin1::toUpperCase (53 bytes)
+   1867  283    b        java.lang.String::indexOf (7 bytes)
+   1869  284    b        java.io.InputStream::&lt;init&gt; (5 bytes)
+   1871  285    b        java.net.URL::getPort (5 bytes)
+   1872  286    b        java.lang.ClassLoader::loadClass (7 bytes)
+   1874  287    b        sun.misc.Launcher$AppClassLoader::loadClass (85 bytes)
+   1881  288  s b        sun.misc.URLClassPath::knownToNotExist (24 bytes)
+   1885  289    b        java.lang.ClassLoader::findBootstrapClassOrNull (16 bytes)
+<writer thread='9731'/>
+   1886  290     n       java.lang.ClassLoader::findBootstrapClass (native)   
+<writer thread='22275'/>
+   1887  291    b        java.util.ArrayList::get (11 bytes)
+   1888  292    b        java.util.ArrayList::rangeCheck (22 bytes)
+   1889  293    b        java.util.ArrayList::elementData (7 bytes)
+   1891  294    b        sun.net.www.ParseUtil::encodePath (336 bytes)
+   1909  295    b        java.util.BitSet::checkInvariants (111 bytes)
+   1910  296    b        java.io.UnixFileSystem::resolve (103 bytes)
+   1932  297    b        java.lang.StringBuffer::&lt;init&gt; (6 bytes)
+   1935  298  s b        java.lang.StringBuffer::toString (36 bytes)
+   1940  299    b        java.security.ProtectionDomain::getCodeSource (5 bytes)
+   1942  300   !b        sun.misc.URLClassPath$JarLoader::getResource (85 bytes)
+   1946  301    b        java.lang.String::concat (47 bytes)
+   1951  302    b        java.lang.String::getChars (16 bytes)
+   1953  303    b        sun.misc.URLClassPath$Loader::getBaseURL (5 bytes)
+   1954  304   !b        sun.misc.Resource::getBytes (242 bytes)
+   1971  305    b        sun.misc.PerfCounter::addElapsedTimeFrom (10 bytes)
+   1972  306    b        java.net.URLStreamHandler::getDefaultPort (2 bytes)
+<writer thread='9731'/>
+   1973  254             java.util.concurrent.ConcurrentHashMap::addCount (281 bytes)   made not entrant
+<dependency_failed type='leaf_type' ctxk='java/util/concurrent/ConcurrentHashMap$Node' witness='java/util/concurrent/ConcurrentHashMap$ForwardingNode' stamp='1.974'/>
+<dependency_failed type='leaf_type' ctxk='java/util/concurrent/ConcurrentHashMap$Node' witness='java/util/concurrent/ConcurrentHashMap$ForwardingNode' stamp='1.974'/>
+<dependency_failed type='leaf_type' ctxk='java/util/concurrent/ConcurrentHashMap$Node' witness='java/util/concurrent/ConcurrentHashMap$ForwardingNode' stamp='1.974'/>
+<writer thread='16899'/>
+   1976   54             java.util.concurrent.ConcurrentHashMap::tabAt (21 bytes)   made not entrant
+   1976  263   !         java.util.concurrent.ConcurrentHashMap::putVal (362 bytes)   made not entrant
+<writer thread='22275'/>
+   1977  307    b        java.util.concurrent.ConcurrentHashMap::tabAt (21 bytes)
+   1979  308    b        java.util.concurrent.ConcurrentHashMap::setTabAt (19 bytes)
+<writer thread='9731'/>
+   1980  309     n       sun.misc.Unsafe::putObjectVolatile (native)   
+<writer thread='22275'/>
+   1980  310   !b        java.util.concurrent.ConcurrentHashMap::putVal (362 bytes)
+   2001  311   !b        java.util.concurrent.ConcurrentHashMap::transfer (832 bytes)
+   2044  312   !b        java.net.URLClassLoader::findClass (47 bytes)
+   2050  313    b        java.net.URLClassLoader$1::&lt;init&gt; (15 bytes)
+   2051  314    b        java.net.URLClassLoader$1::run (5 bytes)
+   2052  315   !b        java.net.URLClassLoader$1::run (81 bytes)
+   2055  316    b        java.net.URLClassLoader::access$000 (5 bytes)
+   2055  317  s b        sun.misc.URLClassPath::getLookupCache (98 bytes)
+   2059  318    b        java.net.URL::&lt;init&gt; (8 bytes)
+   2060  319    b        sun.net.www.protocol.file.Handler::parseURL (18 bytes)
+   2062  320    b        java.net.URLStreamHandler::parseURL (1193 bytes)
+   2181  321    b        java.net.URLStreamHandler::setURL (73 bytes)
+   2185  322   !b        java.net.URL::set (114 bytes)
+<writer thread='9731'/>
+   2197  323     n       java.io.FileInputStream::readBytes (native)   
+   2198  154             java.util.HashMap::getNode (148 bytes)   made not entrant
+<writer thread='22275'/>
+   2198  324    b        java.security.CodeSource::getLocation (5 bytes)
+   2201  325    b        java.util.Stack::empty (13 bytes)
+   2207  326  s b        sun.misc.Resource::cachedInputStream (20 bytes)
+   2211  327    b        java.net.URLStreamHandler::getHostAddress (5 bytes)
+   2212  328  s!b        java.net.URL::getHostAddress (53 bytes)
+   2215  329    b        java.lang.String::isEmpty (14 bytes)
+   2217  330    b        java.security.CodeSource::getCertificates (98 bytes)
+   2225  331   !b        java.lang.ClassLoader::getPackage (118 bytes)
+   2234  332  s b        java.io.FileDescriptor::attach (73 bytes)
+   2236  333    b        java.util.HashMap::getNode (148 bytes)
+   2246  334    b        java.net.URL::toString (5 bytes)
+   2247  335    b        java.net.URL::toExternalForm (9 bytes)
+   2248  336    b        java.net.URLStreamHandler::toExternalForm (219 bytes)
+   2260  337    b        java.util.concurrent.ConcurrentHashMap::addCount (281 bytes)
+   2270  338  s b        java.lang.Throwable::fillInStackTrace (29 bytes)
+<writer thread='9731'/>
+   2273  339     n       java.lang.Throwable::fillInStackTrace (native)   
+<writer thread='22275'/>
+   2273  340    b        java.security.CodeSource::hashCode (17 bytes)
+   2277  341  s b        java.net.URL::hashCode (30 bytes)
+   2281  342    b        java.lang.ReflectiveOperationException::&lt;init&gt; (7 bytes)
+   2285  343    b        java.lang.Exception::&lt;init&gt; (7 bytes)
+   2288  344    b        java.lang.Throwable::&lt;init&gt; (39 bytes)
+   2290  345   !b        sun.misc.URLClassPath$FileLoader::getResource (164 bytes)
+   2320  346    b        sun.misc.URLClassPath$FileLoader$1::&lt;init&gt; (26 bytes)
+   2321  347    b        sun.misc.Resource::&lt;init&gt; (5 bytes)
+   2322  348    b        java.net.URLClassLoader::access$100 (7 bytes)
+   2323  349    b        java.net.URLClassLoader::defineClass (142 bytes)
+   2335  350    b        sun.misc.URLClassPath$FileLoader$1::getCodeSourceURL (8 bytes)
+   2336  351    b        sun.misc.Resource::getManifest (2 bytes)
+   2337  352   !b        java.net.URLClassLoader::definePackageInternal (81 bytes)
+   2340  353    b        java.net.URLClassLoader::getAndVerifyPackage (109 bytes)
+   2342  354    b        sun.misc.Resource::getByteBuffer (24 bytes)
+   2344  355    b        sun.misc.URLClassPath$FileLoader$1::getInputStream (12 bytes)
+   2353  356    b        java.io.FileInputStream::&lt;init&gt; (110 bytes)
+   2361  357    b        java.io.FileDescriptor::&lt;init&gt; (10 bytes)
+   2362  358    b        java.io.FileInputStream::open (6 bytes)
+<writer thread='9731'/>
+   2362  359     n       java.io.FileInputStream::open0 (native)   
+<writer thread='22275'/>
+   2362  360    b        java.lang.Thread::interrupted (8 bytes)
+<writer thread='9731'/>
+   2363  361     n       java.lang.Thread::isInterrupted (native)   
+<writer thread='22275'/>
+   2364  362    b        sun.misc.URLClassPath$FileLoader$1::getContentLength (9 bytes)
+   2365  363    b        java.io.File::length (33 bytes)
+<writer thread='9731'/>
+   2367  364     n       java.io.UnixFileSystem::getLength (native)   
+<writer thread='22275'/>
+   2367  365   !b        java.io.FileInputStream::close (62 bytes)
+   2373  366    b        java.io.FileInputStream$1::&lt;init&gt; (10 bytes)
+   2374  367  s!b        java.io.FileDescriptor::closeAll (215 bytes)
+   2385  368    b        java.io.FileInputStream$1::close (8 bytes)
+   2386  369    b        java.io.FileInputStream::access$000 (5 bytes)
+<writer thread='9731'/>
+   2387  370     n       java.io.FileInputStream::close0 (native)   
+<writer thread='22275'/>
+   2387  371    b        sun.misc.Resource::getCodeSigners (2 bytes)
+   2388  372    b        java.security.CodeSource::&lt;init&gt; (40 bytes)
+   2393  373    b        sun.misc.PerfCounter::getReadClassBytesTime (4 bytes)
+   2393  374    b        java.security.SecureClassLoader::defineClass (16 bytes)
+   2395  375   !b        java.security.SecureClassLoader::getProtectionDomain (114 bytes)
+   2399  376    b        java.lang.ClassLoader::defineClass (43 bytes)
+   2403  377    b        java.lang.ClassLoader::preDefineClass (109 bytes)
+   2405  378   !b        java.lang.ClassLoader::checkCerts (195 bytes)
+   2414  379    b        java.lang.ClassLoader::defineClassSourceLocation (28 bytes)
+<writer thread='9731'/>
+   2417  380     n       java.lang.ClassLoader::defineClass1 (native)   
+<writer thread='22275'/>
+   2418  381    b        java.lang.ClassLoader::addClass (9 bytes)
+   2419  382    b        java.lang.ClassLoader::postDefineClass (26 bytes)
+   2424  383    b        java.security.CodeSource::equals (60 bytes)
+   2427  384    b        java.net.URL::equals (24 bytes)
+   2429  385    b        java.net.URLStreamHandler::equals (45 bytes)
+   2431  386    b        java.net.URLStreamHandler::sameFile (136 bytes)
+   2436  387    b        sun.net.www.protocol.file.Handler::hostsEqual (69 bytes)
+   2440  388    b        java.net.URLStreamHandler::hostsEqual (75 bytes)
+   2443  389    b        java.security.CodeSource::matchCerts (254 bytes)
+   2451  390    b        java.lang.ClassLoader::compareCerts (149 bytes)
+   2467  391    b        java.lang.ClassLoader::checkPackageAccess (111 bytes)
+   2475  392    b        java.lang.Class::checkMemberAccess (49 bytes)
+   2477  393    b        java.lang.Class::getDeclaredField (34 bytes)
+   2479  394    b        java.lang.Class::privateGetDeclaredFields (67 bytes)
+<writer thread='9731'/>
+   2485  395     n       java.lang.Class::getDeclaredFields0 (native)   
+<writer thread='22275'/>
+   2485  396    b        sun.reflect.Reflection::filter (220 bytes)
+   2494  397    b        java.net.URL::&lt;init&gt; (386 bytes)
+   2542  398    b        java.net.Parts::&lt;init&gt; (87 bytes)
+   2546  399    b        java.net.Parts::getPath (5 bytes)
+   2547  400    b        java.net.Parts::getQuery (5 bytes)
+   2547  401    b        java.net.Parts::getRef (5 bytes)
+   2547  402    b        sun.net.util.IPAddressUtil::checkExternalForm (69 bytes)
+   2549  403    b        sun.net.util.IPAddressUtil::scan (62 bytes)
+   2551  404   !b        sun.net.www.ParseUtil::decode (316 bytes)
+   2557  405    b        java.nio.charset.Charset::name (5 bytes)
+<writer thread='9731'/>
+   2560  406     n       java.util.zip.ZipFile::getEntryBytes (native)   (static)
+   2560  407     n       java.util.zip.ZipFile::getEntrySize (native)   (static)
+<writer thread='22275'/>
+   2562  408   !b        java.util.zip.InflaterInputStream::read (138 bytes)
+   2574  409   !b        java.util.zip.Inflater::inflate (113 bytes)
+<writer thread='9731'/>
+   2579  410     n       java.util.zip.Inflater::inflateBytes (native)   
+<writer thread='22275'/>
+   2579  411    b        java.util.zip.ZipFile::access$400 (5 bytes)
+   2580  412    b        java.util.WeakHashMap::eq (19 bytes)
+<writer thread='9731'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='2.584'/>
+<writer thread='16899'/>
+   2584  300   !         sun.misc.URLClassPath$JarLoader::getResource (85 bytes)   made not entrant
+   2584  276             sun.misc.URLClassPath::getResource (83 bytes)   made not entrant
+   2584  347             sun.misc.Resource::&lt;init&gt; (5 bytes)   made not entrant
+   2584  351             sun.misc.Resource::getManifest (2 bytes)   made not entrant
+   2584  304   !         sun.misc.Resource::getBytes (242 bytes)   made not entrant
+   2584  315   !         java.net.URLClassLoader$1::run (81 bytes)   made not entrant
+   2584  348             java.net.URLClassLoader::access$100 (7 bytes)   made not entrant
+   2584  326  s          sun.misc.Resource::cachedInputStream (20 bytes)   made not entrant
+   2585  354             sun.misc.Resource::getByteBuffer (24 bytes)   made not entrant
+   2585  349             java.net.URLClassLoader::defineClass (142 bytes)   made not entrant
+   2585  371             sun.misc.Resource::getCodeSigners (2 bytes)   made not entrant
+   2585  346             sun.misc.URLClassPath$FileLoader$1::&lt;init&gt; (26 bytes)   made not entrant
+   2585  345   !         sun.misc.URLClassPath$FileLoader::getResource (164 bytes)   made not entrant
+<writer thread='22275'/>
+   2585  413    b        java.lang.String::toUpperCase (439 bytes)
+   2623   13             java.lang.String::equals (81 bytes)   made zombie
+   2625   68             java.io.ObjectStreamField::&lt;init&gt; (8 bytes)   made zombie
+   2625  414    b        java.util.zip.ZipCoder::isUTF8 (5 bytes)
+<writer thread='9731'/>
+   2630  415     n       java.util.zip.ZipFile::getEntryCSize (native)   (static)
+   2630  416     n       java.util.zip.ZipFile::getEntryMethod (native)   (static)
+   2633  417     n       java.util.zip.ZipFile::freeEntry (native)   (static)
+<writer thread='22275'/>
+   2633  418    b        java.util.WeakHashMap::remove (133 bytes)
+   2643  419    b        java.lang.String::checkBounds (46 bytes)
+   2646  420    b        java.util.jar.Attributes$Name::isValid (32 bytes)
+   2647  421    b        java.util.jar.Attributes$Name::isAlpha (30 bytes)
+   2648  422    b        java.util.jar.Attributes$Name::isValid (45 bytes)
+   2661  423    b        java.util.jar.Attributes$Name::&lt;init&gt; (48 bytes)
+   2667  424    b        java.util.jar.Attributes$Name::isDigit (18 bytes)
+   2683  425    b        sun.misc.ASCIICaseInsensitiveComparator::toLower (16 bytes)
+   2683  426    b        sun.misc.ASCIICaseInsensitiveComparator::isUpper (18 bytes)
+   2684  427    b        java.util.jar.Manifest$FastInputStream::readLine (167 bytes)
+   2698  428    b        java.lang.String::&lt;init&gt; (100 bytes)
+   2714  429    b        java.lang.String::&lt;init&gt; (38 bytes)
+   2716  430   !b        java.lang.StringCoding::decode (120 bytes)
+   2728  431   !b        java.lang.StringCoding$StringDecoder::decode (179 bytes)
+   2734  432    b        java.lang.StringCoding::access$100 (8 bytes)
+   2735  433    b        java.lang.StringCoding::safeTrim (24 bytes)
+   2736  434    b        sun.misc.ASCIICaseInsensitiveComparator::lowerCaseHashCode (36 bytes)
+   2750  435    b        java.lang.ref.SoftReference::&lt;init&gt; (13 bytes)
+   2752  436    b        java.util.jar.Attributes$Name::hashCode (24 bytes)
+   2754  437    b        sun.misc.ASCIICaseInsensitiveComparator::compare (126 bytes)
+   2761  438   !b        sun.misc.Resource::getBytes (242 bytes)
+   2781  439   !b        java.util.zip.ZipFile$ZipFileInputStream::close (110 bytes)
+   2790  440    b        java.util.jar.JarFile::maybeInstantiateVerifier (96 bytes)
+<writer thread='9731'/>
+   2799  375   !         java.security.SecureClassLoader::getProtectionDomain (114 bytes)   made not entrant
+<writer thread='22275'/>
+   2801  441    b        java.nio.CharBuffer::arrayOffset (35 bytes)
+   2802  442    b        java.nio.ByteBuffer::arrayOffset (35 bytes)
+   2803  443    b        java.util.AbstractList::&lt;init&gt; (10 bytes)
+   2804  444    b        java.util.HashMap::&lt;init&gt; (8 bytes)
+   2805  445    b        java.util.HashMap::&lt;init&gt; (98 bytes)
+   2806  446    b        java.util.HashMap::tableSizeFor (59 bytes)
+<writer thread='9731'/>
+   2808  378   !         java.lang.ClassLoader::checkCerts (195 bytes)   made not entrant
+<writer thread='22275'/>
+   2810  447    b        java.lang.Integer::numberOfLeadingZeros (76 bytes)
+   2812  448    b        java.util.concurrent.ConcurrentHashMap::resizeStamp (13 bytes)
+<writer thread='9731'/>
+   2815  449     n       java.lang.Object::clone (native)   
+<writer thread='22275'/>
+   2815  450    b        java.lang.Class::arrayContentsEq (70 bytes)
+   2822  451    b        java.lang.reflect.Executable::&lt;init&gt; (5 bytes)
+   2823  452    b        sun.misc.URLClassPath::getResource (83 bytes)
+   2827  453   !b        sun.misc.URLClassPath$JarLoader::getResource (85 bytes)
+   2833  454    b        java.util.jar.Attributes::getValue (9 bytes)
+   2835  455    b        java.util.jar.Attributes::get (11 bytes)
+<writer thread='9731'/>
+   2836  333             java.util.HashMap::getNode (148 bytes)   made not entrant
+<writer thread='22275'/>
+   2837  456    b        sun.misc.URLClassPath$JarLoader::access$700 (5 bytes)
+   2844  457    b        java.util.concurrent.ConcurrentHashMap::get (162 bytes)
+<writer thread='9731'/>
+   2853  458     n       java.lang.Class::isPrimitive (native)   
+<writer thread='22275'/>
+   2853  459    b        java.util.Objects::requireNonNull (14 bytes)
+   2854  460    b        java.lang.invoke.MethodType::checkPtype (19 bytes)
+   2855  461    b        java.lang.invoke.MethodTypeForm::canonicalize (233 bytes)
+   2857  462    b        java.lang.invoke.MethodType::hashCode (53 bytes)
+   2862  463    b        java.lang.ref.WeakReference::&lt;init&gt; (7 bytes)
+   2868  464    b        java.lang.Byte::&lt;init&gt; (10 bytes)
+   2869  465    b        java.lang.String::lastIndexOf (151 bytes)
+   2880  466    b        java.lang.Short::&lt;init&gt; (10 bytes)
+   2882  467    b        java.lang.Character::&lt;init&gt; (10 bytes)
+   2884  468    b        java.lang.Class::getEnclosingMethodInfo (21 bytes)
+<writer thread='9731'/>
+   2884  469     n       java.lang.Class::getEnclosingMethod0 (native)   
+<writer thread='22275'/>
+   2885  470    b        java.lang.Integer::valueOf (32 bytes)
+   2887  471    b        java.lang.Class::getEnclosingClass (60 bytes)
+   2889  472    b        java.lang.Class::getDeclaringClass (22 bytes)
+<writer thread='9731'/>
+   2890  473     n       java.lang.Class::getDeclaringClass0 (native)   
+<writer thread='22275'/>
+   2890  474    b        java.lang.Class::getSimpleName (120 bytes)
+   2895  475   !b        java.lang.Class::getSimpleBinaryName (38 bytes)
+   2898  476    b        java.lang.String::lastIndexOf (11 bytes)
+   2899  477    b        java.lang.String::lastIndexOf (25 bytes)
+   2901  478    b        java.lang.Long::&lt;init&gt; (10 bytes)
+   2904  479    b        java.lang.Enum::&lt;init&gt; (15 bytes)
+   2905  480    b        sun.invoke.util.Wrapper::&lt;init&gt; (59 bytes)
+   2909  481    b        sun.invoke.util.Wrapper::hashPrim (30 bytes)
+   2912  482    b        sun.invoke.util.Wrapper::hashWrap (62 bytes)
+   2913  483    b        sun.invoke.util.Wrapper::hashChar (9 bytes)
+   2916  484    b        java.lang.invoke.MemberName::testFlags (16 bytes)
+   2917  485    b        java.lang.invoke.MethodType::checkPtypes (61 bytes)
+   2926  486    b        java.lang.invoke.MethodTypeForm::canonicalizeAll (66 bytes)
+<writer thread='9731'/>
+   2936  457             java.util.concurrent.ConcurrentHashMap::get (162 bytes)   made not entrant
+<writer thread='22275'/>
+   2936  487    b        java.lang.invoke.MethodTypeForm::&lt;init&gt; (687 bytes)
+<writer thread='9731'/>
+   3029  488     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   3029  489    b        java.lang.invoke.MemberName::isInvocable (7 bytes)
+   3031  490    b        java.lang.invoke.MemberName::testAnyFlags (15 bytes)
+   3032  491    b        sun.invoke.util.VerifyAccess::isTypeVisible (118 bytes)
+   3102  492    b        java.lang.invoke.MethodType::parameterType (7 bytes)
+   3133  493    b        java.lang.ref.WeakReference::&lt;init&gt; (6 bytes)
+   3136  494    b        java.lang.invoke.MethodType$ConcurrentWeakInternSet::expungeStaleElements (27 bytes)
+   3140  495    b        java.lang.invoke.MethodType$ConcurrentWeakInternSet$WeakEntry::hashCode (5 bytes)
+   3143  496    b        java.lang.invoke.LambdaForm$Name::&lt;init&gt; (9 bytes)
+   3146  497    b        java.lang.invoke.LambdaForm$Name::&lt;init&gt; (54 bytes)
+   3150  498    b        java.lang.invoke.MethodType::checkSlotCount (33 bytes)
+   3150  499    b        java.lang.invoke.MethodType::returnType (5 bytes)
+   3152  500    b        java.util.concurrent.ConcurrentHashMap::get (162 bytes)
+   3165  501    b        java.lang.invoke.MethodType::ptypes (5 bytes)
+   3166  502    b        java.lang.invoke.MethodType::makeImpl (66 bytes)
+   3199  503    b        java.lang.invoke.MethodType::&lt;init&gt; (15 bytes)
+   3201  504    b        java.lang.invoke.MethodType$ConcurrentWeakInternSet::get (54 bytes)
+   3210  505    b        java.lang.invoke.MethodType$ConcurrentWeakInternSet$WeakEntry::&lt;init&gt; (14 bytes)
+   3214  506    b        java.lang.invoke.MethodTypeForm::pack (54 bytes)
+   3215  507    b        java.lang.Enum::ordinal (5 bytes)
+   3216  508    b        java.util.Arrays::copyOf (46 bytes)
+   3232  509    b        java.lang.invoke.MethodTypeForm::canonicalize (64 bytes)
+   3238  510    b        java.lang.invoke.MethodType$ConcurrentWeakInternSet::add (66 bytes)
+   3251  511    b        java.lang.invoke.MethodType$ConcurrentWeakInternSet$WeakEntry::&lt;init&gt; (15 bytes)
+   3257  512    b        java.lang.invoke.MemberName::initResolved (53 bytes)
+   3259  513    b        java.lang.invoke.LambdaForm::normalize (322 bytes)
+   3292  514    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+<writer thread='9731'/>
+   3295  514             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+   3297  513             java.lang.invoke.LambdaForm::normalize (322 bytes)   made not entrant
+<writer thread='22275'/>
+   3302  515    b        java.lang.invoke.MemberName::getDeclaringClass (5 bytes)
+   3303  516    b        java.lang.invoke.LambdaForm$Name::initIndex (26 bytes)
+   3306  517    b        sun.invoke.util.Wrapper::forPrimitiveType (49 bytes)
+   3313  518    b        sun.invoke.util.Wrapper::findPrimitiveType (25 bytes)
+<writer thread='9731'/>
+   3317  519     n       java.lang.Class::getComponentType (native)   
+<writer thread='22275'/>
+   3319  520    b        sun.invoke.util.Wrapper::isDoubleWord (15 bytes)
+   3320  521    b        java.lang.invoke.MemberName::flagsMods (72 bytes)
+   3321  522    b        java.lang.invoke.MemberName::init (66 bytes)
+   3322  523    b        java.lang.invoke.MemberName$Factory::resolveOrFail (52 bytes)
+   3327  524   !b        java.lang.invoke.MemberName$Factory::resolve (145 bytes)
+   3341  525   !b        java.lang.invoke.MemberName::clone (14 bytes)
+<writer thread='9731'/>
+   3348  526     n       java.lang.invoke.MethodHandleNatives::resolve (native)   (static)
+<writer thread='22275'/>
+   3349  527    b        java.lang.invoke.MemberName::checkForTypeAlias (168 bytes)
+   3355  528    b        java.lang.invoke.MethodType::erase (8 bytes)
+   3356  529    b        java.lang.invoke.MethodTypeForm::erasedType (5 bytes)
+   3357  530    b        java.lang.invoke.MemberName::access$002 (7 bytes)
+   3358  531    b        java.lang.invoke.MemberName::access$200 (6 bytes)
+   3359  532    b        java.lang.invoke.MemberName::isResolved (13 bytes)
+   3359  533    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+<writer thread='9731'/>
+   3362  533             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+<writer thread='22275'/>
+   3362  534    b        java.lang.invoke.LambdaForm::normalize (322 bytes)
+   3388  535    b        java.lang.invoke.LambdaForm::internArgument (84 bytes)
+   3389  536    b        java.lang.invoke.LambdaForm$Name::access$000 (5 bytes)
+<writer thread='9731'/>
+   3390  535             java.lang.invoke.LambdaForm::internArgument (84 bytes)   made not entrant
+   3391  534             java.lang.invoke.LambdaForm::normalize (322 bytes)   made not entrant
+<writer thread='22275'/>
+   3391  537    b        sun.invoke.util.Wrapper::isSubwordOrInt (20 bytes)
+   3393  538    b        sun.invoke.util.Wrapper::isIntegral (23 bytes)
+   3393  539    b        sun.invoke.util.Wrapper::isNumeric (16 bytes)
+   3396  540    b        java.lang.invoke.MemberName::&lt;init&gt; (47 bytes)
+   3401  541    b        java.lang.invoke.MemberName::getName (25 bytes)
+   3403  542    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+   3405  543    b        java.lang.invoke.LambdaForm$NamedFunction::&lt;init&gt; (15 bytes)
+<writer thread='9731'/>
+   3406  542             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+<writer thread='22275'/>
+   3406  544    b        java.lang.invoke.LambdaForm::&lt;init&gt; (12 bytes)
+   3407  545    b        java.lang.invoke.LambdaForm::&lt;init&gt; (119 bytes)
+   3417  546    b        java.lang.invoke.LambdaForm::fixResult (31 bytes)
+   3419  547   !b        java.lang.invoke.LambdaForm::fixDebugName (236 bytes)
+<writer thread='9731'/>
+   3421  547   !         java.lang.invoke.LambdaForm::fixDebugName (236 bytes)   made not entrant
+<writer thread='22275'/>
+   3421  548    b        java.lang.invoke.LambdaForm::normalize (322 bytes)
+   3449  549   !b        java.lang.invoke.MemberName::getMethodType (208 bytes)
+   3453  550    b        java.lang.invoke.MemberName::testAllFlags (7 bytes)
+   3454  551    b        java.lang.reflect.Modifier::isStatic (13 bytes)
+<writer thread='9731'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/lang/invoke/MethodHandle' x='java/lang/invoke/DirectMethodHandle' witness='java/lang/invoke/SimpleMethodHandle' stamp='3.456'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/lang/invoke/MethodHandle' x='java/lang/invoke/DirectMethodHandle' witness='java/lang/invoke/SimpleMethodHandle' stamp='3.456'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/lang/invoke/MethodHandle' x='java/lang/invoke/DirectMethodHandle' witness='java/lang/invoke/SimpleMethodHandle' stamp='3.456'/>
+<writer thread='16899'/>
+   3456  544             java.lang.invoke.LambdaForm::&lt;init&gt; (12 bytes)   made not entrant
+   3456  543             java.lang.invoke.LambdaForm$NamedFunction::&lt;init&gt; (15 bytes)   made not entrant
+   3456  545             java.lang.invoke.LambdaForm::&lt;init&gt; (119 bytes)   made not entrant
+<writer thread='22275'/>
+   3461  552    b        java.util.Arrays::copyOf (13 bytes)
+   3469  553    b        sun.invoke.util.VerifyAccess::isTypeVisible (49 bytes)
+   3474  554    b        java.lang.invoke.MethodType::parameterCount (6 bytes)
+   3475  555    b        java.lang.invoke.MemberName::isStatic (8 bytes)
+   3476  556    b        java.lang.invoke.MemberName::getMethodOrFieldType (72 bytes)
+   3478  557    b        java.lang.invoke.MemberName::isConstructor (7 bytes)
+   3480  558    b        sun.invoke.util.VerifyAccess::isSamePackage (114 bytes)
+<writer thread='9731'/>
+   3493  559     n       java.lang.invoke.MethodHandle::linkToStatic(LLLL)L (native)   (static)
+<writer thread='22275'/>
+   3495  560    b        java.lang.reflect.Array::newInstance (6 bytes)
+<writer thread='9731'/>
+   3498  561     n       java.lang.reflect.Array::newArray (native)   (static)
+<writer thread='22275'/>
+   3499  562    b        java.util.Arrays::equals (78 bytes)
+   3507  563    b        java.lang.Object::equals (11 bytes)
+   3509  564    b        java.util.HashMap::getNode (148 bytes)
+   3518  565    b        java.lang.reflect.Method::getName (5 bytes)
+   3519  566    b        java.lang.Class::searchMethods (90 bytes)
+   3530  567    b        java.lang.reflect.Method::getParameterTypes (11 bytes)
+   3537  568    b        java.lang.invoke.LambdaForm$NamedFunction::&lt;init&gt; (15 bytes)
+   3538  569    b        java.lang.Class::privateGetDeclaredMethods (67 bytes)
+   3541  570    b        sun.reflect.ReflectionFactory::copyMethod (10 bytes)
+   3543  571    b        java.lang.reflect.ReflectAccess::copyMethod (5 bytes)
+   3544  572    b        java.lang.reflect.Method::copy (84 bytes)
+   3551  573    b        java.lang.reflect.Method::&lt;init&gt; (68 bytes)
+   3554  574    b        java.lang.Class::getDeclaredMethod (67 bytes)
+   3557  575    b        java.lang.reflect.Method::getReturnType (5 bytes)
+   3558  576    b        java.lang.invoke.LambdaForm$NamedFunction::&lt;init&gt; (13 bytes)
+   3574  577    b        java.lang.invoke.MemberName::&lt;init&gt; (7 bytes)
+   3586  578    b        java.lang.invoke.MemberName::&lt;init&gt; (223 bytes)
+<writer thread='9731'/>
+   3601  579     n       java.lang.invoke.MethodHandleNatives::init (native)   (static)
+<writer thread='22275'/>
+   3604  580    b        java.lang.invoke.MethodType::insertParameterTypes (106 bytes)
+   3620  581    b        java.lang.invoke.MethodType::parameterSlotCount (8 bytes)
+   3622  582    b        java.lang.invoke.MethodTypeForm::parameterSlotCount (9 bytes)
+   3623  583    b        java.lang.invoke.MethodTypeForm::unpack (30 bytes)
+   3624  584    b        java.util.Arrays::copyOfRange (11 bytes)
+   3630  585    b        java.util.Arrays::copyOfRange (95 bytes)
+<writer thread='9731'/>
+   3642  586     n       java.lang.invoke.MethodHandle::linkToStatic(LL)L (native)   (static)
+<writer thread='22275'/>
+   3643  587    b        java.lang.invoke.LambdaForm$BasicType::basicType (19 bytes)
+   3644  588    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+<writer thread='9731'/>
+   3648  588             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+<writer thread='22275'/>
+   3648  589    b        java.lang.invoke.LambdaForm$Name::&lt;init&gt; (194 bytes)
+   3661  590    b        java.lang.invoke.MemberName::getInvocationType (56 bytes)
+<writer thread='9731'/>
+   3672  548             java.lang.invoke.LambdaForm::normalize (322 bytes)   made not entrant
+<writer thread='22275'/>
+   3680  591    b        jdk.internal.org.objectweb.asm.ByteVector::putUTF8 (142 bytes)
+   3748  592    b        jdk.internal.org.objectweb.asm.ClassWriter::get (49 bytes)
+   3752  593    b        jdk.internal.org.objectweb.asm.Item::set (143 bytes)
+   3759  594    b        jdk.internal.org.objectweb.asm.Item::&lt;init&gt; (66 bytes)
+   3762  595    b        jdk.internal.org.objectweb.asm.ClassWriter::put (152 bytes)
+<writer thread='9731'/>
+   3788  596     n       java.lang.Class::isInterface (native)   
+<writer thread='22275'/>
+   3789  597    b        jdk.internal.org.objectweb.asm.ByteVector::putByte (39 bytes)
+   3818  598    b        jdk.internal.org.objectweb.asm.ClassWriter::newUTF8 (70 bytes)
+   3851  599    b        jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes (151 bytes)
+   3933  600    b        java.lang.invoke.MemberName::getReferenceKind (12 bytes)
+   3938  601    b        java.lang.invoke.LambdaForm$NamedFunction::methodType (23 bytes)
+   3943  602    b        sun.invoke.util.Wrapper::basicTypeChar (5 bytes)
+   3947  603    b        java.util.Collections$UnmodifiableCollection$1::hasNext (10 bytes)
+   3951  604    b        java.util.AbstractList$Itr::hasNext (20 bytes)
+   3954  605    b        java.util.Arrays$ArrayList::size (6 bytes)
+   3954  606    b        sun.invoke.util.Wrapper::forBasicType (16 bytes)
+   3956  607    b        jdk.internal.org.objectweb.asm.ByteVector::put12 (64 bytes)
+   3960  608    b        jdk.internal.org.objectweb.asm.ByteVector::putShort (52 bytes)
+   3965  609    b        jdk.internal.org.objectweb.asm.Type::&lt;init&gt; (26 bytes)
+   3967  610    b        jdk.internal.org.objectweb.asm.Type::getType (269 bytes)
+   3988  611    b        java.lang.invoke.MethodType::form (5 bytes)
+<writer thread='9731'/>
+   3989  612     n       java.lang.invoke.MethodHandle::linkToStatic(LL)V (native)   (static)
+<writer thread='22275'/>
+   3990  613    b        java.lang.invoke.LambdaForm$BasicType::basicType (172 bytes)
+   3992  614    b        java.lang.invoke.LambdaForm::internArgument (84 bytes)
+<writer thread='9731'/>
+   3992  614             java.lang.invoke.LambdaForm::internArgument (84 bytes)   made not entrant
+<writer thread='22275'/>
+   3993  615    b        java.lang.invoke.LambdaForm$BasicType::basicTypeChar (5 bytes)
+   3993  616    b        java.lang.invoke.LambdaForm$BasicType::access$100 (5 bytes)
+   3994  617    b        java.lang.invoke.MethodType$ConcurrentWeakInternSet$WeakEntry::equals (49 bytes)
+   3999  618    b        java.lang.invoke.MethodType::equals (29 bytes)
+   4001  619    b        java.lang.invoke.MethodType::equals (31 bytes)
+   4003  620    b        sun.invoke.util.BytecodeDescriptor::unparseSig (75 bytes)
+   4010  621    b        jdk.internal.org.objectweb.asm.ByteVector::&lt;init&gt; (13 bytes)
+   4012  622    b        jdk.internal.org.objectweb.asm.Frame::execute (2252 bytes)
+   4062  623    b        java.lang.invoke.InvokerBytecodeGenerator::isStaticallyNameable (116 bytes)
+   4072  624    b        java.lang.invoke.LambdaForm$Name::index (5 bytes)
+   4072  625    b        jdk.internal.org.objectweb.asm.Frame::push (110 bytes)
+   4081  626    b        sun.invoke.util.BytecodeDescriptor::unparseMethod (68 bytes)
+   4103  627    b        java.util.Collections$UnmodifiableCollection$1::next (10 bytes)
+   4104  628   !b        java.util.AbstractList$Itr::next (45 bytes)
+   4107  629    b        java.util.AbstractList$Itr::checkForComodification (23 bytes)
+   4108  630    b        java.util.Arrays$ArrayList::get (7 bytes)
+   4109  631    b        jdk.internal.org.objectweb.asm.ClassWriter::newClassItem (70 bytes)
+   4117  632    b        jdk.internal.org.objectweb.asm.Type::getArgumentTypes (131 bytes)
+   4131  633    b        jdk.internal.org.objectweb.asm.ByteVector::putInt (74 bytes)
+   4134  634    b        jdk.internal.org.objectweb.asm.Item::isEqualTo (354 bytes)
+   4151  635    b        jdk.internal.org.objectweb.asm.ByteVector::putByteArray (49 bytes)
+<writer thread='9731'/>
+   4155  549   !         java.lang.invoke.MemberName::getMethodType (208 bytes)   made not entrant
+<writer thread='22275'/>
+   4155  636    b        java.lang.invoke.MethodType::appendParameterTypes (10 bytes)
+<writer thread='9731'/>
+   4157  637     n       java.lang.invoke.MethodHandle::linkToStatic(LL)J (native)   (static)
+<writer thread='22275'/>
+   4157  638    b        java.lang.invoke.LambdaForm::arguments (47 bytes)
+   4167  639    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+   4168  640    b        java.lang.invoke.LambdaForm$NamedFunction::returnType (11 bytes)
+   4171  641    b        java.lang.invoke.LambdaForm::shortenSignature (166 bytes)
+   4183  642    b        java.lang.invoke.LambdaForm::normalize (322 bytes)
+<writer thread='9731'/>
+   4206  639             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+<writer thread='22275'/>
+   4207  643    b        java.lang.invoke.InvokerBytecodeGenerator::&lt;init&gt; (91 bytes)
+   4270  644    b        java.lang.invoke.LambdaForm$Name::type (5 bytes)
+   4270  645    b        java.lang.invoke.LambdaForm$BasicType::basicTypeSlots (8 bytes)
+   4271  646    b        sun.invoke.util.Wrapper::stackSlots (9 bytes)
+   4272  647    b        jdk.internal.org.objectweb.asm.Item::&lt;init&gt; (5 bytes)
+   4274  648    b        jdk.internal.org.objectweb.asm.ClassWriter::newClass (9 bytes)
+   4275  649    b        java.util.Collections::unmodifiableList (27 bytes)
+   4281  650    b        java.util.Collections$UnmodifiableRandomAccessList::&lt;init&gt; (6 bytes)
+   4283  651    b        java.util.Collections$UnmodifiableList::&lt;init&gt; (11 bytes)
+   4285  652    b        java.util.Collections$UnmodifiableCollection::&lt;init&gt; (22 bytes)
+   4288  653    b        jdk.internal.org.objectweb.asm.ByteVector::enlarge (51 bytes)
+   4294  654    b        java.lang.invoke.InvokerBytecodeGenerator::isStaticallyInvocable (169 bytes)
+   4307  655    b        java.lang.invoke.InvokerBytecodeGenerator::emitPushArguments (24 bytes)
+   4314  656   !b        java.lang.invoke.MemberName::getMethodType (208 bytes)
+   4330  657    b        jdk.internal.org.objectweb.asm.ClassWriter::put122 (15 bytes)
+   4333  658    b        jdk.internal.org.objectweb.asm.ClassWriter::addType (39 bytes)
+   4336  659    b        jdk.internal.org.objectweb.asm.MethodWriter::visitVarInsn (292 bytes)
+   4353  660    b        jdk.internal.org.objectweb.asm.Frame::get (46 bytes)
+   4360  661    b        java.lang.invoke.InvokerBytecodeGenerator::emitImplicitConversion (159 bytes)
+   4370  662    b        java.lang.invoke.LambdaForm$BasicType::basicTypeClass (5 bytes)
+   4371  663    b        sun.invoke.util.VerifyType::isNullConversion (157 bytes)
+   4382  664    b        java.lang.invoke.MethodType::parameterList (17 bytes)
+   4392  665    b        java.util.Arrays::asList (9 bytes)
+   4399  666    b        java.util.Arrays$ArrayList::&lt;init&gt; (16 bytes)
+   4403  667    b        java.util.AbstractList$Itr::&lt;init&gt; (6 bytes)
+   4404  668    b        java.util.AbstractList$Itr::&lt;init&gt; (31 bytes)
+   4407  669    b        jdk.internal.org.objectweb.asm.Frame::type (416 bytes)
+   4422  670  s b        java.lang.StringBuffer::append (13 bytes)
+   4429  671    b        jdk.internal.org.objectweb.asm.MethodWriter::visitFrame (233 bytes)
+   4461  672    b        jdk.internal.org.objectweb.asm.AnnotationWriter::put (109 bytes)
+   4469   49             java.lang.String::replace (127 bytes)   made zombie
+   4469   48             sun.nio.cs.UTF_8$Decoder::decode (779 bytes)   made zombie
+   4469   51   !         java.util.concurrent.ConcurrentHashMap::putVal (362 bytes)   made zombie
+   4471   70             java.io.ObjectStreamField::getClassSignature (242 bytes)   made zombie
+   4471  106             java.lang.String::equals (81 bytes)   made zombie
+   4472  673   !b        java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)
+   4475  208             sun.net.www.ParseUtil::encodePath (336 bytes)   made zombie
+   4476  254             java.util.concurrent.ConcurrentHashMap::addCount (281 bytes)   made zombie
+   4477  674    b        java.lang.invoke.DirectMethodHandle::make (242 bytes)
+   4509  675    b        java.lang.invoke.MemberName::isField (7 bytes)
+   4514  676    b        java.lang.invoke.DirectMethodHandle::preparedLambdaForm (230 bytes)
+   4523  677    b        java.lang.invoke.MethodType::basicType (8 bytes)
+   4525  678    b        java.lang.invoke.MethodTypeForm::basicType (5 bytes)
+   4525  679    b        java.lang.invoke.DirectMethodHandle::shouldBeInitialized (123 bytes)
+<writer thread='9731'/>
+   4530  680     n       sun.misc.Unsafe::shouldBeInitialized (native)   
+<writer thread='22275'/>
+   4530  681    b        java.lang.invoke.DirectMethodHandle::preparedLambdaForm (31 bytes)
+   4534  682    b        java.lang.invoke.MethodTypeForm::cachedLambdaForm (44 bytes)
+<writer thread='9731'/>
+   4540  683     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)L (native)   (static)
+<writer thread='22275'/>
+   4543  684    b        java.lang.invoke.LambdaForm::&lt;init&gt; (12 bytes)
+   4544  685    b        java.lang.invoke.LambdaForm::&lt;init&gt; (119 bytes)
+<writer thread='9731'/>
+   4556  642             java.lang.invoke.LambdaForm::normalize (322 bytes)   made not entrant
+<writer thread='22275'/>
+   4556  686    b        java.lang.invoke.LambdaForm::basicTypeSignature (65 bytes)
+   4572  687    b        java.lang.invoke.LambdaForm::signatureType (50 bytes)
+<writer thread='9731'/>
+   4585  673   !         java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)   made not entrant
+<writer thread='22275'/>
+   4587  688    b        java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)
+   4639  689    b        java.lang.invoke.MethodType::toMethodDescriptorString (21 bytes)
+   4644  690    b        jdk.internal.org.objectweb.asm.MethodWriter::visitAnnotation (82 bytes)
+   4659  691    b        jdk.internal.org.objectweb.asm.AnnotationWriter::&lt;init&gt; (34 bytes)
+   4661  692    b        jdk.internal.org.objectweb.asm.AnnotationVisitor::&lt;init&gt; (7 bytes)
+   4664  693    b        jdk.internal.org.objectweb.asm.AnnotationVisitor::&lt;init&gt; (35 bytes)
+   4668  694    b        java.lang.invoke.InvokerBytecodeGenerator::getInternalName (75 bytes)
+   4671  695    b        java.lang.invoke.InvokerBytecodeGenerator::emitPushArgument (120 bytes)
+   4679  696    b        java.lang.invoke.InvokerBytecodeGenerator::emitLoadInsn (21 bytes)
+   4683  697    b        java.lang.invoke.InvokerBytecodeGenerator::loadInsnOpcode (86 bytes)
+   4688  698    b        java.lang.invoke.LambdaForm$Name::useCount (42 bytes)
+   4701  699    b        java.lang.invoke.MemberName::isMethod (7 bytes)
+   4704  700    b        jdk.internal.org.objectweb.asm.Frame::pop (45 bytes)
+   4706  701    b        jdk.internal.org.objectweb.asm.MethodWriter::visitMaxs (1159 bytes)
+   4741  702    b        jdk.internal.org.objectweb.asm.Frame::initInputFrame (158 bytes)
+   4765  703    b        jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (1289 bytes)
+   4829  704    b        jdk.internal.org.objectweb.asm.AnnotationWriter::getSize (28 bytes)
+   4831  705    b        jdk.internal.org.objectweb.asm.AnnotationWriter::visitEnd (43 bytes)
+   4836  706    b        java.lang.invoke.LambdaForm$NamedFunction::resolve (12 bytes)
+   4839  707    b        java.lang.invoke.DirectMethodHandle::make (21 bytes)
+   4841  708    b        java.lang.invoke.DirectMethodHandle::make (20 bytes)
+   4843  709    b        java.lang.invoke.LambdaForm::uncustomize (58 bytes)
+   4843  710    b        java.lang.invoke.LambdaForm::prepare (43 bytes)
+<writer thread='9731'/>
+   4846  711     n       java.lang.invoke.MethodHandle::linkToVirtual(LLL)L (native)   (static)
+<writer thread='22275'/>
+   4846  712    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+<writer thread='9731'/>
+   4848  712             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+<writer thread='22275'/>
+   4849  713    b        java.lang.invoke.LambdaForm::basicTypeSignature (101 bytes)
+   4875  714    b        java.util.Collections$UnmodifiableCollection::iterator (9 bytes)
+   4884  715    b        java.util.Collections$UnmodifiableCollection$1::&lt;init&gt; (26 bytes)
+   4889  716    b        java.util.AbstractList::iterator (10 bytes)
+   4892  717    b        java.lang.invoke.LambdaForm$BasicType::basicTypeChar (8 bytes)
+   4894  718    b        java.lang.invoke.LambdaForm::internArgument (84 bytes)
+   4895  719    b        java.lang.invoke.LambdaForm::arity (5 bytes)
+   4897  720    b        java.lang.invoke.LambdaForm::parameterType (9 bytes)
+   4898  721    b        java.lang.invoke.LambdaForm::parameter (52 bytes)
+<writer thread='9731'/>
+   4899  721             java.lang.invoke.LambdaForm::parameter (52 bytes)   made not entrant
+<writer thread='22275'/>
+   4900  722    b        java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+   4902  723    b        java.lang.Class::isLocalOrAnonymousClass (13 bytes)
+   4904  724    b        jdk.internal.org.objectweb.asm.Frame::set (65 bytes)
+   4910  725    b        java.lang.Class::isAnonymousClass (10 bytes)
+   4911  726    b        java.lang.Class::isLocalClass (20 bytes)
+   4913  727    b        java.lang.invoke.MethodType::parameterArray (11 bytes)
+   4918  728    b        java.lang.invoke.MemberName::isPrivate (8 bytes)
+   4919  729    b        java.lang.reflect.Modifier::isPrivate (12 bytes)
+   4919  730    b        java.lang.invoke.InvokerBytecodeGenerator::emitStaticInvoke (246 bytes)
+   4931  731    b        java.lang.invoke.InvokerBytecodeGenerator::emitPushArguments (7 bytes)
+   4932  732    b        jdk.internal.org.objectweb.asm.Frame::pop (43 bytes)
+   4934  733    b        jdk.internal.org.objectweb.asm.ClassWriter::addType (103 bytes)
+   4946  734    b        java.lang.invoke.InvokerBytecodeGenerator::refKindOpcode (112 bytes)
+   4948  735    b        jdk.internal.org.objectweb.asm.MethodWriter::visitMethodInsn (220 bytes)
+   4955  736    b        jdk.internal.org.objectweb.asm.ClassWriter::newMethodItem (91 bytes)
+   4964  737    b        jdk.internal.org.objectweb.asm.ClassWriter::newNameType (10 bytes)
+   4965  738    b        jdk.internal.org.objectweb.asm.ClassWriter::newNameTypeItem (71 bytes)
+   4973  739    b        jdk.internal.org.objectweb.asm.Frame::pop (53 bytes)
+   4975  740    b        jdk.internal.org.objectweb.asm.Frame::push (34 bytes)
+   4977  741    b        java.lang.invoke.LambdaForm::returnType (26 bytes)
+   4978  742    b        jdk.internal.org.objectweb.asm.Label::&lt;init&gt; (5 bytes)
+   4978  743    b        jdk.internal.org.objectweb.asm.Frame::&lt;init&gt; (5 bytes)
+   4980  744    b        jdk.internal.org.objectweb.asm.Label::resolve (214 bytes)
+   5008  745    b        jdk.internal.org.objectweb.asm.Type::getDescriptor (87 bytes)
+   5012  746  s b        java.lang.StringBuffer::append (15 bytes)
+   5015  747    b        java.lang.AbstractStringBuilder::append (40 bytes)
+<writer thread='9731'/>
+   5025  713             java.lang.invoke.LambdaForm::basicTypeSignature (101 bytes)   made not entrant
+   5026  641             java.lang.invoke.LambdaForm::shortenSignature (166 bytes)   made not entrant
+<writer thread='22275'/>
+   5026  748    b        java.lang.invoke.LambdaForm::normalize (322 bytes)
+<writer thread='9731'/>
+   5048  718             java.lang.invoke.LambdaForm::internArgument (84 bytes)   made not entrant
+<writer thread='22275'/>
+   5049  749    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+<writer thread='9731'/>
+   5050  722             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made not entrant
+<writer thread='22275'/>
+   5054  750    b        java.lang.invoke.LambdaForm::useCount (99 bytes)
+<writer thread='9731'/>
+   5063  710             java.lang.invoke.LambdaForm::prepare (43 bytes)   made not entrant
+   5065  751     n       java.lang.Class::isAssignableFrom (native)   
+   5066  749             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+<writer thread='22275'/>
+   5067  752    b        java.lang.invoke.DirectMethodHandle::maybeCompile (18 bytes)
+   5069  753   !b        java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)
+<writer thread='9731'/>
+   5072  482             sun.invoke.util.Wrapper::hashWrap (62 bytes)   made not entrant
+   5076  674             java.lang.invoke.DirectMethodHandle::make (242 bytes)   made not entrant
+<writer thread='22275'/>
+   5076  754    b        java.lang.invoke.DirectMethodHandle::&lt;init&gt; (132 bytes)
+   5085  755    b        java.lang.invoke.MethodHandle::&lt;init&gt; (35 bytes)
+   5089  756    b        java.lang.invoke.LambdaForm::parameter (52 bytes)
+<writer thread='9731'/>
+   5090  753   !         java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)   made not entrant
+   5091  757     n       sun.misc.Unsafe::ensureClassInitialized (native)   
+   5091  756             java.lang.invoke.LambdaForm::parameter (52 bytes)   made not entrant
+<writer thread='22275'/>
+   5091  758    b        java.lang.String::contains (20 bytes)
+   5093  759    b        java.lang.String::toString (2 bytes)
+<writer thread='9731'/>
+   5094  695             java.lang.invoke.InvokerBytecodeGenerator::emitPushArgument (120 bytes)   made not entrant
+<writer thread='22275'/>
+   5094  760    b        jdk.internal.org.objectweb.asm.MethodWriter::visitInsn (106 bytes)
+   5100  761    b        java.lang.invoke.InvokerBytecodeGenerator::cpPatches (128 bytes)
+   5128  762    b        java.util.HashMap$HashIterator::nextNode (100 bytes)
+   5135  763    b        java.util.HashMap$HashIterator::hasNext (13 bytes)
+   5137  764    b        java.lang.invoke.LambdaForm::methodType (8 bytes)
+   5138  765    b        java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+   5139  766    b        java.lang.invoke.LambdaForm::signatureReturn (14 bytes)
+<writer thread='9731'/>
+   5141  765             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made not entrant
+<writer thread='22275'/>
+   5141  767    b        java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCode (21 bytes)
+   5146  768    b        java.lang.invoke.InvokerBytecodeGenerator::classFilePrologue (74 bytes)
+   5212  769    b        jdk.internal.org.objectweb.asm.ClassWriter::&lt;init&gt; (122 bytes)
+   5227  770    b        jdk.internal.org.objectweb.asm.ClassVisitor::&lt;init&gt; (7 bytes)
+   5228  771    b        jdk.internal.org.objectweb.asm.ClassVisitor::&lt;init&gt; (35 bytes)
+   5230  772    b        jdk.internal.org.objectweb.asm.ClassWriter::visit (121 bytes)
+   5239  773    b        jdk.internal.org.objectweb.asm.ClassWriter::visitSource (36 bytes)
+   5242  774    b        jdk.internal.org.objectweb.asm.ClassWriter::visitMethod (24 bytes)
+   5293  775    b        jdk.internal.org.objectweb.asm.MethodWriter::&lt;init&gt; (268 bytes)
+   5323  776    b        jdk.internal.org.objectweb.asm.MethodWriter::visitLabel (281 bytes)
+   5334  777    b        java.lang.invoke.InvokerBytecodeGenerator::emitReturn (107 bytes)
+   5340  778    b        jdk.internal.org.objectweb.asm.MethodWriter::noSuccessor (87 bytes)
+   5347  779    b        java.lang.invoke.InvokerBytecodeGenerator::classFileEpilogue (17 bytes)
+   5349  780    b        jdk.internal.org.objectweb.asm.MethodWriter::startFrame (55 bytes)
+   5352  781    b        jdk.internal.org.objectweb.asm.MethodWriter::endFrame (53 bytes)
+   5355  782    b        jdk.internal.org.objectweb.asm.MethodWriter::visitEnd (1 bytes)
+   5355  783    b        java.lang.invoke.InvokerBytecodeGenerator::bogusMethod (101 bytes)
+   5356  784    b        jdk.internal.org.objectweb.asm.MethodWriter::getSize (838 bytes)
+   5388  785    b        jdk.internal.org.objectweb.asm.MethodWriter::put (1602 bytes)
+   5459  786    b        java.lang.invoke.InvokerBytecodeGenerator::maybeDump (20 bytes)
+   5460  787    b        java.lang.invoke.InvokerBytecodeGenerator::loadMethod (23 bytes)
+   5462  788    b        java.lang.invoke.InvokerBytecodeGenerator::loadAndInitializeInvokerClass (21 bytes)
+<writer thread='9731'/>
+   5463  789     n       sun.misc.Unsafe::defineAnonymousClass (native)   
+<writer thread='22275'/>
+   5464  790   !b        java.lang.invoke.InvokerBytecodeGenerator::resolveInvokerMember (41 bytes)
+   5475  791    b        java.lang.invoke.InvokerBytecodeGenerator::emitReturnInsn (126 bytes)
+   5494  792    b        java.lang.invoke.InvokerBytecodeGenerator::emitReferenceCast (184 bytes)
+   5504  793    b        jdk.internal.org.objectweb.asm.MethodWriter::visitTypeInsn (110 bytes)
+   5508  794    b        java.lang.invoke.LambdaForm$BasicType::basicType (10 bytes)
+   5511  795    b        java.lang.invoke.LambdaForm::prepare (43 bytes)
+   5512  796    b        java.lang.invoke.LambdaForm::parameter (52 bytes)
+   5513  797    b        java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+<writer thread='9731'/>
+   5516  797             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made not entrant
+<writer thread='22275'/>
+   5516  798    b        jdk.internal.org.objectweb.asm.ClassWriter::newConstItem (308 bytes)
+   5532  799    b        jdk.internal.org.objectweb.asm.ClassWriter::newString (70 bytes)
+   5539  800    b        java.lang.invoke.InvokerBytecodeGenerator::emitPushArgument (120 bytes)
+<writer thread='9731'/>
+   5550  795             java.lang.invoke.LambdaForm::prepare (43 bytes)   made not entrant
+<writer thread='22275'/>
+   5550  801   !b        java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)
+<writer thread='9731'/>
+   5552  796             java.lang.invoke.LambdaForm::parameter (52 bytes)   made not entrant
+<writer thread='22275'/>
+   5554  802    b        java.lang.invoke.SimpleMethodHandle::make (10 bytes)
+   5558  803    b        java.lang.invoke.SimpleMethodHandle::&lt;init&gt; (7 bytes)
+   5560  804    b        java.lang.invoke.BoundMethodHandle::&lt;init&gt; (32 bytes)
+<writer thread='9731'/>
+   5563  801   !         java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)   made not entrant
+<writer thread='22275'/>
+   5565  805    b        jdk.internal.org.objectweb.asm.ByteVector::put11 (52 bytes)
+   5571  806    b        java.lang.invoke.MemberName::&lt;init&gt; (5 bytes)
+   5572  807    b        java.lang.invoke.MemberName$Factory::newMemberBuffer (30 bytes)
+   5583  808    b        java.util.SubList::access$000 (5 bytes)
+   5584  809    b        java.util.SubList$1::hasNext (20 bytes)
+   5586  810    b        java.util.SubList$1::nextIndex (18 bytes)
+   5587  811    b        java.util.AbstractList$ListItr::nextIndex (5 bytes)
+   5587  812    b        java.util.SubList::access$200 (5 bytes)
+   5588  813    b        java.util.SubList$1::next (25 bytes)
+   5590  814    b        java.util.ArrayList::access$000 (5 bytes)
+   5591  815    b        java.util.ArrayList$Itr::hasNext (20 bytes)
+   5591  816    b        java.util.ArrayList$Itr::next (66 bytes)
+   5593  817    b        java.util.ArrayList$Itr::checkForComodification (23 bytes)
+   5594  818    b        java.lang.invoke.MemberName::isPackage (15 bytes)
+   5596  819    b        java.util.ArrayList::&lt;init&gt; (12 bytes)
+   5597  820    b        java.util.ArrayList::grow (45 bytes)
+   5599  821   !b        sun.invoke.util.BytecodeDescriptor::parseSig (141 bytes)
+   5608  822    b        sun.invoke.util.BytecodeDescriptor::parseMethod (183 bytes)
+   5627  823  s!b        java.lang.ClassLoader::initSystemClassLoader (109 bytes)
+   5634  824    b        sun.invoke.util.Wrapper::forBasicType (90 bytes)
+   5639  825    b        java.lang.invoke.MethodType::fromMethodDescriptorString (97 bytes)
+   5649  826    b        sun.invoke.util.BytecodeDescriptor::parseMethod (11 bytes)
+   5651  827    b        java.util.ArrayList::remove (69 bytes)
+   5656  828    b        java.lang.invoke.MethodType::listToArray (22 bytes)
+   5660  829    b        java.util.ArrayList::toArray (60 bytes)
+   5670  830    b        java.lang.invoke.MemberName::expandFromVM (21 bytes)
+<writer thread='9731'/>
+   5671  831     n       java.lang.invoke.MethodHandleNatives::expand (native)   (static)
+<writer thread='22275'/>
+   5671  832    b        java.lang.invoke.MemberName::getClassLoader (8 bytes)
+   5673  833    b        java.lang.String::&lt;init&gt; (15 bytes)
+   5674  834    b        java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+<writer thread='9731'/>
+   5675  834             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made not entrant
+<writer thread='22275'/>
+   5677  835    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+<writer thread='9731'/>
+   5678  835             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+<writer thread='22275'/>
+   5679  836    b        java.util.Collections::addAll (43 bytes)
+   5682  837    b        java.util.AbstractCollection::toArray (70 bytes)
+   5694  838    b        java.util.Arrays::fill (21 bytes)
+   5711  839    b        java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+<writer thread='9731'/>
+   5713  839             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made not entrant
+<writer thread='22275'/>
+   5713  840    b        java.lang.invoke.MethodType::genericMethodType (95 bytes)
+<writer thread='9731'/>
+   5721  838             java.util.Arrays::fill (21 bytes)   made not entrant
+<writer thread='22275'/>
+   5722  841    b        java.lang.invoke.LambdaForm::prepare (43 bytes)
+   5723  842    b        java.util.Arrays::fill (21 bytes)
+   5737  843    b        java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+<writer thread='9731'/>
+   5738  843             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made not entrant
+<writer thread='22275'/>
+   5738  844   !b        java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)
+<writer thread='9731'/>
+   5739  841             java.lang.invoke.LambdaForm::prepare (43 bytes)   made not entrant
+<writer thread='22275'/>
+   5739  845    b        java.lang.invoke.DirectMethodHandle::make (242 bytes)
+   5754  846    b        java.lang.invoke.MethodType::genericMethodType (6 bytes)
+   5755  847  s b        java.lang.invoke.MethodTypeForm::setCachedMethodHandle (44 bytes)
+   5767  848    b        java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+<writer thread='9731'/>
+   5768  848             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made not entrant
+<writer thread='22275'/>
+   5768  849    b        java.lang.invoke.LambdaForm::basicTypeSignature (101 bytes)
+   5792  850    b        java.lang.String::valueOf (9 bytes)
+   5794  851    b        java.lang.invoke.LambdaForm::shortenSignature (166 bytes)
+   5806  852   !b        java.lang.invoke.LambdaForm::fixDebugName (236 bytes)
+<writer thread='9731'/>
+   5807  748             java.lang.invoke.LambdaForm::normalize (322 bytes)   made not entrant
+<writer thread='22275'/>
+   5807  853    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+   5809  854    b        java.lang.invoke.LambdaForm::internArgument (84 bytes)
+   5810  855    b        java.lang.invoke.LambdaForm::parameter (52 bytes)
+<writer thread='9731'/>
+   5812  844   !         java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)   made not entrant
+<writer thread='22275'/>
+   5814  856    b        sun.invoke.util.VerifyType::isNullType (18 bytes)
+<writer thread='9731'/>
+   5815  750             java.lang.invoke.LambdaForm::useCount (99 bytes)   made not entrant
+<writer thread='22275'/>
+   5817  857  s b        java.lang.invoke.MethodTypeForm::setCachedLambdaForm (44 bytes)
+   5827  858    b        java.util.concurrent.ConcurrentHashMap::put (8 bytes)
+   5830  859    b        java.util.Arrays::hashCode (56 bytes)
+   5834  860    b        java.lang.invoke.MethodHandles$Lookup::lookupClassOrNull (17 bytes)
+<writer thread='9731'/>
+   5835  491             sun.invoke.util.VerifyAccess::isTypeVisible (118 bytes)   made not entrant
+<writer thread='22275'/>
+   5835  861    b        java.lang.invoke.MethodHandleNatives::refKindIsField (32 bytes)
+<writer thread='9731'/>
+   5835   20             java.lang.Class::getClassLoader (28 bytes)   made not entrant
+   5836  862     n       java.lang.invoke.MethodHandle::linkToStatic(IL)L (native)   (static)
+<writer thread='22275'/>
+   5838  863    b        java.lang.invoke.LambdaForm::normalize (322 bytes)
+   5853  864    b        java.lang.invoke.InvokerBytecodeGenerator::emitStoreInsn (21 bytes)
+   5855  865    b        java.lang.invoke.InvokerBytecodeGenerator::storeInsnOpcode (86 bytes)
+   5857  866    b        java.lang.Class::getClassLoader (28 bytes)
+   5859  867    b        java.lang.invoke.LambdaForm::useCount (99 bytes)
+<writer thread='9731'/>
+   5865  698             java.lang.invoke.LambdaForm$Name::useCount (42 bytes)   made not entrant
+   5869  868     n       java.lang.invoke.MethodHandle::linkToVirtual(LL)L (native)   (static)
+<writer thread='22275'/>
+   5869  869    b        sun.invoke.util.VerifyAccess::isTypeVisible (118 bytes)
+   5879  870    b        java.lang.invoke.MethodType::invokerType (15 bytes)
+   5883  871    b        java.lang.invoke.LambdaForm$Name::&lt;init&gt; (14 bytes)
+   5887  872    b        java.lang.invoke.LambdaForm$Name::useCount (42 bytes)
+   5891  873    b        java.lang.invoke.LambdaForm::prepare (43 bytes)
+   5898  874   !b        java.lang.invoke.DirectMethodHandle::makePreparedLambdaForm (726 bytes)
+<writer thread='9731'/>
+   6050  875     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)V (native)   (static)
+<writer thread='22275'/>
+   6051  876    b        java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+   6053  877    b        java.lang.invoke.InvokerBytecodeGenerator::assertStaticType (58 bytes)
+   6058  878    b        java.lang.invoke.LambdaForm::lastUseIndex (76 bytes)
+   6062  879    b        java.lang.invoke.LambdaForm$Name::lastUseIndex (36 bytes)
+   6069  880   !b        java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)
+<writer thread='9731'/>
+   6073  881     n       java.lang.invoke.MethodHandle::invokeBasic(L)L (native)   
+   6074  882     n       java.lang.invoke.MethodHandle::linkToSpecial(LLL)L (native)   (static)
+<writer thread='22275'/>
+   6078  883    b        java.lang.invoke.MethodType::methodType (9 bytes)
+   6081  884    b        java.lang.invoke.MethodHandle::type (5 bytes)
+   6083  885    b        java.lang.invoke.MethodHandles::access$000 (4 bytes)
+<writer thread='9731'/>
+   6085  886     n       java.lang.invoke.MethodHandle::linkToStatic(L)L (native)   (static)
+<dependency_failed type='unique_concrete_method' ctxk='java/lang/invoke/MethodHandle' x='java/lang/invoke/MethodHandle intrinsicName ()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;' witness='java/lang/invoke/MethodHandleImpl$IntrinsicMethodHandle' stamp='6.089'/>
+<writer thread='16899'/>
+   6089  688             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)   made not entrant
+<writer thread='22275'/>
+   6089  887    b        java.lang.invoke.MethodHandles$Lookup::checkSymbolicClass (42 bytes)
+<writer thread='9731'/>
+   6093  888     n       java.lang.invoke.MethodHandle::invokeBasic()L (native)   
+   6094  889     n       java.lang.invoke.MethodHandle::linkToSpecial(LL)L (native)   (static)
+<writer thread='22275'/>
+   6095   54             java.util.concurrent.ConcurrentHashMap::tabAt (21 bytes)   made zombie
+   6097  154             java.util.HashMap::getNode (148 bytes)   made zombie
+   6098  890    b        java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)
+   6135  300   !         sun.misc.URLClassPath$JarLoader::getResource (85 bytes)   made zombie
+   6135  263   !         java.util.concurrent.ConcurrentHashMap::putVal (362 bytes)   made zombie
+   6135  276             sun.misc.URLClassPath::getResource (83 bytes)   made zombie
+   6135  347             sun.misc.Resource::&lt;init&gt; (5 bytes)   made zombie
+   6135  351             sun.misc.Resource::getManifest (2 bytes)   made zombie
+   6135  304   !         sun.misc.Resource::getBytes (242 bytes)   made zombie
+   6135  315   !         java.net.URLClassLoader$1::run (81 bytes)   made zombie
+   6135  348             java.net.URLClassLoader::access$100 (7 bytes)   made zombie
+   6135  326  s          sun.misc.Resource::cachedInputStream (20 bytes)   made zombie
+   6136  333             java.util.HashMap::getNode (148 bytes)   made zombie
+   6136  354             sun.misc.Resource::getByteBuffer (24 bytes)   made zombie
+   6136  349             java.net.URLClassLoader::defineClass (142 bytes)   made zombie
+   6136  371             sun.misc.Resource::getCodeSigners (2 bytes)   made zombie
+   6136  346             sun.misc.URLClassPath$FileLoader$1::&lt;init&gt; (26 bytes)   made zombie
+   6136  345   !         sun.misc.URLClassPath$FileLoader::getResource (164 bytes)   made zombie
+   6136  375   !         java.security.SecureClassLoader::getProtectionDomain (114 bytes)   made zombie
+   6136  378   !         java.lang.ClassLoader::checkCerts (195 bytes)   made zombie
+   6136  891    b        java.lang.invoke.InvokerBytecodeGenerator::emitStoreResult (27 bytes)
+   6139  457             java.util.concurrent.ConcurrentHashMap::get (162 bytes)   made zombie
+   6139  514             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   6139  513             java.lang.invoke.LambdaForm::normalize (322 bytes)   made zombie
+   6139  535             java.lang.invoke.LambdaForm::internArgument (84 bytes)   made zombie
+   6140  533             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   6140  542             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   6140  547   !         java.lang.invoke.LambdaForm::fixDebugName (236 bytes)   made zombie
+   6140  534             java.lang.invoke.LambdaForm::normalize (322 bytes)   made zombie
+   6141  892    b        java.lang.invoke.LambdaForm$NamedFunction::intrinsicName (21 bytes)
+   6144  893    b        java.lang.invoke.LambdaForm$NamedFunction::member (26 bytes)
+   6156  894    b        java.lang.invoke.MethodHandleNatives::refKindHasReceiver (33 bytes)
+<writer thread='9731'/>
+   6158  895     n       java.lang.invoke.MethodHandle::invokeBasic(LL)L (native)   
+   6158  896     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)L (native)   (static)
+<writer thread='22275'/>
+   6159  897    b        java.lang.StringBuilder::append (8 bytes)
+   6159  898    b        java.lang.AbstractStringBuilder::append (62 bytes)
+   6166  899    b        java.lang.Integer::stringSize (21 bytes)
+   6169  900    b        java.lang.Integer::getChars (131 bytes)
+   6181  901    b        java.lang.invoke.MethodType::changeReturnType (20 bytes)
+   6182  902    b        java.lang.invoke.MethodHandles$Lookup::resolveOrFail (48 bytes)
+   6189  903    b        java.lang.invoke.MethodHandles$Lookup::checkMethodName (43 bytes)
+   6190  904    b        java.lang.invoke.MemberName::isCallerSensitive (7 bytes)
+   6191  905    b        java.lang.invoke.MethodHandles$Lookup::checkAccess (250 bytes)
+<writer thread='9731'/>
+   6201  906     n       java.lang.invoke.MethodHandle::invokeBasic(LLL)L (native)   
+   6201  907     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6201  908    b        java.util.concurrent.ConcurrentHashMap$ForwardingNode::&lt;init&gt; (14 bytes)
+   6203  909    b        java.util.concurrent.ConcurrentHashMap::sumCount (48 bytes)
+   6210  910    b        java.lang.invoke.MethodHandleNatives::isCallerSensitive (29 bytes)
+   6212  911    b        java.lang.invoke.MethodHandleNatives::canBeCalledVirtual (132 bytes)
+   6216  912    b        java.lang.invoke.MethodHandles$Lookup::getDirectMethodCommon (271 bytes)
+   6237  913    b        java.lang.invoke.MethodHandles$Lookup::checkMethod (83 bytes)
+   6242  914    b        java.lang.invoke.MethodHandles$Lookup::checkSecurityManager (87 bytes)
+<writer thread='9731'/>
+   6245  915     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6246  916    b        java.lang.invoke.MethodHandles$Lookup::maybeBindCaller (44 bytes)
+   6249  917    b        java.lang.invoke.MethodHandle::setVarargs (38 bytes)
+   6252  918    b        java.lang.invoke.MemberName::isVarargs (23 bytes)
+<writer thread='9731'/>
+   6253  919     n       java.lang.invoke.MethodHandle::invokeBasic(LLLL)L (native)   
+   6253  920     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLL)L (native)   (static)
+   6255  921     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6255  922    b        java.lang.invoke.MethodHandle::intrinsicName (4 bytes)
+<writer thread='9731'/>
+   6256  923     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLL)L (native)   
+   6256  924     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6257  925    b        java.lang.invoke.MethodHandles$Lookup::findBoundCallerClass (36 bytes)
+   6259  926    b        java.lang.invoke.MethodHandles$Lookup::getDirectMethod (18 bytes)
+<writer thread='9731'/>
+   6261  927     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLL)L (native)   
+   6261  928     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6261  929    b        java.lang.invoke.DirectMethodHandle::internalMemberName (5 bytes)
+   6263  930    b        java.lang.invoke.MethodHandles$Lookup::findStatic (27 bytes)
+<writer thread='9731'/>
+   6265  931     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6265  932    b        java.lang.StringBuilder::append (10 bytes)
+   6266  933    b        java.lang.AbstractStringBuilder::append (144 bytes)
+   6271  934    b        java.lang.invoke.DelegatingMethodHandle::makeReinvokerForm (58 bytes)
+   6272  935    b        java.lang.invoke.DelegatingMethodHandle::makeReinvokerForm (338 bytes)
+<writer thread='9731'/>
+   6367  936     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLL)L (native)   
+   6368  937     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLL)L (native)   (static)
+   6370  938     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6370  939    b        java.lang.invoke.DelegatingMethodHandle::&lt;init&gt; (10 bytes)
+   6374  940    b        java.lang.invoke.DelegatingMethodHandle::chooseDelegatingForm (24 bytes)
+   6377  941    b        java.lang.invoke.Invokers::basicInvoker (103 bytes)
+   6386  942    b        java.lang.invoke.Invokers::cachedInvoker (7 bytes)
+<writer thread='9731'/>
+   6387  943     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLL)L (native)   
+   6387  944     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6388  945   !b        java.lang.invoke.MethodHandleImpl::findCollector (31 bytes)
+<writer thread='9731'/>
+   6393  946     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6393  947    b        java.lang.invoke.MethodHandleImpl::makeIntrinsic (20 bytes)
+   6402  948    b        java.lang.invoke.MethodHandleImpl$IntrinsicMethodHandle::&lt;init&gt; (20 bytes)
+   6409  949    b        java.lang.invoke.MethodTypeForm::cachedMethodHandle (44 bytes)
+   6411  950   !b        java.lang.invoke.Invokers::invokeBasicMethod (60 bytes)
+<writer thread='9731'/>
+   6413  951     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLL)L (native)   
+   6413  952     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLL)L (native)   (static)
+   6413  853             java.lang.invoke.LambdaForm::argument (27 bytes)   made not entrant
+<writer thread='22275'/>
+   6414  953    b        java.lang.invoke.LambdaForm::argument (27 bytes)
+   6418  954  s b        java.lang.invoke.Invokers::setCachedInvoker (22 bytes)
+<writer thread='9731'/>
+   6423  842             java.util.Arrays::fill (21 bytes)   made not entrant
+   6424  955     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLL)L (native)   (static)
+   6426  956     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLLL)L (native)   
+   6426  957     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6427  958    b        java.util.Arrays::fill (21 bytes)
+   6441  959    b        java.lang.invoke.MemberName::getType (19 bytes)
+<writer thread='9731'/>
+   6443  474             java.lang.Class::getSimpleName (120 bytes)   made not entrant
+   6443  523             java.lang.invoke.MemberName$Factory::resolveOrFail (52 bytes)   made not entrant
+   6444  195             java.util.ArrayList::add (29 bytes)   made not entrant
+<writer thread='22275'/>
+   6446  960    b        java.lang.invoke.MemberName$Factory::resolveOrFail (52 bytes)
+   6449  961    b        java.util.ArrayList::add (29 bytes)
+<writer thread='9731'/>
+   6453  962     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLL)L (native)   (static)
+   6456  963     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLLL)L (native)   (static)
+<writer thread='22275'/>
+   6457  964    b        java.lang.invoke.MethodType::toString (81 bytes)
+   6465  965    b        java.lang.Class::getSimpleName (120 bytes)
+<writer thread='9731'/>
+   6479  966     n       java.lang.invoke.MethodHandle::linkToStatic(LIL)V (native)   (static)
+   6481  967     n       java.lang.invoke.MethodHandle::linkToStatic(ILL)I (native)   (static)
+<writer thread='22275'/>
+   6485  968    b        java.lang.invoke.LambdaFormEditor$Transform$Kind::&lt;init&gt; (7 bytes)
+   6488  969    b        java.lang.invoke.LambdaForm$Name::&lt;init&gt; (52 bytes)
+   6498  970    b        java.lang.invoke.LambdaForm$NamedFunction::&lt;init&gt; (95 bytes)
+   6505  971    b        java.lang.invoke.MethodType::invokers (27 bytes)
+   6510  972    b        java.lang.ClassLoader::getClassLoader (11 bytes)
+   6511  973   !b        java.lang.invoke.MemberName::getFieldType (177 bytes)
+<writer thread='9731'/>
+   6516  892             java.lang.invoke.LambdaForm$NamedFunction::intrinsicName (21 bytes)   made not entrant
+   6517  974     n       java.lang.invoke.MethodHandle::linkToStatic(ILLL)L (native)   (static)
+   6518  975     n       java.lang.invoke.MethodHandle::invokeBasic(ILL)L (native)   
+   6518  976     n       java.lang.invoke.MethodHandle::linkToSpecial(LILLL)L (native)   (static)
+<writer thread='22275'/>
+   6519  977    b        java.lang.invoke.LambdaForm$Name::replaceNames (174 bytes)
+   6547  978    b        java.util.Arrays::fill (28 bytes)
+<writer thread='9731'/>
+   6561  890             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)   made not entrant
+<writer thread='22275'/>
+   6561  979    b        java.util.HashMap::containsKey (18 bytes)
+   6564  980    b        java.lang.Class::checkPackageAccess (94 bytes)
+   6566  981    b        java.lang.invoke.MemberName::isGetter (8 bytes)
+   6567  982    b        java.lang.invoke.MethodHandleNatives::refKindIsGetter (32 bytes)
+   6570  983    b        java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)
+   6611  984    b        java.lang.invoke.BoundMethodHandle$Factory::makeSignature (75 bytes)
+   6625  985    b        java.lang.invoke.BoundMethodHandle$Factory::typeSig (16 bytes)
+   6626  986    b        jdk.internal.org.objectweb.asm.MethodWriter::visitFieldInsn (248 bytes)
+   6632  987    b        jdk.internal.org.objectweb.asm.ClassWriter::newFieldItem (77 bytes)
+   6642  988    b        java.lang.invoke.BoundMethodHandle$Factory::makeFieldName (54 bytes)
+   6650  989    b        java.lang.invoke.BoundMethodHandle$Factory::emitPushFields (49 bytes)
+   6656  990    b        java.lang.String::valueOf (18 bytes)
+   6660  991    b        jdk.internal.org.objectweb.asm.MethodWriter::visitCode (1 bytes)
+<writer thread='9731'/>
+   6661  703             jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (1289 bytes)   made not entrant
+<writer thread='22275'/>
+   6667  992    b        java.lang.reflect.Modifier::isProtected (12 bytes)
+   6668  993    b        sun.reflect.Reflection::quickCheckMemberAccess (10 bytes)
+<writer thread='9731'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/util/HashMap$HashIterator' x='java/util/HashMap$ValueIterator' witness='java/util/HashMap$EntryIterator' stamp='6.673'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/util/HashMap$HashIterator' x='java/util/HashMap$ValueIterator' witness='java/util/HashMap$EntryIterator' stamp='6.673'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/util/HashMap$HashIterator' x='java/util/HashMap$ValueIterator' witness='java/util/HashMap$EntryIterator' stamp='6.673'/>
+<writer thread='16899'/>
+   6673  762             java.util.HashMap$HashIterator::nextNode (100 bytes)   made not entrant
+   6673  763             java.util.HashMap$HashIterator::hasNext (13 bytes)   made not entrant
+   6673  761             java.lang.invoke.InvokerBytecodeGenerator::cpPatches (128 bytes)   made not entrant
+<writer thread='22275'/>
+   6674  994    b        java.util.HashMap$HashIterator::nextNode (100 bytes)
+   6682  995    b        java.util.HashMap$HashIterator::hasNext (13 bytes)
+   6683  996    b        java.lang.invoke.LambdaFormBuffer::ownedCount (7 bytes)
+   6683  997    b        java.lang.invoke.LambdaForm$Name::withConstraint (20 bytes)
+   6686  998    b        java.lang.invoke.LambdaForm$Name::&lt;init&gt; (99 bytes)
+   6688  999    b        java.lang.invoke.LambdaFormBuffer::endEdit (308 bytes)
+   6706 1000    b        java.lang.invoke.LambdaFormBuffer::clearDuplicatesAndNulls (268 bytes)
+   6728 1001    b        java.lang.invoke.LambdaFormBuffer::indexOf (25 bytes)
+<writer thread='9731'/>
+   6735  863             java.lang.invoke.LambdaForm::normalize (322 bytes)   made not entrant
+<writer thread='22275'/>
+   6735 1002    b        java.lang.invoke.LambdaForm$Name::isParam (13 bytes)
+   6736 1003    b        java.lang.invoke.LambdaForm$NamedFunction::intrinsicName (21 bytes)
+   6738 1004    b        jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (1289 bytes)
+   6803 1005    b        java.lang.invoke.InvokerBytecodeGenerator::getConstantPoolSize (21 bytes)
+   6804 1006    b        java.util.HashMap$Values::&lt;init&gt; (10 bytes)
+   6805 1007    b        java.util.HashMap$Values::iterator (12 bytes)
+   6818 1008    b        java.util.HashMap$ValueIterator::&lt;init&gt; (11 bytes)
+   6827 1009    b        java.util.HashMap$HashIterator::&lt;init&gt; (79 bytes)
+<writer thread='9731'/>
+   6838  978             java.util.Arrays::fill (28 bytes)   made not entrant
+<writer thread='22275'/>
+   6838 1010    b        java.util.Arrays::fill (28 bytes)
+   6854 1011    b        java.lang.invoke.LambdaFormBuffer::changeName (149 bytes)
+   6859 1012    b        java.util.Arrays::rangeCheck (74 bytes)
+<writer thread='9731'/>
+   6860 1010             java.util.Arrays::fill (28 bytes)   made not entrant
+<writer thread='22275'/>
+   6862 1013    b        java.util.Arrays::fill (28 bytes)
+   6877 1014    b        java.lang.invoke.LambdaForm::normalize (322 bytes)
+   6910 1015    b        java.lang.invoke.LambdaForm$Name::internArguments (59 bytes)
+   6919 1016    b        sun.invoke.util.BytecodeDescriptor::unparse (18 bytes)
+   6926 1017    b        java.util.HashMap::values (25 bytes)
+   6931 1018    b        java.lang.invoke.LambdaFormEditor$Transform::&lt;init&gt; (17 bytes)
+   6933 1019    b        java.lang.invoke.BoundMethodHandle$Factory::generateConcreteBMHClass (1031 bytes)
+   7034 1020    b        java.lang.invoke.BoundMethodHandle$Factory::typeLoadOp (90 bytes)
+   7043 1021    b        sun.reflect.ReflectionFactory::checkInitted (19 bytes)
+   7045 1022    b        java.lang.reflect.Field::getModifiers (5 bytes)
+   7046 1023    b        java.lang.invoke.LambdaFormBuffer::indexOf (25 bytes)
+<writer thread='9731'/>
+   7053  562             java.util.Arrays::equals (78 bytes)   made not entrant
+<writer thread='22275'/>
+   7055 1024    b        java.util.Arrays::equals (78 bytes)
+   7062 1025    b        java.lang.invoke.InvokerBytecodeGenerator::cpPatches (128 bytes)
+   7073 1026    b        java.lang.invoke.BoundMethodHandle$SpeciesData::getterFunction (60 bytes)
+   7074 1027    b        java.lang.invoke.BoundMethodHandle$Species_L::&lt;init&gt; (12 bytes)
+   7078 1028    b        java.lang.invoke.LambdaFormEditor::getInCache (189 bytes)
+   7092 1029    b        jdk.internal.org.objectweb.asm.ClassWriter::visitField (16 bytes)
+   7099 1030    b        jdk.internal.org.objectweb.asm.FieldWriter::&lt;init&gt; (97 bytes)
+   7104 1031    b        jdk.internal.org.objectweb.asm.FieldVisitor::&lt;init&gt; (7 bytes)
+   7105 1032    b        jdk.internal.org.objectweb.asm.FieldVisitor::&lt;init&gt; (35 bytes)
+   7120 1033    b        jdk.internal.org.objectweb.asm.FieldWriter::getSize (262 bytes)
+   7132 1034    b        jdk.internal.org.objectweb.asm.FieldWriter::put (475 bytes)
+   7150 1035    b        java.lang.invoke.LambdaForm$BasicType::basicTypes (35 bytes)
+   7158 1036    b        java.lang.invoke.BoundMethodHandle::access$300 (4 bytes)
+   7159 1037    b        java.lang.invoke.BoundMethodHandle$Factory::makeGetters (64 bytes)
+   7166 1038    b        java.lang.reflect.Modifier::isVolatile (13 bytes)
+   7166 1039    b        sun.invoke.util.VerifyType::isNullReferenceConversion (45 bytes)
+   7169 1040    b        java.lang.invoke.MethodHandles$Lookup::restrictProtectedReceiver (54 bytes)
+   7172 1041    b        java.lang.invoke.MemberName::isProtected (8 bytes)
+   7172 1042   !b        java.lang.invoke.BoundMethodHandle$Factory::makeGetter (38 bytes)
+   7178 1043    b        sun.invoke.util.Wrapper::primitiveType (5 bytes)
+   7179 1044    b        java.lang.invoke.MethodHandles$Lookup::findGetter (19 bytes)
+   7180 1045    b        java.lang.invoke.MethodHandles$Lookup::resolveOrFail (42 bytes)
+   7185 1046    b        java.lang.invoke.MemberName::&lt;init&gt; (25 bytes)
+   7186 1047    b        java.lang.invoke.MethodHandles$Lookup::getDirectField (12 bytes)
+   7187 1048    b        java.lang.invoke.MethodHandles$Lookup::getDirectFieldCommon (67 bytes)
+   7190 1049    b        java.lang.invoke.MethodHandles$Lookup::checkField (56 bytes)
+   7192 1050    b        java.lang.invoke.MemberName::isVolatile (8 bytes)
+<writer thread='9731'/>
+   7193 1051     n       java.lang.invoke.MethodHandleNatives::objectFieldOffset (native)   (static)
+<writer thread='22275'/>
+   7194 1052    b        java.lang.invoke.DirectMethodHandle$Accessor::&lt;init&gt; (10 bytes)
+   7196 1053    b        java.lang.invoke.DirectMethodHandle$Accessor::&lt;init&gt; (23 bytes)
+   7198 1054    b        java.lang.invoke.BoundMethodHandle$Factory::makeNominalGetters (41 bytes)
+   7208 1055    b        java.lang.invoke.LambdaForm$NamedFunction::&lt;init&gt; (10 bytes)
+   7211 1056    b        java.lang.invoke.LambdaForm$NamedFunction::&lt;init&gt; (15 bytes)
+   7212 1057    b        sun.reflect.Reflection::ensureMemberAccess (86 bytes)
+   7214 1058    b        sun.reflect.Reflection::verifyMemberAccess (172 bytes)
+   7222 1059    b        java.lang.invoke.LambdaFormBuffer::replaceFunctions (110 bytes)
+   7230 1060    b        java.lang.invoke.LambdaFormBuffer::insertName (106 bytes)
+   7231 1061    b        java.lang.invoke.LambdaFormBuffer::growNames (281 bytes)
+   7242 1062    b        java.lang.invoke.LambdaFormBuffer::replaceName (124 bytes)
+   7244 1063    b        java.lang.invoke.BoundMethodHandle$SpeciesData::extendWith (55 bytes)
+   7256 1064    b        java.lang.invoke.DirectMethodHandle::internalMemberName (8 bytes)
+   7259 1065    b        java.lang.StringBuffer::&lt;init&gt; (7 bytes)
+   7263 1066    b        java.security.Permission::&lt;init&gt; (10 bytes)
+   7266 1067    b        java.security.BasicPermission::init (132 bytes)
+   7271 1068    b        java.security.BasicPermission::&lt;init&gt; (11 bytes)
+   7273 1069    b        java.lang.RuntimePermission::&lt;init&gt; (6 bytes)
+   7278 1070    b        java.security.PermissionCollection::isReadOnly (5 bytes)
+   7279 1071    b        java.security.AccessControlContext::combine (205 bytes)
+<writer thread='9731'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.303'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.303'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.303'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.303'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.304'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='7.305'/>
+<writer thread='16899'/>
+   7305  696             java.lang.invoke.InvokerBytecodeGenerator::emitLoadInsn (21 bytes)   made not entrant
+   7305  730             java.lang.invoke.InvokerBytecodeGenerator::emitStaticInvoke (246 bytes)   made not entrant
+   7305  777             java.lang.invoke.InvokerBytecodeGenerator::emitReturn (107 bytes)   made not entrant
+   7305  768             java.lang.invoke.InvokerBytecodeGenerator::classFilePrologue (74 bytes)   made not entrant
+   7305  779             java.lang.invoke.InvokerBytecodeGenerator::classFileEpilogue (17 bytes)   made not entrant
+   7305  791             java.lang.invoke.InvokerBytecodeGenerator::emitReturnInsn (126 bytes)   made not entrant
+   7305  774             jdk.internal.org.objectweb.asm.ClassWriter::visitMethod (24 bytes)   made not entrant
+   7305  775             jdk.internal.org.objectweb.asm.MethodWriter::&lt;init&gt; (268 bytes)   made not entrant
+   7305  792             java.lang.invoke.InvokerBytecodeGenerator::emitReferenceCast (184 bytes)   made not entrant
+   7305  800             java.lang.invoke.InvokerBytecodeGenerator::emitPushArgument (120 bytes)   made not entrant
+   7305  864             java.lang.invoke.InvokerBytecodeGenerator::emitStoreInsn (21 bytes)   made not entrant
+   7305  891             java.lang.invoke.InvokerBytecodeGenerator::emitStoreResult (27 bytes)   made not entrant
+   7305  989             java.lang.invoke.BoundMethodHandle$Factory::emitPushFields (49 bytes)   made not entrant
+   7305  983             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)   made not entrant
+   7305 1004             jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (1289 bytes)   made not entrant
+   7305 1019             java.lang.invoke.BoundMethodHandle$Factory::generateConcreteBMHClass (1031 bytes)   made not entrant
+<writer thread='22275'/>
+   7306 1072    b        java.lang.invoke.TypeConvertingMethodAdapter::initWidening (44 bytes)
+<writer thread='9731'/>
+   7308 1072             java.lang.invoke.TypeConvertingMethodAdapter::initWidening (44 bytes)   made not entrant
+<writer thread='22275'/>
+   7310 1073    b        jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (1289 bytes)
+<writer thread='9731'/>
+   7371 1074     n       java.lang.invoke.MethodHandle::invokeBasic(I)L (native)   
+<writer thread='22275'/>
+   7372  482             sun.invoke.util.Wrapper::hashWrap (62 bytes)   made zombie
+<writer thread='9731'/>
+   7372 1075     n       java.lang.invoke.MethodHandle::linkToSpecial(LIL)L (native)   (static)
+<writer thread='22275'/>
+   7373 1076    b        java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)
+   7413  544             java.lang.invoke.LambdaForm::&lt;init&gt; (12 bytes)   made zombie
+   7413  543             java.lang.invoke.LambdaForm$NamedFunction::&lt;init&gt; (15 bytes)   made zombie
+   7413  545             java.lang.invoke.LambdaForm::&lt;init&gt; (119 bytes)   made zombie
+   7413  549   !         java.lang.invoke.MemberName::getMethodType (208 bytes)   made zombie
+   7413  548             java.lang.invoke.LambdaForm::normalize (322 bytes)   made zombie
+   7413  588             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   7414  614             java.lang.invoke.LambdaForm::internArgument (84 bytes)   made zombie
+   7414  642             java.lang.invoke.LambdaForm::normalize (322 bytes)   made zombie
+   7414  641             java.lang.invoke.LambdaForm::shortenSignature (166 bytes)   made zombie
+   7414  639             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   7415  673   !         java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)   made zombie
+   7415  765             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made zombie
+   7415  674             java.lang.invoke.DirectMethodHandle::make (242 bytes)   made zombie
+   7415  718             java.lang.invoke.LambdaForm::internArgument (84 bytes)   made zombie
+   7415  695             java.lang.invoke.InvokerBytecodeGenerator::emitPushArgument (120 bytes)   made zombie
+   7415  712             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   7415  710             java.lang.invoke.LambdaForm::prepare (43 bytes)   made zombie
+   7415  722             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made zombie
+   7415  721             java.lang.invoke.LambdaForm::parameter (52 bytes)   made zombie
+   7415  713             java.lang.invoke.LambdaForm::basicTypeSignature (101 bytes)   made zombie
+   7416  756             java.lang.invoke.LambdaForm::parameter (52 bytes)   made zombie
+   7416  749             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   7416  753   !         java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)   made zombie
+   7416 1077    b        jdk.internal.org.objectweb.asm.MethodVisitor::&lt;init&gt; (35 bytes)
+   7423 1078    b        java.lang.invoke.InvokerBytecodeGenerator::emitPushArgument (120 bytes)
+   7432 1079    b        java.lang.invoke.InvokerBytecodeGenerator::emitLoadInsn (21 bytes)
+   7444 1080    b        jdk.internal.org.objectweb.asm.MethodVisitor::&lt;init&gt; (7 bytes)
+   7447 1081    b        java.lang.invoke.InvokerBytecodeGenerator::emitStaticInvoke (246 bytes)
+   7463 1082    b        java.lang.Integer::parseInt (261 bytes)
+   7471 1083    b        java.lang.Character::digit (6 bytes)
+   7472 1084    b        java.lang.Character::digit (10 bytes)
+   7473 1085    b        java.lang.CharacterDataLatin1::digit (91 bytes)
+   7474 1086    b        java.lang.Integer::intValue (5 bytes)
+   7476 1087   !b        java.net.URLClassLoader$1::run (81 bytes)
+   7482 1088    b        java.net.URLClassLoader::access$100 (7 bytes)
+   7483 1089    b        sun.misc.SharedSecrets::javaUtilJarAccess (18 bytes)
+   7484 1090  s b        sun.misc.Resource::cachedInputStream (20 bytes)
+   7488 1091    b        java.io.FilterInputStream::&lt;init&gt; (10 bytes)
+   7496 1092   !b        sun.misc.URLClassPath$FileLoader::getResource (164 bytes)
+<writer thread='9731'/>
+   7525  280   !         java.net.URL::&lt;init&gt; (543 bytes)   made not entrant
+<writer thread='22275'/>
+   7525 1093    b        sun.misc.Resource::&lt;init&gt; (5 bytes)
+   7526 1094    b        java.net.URLClassLoader::defineClass (142 bytes)
+   7542 1095    b        sun.misc.Resource::getByteBuffer (24 bytes)
+   7545 1096    b        java.util.zip.ZipFile$ZipFileInflaterInputStream::fill (80 bytes)
+   7549 1097   !b        java.util.zip.ZipFile$ZipFileInputStream::read (131 bytes)
+   7554 1098    b        java.util.zip.ZipFile::access$1300 (5 bytes)
+   7555 1099    b        java.util.zip.ZipFile::ensureOpenOrZipException (18 bytes)
+   7556 1100    b        java.util.zip.ZipFile::access$1400 (14 bytes)
+<writer thread='9731'/>
+   7557 1101     n       java.util.zip.ZipFile::read (native)   (static)
+<writer thread='22275'/>
+   7558 1102   !b        java.net.URL::&lt;init&gt; (543 bytes)
+   7615 1103   !b        java.util.zip.ZipFile::getInputStream (304 bytes)
+   7647 1104    b        java.util.zip.ZipFile$ZipFileInputStream::&lt;init&gt; (41 bytes)
+   7649 1105    b        java.util.zip.ZipFile::access$1100 (5 bytes)
+   7650 1106    b        java.util.zip.ZipFile::access$1200 (5 bytes)
+   7650 1107   !b        java.util.zip.ZipFile::getInflater (56 bytes)
+   7666 1108    b        java.util.ArrayDeque::poll (5 bytes)
+   7667 1109    b        java.util.ArrayDeque::pollFirst (42 bytes)
+   7668 1110    b        java.util.zip.ZipFile$ZipFileInflaterInputStream::&lt;init&gt; (29 bytes)
+   7675 1111    b        java.util.zip.InflaterInputStream::&lt;init&gt; (79 bytes)
+<writer thread='9731'/>
+   7681  438   !         sun.misc.Resource::getBytes (242 bytes)   made not entrant
+<writer thread='22275'/>
+   7682 1112   !b        java.util.zip.Inflater::ended (32 bytes)
+   7685 1113   !b        java.security.SecureClassLoader::getProtectionDomain (114 bytes)
+   7702 1114   !b        java.lang.ClassLoader::checkCerts (195 bytes)
+   7715 1115    b        java.util.zip.ZipFile::getZipEntry (251 bytes)
+<writer thread='9731'/>
+   7725 1116     n       java.util.zip.ZipFile::getEntryFlag (native)   (static)
+<writer thread='22275'/>
+   7725 1117    b        java.util.zip.ZipCoder::toString (190 bytes)
+   7742 1118    b        java.util.zip.ZipCoder::decoder (35 bytes)
+   7745 1119    b        java.nio.charset.CharsetDecoder::reset (11 bytes)
+   7745 1120    b        java.nio.charset.CharsetDecoder::implReset (1 bytes)
+<writer thread='9731'/>
+   7747 1121     n       java.util.zip.ZipFile::getEntryTime (native)   (static)
+   7748 1122     n       java.util.zip.ZipFile::getEntryCrc (native)   (static)
+<writer thread='22275'/>
+   7749 1123    b        java.util.Objects::requireNonNull (15 bytes)
+   7749 1124    b        sun.net.www.protocol.jar.Handler::checkNestedProtocol (18 bytes)
+   7751 1125    b        sun.misc.URLClassPath$JarLoader::access$600 (5 bytes)
+   7755 1126   !b        sun.misc.Resource::getBytes (242 bytes)
+   7776 1127   !b        java.util.zip.ZipFile$ZipFileInflaterInputStream::close (67 bytes)
+   7784 1128    b        java.util.zip.InflaterInputStream::close (34 bytes)
+   7786 1129    b        java.util.zip.ZipFile::access$100 (6 bytes)
+   7787 1130   !b        java.util.zip.ZipFile::releaseInflater (41 bytes)
+   7791 1131    b        java.util.ArrayDeque::add (7 bytes)
+   7792 1132    b        java.util.ArrayDeque::addLast (53 bytes)
+   7806 1133    b        java.util.zip.ZipEntry::setExtra0 (360 bytes)
+   7808 1134    b        java.util.zip.ZipEntry::getSize (5 bytes)
+   7808 1135   !b        java.util.zip.Inflater::needsDictionary (19 bytes)
+   7810 1136   !b        java.util.zip.Inflater::needsInput (27 bytes)
+   7813 1137   !b        java.util.zip.Inflater::setInput (74 bytes)
+   7819 1138   !b        java.util.zip.Inflater::reset (69 bytes)
+<writer thread='9731'/>
+   7823 1139     n       java.util.zip.Inflater::reset (native)   (static)
+<writer thread='22275'/>
+   7824 1140   !b        sun.misc.URLClassPath$JarLoader::checkResource (55 bytes)
+   7833 1141    b        sun.net.www.protocol.jar.Handler::parseURL (223 bytes)
+   7849 1142    b        sun.net.www.protocol.jar.Handler::parseContextSpec (154 bytes)
+   7859 1143    b        sun.net.www.protocol.jar.Handler::indexOfBangSlash (52 bytes)
+   7863 1144    b        sun.net.www.ParseUtil::&lt;init&gt; (5 bytes)
+   7864 1145    b        sun.net.www.ParseUtil::canonizeString (195 bytes)
+   7885 1146    b        java.net.URLStreamHandler::setURL (159 bytes)
+   7902 1147    b        sun.misc.URLClassPath$JarLoader$2::&lt;init&gt; (31 bytes)
+   7903 1148    b        sun.misc.URLClassPath$JarLoader$2::getCodeSourceURL (8 bytes)
+   7904 1149    b        sun.misc.URLClassPath$JarLoader$2::getManifest (26 bytes)
+   7906 1150    b        java.util.jar.JavaUtilJarAccessImpl::ensureInitialization (5 bytes)
+   7907 1151  s!b        java.util.jar.JarFile::ensureInitialization (41 bytes)
+   7909 1152    b        java.util.jar.JarFile::getManifest (5 bytes)
+   7910 1153    b        java.util.jar.JarFile::getManifestFromReference (151 bytes)
+   7918 1154    b        java.util.jar.JavaUtilJarAccessImpl::getTrustedAttributes (6 bytes)
+   7919 1155    b        sun.misc.URLClassPath$JarLoader$2::getInputStream (15 bytes)
+   7921 1156  s b        java.util.jar.JarFile::getInputStream (89 bytes)
+   7924 1157    b        sun.misc.URLClassPath$JarLoader$2::getBytes (48 bytes)
+   7929 1158    b        sun.misc.URLClassPath$JarLoader$2::getContentLength (9 bytes)
+   7931 1159    b        java.util.zip.CRC32::&lt;init&gt; (5 bytes)
+   7931 1160    b        java.util.zip.CRC32::update (16 bytes)
+   7932 1161    b        java.util.zip.CRC32::getValue (10 bytes)
+   7932 1162    b        java.util.zip.ZipEntry::getCrc (5 bytes)
+   7932 1163    b        sun.misc.URLClassPath$JarLoader$2::getCodeSigners (8 bytes)
+   7933 1164   !b        java.util.jar.JarFile$JarFileEntry::getCodeSigners (78 bytes)
+   7939 1165    b        java.util.jar.JarFile::access$200 (5 bytes)
+   7941 1166    b        java.util.jar.JarFile::access$300 (5 bytes)
+   7944 1167    b        java.util.jar.Manifest::getTrustedAttributes (57 bytes)
+   7947 1168    b        java.util.jar.Manifest::getAttributes (14 bytes)
+   7949 1169    b        java.util.jar.Manifest::getEntries (5 bytes)
+   7949 1170    b        java.util.jar.Manifest::getMainAttributes (5 bytes)
+   7955 1171    b        java.net.URLClassLoader::isSealed (70 bytes)
+<writer thread='9731'/>
+   7966  560             java.lang.reflect.Array::newInstance (6 bytes)   made not entrant
+<writer thread='22275'/>
+   7971 1172    b        java.util.concurrent.atomic.AtomicInteger::&lt;init&gt; (5 bytes)
+   7971 1173    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt; (48 bytes)
+   7986 1174    b        java.util.concurrent.locks.ReentrantLock::&lt;init&gt; (16 bytes)
+   7989 1175    b        java.util.concurrent.locks.ReentrantLock$NonfairSync::&lt;init&gt; (5 bytes)
+   7990 1176    b        java.util.concurrent.locks.ReentrantLock$Sync::&lt;init&gt; (5 bytes)
+   7991 1177    b        java.util.concurrent.locks.AbstractQueuedSynchronizer::&lt;init&gt; (5 bytes)
+   7991 1178    b        java.util.concurrent.locks.AbstractOwnableSynchronizer::&lt;init&gt; (5 bytes)
+   7992 1179    b        org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager (9 bytes)
+   7998 1180    b        org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt; (21 bytes)
+   8002 1181    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::createReferenceArray (5 bytes)
+   8004 1182   !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::clear (69 bytes)
+   8009 1183    b        java.util.concurrent.atomic.AtomicInteger::get (5 bytes)
+   8014 1184    b        org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt; (176 bytes)
+   8025 1185    b        org.springframework.util.ConcurrentReferenceHashMap::calculateShift (26 bytes)
+   8027 1186    b        org.springframework.util.ConcurrentReferenceHashMap::clear (32 bytes)
+   8036 1187    b        sun.reflect.generics.parser.SignatureParser::current (59 bytes)
+   8037 1188    b        sun.reflect.generics.parser.SignatureParser::advance (53 bytes)
+   8039 1189    b        sun.reflect.generics.parser.SignatureParser::skipIdentifier (67 bytes)
+   8042 1190    b        java.lang.Character::isWhitespace (5 bytes)
+   8043 1191    b        java.lang.Character::isWhitespace (9 bytes)
+   8044 1192    b        java.lang.CharacterDataLatin1::isWhitespace (23 bytes)
+   8050 1193    b        java.util.ArrayList::&lt;init&gt; (61 bytes)
+   8054 1194    b        java.lang.Class::forName (53 bytes)
+   8059 1195    b        sun.reflect.generics.parser.SignatureParser::parsePackageNameAndSimpleClassTypeSignature (119 bytes)
+   8066 1196    b        sun.reflect.generics.parser.SignatureParser::mark (9 bytes)
+   8067 1197    b        sun.reflect.generics.parser.SignatureParser::markToCurrent (16 bytes)
+   8071 1198    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::restructureIfNecessary (56 bytes)
+   8074 1199    b        org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::pollForPurge (11 bytes)
+   8083 1200    b        sun.reflect.ReflectionFactory::inflationThreshold (4 bytes)
+<writer thread='9731'/>
+   8087 1201     n       java.lang.invoke.MethodHandle::linkToSpecial(LLILILL)V (native)   (static)
+<writer thread='22275'/>
+   8088 1202    b        java.lang.invoke.InvokerBytecodeGenerator::classFilePrologue (74 bytes)
+   8116 1203    b        java.lang.invoke.InvokerBytecodeGenerator::emitReferenceCast (184 bytes)
+   8126 1204    b        java.lang.invoke.InvokerBytecodeGenerator::emitReturn (107 bytes)
+<writer thread='9731'/>
+   8134  845             java.lang.invoke.DirectMethodHandle::make (242 bytes)   made not entrant
+   8136 1205     n       java.lang.Class::isInstance (native)   
+<writer thread='22275'/>
+   8136 1206    b        jdk.internal.org.objectweb.asm.FieldWriter::visitEnd (1 bytes)
+   8137 1207    b        jdk.internal.org.objectweb.asm.ClassWriter::visitMethod (24 bytes)
+   8169 1208    b        jdk.internal.org.objectweb.asm.MethodWriter::&lt;init&gt; (268 bytes)
+   8195 1209    b        java.lang.invoke.InnerClassLambdaMetafactory::getOpcodeOffset (38 bytes)
+   8197 1210    b        java.lang.invoke.InnerClassLambdaMetafactory::getLoadOpcode (25 bytes)
+   8198 1211    b        java.lang.invoke.InnerClassLambdaMetafactory::getParameterSize (27 bytes)
+   8199 1212    b        java.lang.invoke.InnerClassLambdaMetafactory::access$300 (5 bytes)
+<writer thread='9731'/>
+   8202 1213     n       java.lang.invoke.MethodHandle::linkToStatic(LLILIL)L (native)   (static)
+   8205 1214     n       java.lang.invoke.MethodHandle::invokeBasic(LLILI)L (native)   
+   8205 1215     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLILIL)L (native)   (static)
+<writer thread='22275'/>
+   8209 1216    b        java.lang.invoke.InvokerBytecodeGenerator::emitReturnInsn (126 bytes)
+   8216 1217    b        java.util.ArrayList::iterator (9 bytes)
+   8220 1218    b        java.util.ArrayList$Itr::&lt;init&gt; (26 bytes)
+   8221 1219    b        sun.reflect.generics.parser.SignatureParser::parseFieldTypeSignature (6 bytes)
+   8222 1220    b        sun.reflect.generics.parser.SignatureParser::parseFieldTypeSignature (73 bytes)
+   8225 1221    b        sun.reflect.generics.parser.SignatureParser::parseClassTypeSignature (118 bytes)
+   8236 1222    b        sun.reflect.generics.tree.SimpleClassTypeSignature::make (11 bytes)
+   8241 1223    b        sun.reflect.generics.tree.SimpleClassTypeSignature::&lt;init&gt; (20 bytes)
+   8242 1224    b        sun.reflect.generics.parser.SignatureParser::parseClassTypeSignatureSuffix (29 bytes)
+   8244 1225    b        sun.reflect.generics.tree.ClassTypeSignature::make (9 bytes)
+   8246 1226    b        sun.reflect.generics.tree.ClassTypeSignature::&lt;init&gt; (10 bytes)
+   8248 1227    b        sun.reflect.generics.visitor.Reifier::getFactory (5 bytes)
+   8253 1228    b        java.util.concurrent.ConcurrentHashMap::&lt;init&gt; (5 bytes)
+   8254 1229   !b        java.util.concurrent.ConcurrentHashMap::initTable (115 bytes)
+   8265 1230    b        java.lang.Boolean::booleanValue (5 bytes)
+<writer thread='9731'/>
+   8266 1231     n       java.lang.Class::getDeclaredMethods0 (native)   
+<writer thread='22275'/>
+   8266 1232    b        sun.reflect.Reflection::filterMethods (31 bytes)
+   8270 1233    b        java.lang.StringBuilder::&lt;init&gt; (18 bytes)
+   8275 1234    b        java.lang.reflect.Method::getDeclaringClass (5 bytes)
+   8276 1235    b        java.lang.reflect.Method::getModifiers (5 bytes)
+   8276 1236    b        java.lang.reflect.Method::isDefault (28 bytes)
+   8278 1237    b        java.lang.Class$MethodArray::get (7 bytes)
+   8279 1238    b        java.lang.Class$MethodArray::&lt;init&gt; (38 bytes)
+   8282 1239    b        java.lang.Class$MethodArray::length (5 bytes)
+   8283 1240    b        java.lang.Class$MethodArray::removeLessSpecifics (111 bytes)
+<writer thread='9731'/>
+   8288  149             java.util.HashMap::putVal (300 bytes)   made not entrant
+<writer thread='22275'/>
+   8288 1241    b        java.lang.Class::privateGetPublicMethods (267 bytes)
+   8316  892             java.lang.invoke.LambdaForm$NamedFunction::intrinsicName (21 bytes)   made zombie
+   8316   20             java.lang.Class::getClassLoader (28 bytes)   made zombie
+   8317  195             java.util.ArrayList::add (29 bytes)   made zombie
+   8318 1242    b        java.lang.Class$MethodArray::compactAndTrim (69 bytes)
+   8329  474             java.lang.Class::getSimpleName (120 bytes)   made zombie
+   8329  491             sun.invoke.util.VerifyAccess::isTypeVisible (118 bytes)   made zombie
+   8329  523             java.lang.invoke.MemberName$Factory::resolveOrFail (52 bytes)   made zombie
+   8330 1243    b        java.util.HashMap$ValueIterator::next (8 bytes)
+   8334  688             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)   made zombie
+   8334  698             java.lang.invoke.LambdaForm$Name::useCount (42 bytes)   made zombie
+   8334  703             jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (1289 bytes)   made zombie
+   8335  748             java.lang.invoke.LambdaForm::normalize (322 bytes)   made zombie
+   8335  750             java.lang.invoke.LambdaForm::useCount (99 bytes)   made zombie
+   8335  795             java.lang.invoke.LambdaForm::prepare (43 bytes)   made zombie
+   8335  797             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made zombie
+   8335  801   !         java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)   made zombie
+   8335  796             java.lang.invoke.LambdaForm::parameter (52 bytes)   made zombie
+   8336  834             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made zombie
+   8336  839             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made zombie
+   8336  835             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   8336  843             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made zombie
+   8336  841             java.lang.invoke.LambdaForm::prepare (43 bytes)   made zombie
+   8336  838             java.util.Arrays::fill (21 bytes)   made zombie
+   8336  844   !         java.lang.invoke.LambdaForm::compileToBytecode (103 bytes)   made zombie
+   8336  842             java.util.Arrays::fill (21 bytes)   made zombie
+   8336  848             java.lang.invoke.LambdaForm::signatureArity (28 bytes)   made zombie
+   8336  853             java.lang.invoke.LambdaForm::argument (27 bytes)   made zombie
+   8336 1244    b        java.util.HashMap::afterNodeInsertion (1 bytes)
+   8337  890             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)   made zombie
+   8340 1245    b        java.util.HashMap::putVal (300 bytes)
+   8372 1246    b        sun.misc.ProxyGenerator$ConstantPool$Entry::&lt;init&gt; (5 bytes)
+   8372 1247    b        sun.misc.ProxyGenerator$ConstantPool$Entry::&lt;init&gt; (5 bytes)
+   8373 1248    b        sun.misc.ProxyGenerator$ConstantPool::addEntry (46 bytes)
+   8375 1249    b        sun.misc.ProxyGenerator::getParameterDescriptors (47 bytes)
+   8385 1250    b        java.lang.reflect.Array::newInstance (6 bytes)
+   8388 1251    b        sun.misc.ProxyGenerator::dotToSlash (9 bytes)
+   8389 1252    b        java.io.OutputStream::&lt;init&gt; (5 bytes)
+   8389 1253    b        sun.misc.ProxyGenerator$ConstantPool::getUtf8 (18 bytes)
+   8390 1254    b        sun.misc.ProxyGenerator$ConstantPool::getValue (91 bytes)
+   8400 1255    b        sun.misc.ProxyGenerator::access$300 (5 bytes)
+   8402 1256    b        sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::hashCode (15 bytes)
+   8402 1257  s b        java.io.ByteArrayOutputStream::write (32 bytes)
+   8406 1258    b        java.io.ByteArrayOutputStream::ensureCapacity (16 bytes)
+   8407 1259    b        java.io.DataOutputStream::incCount (20 bytes)
+   8408 1260    b        java.io.DataOutputStream::writeByte (14 bytes)
+   8409 1261    b        sun.misc.ProxyGenerator$ConstantPool::getIndirect (67 bytes)
+   8417 1262    b        sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::&lt;init&gt; (21 bytes)
+   8419 1263    b        sun.misc.ProxyGenerator::access$900 (5 bytes)
+   8420 1264    b        sun.misc.ProxyGenerator$ConstantPool::getClass (21 bytes)
+   8424 1265    b        sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::&lt;init&gt; (21 bytes)
+   8426 1266    b        sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::equals (49 bytes)
+   8428 1267    b        java.io.DataOutputStream::writeShort (35 bytes)
+   8431 1268    b        sun.misc.ProxyGenerator::codeLocalLoadStore (90 bytes)
+   8435 1269    b        sun.misc.ProxyGenerator$ConstantPool::getNameAndType (30 bytes)
+   8439 1270    b        sun.misc.ProxyGenerator::code_aload (11 bytes)
+   8441 1271    b        sun.misc.ProxyGenerator::access$700 (7 bytes)
+   8442 1272    b        sun.misc.ProxyGenerator$ProxyMethod::generateMethod (733 bytes)
+   8604 1273  s b        java.io.ByteArrayOutputStream::size (5 bytes)
+   8606 1274    b        sun.misc.ProxyGenerator$ExceptionTableEntry::&lt;init&gt; (26 bytes)
+   8617 1275    b        sun.misc.ProxyGenerator::getFieldType (65 bytes)
+   8625 1276    b        sun.misc.ProxyGenerator$ConstantPool::getMethodRef (33 bytes)
+   8628 1277    b        java.io.FilterOutputStream::&lt;init&gt; (10 bytes)
+   8630 1278    b        sun.misc.ProxyGenerator$ConstantPool::getFieldRef (33 bytes)
+   8633 1279    b        sun.misc.ProxyGenerator$ConstantPool::getString (21 bytes)
+   8637 1280    b        sun.misc.ProxyGenerator::code_ldc (64 bytes)
+   8641 1281    b        sun.misc.ProxyGenerator::access$800 (5 bytes)
+   8642 1282    b        sun.misc.ProxyGenerator::access$1000 (7 bytes)
+   8643 1283    b        sun.misc.ProxyGenerator::code_ipush (90 bytes)
+   8647 1284    b        sun.misc.ProxyGenerator::code_astore (11 bytes)
+   8648 1285    b        java.io.DataOutputStream::writeUTF (435 bytes)
+<writer thread='9731'/>
+   8682 1260             java.io.DataOutputStream::writeByte (14 bytes)   made not entrant
+<writer thread='22275'/>
+   8682 1286  s b        java.io.DataOutputStream::write (16 bytes)
+   8688 1287  s b        java.io.DataOutputStream::write (14 bytes)
+<writer thread='9731'/>
+   8692 1267             java.io.DataOutputStream::writeShort (35 bytes)   made not entrant
+<writer thread='22275'/>
+   8692 1288    b        java.io.DataOutputStream::writeByte (14 bytes)
+   8694 1289    b        sun.misc.ProxyGenerator$ConstantPool$ValueEntry::write (190 bytes)
+   8699 1290    b        java.io.DataOutputStream::writeUTF (7 bytes)
+   8700 1291  s b        java.io.ByteArrayOutputStream::write (66 bytes)
+   8706 1292    b        java.io.DataOutputStream::writeShort (35 bytes)
+   8709 1293    b        sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::write (61 bytes)
+   8713 1294    b        java.io.ByteArrayOutputStream::grow (43 bytes)
+   8716 1295    b        java.io.DataOutputStream::writeInt (65 bytes)
+   8720 1296    b        sun.misc.ProxyGenerator$MethodInfo::write (283 bytes)
+   8746 1297  s b        java.io.ByteArrayOutputStream::writeTo (14 bytes)
+   8757 1298    b        java.lang.reflect.AccessibleObject::setAccessible (21 bytes)
+   8758 1299    b        java.lang.reflect.AccessibleObject::setAccessible0 (42 bytes)
+   8760 1300    b        sun.reflect.DelegatingConstructorAccessorImpl::newInstance (9 bytes)
+   8761 1301    b        sun.reflect.NativeConstructorAccessorImpl::newInstance (89 bytes)
+<writer thread='9731'/>
+   8763 1302     n       sun.reflect.NativeConstructorAccessorImpl::newInstance0 (native)   (static)
+<writer thread='22275'/>
+   8764 1303    b        java.lang.Class::privateGetMethodRecursive (130 bytes)
+   8774 1304    b        java.lang.Class::getMethod0 (40 bytes)
+   8780 1305    b        java.lang.Class::forName (15 bytes)
+   8782 1306    b        java.lang.Class::getMethod (64 bytes)
+   8785 1307    b        org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries (33 bytes)
+   8787 1308    b        java.util.Objects::hashCode (13 bytes)
+   8800 1309    b        sun.invoke.util.VerifyAccess::isClassAccessible (66 bytes)
+   8803 1310    b        sun.invoke.util.VerifyAccess::getClassModifiers (24 bytes)
+   8804 1311    b        java.lang.invoke.MethodHandleNatives::findMethodHandleType (7 bytes)
+   8806 1312    b        java.lang.invoke.MethodHandles$Lookup::&lt;init&gt; (15 bytes)
+   8807 1313    b        java.lang.invoke.MethodHandleNatives::refKindIsMethod (19 bytes)
+<writer thread='9731'/>
+   8809 1314     n       java.lang.invoke.MethodHandle::linkToStatic(LL)I (native)   (static)
+<writer thread='22275'/>
+   8820 1315    b        java.lang.invoke.CallSite::maybeReBox (28 bytes)
+   8823 1316    b        sun.misc.Unsafe::getAndAddInt (27 bytes)
+<writer thread='9731'/>
+   8825 1317     n       sun.misc.Unsafe::getIntVolatile (native)   
+<writer thread='22275'/>
+   8827 1318    b        java.lang.Class::privateGetDeclaredConstructors (85 bytes)
+<writer thread='9731'/>
+   8833 1319     n       java.lang.Class::getDeclaredConstructors0 (native)   
+<writer thread='22275'/>
+   8833 1320    b        sun.reflect.ReflectionFactory::copyConstructor (10 bytes)
+   8835 1321    b        java.lang.reflect.ReflectAccess::copyConstructor (5 bytes)
+   8836 1322    b        sun.reflect.ReflectionFactory::newConstructorAccessor (132 bytes)
+   8847 1323    b        sun.reflect.NativeConstructorAccessorImpl::&lt;init&gt; (10 bytes)
+   8849 1324    b        sun.reflect.DelegatingConstructorAccessorImpl::&lt;init&gt; (10 bytes)
+   8850 1325    b        sun.reflect.DelegatingConstructorAccessorImpl::setDelegate (6 bytes)
+   8850 1326    b        sun.reflect.NativeConstructorAccessorImpl::setParent (6 bytes)
+   8853 1327    b        java.lang.invoke.LambdaFormEditor::oldSpeciesData (8 bytes)
+   8855 1328    b        java.lang.invoke.BoundMethodHandle::speciesData (26 bytes)
+   8857 1329    b        java.lang.invoke.BoundMethodHandle$SpeciesData::getterFunctions (5 bytes)
+   8865 1330    b        java.lang.invoke.MethodHandles$Lookup::in (125 bytes)
+   8877 1331    b        java.lang.invoke.MemberName::isPublic (8 bytes)
+   8881 1332    b        java.lang.invoke.CallSite::maybeReBoxElements (24 bytes)
+   8885 1333    b        java.lang.invoke.LambdaForm$BMH/1324119927::reinvoke (25 bytes)
+   8888 1334    b        java.lang.invoke.LambdaForm$DMH/1581781576::invokeStatic_LL_L (15 bytes)
+   8890 1335    b        java.lang.invoke.MethodHandleImpl::castReference (20 bytes)
+   8892 1336    b        java.lang.invoke.InnerClassLambdaMetafactory::&lt;init&gt; (262 bytes)
+   8973 1337    b        java.lang.reflect.Modifier::isFinal (13 bytes)
+   8975 1338    b        java.lang.invoke.AbstractValidatingLambdaMetafactory::validateMetafactoryArgs (864 bytes)
+   9006 1339    b        java.lang.invoke.InnerClassLambdaMetafactory::spinInnerClass (515 bytes)
+   9038 1340    b        java.lang.invoke.InnerClassLambdaMetafactory::generateConstructor (151 bytes)
+   9049 1341    b        java.lang.invoke.InnerClassLambdaMetafactory$ForwardingMethodGenerator::generate (176 bytes)
+   9065 1342    b        java.lang.invoke.BoundMethodHandle::editor (8 bytes)
+   9068 1343    b        java.lang.invoke.LambdaForm::editor (5 bytes)
+   9071 1344    b        java.lang.invoke.LambdaFormEditor::lambdaFormEditor (12 bytes)
+   9074 1345    b        java.lang.invoke.LambdaFormEditor::&lt;init&gt; (10 bytes)
+   9074 1346    b        java.lang.invoke.LambdaFormEditor$Transform::inRange (36 bytes)
+   9075 1347    b        java.lang.invoke.LambdaFormEditor$Transform::&lt;init&gt; (28 bytes)
+   9078 1348    b        org.springframework.util.Assert::notNull (14 bytes)
+   9080 1349    b        org.springframework.util.Assert::isTrue (14 bytes)
+   9081 1350    b        org.springframework.util.ConcurrentReferenceHashMap$Task::hasOption (9 bytes)
+   9082 1351    b        java.util.RegularEnumSet::contains (57 bytes)
+   9085 1352   !b        sun.misc.ProxyGenerator::generateClassFile (680 bytes)
+   9214 1353    b        sun.misc.ProxyGenerator::addProxyMethod (234 bytes)
+   9266 1354    b        java.lang.reflect.Method::getExceptionTypes (11 bytes)
+   9272 1355    b        sun.misc.ProxyGenerator$ProxyMethod::&lt;init&gt; (14 bytes)
+   9280 1356    b        sun.misc.ProxyGenerator$ProxyMethod::&lt;init&gt; (64 bytes)
+   9287 1357    b        sun.misc.ProxyGenerator::access$408 (12 bytes)
+   9292 1358    b        java.lang.Class$MethodArray::addAll (22 bytes)
+   9295 1359    b        java.lang.Class$MethodArray::add (72 bytes)
+   9303 1360    b        java.lang.Class$MethodArray::removeByNameAndDescriptor (42 bytes)
+   9306 1361    b        java.lang.Class$MethodArray::matchesNameAndDescriptor (42 bytes)
+   9310 1362    b        java.lang.Class$MethodArray::addIfNotPresent (47 bytes)
+   9314 1363    b        java.lang.reflect.Method::equals (69 bytes)
+   9317 1364    b        java.lang.Class::copyMethods (36 bytes)
+   9329 1365    b        sun.misc.ProxyGenerator::checkReturnTypes (295 bytes)
+   9334 1366    b        sun.misc.ProxyGenerator$FieldInfo::&lt;init&gt; (44 bytes)
+   9337 1367    b        sun.misc.ProxyGenerator$ProxyMethod::access$100 (5 bytes)
+   9338 1368    b        sun.misc.ProxyGenerator::getMethodDescriptor (37 bytes)
+   9344 1369    b        sun.misc.ProxyGenerator$ConstantPool::getInterfaceMethodRef (33 bytes)
+   9348 1370    b        sun.misc.ProxyGenerator$ProxyMethod::codeUnwrapReturnValue (213 bytes)
+   9366 1371    b        sun.misc.ProxyGenerator::computeUniqueCatchList (163 bytes)
+   9381 1372    b        sun.misc.ProxyGenerator::access$1200 (7 bytes)
+   9389 1373    b        sun.misc.ProxyGenerator::generateStaticInitializer (457 bytes)
+   9453 1374    b        java.io.ByteArrayOutputStream::&lt;init&gt; (7 bytes)
+   9454 1375    b        java.io.ByteArrayOutputStream::&lt;init&gt; (43 bytes)
+   9456 1376    b        java.io.DataOutputStream::&lt;init&gt; (19 bytes)
+   9458 1377    b        sun.misc.ProxyGenerator$ProxyMethod::codeFieldInitialization (241 bytes)
+   9477 1378    b        sun.misc.ProxyGenerator::access$1700 (7 bytes)
+   9478 1379    b        sun.misc.ProxyGenerator::codeClassForName (41 bytes)
+   9484 1380    b        sun.misc.ProxyGenerator$ProxyMethod::access$1900 (6 bytes)
+   9487 1381    b        sun.misc.ProxyGenerator$ConstantPool::write (64 bytes)
+   9505 1382    b        sun.misc.ProxyGenerator$FieldInfo::write (50 bytes)
+<writer thread='9731'/>
+   9510 1383     n       java.lang.System::identityHashCode (native)   (static)
+<writer thread='22275'/>
+   9510 1384    b        java.lang.Class::getConstructor0 (103 bytes)
+   9519 1385    b        java.lang.Class::getInterfaces (41 bytes)
+   9526 1386    b        java.lang.Class$MethodArray::hasDefaults (13 bytes)
+   9527 1387    b        java.lang.Class$MethodArray::getFirst (36 bytes)
+   9534 1388    b        java.util.EnumSet::of (51 bytes)
+   9539 1389    b        java.util.RegularEnumSet::add (9 bytes)
+   9540 1390    b        java.util.RegularEnumSet::add (40 bytes)
+   9542 1391    b        java.util.EnumSet::typeCheck (59 bytes)
+   9543 1392    b        java.lang.ref.SoftReference::&lt;init&gt; (14 bytes)
+   9545 1393    b        org.springframework.util.ObjectUtils::nullSafeHashCode (183 bytes)
+   9562 1394    b        java.util.AbstractSet::&lt;init&gt; (5 bytes)
+   9564 1395    b        org.springframework.util.ConcurrentReferenceHashMap::getHash (64 bytes)
+   9565 1396    b        org.springframework.util.ConcurrentReferenceHashMap::getSegmentForHash (23 bytes)
+   9567 1397    b        java.util.concurrent.locks.AbstractOwnableSynchronizer::setExclusiveOwnerThread (6 bytes)
+   9567 1398    b        org.springframework.core.ResolvableType::hashCode (22 bytes)
+   9568 1399    b        java.lang.Long::longValue (5 bytes)
+   9569 1400    b        java.lang.Integer::hashCode (8 bytes)
+   9569 1401    b        java.lang.Integer::hashCode (2 bytes)
+   9570 1402    b        org.springframework.core.ResolvableType::resolve (5 bytes)
+   9571 1403    b        java.lang.reflect.Field::getName (5 bytes)
+   9571 1404    b        org.springframework.core.ResolvableType::forType (115 bytes)
+   9620 1405    b        java.lang.reflect.Field::getGenericSignature (5 bytes)
+   9620 1406    b        sun.reflect.generics.reflectiveObjects.TypeVariableImpl::hashCode (16 bytes)
+   9622 1407    b        org.springframework.util.ObjectUtils::nullSafeEquals (55 bytes)
+   9625 1408    b        org.springframework.core.SerializableTypeWrapper$FieldTypeProvider::getType (8 bytes)
+   9628 1409    b        java.lang.reflect.Field::getGenericType (20 bytes)
+   9631 1410    b        java.lang.reflect.Field::getGenericInfo (27 bytes)
+   9632 1411    b        sun.reflect.generics.repository.FieldRepository::getGenericType (38 bytes)
+   9635 1412    b        org.springframework.core.ResolvableType$DefaultVariableResolver::getSource (5 bytes)
+   9637 1413    b        org.springframework.core.SerializableTypeWrapper$TypeProxyInvocationHandler::invoke (324 bytes)
+   9675 1414    b        org.springframework.util.ConcurrentReferenceHashMap::get (37 bytes)
+   9679 1415    b        org.springframework.util.ConcurrentReferenceHashMap::getReference (18 bytes)
+   9681 1416    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::getReference (55 bytes)
+   9683 1417    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::getIndex (7 bytes)
+   9684 1418    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::findInChain (66 bytes)
+   9689 1419    b        org.springframework.util.ConcurrentReferenceHashMap$SoftEntryReference::get (8 bytes)
+   9691 1420    b        java.lang.Class::getGenericInfo (52 bytes)
+   9694 1421    b        sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::hashCode (24 bytes)
+   9697 1422    b        org.springframework.core.ResolvableType::equals (157 bytes)
+   9703 1423    b        java.lang.reflect.Field::getDeclaringClass (5 bytes)
+   9707 1424    b        org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)
+   9731 1425   !b        repro.ResolvableTypeC2Repro::exerciseNestedReleaseChain (155 bytes)
+   9746 1426   !b        repro.ResolvableTypeC2Repro::exerciseConvergedRelease (96 bytes)
+   9754 1427    b        org.springframework.core.ResolvableType::forType (7 bytes)
+   9756 1428    b        org.springframework.core.ResolvableType::getGenerics (148 bytes)
+   9775 1429    b        java.lang.reflect.Method::invoke (62 bytes)
+   9780 1430    b        sun.reflect.DelegatingMethodAccessorImpl::invoke (10 bytes)
+   9781 1431    b        sun.reflect.NativeMethodAccessorImpl::invoke (104 bytes)
+<writer thread='9731'/>
+   9783 1432     n       sun.reflect.NativeMethodAccessorImpl::invoke0 (native)   (static)
+<writer thread='22275'/>
+   9783 1433   !b        org.springframework.util.ReflectionUtils::invokeMethod (22 bytes)
+   9785 1434    b        org.springframework.core.SerializableTypeWrapper$MethodInvokeTypeProvider::getType (58 bytes)
+   9790 1435    b        org.springframework.core.ResolvableType::calculateHashCode (80 bytes)
+   9793 1436    b        org.springframework.core.ResolvableType::as (86 bytes)
+   9798 1437    b        org.springframework.core.ResolvableType::asVariableResolver (18 bytes)
+   9801 1438    b        org.springframework.util.ReflectionUtils::invokeMethod (9 bytes)
+   9802 1439    b        sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::getActualTypeArguments (11 bytes)
+   9808 1440    b        org.springframework.core.ResolvableType::getNested (7 bytes)
+   9809 1441    b        org.springframework.core.ResolvableType::getNested (121 bytes)
+   9821 1442    b        org.springframework.core.ResolvableType::getGeneric (90 bytes)
+<writer thread='9731'/>
+   9832 1431             sun.reflect.NativeMethodAccessorImpl::invoke (104 bytes)   made not entrant
+<writer thread='22275'/>
+   9835 1443    b        sun.reflect.ClassFileAssembler::emitByte (11 bytes)
+   9836 1444    b        sun.reflect.ByteVectorImpl::add (38 bytes)
+   9839 1445    b        sun.reflect.ClassFileAssembler::emitConstantPoolUTF8 (50 bytes)
+   9843 1446   !b        sun.reflect.UTF8::encode (191 bytes)
+   9865 1447    b        sun.reflect.UTF8::utf8Length (81 bytes)
+   9873 1448    b        sun.reflect.ClassFileAssembler::emitShort (24 bytes)
+   9875 1449    b        sun.reflect.ClassFileAssembler::cpi (22 bytes)
+   9878 1450    b        sun.reflect.ByteVectorImpl::getLength (7 bytes)
+   9880 1451    b        sun.reflect.ClassFileAssembler::setStack (25 bytes)
+   9881 1452    b        sun.reflect.ClassFileAssembler::incStack (11 bytes)
+   9882 1453    b        sun.reflect.ClassFileAssembler::getLength (11 bytes)
+   9883 1454    b        sun.reflect.ClassFileAssembler::getStack (5 bytes)
+   9883 1455    b        sun.reflect.ByteVectorImpl::get (26 bytes)
+   9885 1456    b        sun.reflect.ClassFileAssembler::append (30 bytes)
+   9892 1457   !b        java.lang.Class::newInstance (155 bytes)
+   9907 1458    b        org.springframework.util.ObjectUtils::isEmpty (15 bytes)
+   9908 1459    b        repro.ResolvableTypeC2Repro::hotWrapperThree (7 bytes)
+   9909 1460    b        org.springframework.core.ResolvableType::forField (39 bytes)
+   9915 1461    b        org.springframework.core.ResolvableType::forType (7 bytes)
+   9916 1462    b        org.springframework.core.ResolvableType::getInterfaces (68 bytes)
+   9925 1463    b        java.lang.Class::getGenericInterfaces (21 bytes)
+   9926 1464    b        sun.reflect.generics.repository.ClassRepository::getSuperInterfaces (77 bytes)
+   9940 1465   !b        org.springframework.core.ResolvableType::getSuperType (53 bytes)
+   9946 1466    b        java.lang.Class::getGenericSuperclass (28 bytes)
+   9948 1467    b        sun.reflect.generics.repository.ClassRepository::getSuperclass (40 bytes)
+   9951 1468    b        org.springframework.core.ResolvableType::forType (17 bytes)
+   9952 1469    b        org.springframework.core.SerializableTypeWrapper$FieldTypeProvider::&lt;init&gt; (26 bytes)
+   9953 1470   !b        org.springframework.core.$Proxy0::hashCode (32 bytes)
+   9957 1471    b        repro.ResolvableTypeC2Repro::consume (53 bytes)
+   9961 1472   !b        org.springframework.core.$Proxy0::getActualTypeArguments (29 bytes)
+<writer thread='9731'/>
+   9965 1429             java.lang.reflect.Method::invoke (62 bytes)   made not entrant
+<writer thread='22275'/>
+   9965 1473   !b        org.springframework.core.$Proxy1::hashCode (32 bytes)
+   9970 1474    b        org.springframework.core.ResolvableType::resolve (16 bytes)
+<writer thread='9731'/>
+   9973 1430             sun.reflect.DelegatingMethodAccessorImpl::invoke (10 bytes)   made not entrant
+<writer thread='22275'/>
+   9976 1475    b        java.lang.reflect.Method::invoke (62 bytes)
+   9981 1476    b        java.util.concurrent.locks.ReentrantLock::lock (8 bytes)
+   9983 1477    b        java.util.concurrent.locks.ReentrantLock$NonfairSync::lock (25 bytes)
+   9984 1478    b        java.util.concurrent.locks.AbstractQueuedSynchronizer::compareAndSetState (13 bytes)
+   9985 1479    b        java.util.concurrent.locks.ReentrantLock::unlock (10 bytes)
+   9986 1480    b        java.util.concurrent.locks.AbstractQueuedSynchronizer::release (33 bytes)
+   9988 1481    b        java.util.concurrent.locks.ReentrantLock$Sync::tryRelease (45 bytes)
+   9989 1482    b        java.util.concurrent.locks.AbstractQueuedSynchronizer::getState (5 bytes)
+   9990 1483    b        java.util.concurrent.locks.AbstractOwnableSynchronizer::getExclusiveOwnerThread (5 bytes)
+   9990 1484    b        java.util.concurrent.locks.AbstractQueuedSynchronizer::setState (6 bytes)
+   9991 1485    b        java.util.concurrent.atomic.AtomicInteger::incrementAndGet (14 bytes)
+   9993 1486    b        java.lang.reflect.Constructor::copy (72 bytes)
+   9997 1487    b        java.lang.reflect.Constructor::&lt;init&gt; (50 bytes)
+   9999 1488    b        java.lang.reflect.Constructor::newInstance (87 bytes)
+  10004 1489    b        sun.reflect.DelegatingMethodAccessorImpl::invoke (10 bytes)
+  10007 1490   !b        sun.reflect.GeneratedMethodAccessor1::invoke (63 bytes)
+  10009 1491    b        java.lang.reflect.Proxy$KeyX::&lt;init&gt; (55 bytes)
+  10021 1492    b        java.lang.reflect.Proxy$KeyX::hashCode (5 bytes)
+  10022 1493    b        sun.misc.SharedSecrets::getJavaLangAccess (4 bytes)
+  10023 1494    b        org.springframework.util.ConcurrentReferenceHashMap::put (8 bytes)
+  10032 1495    b        org.springframework.util.ConcurrentReferenceHashMap::put (32 bytes)
+  10040 1496    b        org.springframework.util.ConcurrentReferenceHashMap$1::&lt;init&gt; (23 bytes)
+  10042 1497    b        org.springframework.util.ConcurrentReferenceHashMap$Task::&lt;init&gt; (34 bytes)
+  10044 1498    b        java.lang.Enum::getDeclaringClass (22 bytes)
+  10045 1499    b        java.util.EnumSet::noneOf (63 bytes)
+  10051 1500    b        java.util.EnumSet::getUniverse (10 bytes)
+  10053 1501    b        java.lang.System$2::getEnumConstantsShared (8 bytes)
+  10055 1502   !b        java.lang.Class::getEnumConstantsShared (73 bytes)
+  10066 1503    b        java.util.RegularEnumSet::&lt;init&gt; (12 bytes)
+  10068 1504    b        java.util.EnumSet::&lt;init&gt; (15 bytes)
+  10069 1505    b        org.springframework.util.ConcurrentReferenceHashMap::doTask (18 bytes)
+  10070 1506   !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::doTask (179 bytes)
+  10089 1507    b        java.lang.invoke.LambdaForm$MH/396873410::linkToTargetMethod (15 bytes)
+  10090 1508    b        java.lang.invoke.LambdaForm$DMH/1198108795::invokeStatic_LLILI_L (22 bytes)
+  10092 1509    b        org.springframework.util.ConcurrentReferenceHashMap$Segment$$Lambda$2/1721931908::get$Lambda (14 bytes)
+  10096 1510    b        org.springframework.util.ConcurrentReferenceHashMap$Segment$$Lambda$2/1721931908::&lt;init&gt; (32 bytes)
+  10097 1511    b        org.springframework.util.ConcurrentReferenceHashMap$1::execute (55 bytes)
+  10100 1512    b        org.springframework.util.Assert::state (14 bytes)
+  10100 1513    b        org.springframework.util.ConcurrentReferenceHashMap$Segment$$Lambda$2/1721931908::add (25 bytes)
+  10101 1514    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::lambda$doTask$0 (43 bytes)
+  10108 1515    b        org.springframework.util.ConcurrentReferenceHashMap$Entry::&lt;init&gt; (15 bytes)
+  10109 1516    b        org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::createReference (43 bytes)
+  10113 1517    b        org.springframework.util.ConcurrentReferenceHashMap::access$400 (5 bytes)
+  10113 1518    b        org.springframework.util.ConcurrentReferenceHashMap$SoftEntryReference::&lt;init&gt; (18 bytes)
+<writer thread='9731'/>
+Requesting OSR entry for  repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop at bci 78
+<writer thread='22275'/>
+  10116 1519 % !b        repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop @ 78 (528 bytes)
+<writer thread='9731'/>
+nmethod 0x0000000111fc7d90
+OSR entry @ pc: 0x0000000111fc80f0: Compiled method (c2)   10186 1519 % !         repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop @ 78 (528 bytes)
+ total in heap  [0x0000000111fc7d90,0x0000000111fcb090] = 13056
+ relocation     [0x0000000111fc7ec0,0x0000000111fc80c8] = 520
+ main code      [0x0000000111fc80e0,0x0000000111fc9980] = 6304
+ stub code      [0x0000000111fc9980,0x0000000111fc9a10] = 144
+ oops           [0x0000000111fc9a10,0x0000000111fc9a28] = 24
+ metadata       [0x0000000111fc9a28,0x0000000111fc9aa0] = 120
+ scopes data    [0x0000000111fc9aa0,0x0000000111fca438] = 2456
+ scopes pcs     [0x0000000111fca438,0x0000000111fcaf18] = 2784
+ dependencies   [0x0000000111fcaf18,0x0000000111fcaf20] = 8
+ handler table  [0x0000000111fcaf20,0x0000000111fcb028] = 264
+ nul chk table  [0x0000000111fcb028,0x0000000111fcb090] = 104
+  10188 1519 % !         repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop @ -2 (528 bytes)   made not entrant
+<writer thread='22275'/>
+  10189 1520    b        sun.reflect.generics.tree.SimpleClassTypeSignature::getTypeArguments (5 bytes)
+  10190 1521    b        sun.reflect.generics.parser.SignatureParser::parseTypeArguments (109 bytes)
+  10200 1522    b        sun.reflect.generics.parser.SignatureParser::parseTypeArgument (133 bytes)
+  10209 1523    b        sun.reflect.generics.parser.SignatureParser::parseIdentifier (13 bytes)
+  10213 1524    b        sun.reflect.generics.visitor.Reifier::reifyTypeArguments (38 bytes)
+  10223 1525    b        sun.reflect.generics.repository.GenericDeclRepository::getTypeParameters (80 bytes)
+  10241 1526    b        sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::validateConstructorArguments (44 bytes)
+  10247 1527    b        java.lang.Class::getTypeParameters (25 bytes)
+<writer thread='9731'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/reflect/generics/repository/GenericDeclRepository' x='sun/reflect/generics/repository/ClassRepository' witness='sun/reflect/generics/repository/ConstructorRepository' stamp='10.254'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/reflect/generics/repository/GenericDeclRepository' x='sun/reflect/generics/repository/ClassRepository' witness='sun/reflect/generics/repository/ConstructorRepository' stamp='10.254'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/reflect/generics/repository/GenericDeclRepository' x='sun/reflect/generics/repository/ClassRepository' witness='sun/reflect/generics/repository/ConstructorRepository' stamp='10.254'/>
+<writer thread='16899'/>
+  10255 1527             java.lang.Class::getTypeParameters (25 bytes)   made not entrant
+  10255 1525             sun.reflect.generics.repository.GenericDeclRepository::getTypeParameters (80 bytes)   made not entrant
+  10255 1526             sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::validateConstructorArguments (44 bytes)   made not entrant
+<writer thread='22275'/>
+  10255 1528    b        sun.reflect.generics.repository.AbstractRepository::&lt;init&gt; (19 bytes)
+  10262  149             java.util.HashMap::putVal (300 bytes)   made zombie
+  10264  280   !         java.net.URL::&lt;init&gt; (543 bytes)   made zombie
+  10264 1529    b        sun.reflect.generics.parser.SignatureParser::make (8 bytes)
+  10267  438   !         sun.misc.Resource::getBytes (242 bytes)   made zombie
+  10268  562             java.util.Arrays::equals (78 bytes)   made zombie
+  10268  560             java.lang.reflect.Array::newInstance (6 bytes)   made zombie
+  10269 1530    b        sun.reflect.generics.parser.SignatureParser::&lt;init&gt; (5 bytes)
+  10270  762             java.util.HashMap$HashIterator::nextNode (100 bytes)   made zombie
+  10270  696             java.lang.invoke.InvokerBytecodeGenerator::emitLoadInsn (21 bytes)   made zombie
+  10270  730             java.lang.invoke.InvokerBytecodeGenerator::emitStaticInvoke (246 bytes)   made zombie
+  10270  763             java.util.HashMap$HashIterator::hasNext (13 bytes)   made zombie
+  10271  761             java.lang.invoke.InvokerBytecodeGenerator::cpPatches (128 bytes)   made zombie
+  10271  777             java.lang.invoke.InvokerBytecodeGenerator::emitReturn (107 bytes)   made zombie
+  10271  768             java.lang.invoke.InvokerBytecodeGenerator::classFilePrologue (74 bytes)   made zombie
+  10271  779             java.lang.invoke.InvokerBytecodeGenerator::classFileEpilogue (17 bytes)   made zombie
+  10271  791             java.lang.invoke.InvokerBytecodeGenerator::emitReturnInsn (126 bytes)   made zombie
+  10271  774             jdk.internal.org.objectweb.asm.ClassWriter::visitMethod (24 bytes)   made zombie
+  10271  775             jdk.internal.org.objectweb.asm.MethodWriter::&lt;init&gt; (268 bytes)   made zombie
+  10271  792             java.lang.invoke.InvokerBytecodeGenerator::emitReferenceCast (184 bytes)   made zombie
+  10271  800             java.lang.invoke.InvokerBytecodeGenerator::emitPushArgument (120 bytes)   made zombie
+  10271  845             java.lang.invoke.DirectMethodHandle::make (242 bytes)   made zombie
+  10271  864             java.lang.invoke.InvokerBytecodeGenerator::emitStoreInsn (21 bytes)   made zombie
+  10271  863             java.lang.invoke.LambdaForm::normalize (322 bytes)   made zombie
+  10271  891             java.lang.invoke.InvokerBytecodeGenerator::emitStoreResult (27 bytes)   made zombie
+  10272  978             java.util.Arrays::fill (28 bytes)   made zombie
+  10272  989             java.lang.invoke.BoundMethodHandle$Factory::emitPushFields (49 bytes)   made zombie
+  10272  983             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)   made zombie
+  10272 1010             java.util.Arrays::fill (28 bytes)   made zombie
+  10272 1004             jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (1289 bytes)   made zombie
+  10272 1019             java.lang.invoke.BoundMethodHandle$Factory::generateConcreteBMHClass (1031 bytes)   made zombie
+  10273 1531    b        sun.reflect.generics.parser.SignatureParser::init (16 bytes)
+  10273 1072             java.lang.invoke.TypeConvertingMethodAdapter::initWidening (44 bytes)   made zombie
+  10279 1532    b        sun.reflect.generics.parser.SignatureParser::parseTypeVariableSignature (93 bytes)
+  10286 1533    b        sun.reflect.generics.tree.TypeVariableSignature::make (9 bytes)
+  10288 1534    b        sun.reflect.generics.tree.TypeVariableSignature::&lt;init&gt; (10 bytes)
+  10291 1535    b        sun.reflect.generics.repository.AbstractRepository::getReifier (8 bytes)
+  10293 1536    b        sun.reflect.generics.repository.AbstractRepository::getFactory (5 bytes)
+  10293 1537    b        sun.reflect.generics.visitor.Reifier::make (9 bytes)
+  10296 1538    b        sun.reflect.generics.visitor.Reifier::&lt;init&gt; (10 bytes)
+  10297 1539    b        sun.reflect.generics.repository.GenericDeclRepository::getTypeParameters (80 bytes)
+  10316 1540    b        sun.reflect.generics.scope.AbstractScope::&lt;init&gt; (10 bytes)
+  10317 1541    b        sun.reflect.generics.visitor.Reifier::getResult (26 bytes)
+  10317 1542    b        sun.reflect.generics.tree.ClassTypeSignature::accept (8 bytes)
+  10319 1543    b        sun.reflect.generics.visitor.Reifier::visitClassTypeSignature (381 bytes)
+  10348 1544    b        sun.reflect.generics.tree.ClassTypeSignature::getPath (5 bytes)
+  10349 1545    b        sun.reflect.generics.tree.SimpleClassTypeSignature::getName (5 bytes)
+  10350 1546    b        sun.reflect.generics.tree.SimpleClassTypeSignature::getDollar (5 bytes)
+  10350 1547   !b        sun.reflect.generics.factory.CoreReflectionFactory::makeNamedType (21 bytes)
+  10352 1548    b        sun.reflect.generics.factory.CoreReflectionFactory::getDeclsLoader (85 bytes)
+  10355 1549    b        sun.reflect.generics.reflectiveObjects.TypeVariableImpl::getName (5 bytes)
+  10356 1550    b        sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::validateConstructorArguments (44 bytes)
+  10362 1551    b        sun.reflect.generics.scope.AbstractScope::lookup (66 bytes)
+  10374 1552    b        sun.reflect.generics.scope.AbstractScope::getRecvr (5 bytes)
+  10374 1553    b        java.lang.Class::getTypeParameters (25 bytes)
+  10379 1554    b        sun.reflect.generics.scope.ClassScope::make (9 bytes)
+  10382 1555    b        sun.reflect.generics.scope.ClassScope::&lt;init&gt; (6 bytes)
+  10383 1556    b        sun.reflect.generics.factory.CoreReflectionFactory::make (10 bytes)
+  10386 1557    b        sun.reflect.generics.factory.CoreReflectionFactory::&lt;init&gt; (15 bytes)
+  10387 1558    b        sun.reflect.generics.repository.GenericDeclRepository::&lt;init&gt; (7 bytes)
+  10388 1559    b        sun.reflect.generics.parser.SignatureParser::parseZeroOrMoreFormalTypeParameters (19 bytes)
+  10391 1560    b        sun.reflect.generics.parser.SignatureParser::parseFormalTypeParameter (16 bytes)
+  10394 1561    b        sun.reflect.generics.parser.SignatureParser::parseBounds (111 bytes)
+  10405 1562    b        sun.reflect.generics.tree.FormalTypeParameter::make (10 bytes)
+  10407 1563    b        sun.reflect.generics.tree.FormalTypeParameter::&lt;init&gt; (15 bytes)
+  10408 1564    b        sun.reflect.generics.parser.SignatureParser::parseSuperInterfaces (51 bytes)
+  10417 1565    b        sun.reflect.generics.reflectiveObjects.TypeVariableImpl::make (66 bytes)
+  10421 1566    b        sun.reflect.generics.reflectiveObjects.TypeVariableImpl::&lt;init&gt; (22 bytes)
+  10422 1567    b        sun.reflect.generics.reflectiveObjects.LazyReflectiveObjectGenerator::&lt;init&gt; (10 bytes)
+  10424 1568    b        java.lang.reflect.Constructor::getParameterTypes (11 bytes)
+  10430 1569    b        org.springframework.core.ResolvableType::resolveClass (73 bytes)
+  10436 1570    b        org.springframework.core.ResolvableType::resolveType (151 bytes)
+<writer thread='9731'/>
+  10449 1570             org.springframework.core.ResolvableType::resolveType (151 bytes)   made not entrant
+<writer thread='22275'/>
+  10449 1571    b        sun.reflect.generics.repository.ClassRepository::make (10 bytes)
+  10454 1572    b        sun.reflect.generics.repository.ClassRepository::&lt;init&gt; (7 bytes)
+  10456 1573    b        sun.reflect.generics.parser.SignatureParser::parseClassSignature (37 bytes)
+  10460 1574    b        sun.reflect.generics.tree.ClassSignature::make (11 bytes)
+  10463 1575    b        sun.reflect.generics.tree.ClassSignature::&lt;init&gt; (20 bytes)
+<writer thread='9731'/>
+  10465 1576     n       java.lang.Class::getGenericSignature0 (native)   
+<writer thread='22275'/>
+  10466 1577    b        org.springframework.core.MethodParameter::withContainingClass (17 bytes)
+  10471 1578    b        org.springframework.core.MethodParameter::clone (9 bytes)
+  10475 1579    b        org.springframework.core.MethodParameter::&lt;init&gt; (99 bytes)
+  10479 1580    b        org.springframework.core.NativeDetector::inNativeImage (4 bytes)
+  10480 1581    b        org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider::getType (8 bytes)
+  10481 1582    b        org.springframework.core.MethodParameter::getGenericParameterType (147 bytes)
+<writer thread='9731'/>
+  10486 1428             org.springframework.core.ResolvableType::getGenerics (148 bytes)   made not entrant
+  10486 1413             org.springframework.core.SerializableTypeWrapper$TypeProxyInvocationHandler::invoke (324 bytes)   made not entrant
+<writer thread='22275'/>
+  10487 1583    b        org.springframework.core.ResolvableType::getGenerics (148 bytes)
+  10506 1584    b        org.springframework.core.ResolvableType$DefaultVariableResolver::resolveVariable (9 bytes)
+  10507 1585    b        org.springframework.core.ResolvableType::access$200 (6 bytes)
+  10508 1586    b        org.springframework.core.ResolvableType::resolveVariable (186 bytes)
+  10525 1587    b        org.springframework.core.ResolvableType::isArray (58 bytes)
+  10529 1588    b        org.springframework.core.ResolvableType::resolveType (151 bytes)
+  10542 1589    b        org.springframework.core.SerializableTypeWrapper$TypeProxyInvocationHandler::invoke (324 bytes)
+  10578 1590    b        sun.reflect.NativeMethodAccessorImpl::invoke (104 bytes)
+<writer thread='9731'/>
+  10589 1424             org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)   made not entrant
+  10590 1404             org.springframework.core.ResolvableType::forType (115 bytes)   made not entrant
+<writer thread='22275'/>
+  10591 1591   !b        org.springframework.core.$Proxy1::getName (29 bytes)
+  10596 1592    b        org.springframework.core.ResolvableType::forType (115 bytes)
+  10639 1593    b        org.springframework.core.ResolvableType::hasGenerics (14 bytes)
+  10643 1594    b        org.springframework.core.MethodParameter::getMethod (22 bytes)
+  10645 1595    b        org.springframework.core.MethodParameter::getDeclaringClass (8 bytes)
+  10646 1596    b        org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)
+  10666 1597    b        java.lang.reflect.Method::getGenericSignature (5 bytes)
+<writer thread='9731'/>
+  10667 1422             org.springframework.core.ResolvableType::equals (157 bytes)   made not entrant
+<writer thread='22275'/>
+  10667 1598    b        org.springframework.core.ResolvableType::equals (157 bytes)
+  10677 1599    b        java.lang.reflect.Method::getGenericInfo (27 bytes)
+  10681 1600    b        sun.reflect.generics.repository.ConstructorRepository::getParameterTypes (78 bytes)
+  10698 1601    b        sun.reflect.ClassFileAssembler::emitConstantPoolClass (23 bytes)
+  10702 1602    b        sun.reflect.ClassFileAssembler::emitConstantPoolMethodref (28 bytes)
+  10707 1603    b        sun.reflect.ClassFileAssembler::emitConstantPoolNameAndType (28 bytes)
+  10712 1604    b        sun.reflect.ByteVectorImpl::put (27 bytes)
+  10714 1605    b        sun.reflect.ClassFileAssembler::opc_invokespecial (26 bytes)
+  10718 1606    b        sun.reflect.ClassFileAssembler::emitInt (46 bytes)
+  10722 1607    b        java.util.Vector::&lt;init&gt; (7 bytes)
+  10724 1608    b        java.util.Vector::&lt;init&gt; (7 bytes)
+  10726 1609    b        java.util.Vector::&lt;init&gt; (49 bytes)
+  10728 1610    b        java.lang.Math::min (46 bytes)
+  10732 1611    b        java.lang.reflect.Constructor::acquireConstructorAccessor (44 bytes)
+  10734 1612    b        java.lang.reflect.Constructor::getConstructorAccessor (5 bytes)
+  10734 1613    b        java.lang.reflect.Modifier::isAbstract (14 bytes)
+  10735 1614    b        sun.reflect.MethodAccessorImpl::&lt;init&gt; (5 bytes)
+<writer thread='9731'/>
+  10736 1475             java.lang.reflect.Method::invoke (62 bytes)   made not entrant
+  10736 1489             sun.reflect.DelegatingMethodAccessorImpl::invoke (10 bytes)   made not entrant
+<writer thread='22275'/>
+  10736 1615    b        org.springframework.core.ResolvableType::forMethodParameter (9 bytes)
+  10738 1616    b        org.springframework.core.ResolvableType::forMethodParameter (16 bytes)
+  10739 1617    b        org.springframework.core.MethodParameter::getNestingLevel (5 bytes)
+  10739 1618    b        org.springframework.core.ResolvableType::forMethodParameter (40 bytes)
+  10749 1619    b        org.springframework.core.MethodParameter::getContainingClass (18 bytes)
+  10750 1620    b        org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider::&lt;init&gt; (59 bytes)
+  10755 1621    b        org.springframework.core.MethodParameter::getExecutable (5 bytes)
+  10755 1622    b        org.springframework.core.MethodParameter::getParameterIndex (5 bytes)
+  10755 1623    b        java.lang.reflect.Executable::getGenericParameterTypes (20 bytes)
+  10757 1624    b        java.lang.reflect.Method::hasGenericInformation (13 bytes)
+  10758 1625    b        java.lang.reflect.Method::getGenericInfo (5 bytes)
+  10761 1626   !b        sun.reflect.GeneratedMethodAccessor2::invoke (63 bytes)
+  10763 1627    b        java.lang.reflect.Method::invoke (62 bytes)
+  10767 1628    b        sun.reflect.DelegatingMethodAccessorImpl::invoke (10 bytes)
+<writer thread='9731'/>
+Requesting OSR entry for  repro.ResolvableTypeC2Repro::exerciseMethodParameterOsrMemBarLoop at bci 66
+<writer thread='22275'/>
+  10769 1629 % !b        repro.ResolvableTypeC2Repro::exerciseMethodParameterOsrMemBarLoop @ 66 (369 bytes)
+<writer thread='9731'/>
+nmethod 0x0000000111ff4190
+OSR entry @ pc: 0x0000000111ff4510: Compiled method (c2)   10813 1629 % !         repro.ResolvableTypeC2Repro::exerciseMethodParameterOsrMemBarLoop @ 66 (369 bytes)
+ total in heap  [0x0000000111ff4190,0x0000000111ff6d08] = 11128
+ relocation     [0x0000000111ff42c0,0x0000000111ff44e8] = 552
+ main code      [0x0000000111ff4500,0x0000000111ff5ae0] = 5600
+ stub code      [0x0000000111ff5ae0,0x0000000111ff5b80] = 160
+ oops           [0x0000000111ff5b80,0x0000000111ff5ba0] = 32
+ metadata       [0x0000000111ff5ba0,0x0000000111ff5c60] = 192
+ scopes data    [0x0000000111ff5c60,0x0000000111ff63d8] = 1912
+ scopes pcs     [0x0000000111ff63d8,0x0000000111ff6b88] = 1968
+ dependencies   [0x0000000111ff6b88,0x0000000111ff6ba8] = 32
+ handler table  [0x0000000111ff6ba8,0x0000000111ff6cb0] = 264
+ nul chk table  [0x0000000111ff6cb0,0x0000000111ff6d08] = 88
+  10815 1629 % !         repro.ResolvableTypeC2Repro::exerciseMethodParameterOsrMemBarLoop @ -2 (369 bytes)   made not entrant
+<writer thread='22275'/>
+  10815 1630    b        sun.reflect.generics.factory.CoreReflectionFactory::makeParameterizedType (10 bytes)
+  10824 1631    b        sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::make (11 bytes)
+  10831 1632    b        sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::&lt;init&gt; (35 bytes)
+  10837 1633    b        sun.reflect.generics.tree.TypeVariableSignature::accept (8 bytes)
+  10841 1634    b        sun.reflect.generics.visitor.Reifier::visitTypeVariableSignature (18 bytes)
+  10843 1635    b        sun.reflect.generics.tree.TypeVariableSignature::getIdentifier (5 bytes)
+  10844 1636    b        sun.reflect.generics.factory.CoreReflectionFactory::findTypeVariable (11 bytes)
+  10845 1637    b        sun.reflect.generics.factory.CoreReflectionFactory::getScope (5 bytes)
+  10847 1638    b        java.lang.Class::getFactory (9 bytes)
+  10848 1639    b        sun.reflect.generics.parser.SignatureParser::parseFormalTypeParameters (119 bytes)
+  10863 1640    b        java.lang.reflect.Proxy$KeyX::equals (51 bytes)
+  10871 1641    b        java.lang.reflect.WeakCache::get (221 bytes)
+  10902 1642    b        sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::getRawType (5 bytes)
+  10903 1643    b        sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl::getRawType (5 bytes)
+  10907 1644   !b        sun.nio.cs.US_ASCII$Encoder::encodeArrayLoop (356 bytes)
+  10924 1645    b        java.lang.ThreadLocal$ThreadLocalMap::access$000 (6 bytes)
+  10926 1646    b        java.lang.ThreadLocal$ThreadLocalMap::getEntry (42 bytes)
+  10930 1647    b        java.lang.ThreadGroup::checkAccess (14 bytes)
+  10931 1648    b        java.security.AccessController::getContext (23 bytes)
+<writer thread='9731'/>
+  10934 1649     n       java.security.AccessController::getStackAccessControlContext (native)   (static)
+C1 Runtime statistics:
+ _resolve_invoke_virtual_cnt:     34
+ _resolve_invoke_opt_virtual_cnt: 1704
+ _resolve_invoke_static_cnt:      1056
+ _handle_wrong_method_cnt:        60
+ _ic_miss_cnt:                    22
+ _generic_arraycopy_cnt:          0
+ _generic_arraycopystub_cnt:      0
+ _byte_arraycopy_cnt:             0
+ _short_arraycopy_cnt:            0
+ _int_arraycopy_cnt:              0
+ _long_arraycopy_cnt:             0
+ _primitive_arraycopy_cnt:        0
+ _oop_arraycopy_cnt (C):          0
+ _oop_arraycopy_cnt (stub):       0
+ _arraycopy_slowcase_cnt:         0
+ _arraycopy_checkcast_cnt:        0
+ _arraycopy_checkcast_attempt_cnt:0
+ _new_type_array_slowcase_cnt:    0
+ _new_object_array_slowcase_cnt:  0
+ _new_instance_slowcase_cnt:      0
+ _new_multi_array_slowcase_cnt:   0
+ _monitorenter_slowcase_cnt:      0
+ _monitorexit_slowcase_cnt:       0
+ _patch_code_slowcase_cnt:        0
+ _throw_range_check_exception_count:            0:
+ _throw_index_exception_count:                  0:
+ _throw_div0_exception_count:                   0:
+ _throw_null_pointer_exception_count:           0:
+ _throw_class_cast_exception_count:             0:
+ _throw_incompatible_class_change_error_count:  0:
+ _throw_array_store_exception_count:            0:
+ _throw_count:                                  0:
+
+<statistics type='deoptimization'>
+Deoptimization traps recorded:
+   180 (100.0%) total
+     null_check/make_not_entrant/checkcast: 2 (1.1%)
+    null_check/make_not_entrant/instanceof: 1 (0.6%)
+       null_check/make_not_entrant/aastore: 1 (0.6%)
+  null_check/make_not_entrant/invokestatic: 1 (0.6%)
+   null_assert/make_not_entrant/instanceof: 1 (0.6%)
+     null_assert/make_not_entrant/astore_3: 1 (0.6%)
+  class_check/maybe_recompile/invokevirtual: 41 (22.8%)
+    class_check/maybe_recompile/instanceof: 20 (11.1%)
+  class_check/maybe_recompile/invokeinterface: 14 (7.8%)
+       array_check/maybe_recompile/aastore: 8 (4.4%)
+   bimorphic/maybe_recompile/invokevirtual: 18 (10.0%)
+  bimorphic/maybe_recompile/invokeinterface: 6 (3.3%)
+                  unloaded/reinterpret/new: 4 (2.2%)
+       uninitialized/reinterpret/getstatic: 39 (21.7%)
+                       constraint/none/nop: 4 (2.2%)
+           predicate/maybe_recompile/aload: 1 (0.6%)
+         predicate/maybe_recompile/aload_0: 2 (1.1%)
+    loop_limit_check/maybe_recompile/aload: 2 (1.1%)
+    loop_limit_check/maybe_recompile/iload: 1 (0.6%)
+  loop_limit_check/maybe_recompile/aload_0: 1 (0.6%)
+  speculate_class_check/maybe_recompile/instanceof: 3 (1.7%)
+         unstable_if/reinterpret/if_icmpeq: 1 (0.6%)
+         unstable_if/reinterpret/if_icmpge: 3 (1.7%)
+              unstable_if/reinterpret/iflt: 1 (0.6%)
+               unstable_if/reinterpret/nop: 4 (2.2%)
+</statistics>
+<statistics type='SharedRuntime'>
+    2 new instance requires GC
+    4 new array requires GC
+   22 inline cache miss in compiled
+   60 wrong method
+ 1056 unresolved static call site
+   34 unresolved virtual call site
+ 1704 unresolved opt virtual call site
+ 1944 slow partial subtype
+ 1050 byte array copies
+ 6840 short array copies
+  865 int array copies
+ 3955 long array copies
+   76 checkcast array copies
+  128 find exception handler
+  121 rethrow handler
+AdapterHandlerTable: empty 154 longest 3 total 185 average 1.330935
+AdapterHandlerTable: lookups 9081 buckets 9468 equals 8621 hits 8621 compact 8621
+</statistics>
+<statistics type='nmethod'>
+Statistics for 126 native nmethods:
+ N. total size  = 122160
+ N. relocation  = 10336
+ N. main code   = 71824
+Statistics for 1523 bytecoded nmethods:
+ total in heap  = 3349712
+ relocation     = 174960
+ constants      = 3520
+ main code      = 1222912
+ stub code      = 95656
+ oops           = 3760
+ scopes data    = 385360
+ scopes pcs     = 766048
+ dependencies   = 13176
+ handler table  = 129624
+ nul chk table  = 22640
+Debug Data Chunks: 88682, shared 12652+25745, non-SP&apos;s elided 403
+PcDesc Statistics:  6308 queries, 8.16 comparisons per query
+  caches=1523 queries=6308/0, hits=0+1548, tests=22285+29173, adds=4760
+</statistics>
+<statistics type='opto'>
+--- Compiler Statistics ---
+Methods seen: 4919  Methods parsed: 4919  Nodes created: 1186896
+Blocks parsed: 14589  Blocks seen: 16052
+18655 original NULL checks - 13837 elided (74%); optimizer leaves 5187,
+2079 made implicit (40%)
+CCP: 1523  constants found: 11
+Total frameslots = 10188, Max frameslots = 68
+Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
+Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
+Adjusted spill cost =       0.
+Conservatively coalesced 15548 copies, 0 pairs, 22282 post alloc.
+Used cisc instruction  903,  remained in register 5871
+Average allocation trips 1.744639
+High Pressure Blocks = 0, Low Pressure Blocks = 0
+Nops added 0 bytes to total of 1200114 bytes, for 0.00%
+Peephole: peephole rules applied: 0
+PhaseIdealLoop=4987, sum _unique=2552152
+</statistics>
+<statistics type='intrinsic'>
+Compiler intrinsic usage:
+    21 ( 4.0%) _hashCode (worked,virtual,nonvirtual)
+    56 (10.7%) _getClass (worked)
+    28 ( 5.4%) _clone (worked)
+    34 ( 6.5%) _min (worked)
+    12 ( 2.3%) _max (worked)
+     1 ( 0.2%) _floatToRawIntBits (worked)
+     1 ( 0.2%) _numberOfLeadingZeros_i (worked)
+     1 ( 0.2%) _identityHashCode (worked)
+     3 ( 0.6%) _currentTimeMillis (worked)
+     7 ( 1.3%) _nanoTime (worked)
+    49 ( 9.4%) _arraycopy (worked)
+     3 ( 0.6%) _isInterrupted (worked)
+    14 ( 2.7%) _currentThread (worked)
+    19 ( 3.6%) _isAssignableFrom (worked)
+     3 ( 0.6%) _isInstance (worked)
+     6 ( 1.1%) _getModifiers (worked)
+    23 ( 4.4%) _isInterface (worked)
+    23 ( 4.4%) _isArray (worked)
+    30 ( 5.7%) _isPrimitive (worked)
+    12 ( 2.3%) _getSuperclass (worked)
+     8 ( 1.5%) _getComponentType (worked)
+     8 ( 1.5%) _getClassAccessFlags (worked)
+    13 ( 2.5%) _getCallerClass (worked,failed)
+     4 ( 0.8%) _newArray (worked)
+     3 ( 0.6%) _copyOf (worked)
+     5 ( 1.0%) _copyOfRange (worked)
+    14 ( 2.7%) _indexOf (worked)
+    55 (10.5%) _equals (worked)
+     0 ( 0.0%) _checkIndex (disabled)
+    22 ( 4.2%) _Reference_get (worked)
+     2 ( 0.4%) _updateBytesCRC32 (worked)
+    12 ( 2.3%) _getObjectVolatile (worked)
+     2 ( 0.4%) _getIntVolatile (worked)
+     4 ( 0.8%) _putObjectVolatile (worked)
+     3 ( 0.6%) _getLong_raw (worked)
+     2 ( 0.4%) _putLong_raw (worked)
+     5 ( 1.0%) _compareAndSwapObject (worked)
+     2 ( 0.4%) _compareAndSwapLong (worked)
+    10 ( 1.9%) _compareAndSwapInt (worked)
+     2 ( 0.4%) _getAndAddInt (worked)
+   522 (100.0%) total (worked,failed,disabled,virtual,nonvirtual)
+</statistics>
+<writer thread='16899'/>
+<destroy_vm stamp='10.940'/>
+<tty_done stamp='10.959'/>
+</tty>
+<hotspot_log_done stamp='10.959'/>
+</hotspot_log>

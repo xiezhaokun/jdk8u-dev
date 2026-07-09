@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='69190' time_ms='1783157459742'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  4 2026 16:33:53 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=100 -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+StressGCM -XX:+StressLCM -XX:+StressReflectiveCode -XX:+TraceDeoptimization -Drepro.iterations=10000000 -Drepro.seconds=0 -Drepro.clearCacheEvery=257 -Drepro.deoptAfter=3000000 -Drepro.target=advanced 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=10000000
+repro.seconds=0
+repro.clearCacheEvery=257
+repro.deoptAfter=3000000
+repro.target=advanced
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+<writer thread='9731'/>
+<uncommon_trap thread='9731' reason='unstable_if' action='reinterpret' compile_id='2' compiler='C2' stamp='0.344'>
+Uncommon trap occurred in java.lang.String::equals (@0x000000011547a744) thread=9731 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='66' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='50' backedge_count='50' iicount='251'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fbf2c80d000 Compiled frame (sp=0x000000030d856f20 unextended sp=0x000000030d856f20, fp=0x0000000000000000, real_fp=0x000000030d856f60, pc=0x000000011547a744)
+     nmethod    343    2             java.lang.String::equals (81 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030d856f20, unextended_sp=0x000000030d856f20, fp=0x0000000000000000, pc=0x000000011547a744)
+java.lang.String.equals(String.java:988) - if_icmpeq @ bci 66 
+     Created vframeArray 0x00007fbf2c847c20
+DEOPT UNPACKING thread 0x00007fbf2c80d000 vframeArray 0x00007fbf2c847c20 mode 2
+     {method} {0x0000000111eb0488} &apos;equals&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;java/lang/String&apos; - if_icmpeq @ bci 66 sp = 0x000000030d856ed8
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/nio/ByteBuffer' x='java/nio/HeapByteBuffer' witness='java/nio/DirectByteBuffer' stamp='0.373'/>
+<uncommon_trap thread='9731' reason='unstable_if' action='reinterpret' compile_id='7' compiler='C2' stamp='0.491'>
+Uncommon trap occurred in java.lang.String::replace (@0x00000001154addf0) thread=9731 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='26' method='java/lang/String replace (CC)Ljava/lang/String;' bytes='127' count='12' backedge_count='77' iicount='12'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fbf2c80d000 Compiled frame (sp=0x000000030d859640 unextended sp=0x000000030d859640, fp=0x000000000000002e, real_fp=0x000000030d8596b0, pc=0x00000001154addf0)
+     nmethod    491    7             java.lang.String::replace (127 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030d859640, unextended_sp=0x000000030d859640, fp=0x000000000000002e, pc=0x00000001154addf0)
+java.lang.String.replace(String.java:2072) - if_icmpge @ bci 26 
+     Created vframeArray 0x00007fbf2b84c220
+DEOPT UNPACKING thread 0x00007fbf2c80d000 vframeArray 0x00007fbf2b84c220 mode 2
+     {method} {0x0000000111eb27c8} &apos;replace&apos; &apos;(CC)Ljava/lang/String;&apos; in &apos;java/lang/String&apos; - if_icmpge @ bci 26 sp = 0x000000030d859628
+<writer thread='32515'/>
+<uncommon_trap thread='32515' reason='bimorphic' action='maybe_recompile' compile_id='3' compiler='C2' stamp='0.498'>
+Uncommon trap occurred in java.util.Hashtable::get (@0x000000011547e140) thread=32515 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='6' method='java/util/Hashtable get (Ljava/lang/Object;)Ljava/lang/Object;' bytes='69' count='50' backedge_count='32' iicount='68'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fbf2c022000 Compiled frame (sp=0x000000030e58e810 unextended sp=0x000000030e58e810, fp=0x00000000f2ab6049, real_fp=0x000000030e58e850, pc=0x000000011547e140)
+     nmethod    498    3  s          java.util.Hashtable::get (69 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030e58e810, unextended_sp=0x000000030e58e810, fp=0x00000000f2ab6049, pc=0x000000011547e140)
+java.util.Hashtable.get(Hashtable.java:364) - invokevirtual @ bci 6 
+     Created vframeArray 0x00007fbf2b84d620
+DEOPT UNPACKING thread 0x00007fbf2c022000 vframeArray 0x00007fbf2b84d620 mode 2
+     {method} {0x0000000111eeee10} &apos;get&apos; &apos;(Ljava/lang/Object;)Ljava/lang/Object;&apos; in &apos;java/util/Hashtable&apos; - invokevirtual @ bci 6 sp = 0x000000030e58e7c8
+<uncommon_trap thread='32515' reason='class_check' action='maybe_recompile' compile_id='3' compiler='C2' stamp='0.499'>
+Uncommon trap occurred in java.util.Hashtable::get (@0x000000011547e130) thread=32515 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='45' method='java/util/Hashtable get (Ljava/lang/Object;)Ljava/lang/Object;' bytes='69' count='50' backedge_count='32' iicount='68' bimorphic_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fbf2c022000 Compiled frame (sp=0x000000030e58e810 unextended sp=0x000000030e58e810, fp=0x00000000f2ab603f, real_fp=0x000000030e58e850, pc=0x000000011547e130)
+     nmethod    499    3  s          java.util.Hashtable::get (69 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030e58e810, unextended_sp=0x000000030e58e810, fp=0x00000000f2ab603f, pc=0x000000011547e130)
+java.util.Hashtable.get(Hashtable.java:367) - invokevirtual @ bci 45 
+     Created vframeArray 0x00007fbf2c020e20
+DEOPT UNPACKING thread 0x00007fbf2c022000 vframeArray 0x00007fbf2c020e20 mode 2
+     {method} {0x0000000111eeee10} &apos;get&apos; &apos;(Ljava/lang/Object;)Ljava/lang/Object;&apos; in &apos;java/util/Hashtable&apos; - invokevirtual @ bci 45 sp = 0x000000030e58e7c0
+<writer thread='30223'/>
+C1 Runtime statistics:
+ _resolve_invoke_virtual_cnt:     0
+ _resolve_invoke_opt_virtual_cnt: 6
+ _resolve_invoke_static_cnt:      1
+ _handle_wrong_method_cnt:        0
+ _ic_miss_cnt:                    0
+ _generic_arraycopy_cnt:          0
+ _generic_arraycopystub_cnt:      0
+ _byte_arraycopy_cnt:             0
+ _short_arraycopy_cnt:            0
+ _int_arraycopy_cnt:              0
+ _long_arraycopy_cnt:             0
+ _primitive_arraycopy_cnt:        0
+ _oop_arraycopy_cnt (C):          0
+ _oop_arraycopy_cnt (stub):       0
+ _arraycopy_slowcase_cnt:         0
+ _arraycopy_checkcast_cnt:        0
+ _arraycopy_checkcast_attempt_cnt:0
+ _new_type_array_slowcase_cnt:    0
+ _new_object_array_slowcase_cnt:  0
+ _new_instance_slowcase_cnt:      0
+ _new_multi_array_slowcase_cnt:   0
+ _monitorenter_slowcase_cnt:      0
+ _monitorexit_slowcase_cnt:       0
+ _patch_code_slowcase_cnt:        0
+ _throw_range_check_exception_count:            0:
+ _throw_index_exception_count:                  0:
+ _throw_div0_exception_count:                   0:
+ _throw_null_pointer_exception_count:           0:
+ _throw_class_cast_exception_count:             0:
+ _throw_incompatible_class_change_error_count:  0:
+ _throw_array_store_exception_count:            0:
+ _throw_count:                                  0:
+
+<statistics type='deoptimization'>
+Deoptimization traps recorded:
+     4 (100.0%) total
+  class_check/maybe_recompile/invokevirtual: 1 (25.0%)
+   bimorphic/maybe_recompile/invokevirtual: 1 (25.0%)
+         unstable_if/reinterpret/if_icmpeq: 1 (25.0%)
+         unstable_if/reinterpret/if_icmpge: 1 (25.0%)
+</statistics>
+<statistics type='SharedRuntime'>
+    0 inline cache miss in compiled
+    0 wrong method
+    1 unresolved static call site
+    0 unresolved virtual call site
+    6 unresolved opt virtual call site
+    6 slow partial subtype
+   12 byte array copies
+  113 short array copies
+   12 int array copies
+   12 long array copies
+AdapterHandlerTable: empty 186 longest 3 total 136 average 1.271028
+AdapterHandlerTable: lookups 5785 buckets 5627 equals 5374 hits 5374 compact 5374
+</statistics>
+<statistics type='nmethod'>
+Statistics for 1 native nmethods:
+ N. total size  = 1032
+ N. relocation  = 80
+ N. main code   = 632
+Statistics for 31 bytecoded nmethods:
+ total in heap  = 63800
+ relocation     = 1696
+ main code      = 22720
+ stub code      = 952
+ oops           = 8
+ scopes data    = 6992
+ scopes pcs     = 19584
+ dependencies   = 248
+ handler table  = 720
+ nul chk table  = 536
+Debug Data Chunks: 1655, shared 279+501, non-SP&apos;s elided 10
+PcDesc Statistics:  16 queries, 9.50 comparisons per query
+  caches=31 queries=16/0, hits=0+1, tests=33+119, adds=15
+</statistics>
+<statistics type='opto'>
+--- Compiler Statistics ---
+Methods seen: 51  Methods parsed: 51  Nodes created: 32858
+Blocks parsed: 294  Blocks seen: 437
+204 original NULL checks - 140 elided (68%); optimizer leaves 73,
+44 made implicit (60%)
+CCP: 31  constants found: 0
+Total frameslots = 320, Max frameslots = 32
+Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
+Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
+Adjusted spill cost =       0.
+Conservatively coalesced 214 copies, 0 pairs, 409 post alloc.
+Used cisc instruction  100,  remained in register 405
+Average allocation trips 1.595745
+High Pressure Blocks = 0, Low Pressure Blocks = 0
+Nops added 0 bytes to total of 24099 bytes, for 0.00%
+Peephole: peephole rules applied: 0
+PhaseIdealLoop=155, sum _unique=80709
+</statistics>
+<statistics type='intrinsic'>
+Compiler intrinsic usage:
+     8 (57.1%) _min (worked)
+     5 (35.7%) _arraycopy (worked)
+     1 ( 7.1%) _equals (worked)
+    14 (100.0%) total (worked)
+</statistics>
+<tty_done stamp='0.503'/>
+</tty>
+<hotspot_log_done stamp='0.503'/>
+</hotspot_log>

@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='72341' time_ms='1783157679143'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  4 2026 16:33:53 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xcomp -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+PrintCompilation -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.forField -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.* -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro$*.* -Drepro.iterations=200000 -Drepro.seconds=0 -Drepro.clearCacheEvery=257 -Drepro.deoptAfter=100000 -Drepro.target=advanced 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=compiled mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=200000
+repro.seconds=0
+repro.clearCacheEvery=257
+repro.deoptAfter=100000
+repro.target=advanced
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='9987'/>
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+<writer thread='22275'/>
+    417    1   !b        repro.ResolvableTypeC2Repro::&lt;clinit&gt; (849 bytes)
+<writer thread='9987'/>
+    422    1   !         repro.ResolvableTypeC2Repro::&lt;clinit&gt; (849 bytes)   made not entrant
+<writer thread='22275'/>
+    431    2    b        repro.ResolvableTypeC2Repro$StableStringDriver::&lt;init&gt; (5 bytes)
+    434    3    b        repro.ResolvableTypeC2Repro$StableStringDriver::&lt;init&gt; (5 bytes)
+    435    4    b        repro.ResolvableTypeC2Repro$StableIntegerDriver::&lt;init&gt; (5 bytes)
+    437    5    b        repro.ResolvableTypeC2Repro$StableIntegerDriver::&lt;init&gt; (5 bytes)
+    438    6    b        repro.ResolvableTypeC2Repro$RareMutualDriver::&lt;init&gt; (5 bytes)
+    439    7    b        repro.ResolvableTypeC2Repro$RareMutualDriver::&lt;init&gt; (5 bytes)
+<writer thread='9987'/>
+    469    8     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLL)L (native)   (static)
+    477    9     n       java.lang.invoke.MethodHandle::linkToStatic(LLLL)L (native)   (static)
+    478   10     n       java.lang.invoke.MethodHandle::linkToStatic(LL)L (native)   (static)
+    492   11     n       java.lang.invoke.MethodHandle::linkToStatic(LL)V (native)   (static)
+    493   12     n       java.lang.invoke.MethodHandle::linkToStatic(LL)J (native)   (static)
+    494   13     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)L (native)   (static)
+    495   14     n       java.lang.invoke.MethodHandle::linkToVirtual(LLL)L (native)   (static)
+    509   15     n       java.lang.invoke.MethodHandle::linkToStatic(IL)L (native)   (static)
+    511   16     n       java.lang.invoke.MethodHandle::linkToVirtual(LL)L (native)   (static)
+    514   17     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)V (native)   (static)
+    514   18     n       java.lang.invoke.MethodHandle::invokeBasic(L)L (native)   
+    515   19     n       java.lang.invoke.MethodHandle::linkToSpecial(LLL)L (native)   (static)
+    516   20     n       java.lang.invoke.MethodHandle::linkToStatic(L)L (native)   (static)
+    517   21     n       java.lang.invoke.MethodHandle::invokeBasic()L (native)   
+    517   22     n       java.lang.invoke.MethodHandle::linkToSpecial(LL)L (native)   (static)
+    518   23     n       java.lang.invoke.MethodHandle::invokeBasic(LL)L (native)   
+    518   24     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)L (native)   (static)
+    520   25     n       java.lang.invoke.MethodHandle::invokeBasic(LLL)L (native)   
+    520   26     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLL)L (native)   (static)
+    521   27     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)L (native)   (static)
+    522   28     n       java.lang.invoke.MethodHandle::invokeBasic(LLLL)L (native)   
+    522   29     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLL)L (native)   (static)
+    524   30     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)L (native)   (static)
+    524   31     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLL)L (native)   
+    525   32     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLL)L (native)   (static)
+    526   33     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLL)L (native)   
+    526   34     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLL)L (native)   (static)
+    528   35     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLL)L (native)   (static)
+    528   36     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLL)L (native)   
+    528   37     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLL)L (native)   (static)
+    530   38     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLL)L (native)   (static)
+    531   39     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLL)L (native)   
+    531   40     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLL)L (native)   (static)
+    533   41     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLL)L (native)   (static)
+    534   42     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLL)L (native)   
+    534   43     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLL)L (native)   (static)
+    536   44     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLL)L (native)   (static)
+    537   45     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLLL)L (native)   
+    537   46     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLLL)L (native)   (static)
+    541   47     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLL)L (native)   (static)
+    542   48     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLLL)L (native)   (static)
+    544   49     n       java.lang.invoke.MethodHandle::linkToStatic(LIL)V (native)   (static)
+    545   50     n       java.lang.invoke.MethodHandle::linkToStatic(ILL)I (native)   (static)
+    552   51     n       java.lang.invoke.MethodHandle::linkToStatic(ILLL)L (native)   (static)
+    554   52     n       java.lang.invoke.MethodHandle::invokeBasic(ILL)L (native)   
+    554   53     n       java.lang.invoke.MethodHandle::linkToSpecial(LILLL)L (native)   (static)
+    582   54     n       java.lang.invoke.MethodHandle::invokeBasic(I)L (native)   
+    582   55     n       java.lang.invoke.MethodHandle::linkToSpecial(LIL)L (native)   (static)
+<writer thread='22275'/>
+    583   56    b        repro.ResolvableTypeC2Repro::main (243 bytes)
+<writer thread='9987'/>
+    586   56             repro.ResolvableTypeC2Repro::main (243 bytes)   made not entrant
+<writer thread='22275'/>
+    587   57    b        repro.ResolvableTypeC2Repro::secondsToNanos (14 bytes)
+    606   58    b        repro.ResolvableTypeC2Repro::exerciseAdvanced (72 bytes)
+    617   59    b        repro.ResolvableTypeC2Repro$StableStringDriver::implementation (3 bytes)
+    618   60    b        repro.ResolvableTypeC2Repro::hotWrapperTwo (38 bytes)
+<writer thread='9987'/>
+    620   60             repro.ResolvableTypeC2Repro::hotWrapperTwo (38 bytes)   made not entrant
+    635   61     n       java.lang.invoke.MethodHandle::linkToSpecial(LLILILL)V (native)   (static)
+    638   62     n       java.lang.invoke.MethodHandle::linkToStatic(LLILIL)L (native)   (static)
+    638   63     n       java.lang.invoke.MethodHandle::invokeBasic(LLILI)L (native)   
+    638   64     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLILIL)L (native)   (static)
+<writer thread='22275'/>
+    641   65    b        org.springframework.core.ResolvableType::forField (44 bytes)
+<writer thread='9987'/>
+    645   65             org.springframework.core.ResolvableType::forField (44 bytes)   made not entrant
+    666   66     n       java.lang.invoke.MethodHandle::linkToStatic(LL)I (native)   (static)
+<writer thread='22275'/>
+    671   67    b        repro.ResolvableTypeC2Repro::consume (53 bytes)
+    677   68    b        org.springframework.core.ResolvableType::forField (39 bytes)
+    682   69    b        repro.ResolvableTypeC2Repro::consumeDeep (101 bytes)
+    691   70   !b        repro.ResolvableTypeC2Repro::exerciseBarrierBoxing (263 bytes)
+<writer thread='9987'/>
+    693   70   !         repro.ResolvableTypeC2Repro::exerciseBarrierBoxing (263 bytes)   made not entrant
+<writer thread='22275'/>
+    693   71    b        repro.ResolvableTypeC2Repro$BarrierHolder::&lt;init&gt; (64 bytes)
+    697   72    b        repro.ResolvableTypeC2Repro::hotWrapperThree (7 bytes)
+    698   73   !b        repro.ResolvableTypeC2Repro::triggerUncommonTrap (51 bytes)
+<writer thread='9987'/>
+C1 Runtime statistics:
+ _resolve_invoke_virtual_cnt:     1
+ _resolve_invoke_opt_virtual_cnt: 32
+ _resolve_invoke_static_cnt:      16
+ _handle_wrong_method_cnt:        0
+ _ic_miss_cnt:                    0
+ _generic_arraycopy_cnt:          0
+ _generic_arraycopystub_cnt:      0
+ _byte_arraycopy_cnt:             0
+ _short_arraycopy_cnt:            0
+ _int_arraycopy_cnt:              0
+ _long_arraycopy_cnt:             0
+ _primitive_arraycopy_cnt:        0
+ _oop_arraycopy_cnt (C):          0
+ _oop_arraycopy_cnt (stub):       0
+ _arraycopy_slowcase_cnt:         0
+ _arraycopy_checkcast_cnt:        0
+ _arraycopy_checkcast_attempt_cnt:0
+ _new_type_array_slowcase_cnt:    0
+ _new_object_array_slowcase_cnt:  0
+ _new_instance_slowcase_cnt:      0
+ _new_multi_array_slowcase_cnt:   0
+ _monitorenter_slowcase_cnt:      0
+ _monitorexit_slowcase_cnt:       0
+ _patch_code_slowcase_cnt:        0
+ _throw_range_check_exception_count:            0:
+ _throw_index_exception_count:                  0:
+ _throw_div0_exception_count:                   0:
+ _throw_null_pointer_exception_count:           0:
+ _throw_class_cast_exception_count:             0:
+ _throw_incompatible_class_change_error_count:  0:
+ _throw_array_store_exception_count:            0:
+ _throw_count:                                  0:
+
+<statistics type='deoptimization'>
+Deoptimization traps recorded:
+     5 (100.0%) total
+            unloaded/reinterpret/anewarray: 1 (20.0%)
+         unloaded/reinterpret/invokestatic: 1 (20.0%)
+                  unloaded/reinterpret/ldc: 1 (20.0%)
+                  unloaded/reinterpret/new: 1 (20.0%)
+             uninitialized/reinterpret/new: 1 (20.0%)
+</statistics>
+<statistics type='SharedRuntime'>
+    0 inline cache miss in compiled
+    0 wrong method
+   16 unresolved static call site
+    1 unresolved virtual call site
+   32 unresolved opt virtual call site
+  170 slow partial subtype
+   12 byte array copies
+   12 short array copies
+   12 int array copies
+   12 long array copies
+AdapterHandlerTable: empty 157 longest 3 total 182 average 1.338235
+AdapterHandlerTable: lookups 8882 buckets 9243 equals 8425 hits 8425 compact 8425
+</statistics>
+<statistics type='nmethod'>
+Statistics for 53 native nmethods:
+ N. total size  = 48000
+ N. relocation  = 4496
+ N. main code   = 26864
+Statistics for 20 bytecoded nmethods:
+ total in heap  = 23920
+ relocation     = 1376
+ main code      = 6080
+ stub code      = 1272
+ oops           = 208
+ scopes data    = 2048
+ scopes pcs     = 4672
+ dependencies   = 184
+ handler table  = 1416
+Debug Data Chunks: 429, shared 62+54, non-SP&apos;s elided 6
+PcDesc Statistics:  83 queries, 7.43 comparisons per query
+  caches=20 queries=83/0, hits=0+6, tests=300+317, adds=77
+</statistics>
+<statistics type='opto'>
+--- Compiler Statistics ---
+Methods seen: 25  Methods parsed: 25  Nodes created: 7528
+Blocks parsed: 49  Blocks seen: 66
+56 original NULL checks - 35 elided (62%); optimizer leaves 36,
+0 made implicit ( 0%)
+CCP: 20  constants found: 0
+Total frameslots = 124, Max frameslots = 32
+Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
+Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
+Adjusted spill cost =       0.
+Conservatively coalesced 141 copies, 0 pairs, 59 post alloc.
+Used cisc instruction  1,  remained in register 26
+Average allocation trips 1.388889
+High Pressure Blocks = 0, Low Pressure Blocks = 0
+Nops added 0 bytes to total of 7675 bytes, for 0.00%
+Peephole: peephole rules applied: 0
+PhaseIdealLoop=42, sum _unique=5294
+</statistics>
+<statistics type='intrinsic'>
+Compiler intrinsic usage:
+     1 (100.0%) _getClass (worked)
+     1 (100.0%) total (worked)
+</statistics>
+<writer thread='21507'/>
+<destroy_vm stamp='0.708'/>
+<tty_done stamp='0.713'/>
+</tty>
+<hotspot_log_done stamp='0.713'/>
+</hotspot_log>

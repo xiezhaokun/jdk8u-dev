@@ -38,6 +38,7 @@
 #include "opto/mulnode.hpp"
 #include "opto/phaseX.hpp"
 #include "opto/regmask.hpp"
+#include "runtime/os.hpp"
 
 // Portions of code courtesy of Clifford Click
 
@@ -993,6 +994,171 @@ static bool skip_through_membars(Compile::AliasType* atp, const TypeInstPtr* tp,
   return false;
 }
 
+static bool c2_csv_env_on(const char* name) {
+  char value[8];
+  return os::getenv(name, value, sizeof(value)) && value[0] != '\0' && value[0] != '0';
+}
+
+static int c2_csv_log_limit() {
+  char value[32];
+  if (os::getenv("C2_CSV_LOG_LIMIT", value, sizeof(value))) {
+    int limit = atoi(value);
+    return limit > 0 ? limit : 0;
+  }
+  return 200;
+}
+
+static int c2_csv_fatal_step_limit() {
+  char value[32];
+  if (os::getenv("C2_CSV_FATAL_STEP_LIMIT", value, sizeof(value))) {
+    int limit = atoi(value);
+    return limit > 0 ? limit : 0;
+  }
+  return 0;
+}
+
+static bool c2_csv_take_log_budget() {
+  static int budget = -1;
+  if (budget == -1) {
+    budget = c2_csv_log_limit();
+  }
+  if (budget <= 0) {
+    return false;
+  }
+  --budget;
+  return true;
+}
+
+static bool c2_csv_method_matches(Compile* C) {
+  char value[256];
+  if (!os::getenv("C2_CSV_METHOD", value, sizeof(value)) || value[0] == '\0') {
+    return true;
+  }
+  if (C->method() == NULL) {
+    return false;
+  }
+  const char* holder = C->method()->holder()->name()->as_utf8();
+  const char* name = C->method()->name()->as_utf8();
+  return strstr(holder, value) != NULL || strstr(name, value) != NULL;
+}
+
+static void c2_csv_print_node(const char* label, Node* n) {
+  if (n == NULL) {
+    tty->print(" %s=NULL", label);
+  } else {
+    tty->print(" %s=%d:%s", label, n->_idx, n->Name());
+  }
+}
+
+static void c2_csv_print_inputs(const char* label, Node* n) {
+  if (n == NULL || !c2_csv_env_on("C2_CSV_INPUTS")) {
+    return;
+  }
+  tty->print(" %s_inputs=[", label);
+  uint limit = n->req() < 8 ? n->req() : 8;
+  for (uint i = 0; i < limit; i++) {
+    if (i > 0) {
+      tty->print(",");
+    }
+    Node* in = n->in(i);
+    if (in == NULL) {
+      tty->print("NULL");
+    } else {
+      tty->print("%d:%s", in->_idx, in->Name());
+    }
+  }
+  if (n->req() > limit) {
+    tty->print(",...");
+  }
+  tty->print("]");
+}
+
+static bool c2_csv_contains_node(Node* root, Node* target, int depth, Node** seen, int* seen_count) {
+  if (root == NULL || target == NULL || depth < 0) {
+    return false;
+  }
+  if (root == target) {
+    return true;
+  }
+  for (int i = 0; i < *seen_count; i++) {
+    if (seen[i] == root) {
+      return false;
+    }
+  }
+  if (*seen_count >= 128) {
+    return false;
+  }
+  seen[(*seen_count)++] = root;
+  if (!root->is_Phi() && !root->is_MergeMem() && !root->is_Proj() && !root->is_MemBar()) {
+    return false;
+  }
+  for (uint i = 0; i < root->req(); i++) {
+    if (c2_csv_contains_node(root->in(i), target, depth - 1, seen, seen_count)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+static void c2_csv_print_proj_holder(const char* label, Node* n) {
+  if (n == NULL || !n->is_Proj()) {
+    tty->print(" %s_holder=NULL", label);
+    return;
+  }
+  Node* holder = n->in(0);
+  if (holder == NULL) {
+    tty->print(" %s_holder=NULL", label);
+  } else {
+    tty->print(" %s_holder=%d:%s", label, holder->_idx, holder->Name());
+  }
+}
+
+static void c2_csv_print_phi_flags(const char* label, Node* n, Node* current, Node* merge) {
+  if (n == NULL || !n->is_Phi()) {
+    tty->print(" %s_phi=0", label);
+    return;
+  }
+  bool has_current = false;
+  bool has_merge = false;
+  bool has_mergemem = false;
+  bool has_proj = false;
+  bool has_membar_proj = false;
+  Node* holder = current != NULL && current->is_Proj() ? current->in(0) : NULL;
+  for (uint i = 1; i < n->req(); i++) {
+    Node* in = n->in(i);
+    has_current |= in == current;
+    has_merge |= in == merge;
+    has_mergemem |= in != NULL && in->is_MergeMem();
+    has_proj |= in != NULL && in->is_Proj();
+    has_membar_proj |= in != NULL && in->is_Proj() && holder != NULL && in->in(0) == holder;
+  }
+  tty->print(" %s_phi=1 %s_has_current=%d %s_has_merge=%d %s_has_mergemem=%d %s_has_proj=%d %s_has_membar_proj=%d",
+             label,
+             label, has_current ? 1 : 0,
+             label, has_merge ? 1 : 0,
+             label, has_mergemem ? 1 : 0,
+             label, has_proj ? 1 : 0,
+             label, has_membar_proj ? 1 : 0);
+}
+
+static void c2_csv_print_deep_flags(const char* label, Node* n, Node* current) {
+  Node* seen[128];
+  int seen_count = 0;
+  bool has_current = c2_csv_contains_node(n, current, 8, seen, &seen_count);
+  tty->print(" %s_deep_has_current=%d %s_deep_seen=%d",
+             label, has_current ? 1 : 0, label, seen_count);
+}
+
+static void c2_csv_print_compile(PhaseTransform* phase) {
+  Compile* C = phase->C;
+  tty->print(" compile_id=%d entry_bci=%d osr=%d",
+             C->compile_id(), C->entry_bci(), C->is_osr_compilation() ? 1 : 0);
+  if (C->method() != NULL) {
+    tty->print(" method=");
+    C->method()->print_short_name(tty);
+  }
+}
+
 //---------------------------can_see_stored_value------------------------------
 // This routine exists to make sure this set of tests is done the same
 // everywhere.  We need to make a coordinated change: first LoadNode::Ideal
@@ -1012,6 +1178,22 @@ Node* MemNode::can_see_stored_value(Node* st, PhaseTransform* phase) const {
     bool final = !atp->is_rewritable();
     Node* result = NULL;
     Node* current = st;
+    bool method_matches = c2_csv_method_matches(phase->C);
+    bool log_loop = method_matches && c2_csv_env_on("C2_CSV_LOG") && c2_csv_take_log_budget();
+    bool fatal_on_repeat = method_matches && c2_csv_env_on("C2_CSV_FATAL_ON_REPEAT");
+    int fatal_step_limit = method_matches ? c2_csv_fatal_step_limit() : 0;
+    Node* seen[128];
+    int seen_count = 0;
+    if (log_loop) {
+      tty->print("C2_CSV enter");
+      c2_csv_print_compile(phase);
+      tty->print(" alias_idx=%u final=%d eliminate_boxing=%d",
+                 alias_idx, final ? 1 : 0, phase->C->eliminate_boxing() ? 1 : 0);
+      c2_csv_print_node("load", (Node*)this);
+      c2_csv_print_node("ld_adr", ld_adr);
+      c2_csv_print_node("st", st);
+      tty->cr();
+    }
     // Skip through chains of MemBarNodes checking the MergeMems for
     // new states for the slice of this load.  Stop once any other
     // kind of node is encountered.  Loads from final memory can skip
@@ -1019,7 +1201,53 @@ Node* MemNode::can_see_stored_value(Node* st, PhaseTransform* phase) const {
     // through MemBarAcquire since the could allow them to move out of
     // a synchronized region.
     while (current->is_Proj()) {
+      if (log_loop || fatal_on_repeat) {
+        for (int i = 0; i < seen_count; i++) {
+          if (seen[i] == current) {
+            tty->print("C2_CSV repeat");
+            c2_csv_print_compile(phase);
+            tty->print(" steps=%d alias_idx=%u", seen_count, alias_idx);
+            c2_csv_print_node("current", current);
+            tty->cr();
+            if (fatal_on_repeat) {
+              fatal("repeat Proj in MemNode::can_see_stored_value MemBar skip loop");
+            }
+            current = NULL;
+            break;
+          }
+        }
+        if (current == NULL) {
+          break;
+        }
+        if (seen_count < (int)(sizeof(seen) / sizeof(seen[0]))) {
+            seen[seen_count++] = current;
+            if (fatal_step_limit > 0 && seen_count >= fatal_step_limit) {
+              tty->print("C2_CSV step-limit");
+              c2_csv_print_compile(phase);
+              tty->print(" steps=%d alias_idx=%u limit=%d", seen_count, alias_idx, fatal_step_limit);
+              c2_csv_print_node("current", current);
+              tty->cr();
+              fatal("too many MemBar skip steps in MemNode::can_see_stored_value");
+            }
+        } else {
+          tty->print("C2_CSV seen overflow");
+          c2_csv_print_compile(phase);
+          tty->print_cr(" alias_idx=%u", alias_idx);
+          if (fatal_on_repeat) {
+            fatal("too many Proj nodes in MemNode::can_see_stored_value MemBar skip loop");
+          }
+          break;
+        }
+      }
       int opc = current->in(0)->Opcode();
+      if (log_loop) {
+        tty->print("C2_CSV probe");
+        c2_csv_print_compile(phase);
+        tty->print(" step=%d opc=%d holder=%d:%s",
+                   seen_count, opc, current->in(0)->_idx, current->in(0)->Name());
+        c2_csv_print_node("current", current);
+        tty->cr();
+      }
       if ((final && (opc == Op_MemBarAcquire ||
                      opc == Op_MemBarAcquireLock ||
                      opc == Op_LoadFence)) ||
@@ -1031,6 +1259,25 @@ Node* MemNode::can_see_stored_value(Node* st, PhaseTransform* phase) const {
         if (mem->is_MergeMem()) {
           MergeMemNode* merge = mem->as_MergeMem();
           Node* new_st = merge->memory_at(alias_idx);
+          if (log_loop) {
+            tty->print("C2_CSV step");
+            c2_csv_print_compile(phase);
+            tty->print(" step=%d membar=%d:%s opc=%d",
+                       seen_count, current->in(0)->_idx, current->in(0)->Name(), opc);
+            c2_csv_print_node("current", current);
+            c2_csv_print_node("merge", merge);
+            c2_csv_print_node("base", merge->base_memory());
+            c2_csv_print_node("slice", new_st);
+            c2_csv_print_proj_holder("base", merge->base_memory());
+            c2_csv_print_proj_holder("slice", new_st);
+            c2_csv_print_phi_flags("base", merge->base_memory(), current, merge);
+            c2_csv_print_phi_flags("slice", new_st, current, merge);
+            c2_csv_print_deep_flags("base", merge->base_memory(), current);
+            c2_csv_print_deep_flags("slice", new_st, current);
+            c2_csv_print_inputs("base", merge->base_memory());
+            c2_csv_print_inputs("slice", new_st);
+            tty->cr();
+          }
           if (new_st == merge->base_memory()) {
             // Keep searching
             current = new_st;
@@ -1039,13 +1286,20 @@ Node* MemNode::can_see_stored_value(Node* st, PhaseTransform* phase) const {
           // Save the new memory state for the slice and fall through
           // to exit.
           result = new_st;
+        } else if (log_loop) {
+          tty->print("C2_CSV membar-no-mergemem");
+          c2_csv_print_compile(phase);
+          tty->print(" step=%d", seen_count);
+          c2_csv_print_node("membar", current->in(0));
+          c2_csv_print_node("mem", mem);
+          tty->cr();
         }
       }
       break;
     }
-    if (result != NULL) {
-      st = result;
-    }
+      if (result != NULL) {
+        st = result;
+      }
   }
 
   // Loop around twice in the case Load -> Initialize -> Store.

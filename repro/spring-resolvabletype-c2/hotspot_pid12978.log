@@ -1,0 +1,637 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='12978' time_ms='1783300221410'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  4 2026 18:13:54 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=5 -XX:BackEdgeThreshold=10 -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+PrintCompilation -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.exerciseShortOsrVariantA -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.exerciseShortOsrVariantB -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.exerciseShortOsrVariantC -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.exerciseShortOsrVariantD -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.exerciseConvergedRelease -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.forField -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.forMethodParameter -XX:+StressGCM -XX:+StressLCM -XX:+StressReflectiveCode -XX:+TraceOnStackReplacement -Drepro.iterations=50000 -Drepro.seconds=0 -Drepro.clearCacheEvery=65 -Drepro.deoptAfter=12000 -Drepro.target=mixedOsr 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=50000
+repro.seconds=0
+repro.clearCacheEvery=65
+repro.deoptAfter=12000
+repro.target=mixedOsr
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='9731'/>
+Requesting OSR entry for  sun.nio.cs.UTF_8$Decoder::decode at bci 20
+compilation failed
+Requesting OSR entry for  sun.nio.cs.UTF_8$Decoder::decode at bci 20
+compilation failed
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+compilation failed
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+compilation failed
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+compilation failed
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+compilation failed
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+compilation failed
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+compilation failed
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+compilation failed
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.io.UnixFileSystem::normalize at bci 10
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.io.UnixFileSystem::normalize at bci 10
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  sun.net.www.ParseUtil::encodePath at bci 29
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.io.UnixFileSystem::normalize at bci 10
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 53
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  java.io.UnixFileSystem::normalize at bci 10
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.net.www.ParseUtil::encodePath at bci 29
+    469    1     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::equals at bci 49
+    477    2     n       java.lang.invoke.MethodHandle::linkToStatic(LLLL)L (native)   (static)
+    479    3     n       java.lang.invoke.MethodHandle::linkToStatic(LL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+    496    4     n       java.lang.invoke.MethodHandle::linkToStatic(LL)V (native)   (static)
+    498    5     n       java.lang.invoke.MethodHandle::linkToStatic(LL)J (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+    499    6     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+    501    7     n       java.lang.invoke.MethodHandle::linkToVirtual(LLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  sun.invoke.util.VerifyAccess::isSamePackage at bci 82
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::replace at bci 20
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    527    8     n       java.lang.invoke.MethodHandle::linkToStatic(IL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::replace at bci 55
+    530    9     n       java.lang.invoke.MethodHandle::linkToVirtual(LL)L (native)   (static)
+    534   10     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)V (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+    536   11     n       java.lang.invoke.MethodHandle::invokeBasic(L)L (native)   
+    536   12     n       java.lang.invoke.MethodHandle::linkToSpecial(LLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+    541   13     n       java.lang.invoke.MethodHandle::linkToStatic(L)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+    543   14     n       java.lang.invoke.MethodHandle::invokeBasic()L (native)   
+    543   15     n       java.lang.invoke.MethodHandle::linkToSpecial(LL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    546   16     n       java.lang.invoke.MethodHandle::invokeBasic(LL)L (native)   
+    546   17     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    548   18     n       java.lang.invoke.MethodHandle::invokeBasic(LLL)L (native)   
+    548   19     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentTypes at bci 34
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getType at bci 220
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    551   20     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+    552   21     n       java.lang.invoke.MethodHandle::invokeBasic(LLLL)L (native)   
+    552   22     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    554   23     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  sun.invoke.util.VerifyAccess::isSamePackage at bci 82
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+    556   24     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLL)L (native)   
+    556   25     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+    559   26     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLL)L (native)   
+    559   27     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.invoke.MethodType::hashCode at bci 22
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 62
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    562   28     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentTypes at bci 34
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getType at bci 220
+    563   29     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLL)L (native)   
+    563   30     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    566   31     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+    568   32     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLL)L (native)   
+    568   33     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::equals at bci 49
+    571   34     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+    572   35     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLL)L (native)   
+    572   36     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentTypes at bci 34
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getType at bci 220
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+    575   37     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+    577   38     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLLL)L (native)   
+    577   39     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.invoke.MethodType::hashCode at bci 22
+    583   40     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  java.util.Arrays::equals at bci 30
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+    585   41     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  sun.invoke.util.VerifyAccess::isSamePackage at bci 82
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentTypes at bci 34
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getType at bci 220
+    588   42     n       java.lang.invoke.MethodHandle::linkToStatic(LIL)V (native)   (static)
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::replace at bci 20
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    589   43     n       java.lang.invoke.MethodHandle::linkToStatic(ILL)I (native)   (static)
+Requesting OSR entry for  java.lang.String::replace at bci 55
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::equals at bci 49
+    599   44     n       java.lang.invoke.MethodHandle::linkToStatic(ILLL)L (native)   (static)
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+    600   45     n       java.lang.invoke.MethodHandle::invokeBasic(ILL)L (native)   
+    600   46     n       java.lang.invoke.MethodHandle::linkToSpecial(LILLL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentTypes at bci 34
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getType at bci 220
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 62
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentTypes at bci 34
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getType at bci 220
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.invoke.util.VerifyAccess::isSamePackage at bci 82
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::replace at bci 78
+    641   47     n       java.lang.invoke.MethodHandle::invokeBasic(I)L (native)   
+    641   48     n       java.lang.invoke.MethodHandle::linkToSpecial(LIL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Decoder::decode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.io.UnixFileSystem::normalize at bci 10
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  sun.net.www.ParseUtil::encodePath at bci 29
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 53
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.util.concurrent.ConcurrentHashMap::transfer at bci 99
+Requesting OSR entry for  java.util.concurrent.ConcurrentHashMap::transfer at bci 99
+Requesting OSR entry for  sun.net.www.ParseUtil::encodePath at bci 29
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  sun.nio.cs.UTF_8$Decoder::decode at bci 20
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+    686   49     n       java.lang.invoke.MethodHandle::linkToSpecial(LLILILL)V (native)   (static)
+Requesting OSR entry for  java.lang.invoke.MethodType::hashCode at bci 22
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.invoke.MethodType::checkPtypes at bci 10
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+    692   50     n       java.lang.invoke.MethodHandle::linkToStatic(LLILIL)L (native)   (static)
+    693   51     n       java.lang.invoke.MethodHandle::invokeBasic(LLILI)L (native)   
+    693   52     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLILIL)L (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.io.UnixFileSystem::normalize at bci 10
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.net.www.ParseUtil::encodePath at bci 29
+Requesting OSR entry for  java.lang.String::replace at bci 20
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::replace at bci 55
+Requesting OSR entry for  java.lang.String::indexOf at bci 53
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.io.DataOutputStream::writeUTF at bci 13
+Requesting OSR entry for  java.io.DataOutputStream::writeUTF at bci 211
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+    728   53     n       java.lang.invoke.MethodHandle::linkToStatic(LL)I (native)   (static)
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentTypes at bci 34
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getType at bci 220
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::startsWith at bci 42
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes at bci 63
+Requesting OSR entry for  jdk.internal.org.objectweb.asm.ByteVector::putUTF8 at bci 74
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.lang.String::equals at bci 49
+Requesting OSR entry for  java.lang.String::replace at bci 78
+Requesting OSR entry for  java.lang.String::hashCode at bci 24
+Requesting OSR entry for  java.io.DataOutputStream::writeUTF at bci 13
+Requesting OSR entry for  java.io.DataOutputStream::writeUTF at bci 211
+Requesting OSR entry for  java.io.DataOutputStream::writeUTF at bci 13
+Requesting OSR entry for  java.io.DataOutputStream::writeUTF at bci 211
+<writer thread='22531'/>
+    749   54   !b        repro.ResolvableTypeC2Repro::exerciseConvergedRelease (96 bytes)
+    772   55    b        org.springframework.core.ResolvableType::forField (39 bytes)
+<writer thread='9731'/>
+Requesting OSR entry for  repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop at bci 78
+compilation failed
+Requesting OSR entry for  java.lang.String::lastIndexOf at bci 21
+Requesting OSR entry for  sun.nio.cs.UTF_8$Encoder::encode at bci 20
+Requesting OSR entry for  sun.net.www.ParseUtil::encodePath at bci 29
+Requesting OSR entry for  java.lang.String::indexOf at bci 37
+Requesting OSR entry for  java.lang.String::indexOf at bci 69
+Requesting OSR entry for  org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries at bci 10
+<writer thread='22531'/>
+    801   56    b        org.springframework.core.ResolvableType::forMethodParameter (9 bytes)
+    803   57    b        org.springframework.core.ResolvableType::forMethodParameter (16 bytes)
+    804   58    b        org.springframework.core.ResolvableType::forMethodParameter (40 bytes)
+<writer thread='9731'/>
+Requesting OSR entry for  org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries at bci 10
+Requesting OSR entry for  org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries at bci 10
+Requesting OSR entry for  repro.ResolvableTypeC2Repro::exerciseMethodParameterOsrMemBarLoop at bci 66
+compilation failed
+Requesting OSR entry for  org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries at bci 10
+Requesting OSR entry for  org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries at bci 10
+Requesting OSR entry for  org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries at bci 10
+Requesting OSR entry for  org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries at bci 10
+Requesting OSR entry for  java.util.Arrays::hashCode at bci 16
+Requesting OSR entry for  org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries at bci 10
+C1 Runtime statistics:
+ _resolve_invoke_virtual_cnt:     0
+ _resolve_invoke_opt_virtual_cnt: 14
+ _resolve_invoke_static_cnt:      8
+ _handle_wrong_method_cnt:        0
+ _ic_miss_cnt:                    0
+ _generic_arraycopy_cnt:          0
+ _generic_arraycopystub_cnt:      0
+ _byte_arraycopy_cnt:             0
+ _short_arraycopy_cnt:            0
+ _int_arraycopy_cnt:              0
+ _long_arraycopy_cnt:             0
+ _primitive_arraycopy_cnt:        0
+ _oop_arraycopy_cnt (C):          0
+ _oop_arraycopy_cnt (stub):       0
+ _arraycopy_slowcase_cnt:         0
+ _arraycopy_checkcast_cnt:        0
+ _arraycopy_checkcast_attempt_cnt:0
+ _new_type_array_slowcase_cnt:    0
+ _new_object_array_slowcase_cnt:  0
+ _new_instance_slowcase_cnt:      0
+ _new_multi_array_slowcase_cnt:   0
+ _monitorenter_slowcase_cnt:      0
+ _monitorexit_slowcase_cnt:       0
+ _patch_code_slowcase_cnt:        0
+ _throw_range_check_exception_count:            0:
+ _throw_index_exception_count:                  0:
+ _throw_div0_exception_count:                   0:
+ _throw_null_pointer_exception_count:           0:
+ _throw_class_cast_exception_count:             0:
+ _throw_incompatible_class_change_error_count:  0:
+ _throw_array_store_exception_count:            0:
+ _throw_count:                                  0:
+
+<statistics type='SharedRuntime'>
+    0 inline cache miss in compiled
+    0 wrong method
+    8 unresolved static call site
+    0 unresolved virtual call site
+   14 unresolved opt virtual call site
+ 1777 slow partial subtype
+   12 byte array copies
+   12 short array copies
+   12 int array copies
+   12 long array copies
+AdapterHandlerTable: empty 154 longest 3 total 185 average 1.330935
+AdapterHandlerTable: lookups 9081 buckets 9469 equals 8621 hits 8621 compact 8621
+</statistics>
+<statistics type='nmethod'>
+Statistics for 53 native nmethods:
+ N. total size  = 48000
+ N. relocation  = 4496
+ N. main code   = 26864
+Statistics for 5 bytecoded nmethods:
+ total in heap  = 9392
+ relocation     = 592
+ main code      = 2944
+ stub code      = 504
+ oops           = 48
+ scopes data    = 912
+ scopes pcs     = 1920
+ dependencies   = 56
+ handler table  = 648
+Debug Data Chunks: 208, shared 37+21, non-SP&apos;s elided 0
+PcDesc Statistics:  37 queries, 7.35 comparisons per query
+  caches=5 queries=37/0, hits=0+3, tests=140+132, adds=34
+</statistics>
+<statistics type='opto'>
+--- Compiler Statistics ---
+Methods seen: 6  Methods parsed: 6  Nodes created: 4547
+Blocks parsed: 14  Blocks seen: 14
+23 original NULL checks - 8 elided (34%); optimizer leaves 29,
+0 made implicit ( 0%)
+CCP: 5  constants found: 0
+Total frameslots = 104, Max frameslots = 32
+Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
+Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
+Adjusted spill cost =       0.
+Conservatively coalesced 117 copies, 0 pairs, 20 post alloc.
+Used cisc instruction  4,  remained in register 4
+Average allocation trips 1.095238
+High Pressure Blocks = 0, Low Pressure Blocks = 0
+Nops added 0 bytes to total of 4845 bytes, for 0.00%
+Peephole: peephole rules applied: 0
+PhaseIdealLoop=12, sum _unique=2316
+</statistics>
+<writer thread='21507'/>
+<destroy_vm stamp='0.849'/>
+<tty_done stamp='0.854'/>
+</tty>
+<hotspot_log_done stamp='0.854'/>
+</hotspot_log>
