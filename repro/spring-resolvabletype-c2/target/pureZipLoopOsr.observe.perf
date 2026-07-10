@@ -1,0 +1,21 @@
+pid=35630
+=== sample 1 t=1783646109659 ===
+sun.ci.compilerThread.0.compiles=0
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=0
+sun.ci.osrCompiles=0
+sun.ci.totalCompiles=0
+=== sample 2 t=1783646111125 ===
+sun.ci.compilerThread.0.compiles=11
+sun.ci.compilerThread.0.method="java/lang/String replace"
+sun.ci.compilerThread.0.time=6456
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=11
+=== sample 3 t=1783646111477 ===
+sun.ci.compilerThread.0.compiles=21
+sun.ci.compilerThread.0.method="repro/ResolvableTypeC2Repro$PseudoZip loopPhiClose"
+sun.ci.compilerThread.0.time=8207
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=20
+=== sample 4 t=1783646111861 ===
+process-exited sample=5

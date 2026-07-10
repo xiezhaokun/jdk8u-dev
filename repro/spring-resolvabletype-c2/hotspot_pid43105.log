@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='43105' time_ms='1783596088381'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  9 2026 17:01:08 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=1 -XX:BackEdgeThreshold=1 -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+PrintCompilation -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.forField -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.forType -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.getNested -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.as -XX:CompileCommand=compileonly,org/springframework/core/SerializableTypeWrapper.forTypeProvider -XX:CompileCommand=compileonly,org/springframework/core/SerializableTypeWrapper$FieldTypeProvider.&lt;init&gt; -XX:CompileCommand=compileonly,org/springframework/core/SerializableTypeWrapper$FieldTypeProvider.getType -XX:CompileCommand=compileonly,org/springframework/util/Assert.notNull -XX:CompileCommand=compileonly,org/springframework/util/ConcurrentReferenceHashMap.* -XX:CompileCommand=compileonly,org/springframework/util/ConcurrentReferenceHashMap$*.* -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.exerciseCompilerMethodWindowOsr -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.fatResolvableMix -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.hotWrapperThree -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.compactMemBarChain -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.finalCpuLiteStep -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.selectFinalCpuLiteSeed -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.consume -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro$FinalCpuLite.* -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro$FinalPair.* -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro$HotReferenceMap.* -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro$SpreadKey.* -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro$BarrierHolder.* -Drepro.iterations=12000 -Drepro.seconds=0 -Drepro.clearCacheEvery=0 -Drepro.deoptAfter=12001 -Drepro.target=compilerMethodWindowOsr 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=12000
+repro.seconds=0
+repro.clearCacheEvery=0
+repro.deoptAfter=12001
+repro.target=compilerMethodWindowOsr
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='9475'/>
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+<writer thread='32515'/>
+    638    1    b        org.springframework.util.ConcurrentReferenceHashMap$ReferenceType::&lt;init&gt; (7 bytes)
+    644    2    b        org.springframework.util.ConcurrentReferenceHashMap::calculateShift (26 bytes)
+    656    3    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt; (48 bytes)
+    670    4    b        org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager (9 bytes)
+    672    5    b        org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt; (21 bytes)
+    674    6    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::createReferenceArray (5 bytes)
+    678    7    b        org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt; (176 bytes)
+    701    8    b        org.springframework.util.Assert::notNull (14 bytes)
+    701    9    b        org.springframework.util.ConcurrentReferenceHashMap::getLoadFactor (5 bytes)
+    705   10    b        repro.ResolvableTypeC2Repro$SpreadKey::&lt;init&gt; (10 bytes)
+    711   11    b        repro.ResolvableTypeC2Repro$BarrierHolder::&lt;init&gt; (64 bytes)
+<writer thread='9475'/>
+    855   12     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLL)L (native)   (static)
+    864   13     n       java.lang.invoke.MethodHandle::linkToStatic(LLLL)L (native)   (static)
+    867   14     n       java.lang.invoke.MethodHandle::linkToStatic(LL)L (native)   (static)
+    887   15     n       java.lang.invoke.MethodHandle::linkToStatic(LL)V (native)   (static)
+    889   16     n       java.lang.invoke.MethodHandle::linkToStatic(LL)J (native)   (static)
+    892   17     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)L (native)   (static)
+    894   18     n       java.lang.invoke.MethodHandle::linkToVirtual(LLL)L (native)   (static)
+    935   19     n       java.lang.invoke.MethodHandle::linkToStatic(IL)L (native)   (static)
+    939   20     n       java.lang.invoke.MethodHandle::linkToVirtual(LL)L (native)   (static)
+    944   21     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)V (native)   (static)
+    947   22     n       java.lang.invoke.MethodHandle::invokeBasic(L)L (native)   
+    947   23     n       java.lang.invoke.MethodHandle::linkToSpecial(LLL)L (native)   (static)
+    954   24     n       java.lang.invoke.MethodHandle::linkToStatic(L)L (native)   (static)
+    955   25     n       java.lang.invoke.MethodHandle::invokeBasic()L (native)   
+    956   26     n       java.lang.invoke.MethodHandle::linkToSpecial(LL)L (native)   (static)
+    959   27     n       java.lang.invoke.MethodHandle::invokeBasic(LL)L (native)   
+    959   28     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)L (native)   (static)
+    963   29     n       java.lang.invoke.MethodHandle::invokeBasic(LLL)L (native)   
+    963   30     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLL)L (native)   (static)
+    968   31     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)L (native)   (static)
+    971   32     n       java.lang.invoke.MethodHandle::invokeBasic(LLLL)L (native)   
+    971   33     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLL)L (native)   (static)
+    975   34     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)L (native)   (static)
+    976   35     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLL)L (native)   
+    977   36     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLL)L (native)   (static)
+    980   37     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLL)L (native)   
+    981   38     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLL)L (native)   (static)
+    986   39     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLL)L (native)   (static)
+    988   40     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLL)L (native)   
+    988   41     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLL)L (native)   (static)
+    993   42     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLL)L (native)   (static)
+    995   43     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLL)L (native)   
+    996   44     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLL)L (native)   (static)
+   1001   45     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLL)L (native)   (static)
+   1004   46     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLL)L (native)   
+   1004   47     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLL)L (native)   (static)
+   1009   48     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLL)L (native)   (static)
+   1012   49     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLLL)L (native)   
+   1012   50     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLLL)L (native)   (static)
+   1023   51     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLL)L (native)   (static)
+   1026   52     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLLL)L (native)   (static)
+   1031   53     n       java.lang.invoke.MethodHandle::linkToStatic(LIL)V (native)   (static)
+   1034   54     n       java.lang.invoke.MethodHandle::linkToStatic(ILL)I (native)   (static)
+   1052   55     n       java.lang.invoke.MethodHandle::linkToStatic(ILLL)L (native)   (static)
+   1054   56     n       java.lang.invoke.MethodHandle::invokeBasic(ILL)L (native)   
+   1054   57     n       java.lang.invoke.MethodHandle::linkToSpecial(LILLL)L (native)   (static)
+   1142   58     n       java.lang.invoke.MethodHandle::invokeBasic(I)L (native)   
+   1142   59     n       java.lang.invoke.MethodHandle::linkToSpecial(LIL)L (native)   (static)
+<writer thread='32515'/>
+   1189   60    b        org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt; (13 bytes)
+   1199   61    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::restructureIfNecessary (56 bytes)
+   1207   62    b        org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::pollForPurge (11 bytes)
+   1218   63    b        org.springframework.util.ConcurrentReferenceHashMap$Restructure::&lt;init&gt; (7 bytes)
+   1219   64    b        org.springframework.core.ResolvableType::forType (7 bytes)
+   1221   65    b        org.springframework.core.ResolvableType::forType (115 bytes)
+   1239   66    b        org.springframework.util.ConcurrentReferenceHashMap$TaskOption::&lt;init&gt; (7 bytes)
+   1243   67    b        org.springframework.util.ConcurrentReferenceHashMap::getHash (64 bytes)
+   1247   68    b        org.springframework.util.ConcurrentReferenceHashMap::getSegmentForHash (23 bytes)
+   1250   69    b        org.springframework.util.ConcurrentReferenceHashMap$Task::hasOption (9 bytes)
+<writer thread='9475'/>
+   1258   70     n       java.lang.invoke.MethodHandle::linkToSpecial(LLILILL)V (native)   (static)
+   1269   71     n       java.lang.invoke.MethodHandle::linkToStatic(LLILIL)L (native)   (static)
+   1272   72     n       java.lang.invoke.MethodHandle::invokeBasic(LLILI)L (native)   
+   1272   73     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLILIL)L (native)   (static)
+<writer thread='32515'/>
+   1294   74    b        org.springframework.util.ConcurrentReferenceHashMap::get (37 bytes)
+   1301   75    b        org.springframework.util.ConcurrentReferenceHashMap::getReference (18 bytes)
+   1305   76    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::getReference (55 bytes)
+   1310   77    b        org.springframework.util.ConcurrentReferenceHashMap::put (8 bytes)
+   1319   78    b        org.springframework.util.ConcurrentReferenceHashMap::put (32 bytes)
+   1346   79    b        org.springframework.util.ConcurrentReferenceHashMap$1::&lt;init&gt; (23 bytes)
+   1363   80    b        org.springframework.util.ConcurrentReferenceHashMap$Task::&lt;init&gt; (34 bytes)
+   1373   81    b        org.springframework.util.ConcurrentReferenceHashMap::doTask (18 bytes)
+   1378   82   !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::doTask (179 bytes)
+   1409   83    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::getIndex (7 bytes)
+   1411   84    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::findInChain (66 bytes)
+   1437   85    b        org.springframework.util.ConcurrentReferenceHashMap$Segment$$Lambda$3/2108649164::get$Lambda (14 bytes)
+   1444   86    b        org.springframework.util.ConcurrentReferenceHashMap$Segment$$Lambda$3/2108649164::&lt;init&gt; (32 bytes)
+   1447   87    b        org.springframework.util.ConcurrentReferenceHashMap$1::execute (55 bytes)
+   1485   88    b        org.springframework.util.ConcurrentReferenceHashMap$Segment$$Lambda$3/2108649164::add (25 bytes)
+   1490   89    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::lambda$doTask$0 (43 bytes)
+   1503   90    b        org.springframework.util.ConcurrentReferenceHashMap$Entry::&lt;init&gt; (15 bytes)
+   1508   91    b        org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::createReference (43 bytes)
+   1516   92    b        org.springframework.util.ConcurrentReferenceHashMap::access$400 (5 bytes)
+   1518   93    b        org.springframework.util.ConcurrentReferenceHashMap$SoftEntryReference::&lt;init&gt; (18 bytes)
+   1523   94    b        org.springframework.core.ResolvableType::as (86 bytes)
+   1556   95    b        org.springframework.core.ResolvableType::forType (17 bytes)
+   1666   96    b        org.springframework.core.SerializableTypeWrapper$FieldTypeProvider::getType (8 bytes)
+   1674   97    b        org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)
+<writer thread='9475'/>
+   1714   98     n       java.lang.invoke.MethodHandle::linkToStatic(LL)I (native)   (static)
+<writer thread='32515'/>
+   1738   99    b        org.springframework.core.ResolvableType::forField (39 bytes)
+   1751  100    b        org.springframework.core.ResolvableType::forType (7 bytes)
+   1759  101    b        org.springframework.core.SerializableTypeWrapper$FieldTypeProvider::&lt;init&gt; (26 bytes)
+<writer thread='9475'/>
+   1767   67             org.springframework.util.ConcurrentReferenceHashMap::getHash (64 bytes)   made not entrant
+<writer thread='32515'/>
+   1769  102    b        org.springframework.util.ConcurrentReferenceHashMap::getHash (64 bytes)
+   1777  103    b        org.springframework.core.ResolvableType::getNested (7 bytes)
+   1779  104    b        org.springframework.core.ResolvableType::getNested (121 bytes)
+   1799  105    b        org.springframework.util.ConcurrentReferenceHashMap$SoftEntryReference::get (8 bytes)
+   1802  106    b        org.springframework.util.ConcurrentReferenceHashMap$SoftEntryReference::getHash (5 bytes)
+<writer thread='9475'/>
+   1837   97             org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)   made not entrant
+<writer thread='32515'/>
+   1839  107    b        org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)
+<writer thread='9475'/>
+   1863  102             org.springframework.util.ConcurrentReferenceHashMap::getHash (64 bytes)   made not entrant
+<writer thread='32515'/>
+   1863  108    b        org.springframework.util.ConcurrentReferenceHashMap::getHash (64 bytes)
+   1869  109    b        org.springframework.core.ResolvableType::forField (44 bytes)
+   1886  110    b        org.springframework.util.ConcurrentReferenceHashMap$SoftEntryReference::getNext (5 bytes)
+<writer thread='9475'/>
+   1897  107             org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)   made not entrant
+<writer thread='32515'/>
+   1898  111    b        repro.ResolvableTypeC2Repro::consume (53 bytes)
+   1906  112    b        org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)
+   1930  113    b        repro.ResolvableTypeC2Repro::fatResolvableMix (463 bytes)
+   2004  114    b        repro.ResolvableTypeC2Repro::hotWrapperThree (7 bytes)
+   2006  115    b        repro.ResolvableTypeC2Repro::finalCpuLiteStep (687 bytes)
+   2020  116    b        repro.ResolvableTypeC2Repro$FinalCpuLite::&lt;init&gt; (31 bytes)
+   2022  117    b        repro.ResolvableTypeC2Repro::selectFinalCpuLiteSeed (84 bytes)
+<writer thread='9475'/>
+   2026   91             org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::createReference (43 bytes)   made not entrant
+<writer thread='32515'/>
+   2027  118    b        repro.ResolvableTypeC2Repro$SpreadKey::hashCode (8 bytes)
+   2028  119    b        org.springframework.util.ConcurrentReferenceHashMap$WeakEntryReference::getHash (5 bytes)
+   2029  120    b        org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::createReference (43 bytes)
+   2034  121    b        org.springframework.util.ConcurrentReferenceHashMap$WeakEntryReference::&lt;init&gt; (18 bytes)
+   2036  122    b        org.springframework.util.ConcurrentReferenceHashMap$WeakEntryReference::get (8 bytes)
+   2040  123    b        org.springframework.util.ConcurrentReferenceHashMap::getSegment (7 bytes)
+   2061  124    b        org.springframework.util.ConcurrentReferenceHashMap$WeakEntryReference::getNext (5 bytes)
+   2062  125   !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::restructure (316 bytes)
+<writer thread='9475'/>
+   2087   89             org.springframework.util.ConcurrentReferenceHashMap$Segment::lambda$doTask$0 (43 bytes)   made not entrant
+<writer thread='32515'/>
+   2087  126    b        repro.ResolvableTypeC2Repro$FinalPair::&lt;init&gt; (27 bytes)
+   2088  127   !b        repro.ResolvableTypeC2Repro::compactMemBarChain (170 bytes)
+   2103  128    b        repro.ResolvableTypeC2Repro$HotReferenceMap::segmentSize (9 bytes)
+   2104  129    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::getSize (6 bytes)
+   2105  130    b        repro.ResolvableTypeC2Repro$HotReferenceMap::segmentCount (9 bytes)
+   2107  131    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::getCount (8 bytes)
+   2109  132    b        org.springframework.util.ConcurrentReferenceHashMap$Segment::lambda$doTask$0 (43 bytes)
+   2236  133    b        org.springframework.util.ConcurrentReferenceHashMap::remove (30 bytes)
+   2243  134    b        org.springframework.util.ConcurrentReferenceHashMap$2::&lt;init&gt; (12 bytes)
+   2247  135    b        org.springframework.util.ConcurrentReferenceHashMap$Task::execute (7 bytes)
+   2249  136    b        org.springframework.util.ConcurrentReferenceHashMap$2::execute (21 bytes)
+   2251  137    b        org.springframework.util.ConcurrentReferenceHashMap::purgeUnreferencedEntries (33 bytes)
+   2354  138    b        org.springframework.util.ConcurrentReferenceHashMap$Entry::setValue (12 bytes)
+<writer thread='9475'/>
+   2428   82   !         org.springframework.util.ConcurrentReferenceHashMap$Segment::doTask (179 bytes)   made not entrant
+<writer thread='32515'/>
+   2441  139   !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::doTask (179 bytes)
+   3008  140   !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::clear (69 bytes)
+   3019  141    b        org.springframework.util.ConcurrentReferenceHashMap::clear (32 bytes)
+<writer thread='9475'/>
+   5520  125   !         org.springframework.util.ConcurrentReferenceHashMap$Segment::restructure (316 bytes)   made not entrant
+<writer thread='32515'/>
+   5524  142 % !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::restructure @ 144 (316 bytes)
+   5678  143    b        org.springframework.util.ConcurrentReferenceHashMap$WeakEntryReference::release (10 bytes)
+   5680   67             org.springframework.util.ConcurrentReferenceHashMap::getHash (64 bytes)   made zombie
+   5680  144   !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::restructure (316 bytes)
+   5744   91             org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::createReference (43 bytes)   made zombie
+   5744   89             org.springframework.util.ConcurrentReferenceHashMap$Segment::lambda$doTask$0 (43 bytes)   made zombie
+   5744   97             org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)   made zombie
+   5744  102             org.springframework.util.ConcurrentReferenceHashMap::getHash (64 bytes)   made zombie
+<writer thread='9475'/>
+  13516  144   !         org.springframework.util.ConcurrentReferenceHashMap$Segment::restructure (316 bytes)   made not entrant
+  13517  122             org.springframework.util.ConcurrentReferenceHashMap$WeakEntryReference::get (8 bytes)   made not entrant
+<writer thread='32515'/>
+  13517  145    b        org.springframework.util.ConcurrentReferenceHashMap$WeakEntryReference::get (8 bytes)
+  13519  107             org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)   made zombie
+  13519  146 % !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::restructure @ 173 (316 bytes)
+  13575  147   !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::restructure (316 bytes)
+  13638  148 % !b        org.springframework.util.ConcurrentReferenceHashMap$Segment::restructure @ 31 (316 bytes)
+  14433  149 %  b        repro.ResolvableTypeC2Repro::exerciseCompilerMethodWindowOsr @ 160 (970 bytes)

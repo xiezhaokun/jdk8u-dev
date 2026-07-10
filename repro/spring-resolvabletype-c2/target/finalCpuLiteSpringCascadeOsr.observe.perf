@@ -1,0 +1,105 @@
+pid=33777
+=== sample 1 t=1783645999717 ===
+sun.ci.compilerThread.0.compiles=0
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=0
+sun.ci.osrCompiles=0
+sun.ci.totalCompiles=0
+=== sample 2 t=1783646001034 ===
+sun.ci.compilerThread.0.compiles=10
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=2251
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=10
+=== sample 3 t=1783646001401 ===
+sun.ci.compilerThread.0.compiles=27
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType getGenerics"
+sun.ci.compilerThread.0.time=4626
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=26
+=== sample 4 t=1783646001787 ===
+sun.ci.compilerThread.0.compiles=33
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType isArray"
+sun.ci.compilerThread.0.time=8584
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=32
+=== sample 5 t=1783646002161 ===
+sun.ci.compilerThread.0.compiles=34
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType getNested"
+sun.ci.compilerThread.0.time=8792
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=33
+=== sample 6 t=1783646002517 ===
+sun.ci.compilerThread.0.compiles=34
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType getNested"
+sun.ci.compilerThread.0.time=8792
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=33
+=== sample 7 t=1783646002918 ===
+sun.ci.compilerThread.0.compiles=45
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=13959
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=45
+=== sample 8 t=1783646003284 ===
+sun.ci.compilerThread.0.compiles=61
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType as"
+sun.ci.compilerThread.0.time=15793
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=60
+=== sample 9 t=1783646003651 ===
+sun.ci.compilerThread.0.compiles=75
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType getNested"
+sun.ci.compilerThread.0.time=17706
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=74
+=== sample 10 t=1783646004064 ===
+sun.ci.compilerThread.0.compiles=75
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=17706
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=75
+=== sample 11 t=1783646004443 ===
+sun.ci.compilerThread.0.compiles=75
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=17706
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=75
+=== sample 12 t=1783646005023 ===
+sun.ci.compilerThread.0.compiles=81
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType getNested"
+sun.ci.compilerThread.0.time=18497
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=80
+=== sample 13 t=1783646005516 ===
+sun.ci.compilerThread.0.compiles=81
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=18497
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=81
+=== sample 14 t=1783646005913 ===
+sun.ci.compilerThread.0.compiles=95
+sun.ci.compilerThread.0.method="org/springframework/util/ConcurrentReferenceHashMap$Segment getReference"
+sun.ci.compilerThread.0.time=20871
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=94
+=== sample 15 t=1783646006275 ===
+sun.ci.compilerThread.0.compiles=104
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=21413
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=104
+=== sample 16 t=1783646006644 ===
+sun.ci.compilerThread.0.compiles=104
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=21413
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=104
+=== sample 17 t=1783646007017 ===
+sun.ci.compilerThread.0.compiles=104
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=21413
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=104
+=== sample 18 t=1783646007400 ===
+process-exited sample=19

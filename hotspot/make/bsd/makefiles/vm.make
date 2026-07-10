@@ -396,12 +396,21 @@ include $(MAKEFILES_DIR)/saproc.make
 
 ifeq ($(OS_VENDOR), Darwin)
 # no libjvm_db for macosx
+ifeq ($(DISABLE_SAPROC), true)
+build: $(LIBJVM) $(LAUNCHER) $(LIBJSIG) dtraceCheck
+	echo "Doing vm.make build:"
+else
 build: $(LIBJVM) $(LAUNCHER) $(LIBJSIG) $(BUILDLIBSAPROC) dtraceCheck
 	echo "Doing vm.make build:"
+endif
 else
 build: $(LIBJVM) $(LAUNCHER) $(LIBJSIG) $(LIBJVM_DB) $(BUILDLIBSAPROC)
 endif
 
+ifeq ($(DISABLE_SAPROC), true)
+install: install_jvm install_jsig
+else
 install: install_jvm install_jsig install_saproc
+endif
 
 .PHONY: default build install install_jvm

@@ -1,0 +1,105 @@
+2026-07-10 11:19:24
+Full thread dump OpenJDK 64-Bit Server VM (25.512-b00-fastdebug mixed mode):
+
+"Attach Listener" #7 daemon prio=9 os_prio=31 tid=0x00007fce72070000 nid=0x7803 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   JavaThread state: _thread_blocked
+Thread: 0x00007fce72070000  [0x7803] State: _at_safepoint _has_called_back 0 _at_poll_safepoint 0
+   JavaThread state: _thread_blocked
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" #6 daemon prio=9 os_prio=31 tid=0x00007fce72832800 nid=0x7e07 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   JavaThread state: _thread_blocked
+Thread: 0x00007fce72832800  [0x7e07] State: _at_safepoint _has_called_back 0 _at_poll_safepoint 0
+   JavaThread state: _thread_blocked
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" #5 daemon prio=9 os_prio=31 tid=0x00007fce72830000 nid=0x5803 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   JavaThread state: _thread_in_native
+Thread: 0x00007fce72830000  [0x5803] State: _at_safepoint _has_called_back 0 _at_poll_safepoint 0
+   JavaThread state: _thread_in_native
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=31 tid=0x00007fce71025000 nid=0x5603 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   JavaThread state: _thread_blocked
+Thread: 0x00007fce71025000  [0x5603] State: _at_safepoint _has_called_back 0 _at_poll_safepoint 0
+   JavaThread state: _thread_blocked
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" #3 daemon prio=8 os_prio=31 tid=0x00007fce7202b800 nid=0x431b in Object.wait() [0x000000030918f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+   JavaThread state: _thread_blocked
+Thread: 0x00007fce7202b800  [0x431b] State: _at_safepoint _has_called_back 0 _at_poll_safepoint 0
+   JavaThread state: _thread_blocked
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000795588f00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x0000000795588f00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:188)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" #2 daemon prio=10 os_prio=31 tid=0x00007fce72822000 nid=0x5223 in Object.wait() [0x000000030908c000]
+   java.lang.Thread.State: WAITING (on object monitor)
+   JavaThread state: _thread_blocked
+Thread: 0x00007fce72822000  [0x5223] State: _at_safepoint _has_called_back 0 _at_poll_safepoint 0
+   JavaThread state: _thread_blocked
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000795586b98> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x0000000795586b98> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+   Locked ownable synchronizers:
+	- None
+
+"main" #1 prio=5 os_prio=31 tid=0x00007fce73009800 nid=0x2603 waiting on condition [0x000000030866e000]
+   java.lang.Thread.State: RUNNABLE
+   JavaThread state: _thread_blocked
+Thread: 0x00007fce73009800  [0x2603] State: _at_safepoint _has_called_back 0 _at_poll_safepoint 0
+   JavaThread state: _thread_blocked
+	at org.springframework.core.ResolvableType.forField(ResolvableType.java:1209)
+	at repro.ResolvableTypeC2Repro.exerciseFieldObserveNeedlePinned(ResolvableTypeC2Repro.java:469)
+	at repro.ResolvableTypeC2Repro.main(ResolvableTypeC2Repro.java:227)
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" os_prio=31 tid=0x00007fce51008800 nid=0x4103 runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=31 tid=0x00007fce7300c000 nid=0x2c0b runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=31 tid=0x00007fce7280e800 nid=0x3803 runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=31 tid=0x00007fce7280f000 nid=0x2d03 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=31 tid=0x00007fce7200f800 nid=0x3603 runnable 
+
+"GC task thread#4 (ParallelGC)" os_prio=31 tid=0x00007fce7300c800 nid=0x3403 runnable 
+
+"GC task thread#5 (ParallelGC)" os_prio=31 tid=0x00007fce7100c000 nid=0x3003 runnable 
+
+"GC task thread#6 (ParallelGC)" os_prio=31 tid=0x00007fce72813000 nid=0x3103 runnable 
+
+"GC task thread#7 (ParallelGC)" os_prio=31 tid=0x00007fce7300e000 nid=0x4003 runnable 
+
+"VM Periodic Task Thread" os_prio=31 tid=0x00007fce73041800 nid=0x7d03 waiting on condition 
+
+Compiler thread printing unimplemented.
+
+JNI global references: 330
+

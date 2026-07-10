@@ -1,0 +1,656 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='58587' time_ms='1783156911663'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  4 2026 16:33:53 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=100 -XX:+TieredCompilation -XX:CICompilerCount=2 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+PrintCompilation -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.forField -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro.* -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro$*.* -XX:TieredStopAtLevel=4 -XX:Tier4CompileThreshold=100 -XX:Tier3CompileThreshold=50 -XX:Tier2CompileThreshold=20 -XX:+TraceDeoptimization -Drepro.iterations=1000000 -Drepro.seconds=0 -Drepro.clearCacheEvery=257 -Drepro.deoptAfter=500000 -Drepro.target=advanced 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=1000000
+repro.seconds=0
+repro.clearCacheEvery=257
+repro.deoptAfter=500000
+repro.target=advanced
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='9987'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/System getSecurityManager ()Ljava/lang/SecurityManager;' bytes='4' count='128' iicount='128' stamp='0.485'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String hashCode ()I' bytes='55' count='367' backedge_count='4096' iicount='367' stamp='0.492'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='256' backedge_count='805' iicount='256' stamp='0.492'/>
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String length ()I' bytes='6' count='256' iicount='256' stamp='0.501'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Object &lt;init&gt; ()V' bytes='1' count='1280' iicount='1280' stamp='0.505'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder ensureCapacityInternal (I)V' bytes='27' count='128' iicount='128' stamp='0.505'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String charAt (I)C' bytes='29' count='1920' iicount='1920' stamp='0.505'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String indexOf (II)I' bytes='70' count='174' backedge_count='3072' iicount='174' stamp='0.510'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Math min (II)I' bytes='11' count='384' iicount='384' stamp='0.518'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays copyOfRange ([CII)[C' bytes='63' count='128' iicount='128' stamp='0.524'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/System arraycopy (Ljava/lang/Object;ILjava/lang/Object;II)V' bytes='0' count='384' iicount='384' stamp='0.525'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String &lt;init&gt; ([CII)V' bytes='82' count='128' iicount='128' stamp='0.525'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder append (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;' bytes='50' count='128' iicount='128' stamp='0.525'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String getChars (II[CI)V' bytes='62' count='128' iicount='128' stamp='0.526'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder;' bytes='8' count='128' iicount='128' stamp='0.527'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Math max (II)I' bytes='11' count='128' iicount='128' stamp='0.527'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Thread currentThread ()Ljava/lang/Thread;' bytes='0' count='128' iicount='128' stamp='0.530'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ref/SoftReference get ()Ljava/lang/Object;' bytes='29' count='128' iicount='128' stamp='0.541'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ref/Reference get ()Ljava/lang/Object;' bytes='5' count='256' iicount='256' stamp='0.548'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/nio/fs/UnixPath checkNotNul (Ljava/lang/String;C)V' bytes='16' count='128' iicount='128' stamp='0.552'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays copyOf ([CI)[C' bytes='19' count='128' iicount='128' stamp='0.564'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ThreadLocal getMap (Ljava/lang/Thread;)Ljava/lang/ThreadLocal$ThreadLocalMap;' bytes='5' count='128' iicount='128' stamp='0.564'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ThreadLocal access$400 (Ljava/lang/ThreadLocal;)I' bytes='5' count='128' iicount='128' stamp='0.564'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder newCapacity (I)I' bytes='39' count='128' iicount='128' stamp='0.565'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String startsWith (Ljava/lang/String;I)Z' bytes='72' count='118' backedge_count='1024' iicount='118' stamp='0.565'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String indexOf (I)I' bytes='7' count='256' iicount='256' stamp='0.566'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder &lt;init&gt; (I)V' bytes='12' count='128' iicount='128' stamp='0.566'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ThreadLocal get ()Ljava/lang/Object;' bytes='38' count='128' iicount='128' stamp='0.566'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ThreadLocal$ThreadLocalMap access$000 (Ljava/lang/ThreadLocal$ThreadLocalMap;Ljava/lang/ThreadLocal;)Ljava/lang/ThreadLocal$ThreadLocalMap$Entry;' bytes='6' count='128' iicount='128' stamp='0.566'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ThreadLocal$ThreadLocalMap getEntry (Ljava/lang/ThreadLocal;)Ljava/lang/ThreadLocal$ThreadLocalMap$Entry;' bytes='42' count='128' iicount='128' stamp='0.566'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringCoding scale (IF)I' bytes='7' count='128' iicount='128' stamp='0.566'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap tabAt ([Ljava/util/concurrent/ConcurrentHashMap$Node;I)Ljava/util/concurrent/ConcurrentHashMap$Node;' bytes='21' count='128' iicount='128' stamp='0.567'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/Unsafe getObjectVolatile (Ljava/lang/Object;J)Ljava/lang/Object;' bytes='0' count='128' iicount='128' stamp='0.567'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringCoding deref (Ljava/lang/ThreadLocal;)Ljava/lang/Object;' bytes='19' count='128' iicount='128' stamp='0.567'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringCoding access$000 (IF)I' bytes='6' count='128' iicount='128' stamp='0.567'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays copyOf ([BI)[B' bytes='19' count='128' iicount='128' stamp='0.567'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/nio/cs/UTF_8$Encoder encode ([CII[B)I' bytes='359' count='106' backedge_count='7168' iicount='106' stamp='0.568'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuilder &lt;init&gt; ()V' bytes='7' count='128' iicount='128' stamp='0.568'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuilder toString ()Ljava/lang/String;' bytes='17' count='128' iicount='128' stamp='0.568'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/charset/CharsetEncoder maxBytesPerChar ()F' bytes='5' count='128' iicount='128' stamp='0.568'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/CharacterData of (I)Ljava/lang/CharacterData;' bytes='120' count='128' iicount='128' stamp='0.569'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/CharacterDataLatin1 getProperties (I)I' bytes='11' count='128' iicount='128' stamp='0.569'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String lastIndexOf (II)I' bytes='52' count='112' backedge_count='3072' iicount='112' stamp='0.570'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String endsWith (Ljava/lang/String;)Z' bytes='17' count='128' iicount='128' stamp='0.570'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String lastIndexOf (I)I' bytes='13' count='128' iicount='128' stamp='0.570'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String startsWith (Ljava/lang/String;)Z' bytes='7' count='128' iicount='128' stamp='0.571'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String substring (II)Ljava/lang/String;' bytes='79' count='128' iicount='128' stamp='0.571'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getProtocol ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.571'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String toCharArray ()[C' bytes='25' count='128' iicount='128' stamp='0.571'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getHost ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.571'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/Buffer checkIndex (I)I' bytes='22' count='128' iicount='128' stamp='0.571'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/DirectLongBufferU ix (I)J' bytes='10' count='128' iicount='128' stamp='0.571'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/System nanoTime ()J' bytes='0' count='128' iicount='128' stamp='0.571'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String indexOf ([CII[CIII)I' bytes='166' count='101' backedge_count='8192' iicount='101' stamp='0.572'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap setTabAt ([Ljava/util/concurrent/ConcurrentHashMap$Node;ILjava/util/concurrent/ConcurrentHashMap$Node;)V' bytes='19' count='128' iicount='128' stamp='0.572'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/Unsafe putObjectVolatile (Ljava/lang/Object;JLjava/lang/Object;)V' bytes='0' count='128' iicount='128' stamp='0.572'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String replace (CC)Ljava/lang/String;' bytes='127' count='101' backedge_count='2048' iicount='101' stamp='0.572'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/Unsafe compareAndSwapObject (Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z' bytes='0' count='128' iicount='128' stamp='0.573'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap spread (I)I' bytes='10' count='128' iicount='128' stamp='0.573'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/charset/CharsetEncoder reset ()Ljava/nio/charset/CharsetEncoder;' bytes='11' count='128' iicount='128' stamp='0.574'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/charset/CharsetEncoder implReset ()V' bytes='1' count='128' iicount='128' stamp='0.574'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getPath ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipCoder getBytes (Ljava/lang/String;)[B' bytes='192' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipCoder encoder ()Ljava/nio/charset/CharsetEncoder;' bytes='35' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipFile getEntry (J[B)J' bytes='0' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getAuthority ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap putVal (Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object;' bytes='362' count='128' backedge_count='17' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String &lt;init&gt; ([CZ)V' bytes='10' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/BitSet wordIndex (I)I' bytes='5' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getRef ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap casTabAt ([Ljava/util/concurrent/ConcurrentHashMap$Node;ILjava/util/concurrent/ConcurrentHashMap$Node;Ljava/util/concurrent/ConcurrentHashMap$Node;)Z' bytes='20' count='128' iicount='128' stamp='0.575'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ClassLoader checkName (Ljava/lang/String;)Z' bytes='43' count='128' iicount='128' stamp='0.576'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/VM allowArraySyntax ()Z' bytes='4' count='128' iicount='128' stamp='0.576'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String indexOf (Ljava/lang/String;I)I' bytes='25' count='128' iicount='128' stamp='0.576'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/BitSet checkInvariants ()V' bytes='111' count='128' iicount='128' stamp='0.576'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap hash (Ljava/lang/Object;)I' bytes='20' count='128' iicount='128' stamp='0.576'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Character toUpperCaseEx (I)I' bytes='30' count='128' iicount='128' stamp='0.577'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/CharacterDataLatin1 toUpperCaseEx (I)I' bytes='71' count='128' iicount='128' stamp='0.577'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/jar/Attributes$Name isValid (C)Z' bytes='32' count='128' iicount='128' stamp='0.579'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/jar/Attributes$Name isAlpha (C)Z' bytes='30' count='128' iicount='128' stamp='0.579'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ASCIICaseInsensitiveComparator toLower (I)I' bytes='16' count='128' iicount='128' stamp='0.581'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ASCIICaseInsensitiveComparator isUpper (I)Z' bytes='18' count='128' iicount='128' stamp='0.581'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap$Node &lt;init&gt; (ILjava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/ConcurrentHashMap$Node;)V' bytes='26' count='128' iicount='128' stamp='0.584'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap putIfAbsent (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;' bytes='8' count='128' iicount='128' stamp='0.584'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap addCount (JI)V' bytes='281' count='128' backedge_count='4' iicount='128' stamp='0.585'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/Unsafe compareAndSwapLong (Ljava/lang/Object;JJJ)Z' bytes='0' count='128' iicount='128' stamp='0.585'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList size ()I' bytes='5' count='128' iicount='128' stamp='0.585'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='128' iicount='128' stamp='0.586'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/reflect/Field getName ()Ljava/lang/String;' bytes='5' count='256' iicount='256' stamp='0.590'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Number &lt;init&gt; ()V' bytes='5' count='384' iicount='384' stamp='0.594'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Byte &lt;init&gt; (B)V' bytes='10' count='128' iicount='128' stamp='0.594'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Short &lt;init&gt; (S)V' bytes='10' count='128' iicount='128' stamp='0.595'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Character &lt;init&gt; (C)V' bytes='10' count='128' iicount='128' stamp='0.596'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Long &lt;init&gt; (J)V' bytes='10' count='128' iicount='128' stamp='0.597'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getName ()Ljava/lang/String;' bytes='21' count='128' iicount='128' stamp='0.598'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Object hashCode ()I' bytes='0' count='128' iicount='128' stamp='0.601'/>
+    601    1     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ref/Reference &lt;init&gt; (Ljava/lang/Object;)V' bytes='7' count='128' iicount='128' stamp='0.605'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ref/Reference &lt;init&gt; (Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V' bytes='25' count='256' iicount='256' stamp='0.608'/>
+    608    2     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/reflect/Method getName ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.609'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Object getClass ()Ljava/lang/Class;' bytes='0' count='128' iicount='128' stamp='0.610'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getClassLoader0 ()Ljava/lang/ClassLoader;' bytes='5' count='128' iicount='128' stamp='0.610'/>
+    609    3     n 0       java.lang.invoke.MethodHandle::linkToStatic(LL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getClassLoader ()Ljava/lang/ClassLoader;' bytes='28' count='128' iicount='128' stamp='0.619'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder append (C)Ljava/lang/AbstractStringBuilder;' bytes='29' count='128' iicount='128' stamp='0.620'/>
+    621    4     n 0       java.lang.invoke.MethodHandle::linkToStatic(LL)V (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class isPrimitive ()Z' bytes='0' count='128' iicount='128' stamp='0.622'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuilder append (C)Ljava/lang/StringBuilder;' bytes='8' count='128' iicount='128' stamp='0.622'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName testFlags (II)Z' bytes='16' count='128' iicount='128' stamp='0.622'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Objects requireNonNull (Ljava/lang/Object;)Ljava/lang/Object;' bytes='14' count='128' iicount='128' stamp='0.622'/>
+    622    5     n 0       java.lang.invoke.MethodHandle::linkToStatic(LL)J (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ref/ReferenceQueue poll ()Ljava/lang/ref/Reference;' bytes='28' count='128' iicount='128' stamp='0.622'/>
+    622    6     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName isInvocable ()Z' bytes='7' count='128' iicount='128' stamp='0.623'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName testAnyFlags (I)Z' bytes='15' count='128' iicount='128' stamp='0.623'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class isArray ()Z' bytes='0' count='128' iicount='128' stamp='0.623'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Enum ordinal ()I' bytes='5' count='128' iicount='128' stamp='0.623'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Item set (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V' bytes='143' count='128' iicount='128' stamp='0.623'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter get (Ljdk/internal/org/objectweb/asm/Item;)Ljdk/internal/org/objectweb/asm/Item;' bytes='49' count='128' backedge_count='6' iicount='128' stamp='0.623'/>
+    623    7     n 0       java.lang.invoke.MethodHandle::linkToVirtual(LLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector putShort (I)Ljdk/internal/org/objectweb/asm/ByteVector;' bytes='52' count='128' iicount='128' stamp='0.624'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Item &lt;init&gt; (ILjdk/internal/org/objectweb/asm/Item;)V' bytes='66' count='128' iicount='128' stamp='0.624'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter put (Ljdk/internal/org/objectweb/asm/Item;)V' bytes='152' count='128' iicount='128' stamp='0.624'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Object clone ()Ljava/lang/Object;' bytes='0' count='128' iicount='128' stamp='0.625'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector putByte (I)Ljdk/internal/org/objectweb/asm/ByteVector;' bytes='39' count='128' iicount='128' stamp='0.625'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector putUTF8 (Ljava/lang/String;)Ljdk/internal/org/objectweb/asm/ByteVector;' bytes='142' count='107' backedge_count='3072' iicount='107' stamp='0.625'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType returnType ()Ljava/lang/Class;' bytes='5' count='128' iicount='128' stamp='0.625'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName getDeclaringClass ()Ljava/lang/Class;' bytes='5' count='128' iicount='128' stamp='0.625'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm canonicalize (Ljava/lang/Class;I)Ljava/lang/Class;' bytes='233' count='128' iicount='128' stamp='0.625'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter newUTF8 (Ljava/lang/String;)I' bytes='70' count='128' iicount='128' stamp='0.626'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String indexOf (Ljava/lang/String;)I' bytes='7' count='128' iicount='128' stamp='0.628'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName testAllFlags (I)Z' bytes='7' count='128' iicount='128' stamp='0.628'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType checkPtype (Ljava/lang/Class;)V' bytes='19' count='128' iicount='128' stamp='0.628'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType hashCode ()I' bytes='53' count='128' backedge_count='289' iicount='128' stamp='0.628'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType$ConcurrentWeakInternSet expungeStaleElements ()V' bytes='27' count='128' iicount='128' stamp='0.628'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType$ConcurrentWeakInternSet$WeakEntry hashCode ()I' bytes='5' count='128' iicount='128' stamp='0.628'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector put12 (II)Ljdk/internal/org/objectweb/asm/ByteVector;' bytes='64' count='128' iicount='128' stamp='0.629'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/SubList access$000 (Ljava/util/SubList;)I' bytes='5' count='128' iicount='128' stamp='0.632'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/SubList$1 hasNext ()Z' bytes='20' count='128' iicount='128' stamp='0.632'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/SubList$1 nextIndex ()I' bytes='18' count='128' iicount='128' stamp='0.632'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractList$ListItr nextIndex ()I' bytes='5' count='128' iicount='128' stamp='0.632'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/SubList access$200 (Ljava/util/SubList;)I' bytes='5' count='128' iicount='128' stamp='0.632'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractList$Itr next ()Ljava/lang/Object;' bytes='45' count='128' iicount='128' stamp='0.632'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractList$Itr checkForComodification ()V' bytes='23' count='128' iicount='128' stamp='0.632'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays$ArrayList get (I)Ljava/lang/Object;' bytes='7' count='128' iicount='128' stamp='0.632'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType checkSlotCount (I)V' bytes='33' count='128' iicount='128' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ClassLoader loadClass (Ljava/lang/String;Z)Ljava/lang/Class;' bytes='122' count='128' iicount='128' throwouts='24' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ClassLoader getClassLoadingLock (Ljava/lang/String;)Ljava/lang/Object;' bytes='35' count='128' iicount='128' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ClassLoader findLoadedClass (Ljava/lang/String;)Ljava/lang/Class;' bytes='16' count='128' iicount='128' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ClassLoader findLoadedClass0 (Ljava/lang/String;)Ljava/lang/Class;' bytes='0' count='128' iicount='128' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/ConcurrentHashMap get (Ljava/lang/Object;)Ljava/lang/Object;' bytes='162' count='128' backedge_count='5' iicount='128' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName getMethodType ()Ljava/lang/invoke/MethodType;' bytes='208' count='128' iicount='128' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/reflect/Modifier isStatic (I)Z' bytes='13' count='128' iicount='128' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName isStatic ()Z' bytes='8' count='128' iicount='128' stamp='0.633'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ref/WeakReference &lt;init&gt; (Ljava/lang/Object;)V' bytes='6' count='128' iicount='128' stamp='0.634'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList access$000 (Ljava/util/ArrayList;)I' bytes='5' count='128' iicount='128' stamp='0.634'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType makeImpl (Ljava/lang/Class;[Ljava/lang/Class;Z)Ljava/lang/invoke/MethodType;' bytes='66' count='128' iicount='128' stamp='0.634'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType &lt;init&gt; ([Ljava/lang/Class;Ljava/lang/Class;)V' bytes='15' count='128' iicount='128' stamp='0.634'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType$ConcurrentWeakInternSet get (Ljava/lang/Object;)Ljava/lang/Object;' bytes='54' count='128' iicount='128' stamp='0.634'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType$ConcurrentWeakInternSet$WeakEntry &lt;init&gt; (Ljava/lang/Object;)V' bytes='14' count='128' iicount='128' stamp='0.634'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Object equals (Ljava/lang/Object;)Z' bytes='11' count='128' iicount='128' stamp='0.635'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList rangeCheck (I)V' bytes='22' count='128' iicount='128' stamp='0.635'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList elementData (I)Ljava/lang/Object;' bytes='7' count='128' iicount='128' stamp='0.635'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList ensureCapacityInternal (I)V' bytes='13' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList calculateCapacity ([Ljava/lang/Object;I)I' bytes='16' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList ensureExplicitCapacity (I)V' bytes='26' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ref/SoftReference &lt;init&gt; (Ljava/lang/Object;)V' bytes='13' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList add (Ljava/lang/Object;)Z' bytes='29' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ClassLoader loadClass (Ljava/lang/String;)Ljava/lang/Class;' bytes='7' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/Launcher$AppClassLoader loadClass (Ljava/lang/String;Z)Ljava/lang/Class;' bytes='85' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/URLClassPath knownToNotExist (Ljava/lang/String;)Z' bytes='24' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName isConstructor ()Z' bytes='7' count='128' iicount='128' stamp='0.636'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName getMethodOrFieldType ()Ljava/lang/invoke/MethodType;' bytes='72' count='128' iicount='128' stamp='0.636'/>
+    637    8     n 0       java.lang.invoke.MethodHandle::linkToStatic(IL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType parameterType (I)Ljava/lang/Class;' bytes='7' count='128' iicount='128' stamp='0.638'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractCollection &lt;init&gt; ()V' bytes='5' count='128' iicount='128' stamp='0.638'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$BasicType basicType (Ljava/lang/Class;)Ljava/lang/invoke/LambdaForm$BasicType;' bytes='19' count='128' iicount='128' stamp='0.638'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays$ArrayList size ()I' bytes='6' count='128' iicount='128' stamp='0.638'/>
+    639    9     n 0       java.lang.invoke.MethodHandle::linkToVirtual(LL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Collections$UnmodifiableCollection$1 hasNext ()Z' bytes='10' count='128' iicount='128' stamp='0.640'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractList$Itr hasNext ()Z' bytes='20' count='128' iicount='128' stamp='0.640'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame execute (IILjdk/internal/org/objectweb/asm/ClassWriter;Ljdk/internal/org/objectweb/asm/Item;)V' bytes='2252' count='128' iicount='128' stamp='0.640'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType ptypes ()[Ljava/lang/Class;' bytes='5' count='128' iicount='128' stamp='0.640'/>
+    642   10     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLL)V (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType checkPtypes ([Ljava/lang/Class;)I' bytes='61' count='128' backedge_count='223' iicount='128' stamp='0.642'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector putInt (I)Ljdk/internal/org/objectweb/asm/ByteVector;' bytes='74' count='128' iicount='128' stamp='0.643'/>
+    642   11     n 0       java.lang.invoke.MethodHandle::invokeBasic(L)L (native)   
+    643   12     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String substring (I)Ljava/lang/String;' bytes='56' count='128' iicount='128' stamp='0.643'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Item isEqualTo (Ljdk/internal/org/objectweb/asm/Item;)Z' bytes='354' count='128' iicount='128' stamp='0.644'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName getReferenceKind ()B' bytes='12' count='128' iicount='128' stamp='0.644'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class isInterface ()Z' bytes='0' count='128' iicount='128' stamp='0.644'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType equals (Ljava/lang/Object;)Z' bytes='29' count='128' iicount='128' stamp='0.644'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame push (I)V' bytes='110' count='128' iicount='128' stamp='0.644'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/VerifyAccess isSamePackage (Ljava/lang/Class;Ljava/lang/Class;)Z' bytes='114' count='128' backedge_count='1536' iicount='128' stamp='0.644'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName isResolved ()Z' bytes='13' count='128' iicount='128' stamp='0.645'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName getInvocationType ()Ljava/lang/invoke/MethodType;' bytes='56' count='128' iicount='128' stamp='0.645'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType form ()Ljava/lang/invoke/MethodTypeForm;' bytes='5' count='128' iicount='128' stamp='0.645'/>
+    645   13     n 0       java.lang.invoke.MethodHandle::linkToStatic(L)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays copyOf ([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;' bytes='46' count='128' iicount='128' stamp='0.645'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$BasicType basicType (C)Ljava/lang/invoke/LambdaForm$BasicType;' bytes='172' count='128' iicount='128' stamp='0.645'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector &lt;init&gt; ()V' bytes='13' count='128' iicount='128' stamp='0.645'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector putByteArray ([BII)Ljdk/internal/org/objectweb/asm/ByteVector;' bytes='49' count='128' iicount='128' stamp='0.645'/>
+    645   14     n 0       java.lang.invoke.MethodHandle::invokeBasic()L (native)   
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType equals (Ljava/lang/invoke/MethodType;)Z' bytes='31' count='128' iicount='128' stamp='0.646'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType$ConcurrentWeakInternSet$WeakEntry equals (Ljava/lang/Object;)Z' bytes='49' count='128' iicount='128' stamp='0.646'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays equals ([Ljava/lang/Object;[Ljava/lang/Object;)Z' bytes='78' count='128' backedge_count='222' iicount='128' stamp='0.646'/>
+    646   15     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/reflect/Array newInstance (Ljava/lang/Class;I)Ljava/lang/Object;' bytes='6' count='128' iicount='128' stamp='0.647'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/reflect/Array newArray (Ljava/lang/Class;I)Ljava/lang/Object;' bytes='0' count='128' iicount='128' stamp='0.647'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName initResolved (Z)V' bytes='53' count='128' iicount='128' stamp='0.647'/>
+    646   16     n 0       java.lang.invoke.MethodHandle::invokeBasic(LL)L (native)   
+    647   17     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm argument (ILjava/lang/invoke/LambdaForm$BasicType;)Ljava/lang/invoke/LambdaForm$Name;' bytes='27' count='128' iicount='128' stamp='0.647'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator isStaticallyNameable (Ljava/lang/Class;)Z' bytes='116' count='128' backedge_count='4' iicount='128' stamp='0.647'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$Name index ()I' bytes='5' count='128' iicount='128' stamp='0.648'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter newClassItem (Ljava/lang/String;)Ljdk/internal/org/objectweb/asm/Item;' bytes='70' count='128' iicount='128' stamp='0.648'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$NamedFunction methodType ()Ljava/lang/invoke/MethodType;' bytes='23' count='128' iicount='128' stamp='0.648'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter addType (Ljava/lang/String;)I' bytes='39' count='128' iicount='128' stamp='0.648'/>
+    648   18     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLL)L (native)   
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getComponentType ()Ljava/lang/Class;' bytes='0' count='128' iicount='128' stamp='0.648'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType parameterCount ()I' bytes='6' count='128' iicount='128' stamp='0.648'/>
+    648   19     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/Wrapper basicTypeChar ()C' bytes='5' count='128' iicount='128' stamp='0.649'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/Wrapper forBasicType (Ljava/lang/Class;)Lsun/invoke/util/Wrapper;' bytes='16' count='128' iicount='128' stamp='0.649'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuffer append (C)Ljava/lang/StringBuffer;' bytes='13' count='128' iicount='128' stamp='0.649'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Item &lt;init&gt; ()V' bytes='5' count='128' iicount='128' stamp='0.650'/>
+    650   20     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$Name initIndex (I)Z' bytes='26' count='128' iicount='128' stamp='0.650'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$Name type ()Ljava/lang/invoke/LambdaForm$BasicType;' bytes='5' count='128' iicount='128' stamp='0.650'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$BasicType basicTypeSlots ()I' bytes='8' count='128' iicount='128' stamp='0.650'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/Wrapper stackSlots ()I' bytes='9' count='128' iicount='128' stamp='0.650'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame type (Ljdk/internal/org/objectweb/asm/ClassWriter;Ljava/lang/String;)I' bytes='416' count='128' iicount='128' stamp='0.651'/>
+    650   21     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLL)L (native)   
+    650   22     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Collections$UnmodifiableCollection$1 next ()Ljava/lang/Object;' bytes='10' count='128' iicount='128' stamp='0.651'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/BytecodeDescriptor unparseSig (Ljava/lang/Class;Ljava/lang/StringBuilder;)V' bytes='75' count='128' iicount='128' stamp='0.651'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$Name access$000 (Ljava/lang/invoke/LambdaForm$Name;)S' bytes='5' count='128' iicount='128' stamp='0.652'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$BasicType basicTypeChar ()C' bytes='5' count='128' iicount='128' stamp='0.652'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$BasicType access$100 (Ljava/lang/invoke/LambdaForm$BasicType;)Ljava/lang/Class;' bytes='5' count='128' iicount='128' stamp='0.652'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getEnclosingMethodInfo ()Ljava/lang/Class$EnclosingMethodInfo;' bytes='21' count='128' iicount='128' stamp='0.652'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getEnclosingMethod0 ()[Ljava/lang/Object;' bytes='0' count='128' iicount='128' stamp='0.652'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator emitImplicitConversion (Ljava/lang/invoke/LambdaForm$BasicType;Ljava/lang/Class;Ljava/lang/Object;)V' bytes='159' count='128' iicount='128' stamp='0.653'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$BasicType basicTypeClass ()Ljava/lang/Class;' bytes='5' count='128' iicount='128' stamp='0.653'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/MethodWriter visitVarInsn (II)V' bytes='292' count='128' iicount='128' stamp='0.653'/>
+    652   23     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector enlarge (I)V' bytes='51' count='128' iicount='128' stamp='0.653'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame get (I)I' bytes='46' count='128' iicount='128' stamp='0.653'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/VerifyType isNullConversion (Ljava/lang/Class;Ljava/lang/Class;Z)Z' bytes='157' count='128' iicount='128' stamp='0.653'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter newClass (Ljava/lang/String;)I' bytes='9' count='128' iicount='128' stamp='0.653'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuffer toString ()Ljava/lang/String;' bytes='36' count='128' iicount='128' stamp='0.653'/>
+    653   24     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLLL)L (native)   
+    653   25     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/VerifyAccess isTypeVisible (Ljava/lang/Class;Ljava/lang/Class;)Z' bytes='118' count='128' backedge_count='7' iicount='128' stamp='0.654'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator emitPushArgument (Ljava/lang/invoke/LambdaForm$Name;I)V' bytes='28' count='128' iicount='128' stamp='0.654'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator emitPushArgument (Ljava/lang/Class;Ljava/lang/Object;)V' bytes='120' count='128' iicount='128' stamp='0.654'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays copyOfRange ([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;' bytes='95' count='128' iicount='128' stamp='0.655'/>
+    654   26     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLLLL)L (native)   
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType parameterSlotCount ()I' bytes='8' count='128' iicount='128' stamp='0.655'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm parameterSlotCount ()I' bytes='9' count='128' iicount='128' stamp='0.655'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm unpack (JI)C' bytes='30' count='128' iicount='128' stamp='0.655'/>
+    654   27     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator emitLoadInsn (Ljava/lang/invoke/LambdaForm$BasicType;I)V' bytes='21' count='128' iicount='128' stamp='0.655'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator loadInsnOpcode (Ljava/lang/invoke/LambdaForm$BasicType;)I' bytes='86' count='128' iicount='128' stamp='0.655'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter put122 (III)V' bytes='15' count='128' iicount='128' stamp='0.656'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Type &lt;init&gt; (I[CII)V' bytes='26' count='128' iicount='128' stamp='0.656'/>
+    656   28     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractList &lt;init&gt; ()V' bytes='10' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm internArgument (Ljava/lang/invoke/LambdaForm$Name;)Ljava/lang/invoke/LambdaForm$Name;' bytes='84' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm parameterType (I)Ljava/lang/invoke/LambdaForm$BasicType;' bytes='9' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm parameter (I)Ljava/lang/invoke/LambdaForm$Name;' bytes='52' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/reflect/misc/ReflectUtil isVMAnonymousClass (Ljava/lang/Class;)Z' bytes='19' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Type getType ([CI)Ljdk/internal/org/objectweb/asm/Type;' bytes='269' count='128' backedge_count='1952' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Type getDescriptor ()Ljava/lang/String;' bytes='18' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuffer &lt;init&gt; ()V' bytes='7' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Type getDescriptor (Ljava/lang/StringBuffer;)V' bytes='87' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuffer append ([CII)Ljava/lang/StringBuffer;' bytes='15' count='128' iicount='128' stamp='0.657'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder append ([CII)Ljava/lang/AbstractStringBuilder;' bytes='40' count='128' iicount='128' stamp='0.657'/>
+    657   29     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLL)L (native)   
+    657   30     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/MethodWriter visitAnnotation (Ljava/lang/String;Z)Ljdk/internal/org/objectweb/asm/AnnotationVisitor;' bytes='82' count='128' iicount='128' stamp='0.658'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/AnnotationWriter &lt;init&gt; (Ljdk/internal/org/objectweb/asm/ClassWriter;ZLjdk/internal/org/objectweb/asm/ByteVector;Ljdk/internal/org/objectweb/asm/ByteVector;I)V' bytes='34' count='128' iicount='128' stamp='0.658'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/AnnotationVisitor &lt;init&gt; (I)V' bytes='7' count='128' iicount='128' stamp='0.658'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/AnnotationVisitor &lt;init&gt; (ILjdk/internal/org/objectweb/asm/AnnotationVisitor;)V' bytes='35' count='128' iicount='128' stamp='0.658'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodHandle type ()Ljava/lang/invoke/MethodType;' bytes='5' count='128' iicount='128' stamp='0.658'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Type getArgumentsAndReturnSizes (Ljava/lang/String;)I' bytes='151' count='112' backedge_count='5120' iicount='112' stamp='0.658'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType insertParameterTypes (I[Ljava/lang/Class;)Ljava/lang/invoke/MethodType;' bytes='106' count='128' iicount='128' stamp='0.658'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/AnnotationWriter visitEnd ()V' bytes='43' count='128' iicount='128' stamp='0.659'/>
+    658   31     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLL)L (native)   (static)
+    659   32     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLL)L (native)   
+    659   33     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays copyOfRange ([Ljava/lang/Object;II)[Ljava/lang/Object;' bytes='11' count='128' iicount='128' stamp='0.660'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$Name &lt;init&gt; (ILjava/lang/invoke/LambdaForm$BasicType;Ljava/lang/invoke/LambdaForm$NamedFunction;[Ljava/lang/Object;)V' bytes='54' count='128' iicount='128' stamp='0.660'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName getName ()Ljava/lang/String;' bytes='25' count='128' iicount='128' stamp='0.661'/>
+    660   34     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$BasicType basicTypeChar (Ljava/lang/Class;)C' bytes='8' count='128' iicount='128' stamp='0.661'/>
+    661   35     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLL)L (native)   
+    661   36     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ref/WeakReference &lt;init&gt; (Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V' bytes='7' count='128' iicount='128' stamp='0.662'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame pop (I)V' bytes='45' count='128' iicount='128' stamp='0.663'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm signatureArity (Ljava/lang/String;)I' bytes='28' count='128' iicount='128' stamp='0.663'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType toMethodDescriptorString ()Ljava/lang/String;' bytes='21' count='128' iicount='128' stamp='0.663'/>
+    663   37     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ByteVector put11 (II)Ljdk/internal/org/objectweb/asm/ByteVector;' bytes='52' count='128' iicount='128' stamp='0.664'/>
+    663   38     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLLL)L (native)   
+    664   39     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator getInternalName (Ljava/lang/Class;)Ljava/lang/String;' bytes='75' count='128' iicount='128' stamp='0.665'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName flagsMods (IIB)I' bytes='72' count='128' iicount='128' stamp='0.667'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName init (Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;I)V' bytes='66' count='128' iicount='128' stamp='0.667'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName$Factory resolveOrFail (BLjava/lang/invoke/MemberName;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MemberName;' bytes='52' count='128' iicount='128' throwouts='1' stamp='0.667'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName$Factory resolve (BLjava/lang/invoke/MemberName;Ljava/lang/Class;)Ljava/lang/invoke/MemberName;' bytes='145' count='128' iicount='128' stamp='0.667'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName clone ()Ljava/lang/invoke/MemberName;' bytes='14' count='128' iicount='128' stamp='0.667'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodHandleNatives resolve (Ljava/lang/invoke/MemberName;Ljava/lang/Class;)Ljava/lang/invoke/MemberName;' bytes='0' count='128' iicount='128' throwouts='1' stamp='0.667'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName access$002 (Ljava/lang/invoke/MemberName;Ljava/lang/Object;)Ljava/lang/Object;' bytes='7' count='128' iicount='128' stamp='0.667'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName checkForTypeAlias (Ljava/lang/Class;)V' bytes='168' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName access$200 (Ljava/lang/invoke/MemberName;Z)V' bytes='6' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType &lt;init&gt; (Ljava/lang/Class;[Ljava/lang/Class;Z)V' bytes='40' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType checkRtype (Ljava/lang/Class;)V' bytes='6' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm findForm (Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodTypeForm;' bytes='25' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm canonicalize (Ljava/lang/invoke/MethodType;II)Ljava/lang/invoke/MethodType;' bytes='64' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm canonicalizeAll ([Ljava/lang/Class;I)[Ljava/lang/Class;' bytes='66' count='128' backedge_count='459' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType$ConcurrentWeakInternSet add (Ljava/lang/Object;)Ljava/lang/Object;' bytes='66' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType$ConcurrentWeakInternSet$WeakEntry &lt;init&gt; (Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V' bytes='15' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType erase ()Ljava/lang/invoke/MethodType;' bytes='8' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm erasedType ()Ljava/lang/invoke/MethodType;' bytes='5' count='128' iicount='128' stamp='0.668'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName &lt;init&gt; (Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;B)V' bytes='47' count='128' iicount='128' stamp='0.668'/>
+    667   40     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLL)L (native)   (static)
+    668   41     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getSimpleName ()Ljava/lang/String;' bytes='120' count='128' iicount='128' stamp='0.670'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getEnclosingClass ()Ljava/lang/Class;' bytes='60' count='128' iicount='128' stamp='0.670'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getDeclaringClass ()Ljava/lang/Class;' bytes='22' count='128' iicount='128' stamp='0.670'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getDeclaringClass0 ()Ljava/lang/Class;' bytes='0' count='128' iicount='128' stamp='0.670'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class getSimpleBinaryName ()Ljava/lang/String;' bytes='38' count='128' iicount='128' stamp='0.670'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String lastIndexOf (Ljava/lang/String;)I' bytes='11' count='128' iicount='128' stamp='0.670'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String lastIndexOf (Ljava/lang/String;I)I' bytes='25' count='128' iicount='128' stamp='0.670'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String lastIndexOf ([CII[CIII)I' bytes='151' count='128' backedge_count='1580' iicount='128' stamp='0.670'/>
+    670   42     n 0       java.lang.invoke.MethodHandle::linkToStatic(LIL)V (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/Wrapper hashPrim (Ljava/lang/Class;)I' bytes='30' count='128' iicount='128' stamp='0.671'/>
+    670   43     n 0       java.lang.invoke.MethodHandle::linkToStatic(ILL)I (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/Wrapper forPrimitiveType (Ljava/lang/Class;)Lsun/invoke/util/Wrapper;' bytes='49' count='128' iicount='128' stamp='0.671'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/Wrapper findPrimitiveType (Ljava/lang/Class;)Lsun/invoke/util/Wrapper;' bytes='25' count='128' iicount='128' stamp='0.671'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame pop ()I' bytes='43' count='128' iicount='128' stamp='0.672'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm compileToBytecode ()Ljava/lang/invoke/MemberName;' bytes='103' count='128' iicount='128' stamp='0.674'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter addType (Ljdk/internal/org/objectweb/asm/Item;)Ljdk/internal/org/objectweb/asm/Item;' bytes='103' count='128' iicount='128' stamp='0.675'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName isMethod ()Z' bytes='7' count='128' iicount='128' stamp='0.675'/>
+    676   44     n 0       java.lang.invoke.MethodHandle::linkToStatic(ILLL)L (native)   (static)
+    677   45     n 0       java.lang.invoke.MethodHandle::invokeBasic(ILL)L (native)   
+    677   46     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LILLL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm arity ()I' bytes='5' count='128' iicount='128' stamp='0.678'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList$Itr hasNext ()Z' bytes='20' count='128' iicount='128' stamp='0.678'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm returnType ()Ljava/lang/invoke/LambdaForm$BasicType;' bytes='26' count='128' iicount='128' stamp='0.678'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Label &lt;init&gt; ()V' bytes='5' count='128' iicount='128' stamp='0.678'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame &lt;init&gt; ()V' bytes='5' count='128' iicount='128' stamp='0.678'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Label resolve (Ljdk/internal/org/objectweb/asm/MethodWriter;I[B)Z' bytes='214' count='128' iicount='128' stamp='0.678'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame push (Ljdk/internal/org/objectweb/asm/ClassWriter;Ljava/lang/String;)V' bytes='34' count='128' iicount='128' stamp='0.682'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter newNameType (Ljava/lang/String;Ljava/lang/String;)I' bytes='10' count='128' iicount='128' stamp='0.682'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter newNameTypeItem (Ljava/lang/String;Ljava/lang/String;)Ljdk/internal/org/objectweb/asm/Item;' bytes='71' count='128' iicount='128' stamp='0.682'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame pop (Ljava/lang/String;)V' bytes='53' count='128' iicount='128' stamp='0.683'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/MethodWriter visitMethodInsn (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V' bytes='220' count='128' iicount='128' stamp='0.683'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/ClassWriter newMethodItem (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljdk/internal/org/objectweb/asm/Item;' bytes='91' count='128' iicount='128' stamp='0.683'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/invoke/util/BytecodeDescriptor parseSig (Ljava/lang/String;[IILjava/lang/ClassLoader;)Ljava/lang/Class;' bytes='141' count='128' iicount='128' stamp='0.684'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$Name &lt;init&gt; (Ljava/lang/invoke/LambdaForm$NamedFunction;[Ljava/lang/Object;)V' bytes='194' count='128' backedge_count='369' iicount='128' stamp='0.687'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$NamedFunction returnType ()Ljava/lang/invoke/LambdaForm$BasicType;' bytes='11' count='128' iicount='128' stamp='0.687'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm uncustomize ()Ljava/lang/invoke/LambdaForm;' bytes='58' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator emitStoreResult (Ljava/lang/invoke/LambdaForm$Name;)V' bytes='27' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$NamedFunction intrinsicName ()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;' bytes='21' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/reflect/Modifier isPrivate (I)Z' bytes='12' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/Frame set (II)V' bytes='65' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class isLocalOrAnonymousClass ()Z' bytes='13' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm$NamedFunction member ()Ljava/lang/invoke/MemberName;' bytes='26' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator isStaticallyInvocable (Ljava/lang/invoke/MemberName;)Z' bytes='169' count='128' backedge_count='332' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class isAnonymousClass ()Z' bytes='10' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class isLocalClass ()Z' bytes='20' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType parameterArray ()[Ljava/lang/Class;' bytes='11' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MemberName isPrivate ()Z' bytes='8' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator emitPushArguments (Ljava/lang/invoke/LambdaForm$Name;)V' bytes='7' count='128' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator emitPushArguments (Ljava/lang/invoke/LambdaForm$Name;I)V' bytes='24' count='128' backedge_count='380' iicount='128' stamp='0.691'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/BoundMethodHandle$Factory typeSig (C)Ljava/lang/String;' bytes='16' count='128' iicount='128' stamp='0.692'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/MethodWriter visitInsn (I)V' bytes='106' count='128' iicount='128' stamp='0.692'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class isAssignableFrom (Ljava/lang/Class;)Z' bytes='0' count='128' iicount='128' stamp='0.693'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodHandle &lt;init&gt; (Ljava/lang/invoke/MethodType;Ljava/lang/invoke/LambdaForm;)V' bytes='35' count='128' iicount='128' stamp='0.693'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/LambdaForm prepare ()V' bytes='43' count='128' iicount='128' stamp='0.693'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator emitStaticInvoke (Ljava/lang/invoke/MemberName;Ljava/lang/invoke/LambdaForm$Name;)V' bytes='246' count='128' iicount='128' stamp='0.693'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/InvokerBytecodeGenerator refKindOpcode (B)I' bytes='112' count='128' iicount='128' stamp='0.694'/>
+    701   47     n 0       java.lang.invoke.MethodHandle::invokeBasic(I)L (native)   
+    701   48     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LIL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/URLClassPath getNextLoader ([II)Lsun/misc/URLClassPath$Loader;' bytes='88' count='128' iicount='128' stamp='0.704'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/URLClassPath getLoader (I)Lsun/misc/URLClassPath$Loader;' bytes='243' count='128' backedge_count='5' iicount='128' stamp='0.704'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Character toLowerCase (C)C' bytes='6' count='128' iicount='128' stamp='0.704'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Character toLowerCase (I)I' bytes='9' count='128' iicount='128' stamp='0.704'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/CharacterDataLatin1 toLowerCase (I)I' bytes='39' count='128' iicount='128' stamp='0.704'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getFile ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.706'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap get (Ljava/lang/Object;)Ljava/lang/Object;' bytes='23' count='128' iicount='128' stamp='0.706'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList get (I)Ljava/lang/Object;' bytes='11' count='128' iicount='128' stamp='0.708'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZStreamRef address ()J' bytes='5' count='128' iicount='128' stamp='0.708'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getQuery ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.709'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/Unsafe putLong (JJ)V' bytes='0' count='128' iicount='128' stamp='0.709'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/PerfCounter add (J)V' bytes='18' count='128' iicount='128' stamp='0.709'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/PerfCounter get ()J' bytes='9' count='128' iicount='128' stamp='0.709'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/DirectLongBufferU get (I)J' bytes='16' count='128' iicount='128' stamp='0.709'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/Unsafe getLong (J)J' bytes='0' count='128' iicount='128' stamp='0.709'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/DirectLongBufferU put (IJ)Ljava/nio/LongBuffer;' bytes='18' count='128' iicount='128' stamp='0.709'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getPort ()I' bytes='5' count='128' iicount='128' stamp='0.710'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipFile ensureOpen ()V' bytes='37' count='128' iicount='128' stamp='0.710'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Character toUpperCase (C)C' bytes='6' count='128' iicount='128' stamp='0.710'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Character toUpperCase (I)I' bytes='9' count='128' iicount='128' stamp='0.710'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/CharacterDataLatin1 toUpperCase (I)I' bytes='53' count='128' iicount='128' stamp='0.710'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/security/ProtectionDomain getCodeSource ()Ljava/security/CodeSource;' bytes='5' count='128' iicount='128' stamp='0.711'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String equalsIgnoreCase (Ljava/lang/String;)Z' bytes='48' count='128' iicount='128' stamp='0.711'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/URLClassPath$JarLoader ensureOpen ()V' bytes='36' count='128' iicount='128' stamp='0.712'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/jar/JarFile getJarEntry (Ljava/lang/String;)Ljava/util/jar/JarEntry;' bytes='9' count='128' iicount='128' stamp='0.712'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/jar/JarFile getEntry (Ljava/lang/String;)Ljava/util/zip/ZipEntry;' bytes='22' count='128' iicount='128' stamp='0.712'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipFile getEntry (Ljava/lang/String;)Ljava/util/zip/ZipEntry;' bytes='149' count='128' iicount='128' stamp='0.712'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String regionMatches (ZILjava/lang/String;II)Z' bytes='149' count='128' backedge_count='102' iicount='128' stamp='0.713'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/BitSet get (I)Z' bytes='69' count='128' iicount='128' stamp='0.713'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/File getPath ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.713'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringCoding safeTrim ([BILjava/nio/charset/Charset;Z)[B' bytes='24' count='128' iicount='128' stamp='0.713'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/URLClassPath$JarLoader getResource (Ljava/lang/String;Z)Lsun/misc/Resource;' bytes='85' count='128' iicount='128' stamp='0.714'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String getBytes (Ljava/lang/String;)[B' bytes='27' count='128' iicount='128' stamp='0.714'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringCoding encode (Ljava/lang/String;[CII)[B' bytes='120' count='128' iicount='128' stamp='0.714'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringCoding$StringEncoder encode ([CII)[B' bytes='179' count='128' iicount='128' stamp='0.714'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringCoding access$300 ([BILjava/nio/charset/Charset;Z)[B' bytes='8' count='128' iicount='128' stamp='0.714'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuffer append (Ljava/lang/String;)Ljava/lang/StringBuffer;' bytes='13' count='128' iicount='128' stamp='0.714'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String intern ()Ljava/lang/String;' bytes='0' count='128' iicount='128' stamp='0.717'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringCoding$StringEncoder requestedCharsetName ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.718'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ClassLoader findBootstrapClassOrNull (Ljava/lang/String;)Ljava/lang/Class;' bytes='16' count='128' iicount='128' stamp='0.718'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/ClassLoader findBootstrapClass (Ljava/lang/String;)Ljava/lang/Class;' bytes='0' count='128' iicount='128' stamp='0.718'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/File isInvalid ()Z' bytes='47' count='128' iicount='128' stamp='0.718'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/reflect/generics/parser/SignatureParser current ()C' bytes='59' count='128' iicount='128' stamp='0.725'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType basicType ()Ljava/lang/invoke/MethodType;' bytes='8' count='128' iicount='128' stamp='0.726'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm basicType ()Ljava/lang/invoke/MethodType;' bytes='5' count='128' iicount='128' stamp='0.726'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodHandles$Lookup lookupClassOrNull ()Ljava/lang/Class;' bytes='17' count='128' iicount='128' stamp='0.726'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/URLClassPath$Loader getBaseURL ()Ljava/net/URL;' bytes='5' count='128' iicount='128' stamp='0.727'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/nio/cs/UTF_8$Decoder decode ([BII[C)I' bytes='779' count='103' backedge_count='4096' iicount='103' stamp='0.728'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/Inflater ensureOpen ()V' bytes='47' count='128' iicount='128' stamp='0.729'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL isBuiltinStreamHandler (Ljava/net/URLStreamHandler;)Z' bytes='32' count='128' iicount='128' stamp='0.731'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL isBuiltinStreamHandler (Ljava/lang/String;)Z' bytes='7' count='128' iicount='128' stamp='0.731'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/net/util/IPAddressUtil checkHostString (Ljava/lang/String;)Ljava/lang/String;' bytes='53' count='128' iicount='128' stamp='0.731'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/net/util/IPAddressUtil scan (Ljava/lang/String;JJ[C)I' bytes='92' count='128' iicount='128' stamp='0.731'/>
+    735   49     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLILILL)V (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String concat (Ljava/lang/String;)Ljava/lang/String;' bytes='47' count='128' iicount='128' stamp='0.737'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String getChars ([CI)V' bytes='16' count='128' iicount='128' stamp='0.737'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodTypeForm pack (IIII)J' bytes='54' count='128' iicount='128' stamp='0.738'/>
+    738   50     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLILIL)L (native)   (static)
+    738   51     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLILI)L (native)   
+    738   52     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLILIL)L (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays asList ([Ljava/lang/Object;)Ljava/util/List;' bytes='9' count='128' iicount='128' stamp='0.740'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays$ArrayList &lt;init&gt; ([Ljava/lang/Object;)V' bytes='16' count='128' iicount='128' stamp='0.740'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Collections$UnmodifiableRandomAccessList &lt;init&gt; (Ljava/util/List;)V' bytes='6' count='128' iicount='128' stamp='0.740'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Collections$UnmodifiableList &lt;init&gt; (Ljava/util/List;)V' bytes='11' count='128' iicount='128' stamp='0.740'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Collections$UnmodifiableCollection &lt;init&gt; (Ljava/util/Collection;)V' bytes='22' count='128' iicount='128' stamp='0.740'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Collections unmodifiableList (Ljava/util/List;)Ljava/util/List;' bytes='27' count='128' iicount='128' stamp='0.740'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/MethodWriter visitFrame (Ljdk/internal/org/objectweb/asm/Frame;)V' bytes='233' count='107' backedge_count='1024' iicount='107' stamp='0.740'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL &lt;init&gt; (Ljava/net/URL;Ljava/lang/String;)V' bytes='8' count='128' iicount='128' stamp='0.741'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL &lt;init&gt; (Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V' bytes='543' count='128' backedge_count='327' iicount='128' stamp='0.741'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URLStreamHandler setURL (Ljava/net/URL;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V' bytes='73' count='128' iicount='128' stamp='0.741'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL set (Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V' bytes='114' count='128' iicount='128' stamp='0.741'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipFile access$000 (Ljava/util/zip/ZipFile;)Ljava/util/Map;' bytes='5' count='128' iicount='128' stamp='0.741'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/reflect/generics/parser/SignatureParser advance ()V' bytes='53' count='128' iicount='128' stamp='0.742'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Character isWhitespace (C)Z' bytes='5' count='128' iicount='128' stamp='0.742'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Character isWhitespace (I)Z' bytes='9' count='128' iicount='128' stamp='0.742'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/CharacterDataLatin1 isWhitespace (I)Z' bytes='23' count='128' iicount='128' stamp='0.742'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList$Itr next ()Ljava/lang/Object;' bytes='66' count='128' iicount='128' stamp='0.743'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/ArrayList$Itr checkForComodification ()V' bytes='23' count='128' iicount='128' stamp='0.743'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/concurrent/atomic/AtomicInteger get ()I' bytes='5' count='128' iicount='128' stamp='0.744'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractMap &lt;init&gt; ()V' bytes='5' count='128' iicount='128' stamp='0.750'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/reflect/Reflection getCallerClass ()Ljava/lang/Class;' bytes='0' count='128' iicount='128' stamp='0.752'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/reflect/Method getReturnType ()Ljava/lang/Class;' bytes='5' count='128' iicount='128' stamp='0.753'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/reflect/Method getDeclaringClass ()Ljava/lang/Class;' bytes='5' count='128' iicount='128' stamp='0.753'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuilder append (I)Ljava/lang/StringBuilder;' bytes='8' count='128' iicount='128' stamp='0.753'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder append (I)Ljava/lang/AbstractStringBuilder;' bytes='62' count='128' iicount='128' stamp='0.753'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Integer stringSize (I)I' bytes='21' count='128' backedge_count='5' iicount='128' stamp='0.753'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Integer getChars (II[C)V' bytes='131' count='128' backedge_count='5' iicount='128' stamp='0.753'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap putVal (ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;' bytes='300' count='128' backedge_count='12' iicount='128' stamp='0.755'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap$Node &lt;init&gt; (ILjava/lang/Object;Ljava/lang/Object;Ljava/util/HashMap$Node;)V' bytes='26' count='128' iicount='128' stamp='0.755'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;' bytes='13' count='128' iicount='128' stamp='0.755'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/ByteArrayOutputStream write (I)V' bytes='32' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/ByteArrayOutputStream ensureCapacity (I)V' bytes='16' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap newNode (ILjava/lang/Object;Ljava/lang/Object;Ljava/util/HashMap$Node;)Ljava/util/HashMap$Node;' bytes='13' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap afterNodeInsertion (Z)V' bytes='1' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Short shortValue ()S' bytes='5' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool$Entry &lt;init&gt; (Lsun/misc/ProxyGenerator$1;)V' bytes='5' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool$Entry &lt;init&gt; ()V' bytes='5' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/DataOutputStream incCount (I)V' bytes='20' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool getUtf8 (Ljava/lang/String;)S' bytes='18' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool getValue (Ljava/lang/Object;)S' bytes='91' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool$IndirectEntry hashCode ()I' bytes='15' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/DataOutputStream writeByte (I)V' bytes='14' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool getIndirect (Lsun/misc/ProxyGenerator$ConstantPool$IndirectEntry;)S' bytes='67' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator access$300 (Lsun/misc/ProxyGenerator;)Lsun/misc/ProxyGenerator$ConstantPool;' bytes='5' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool$IndirectEntry equals (Ljava/lang/Object;)Z' bytes='49' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Arrays copyOf ([Ljava/lang/Object;I)[Ljava/lang/Object;' bytes='13' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool getClass (Ljava/lang/String;)S' bytes='21' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool$IndirectEntry &lt;init&gt; (IS)V' bytes='21' count='128' iicount='128' stamp='0.756'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool addEntry (Lsun/misc/ProxyGenerator$ConstantPool$Entry;)S' bytes='46' count='128' iicount='128' stamp='0.757'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/ProxyGenerator$ConstantPool$IndirectEntry &lt;init&gt; (ISS)V' bytes='21' count='128' iicount='128' stamp='0.757'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap$HashIterator hasNext ()Z' bytes='13' count='128' iicount='128' stamp='0.757'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/DataOutputStream writeShort (I)V' bytes='35' count='128' iicount='128' stamp='0.757'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/DataOutputStream write (I)V' bytes='14' count='128' iicount='128' stamp='0.758'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/DataOutputStream write ([BII)V' bytes='16' count='128' iicount='128' stamp='0.758'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class reflectionData ()Ljava/lang/Class$ReflectionData;' bytes='49' count='128' iicount='128' stamp='0.763'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Class checkInitted ()V' bytes='19' count='128' iicount='128' stamp='0.763'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='org/springframework/util/ConcurrentReferenceHashMap$Segment restructureIfNecessary (Z)V' bytes='56' count='128' iicount='128' stamp='0.764'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='org/springframework/util/ConcurrentReferenceHashMap$ReferenceManager pollForPurge ()Lorg/springframework/util/ConcurrentReferenceHashMap$Reference;' bytes='11' count='128' iicount='128' stamp='0.764'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/Inflater inflate ([BII)I' bytes='113' count='128' iicount='128' stamp='0.764'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/Inflater inflateBytes (J[BII)I' bytes='0' count='128' iicount='128' stamp='0.764'/>
+    766   53     n 0       java.lang.invoke.MethodHandle::linkToStatic(LL)I (native)   (static)
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/invoke/MethodType parameterList ()Ljava/util/List;' bytes='17' count='128' iicount='128' stamp='0.767'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractList$Itr &lt;init&gt; (Ljava/util/AbstractList;Ljava/util/AbstractList$1;)V' bytes='6' count='128' iicount='128' stamp='0.767'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractList$Itr &lt;init&gt; (Ljava/util/AbstractList;)V' bytes='31' count='128' iicount='128' stamp='0.767'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Collections$UnmodifiableCollection iterator ()Ljava/util/Iterator;' bytes='9' count='128' iicount='128' stamp='0.769'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/Collections$UnmodifiableCollection$1 &lt;init&gt; (Ljava/util/Collections$UnmodifiableCollection;)V' bytes='26' count='128' iicount='128' stamp='0.769'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/AbstractList iterator ()Ljava/util/Iterator;' bytes='10' count='128' iicount='128' stamp='0.769'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/WeakHashMap maskNull (Ljava/lang/Object;)Ljava/lang/Object;' bytes='12' count='128' iicount='128' stamp='0.770'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/WeakHashMap hash (Ljava/lang/Object;)I' bytes='28' count='128' iicount='128' stamp='0.770'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/WeakHashMap getTable ()[Ljava/util/WeakHashMap$Entry;' bytes='9' count='128' iicount='128' stamp='0.770'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/WeakHashMap expungeStaleEntries ()V' bytes='139' count='128' iicount='128' stamp='0.770'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/WeakHashMap indexFor (II)I' bytes='6' count='128' iicount='128' stamp='0.770'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='jdk/internal/org/objectweb/asm/MethodVisitor &lt;init&gt; (ILjdk/internal/org/objectweb/asm/MethodVisitor;)V' bytes='35' count='128' iicount='128' stamp='0.771'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/net/URL getUserInfo ()Ljava/lang/String;' bytes='5' count='128' iicount='128' stamp='0.771'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/net/www/ParseUtil encodePath (Ljava/lang/String;Z)Ljava/lang/String;' bytes='336' count='101' backedge_count='6144' iicount='101' stamp='0.771'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/reflect/generics/parser/SignatureParser skipIdentifier ()V' bytes='67' count='128' backedge_count='533' iicount='128' stamp='0.772'/>
+<make_not_compilable thread='9987' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/misc/Unsafe compareAndSwapInt (Ljava/lang/Object;JII)Z' bytes='0' count='128' iicount='128' stamp='0.772'/>
+C1 Runtime statistics:
+ _resolve_invoke_virtual_cnt:     0
+ _resolve_invoke_opt_virtual_cnt: 0
+ _resolve_invoke_static_cnt:      0
+ _handle_wrong_method_cnt:        0
+ _ic_miss_cnt:                    0
+ _generic_arraycopy_cnt:          0
+ _generic_arraycopystub_cnt:      0
+ _byte_arraycopy_cnt:             0
+ _short_arraycopy_cnt:            0
+ _int_arraycopy_cnt:              0
+ _long_arraycopy_cnt:             0
+ _primitive_arraycopy_cnt:        0
+ _oop_arraycopy_cnt (C):          0
+ _oop_arraycopy_cnt (stub):       0
+ _arraycopy_slowcase_cnt:         0
+ _arraycopy_checkcast_cnt:        0
+ _arraycopy_checkcast_attempt_cnt:0
+ _new_type_array_slowcase_cnt:    0
+ _new_object_array_slowcase_cnt:  0
+ _new_instance_slowcase_cnt:      0
+ _new_multi_array_slowcase_cnt:   0
+ _monitorenter_slowcase_cnt:      0
+ _monitorexit_slowcase_cnt:       0
+ _patch_code_slowcase_cnt:        0
+ _throw_range_check_exception_count:            0:
+ _throw_index_exception_count:                  0:
+ _throw_div0_exception_count:                   0:
+ _throw_null_pointer_exception_count:           0:
+ _throw_class_cast_exception_count:             0:
+ _throw_incompatible_class_change_error_count:  0:
+ _throw_array_store_exception_count:            0:
+ _throw_count:                                  0:
+
+<statistics type='SharedRuntime'>
+    0 inline cache miss in compiled
+    0 wrong method
+    0 unresolved static call site
+    0 unresolved virtual call site
+    0 unresolved opt virtual call site
+  130 slow partial subtype
+   12 byte array copies
+   12 short array copies
+   12 int array copies
+   12 long array copies
+AdapterHandlerTable: empty 157 longest 3 total 182 average 1.338235
+AdapterHandlerTable: lookups 8887 buckets 9250 equals 8430 hits 8430 compact 8430
+</statistics>
+<statistics type='nmethod'>
+Statistics for 53 native nmethods:
+ N. total size  = 48000
+ N. relocation  = 4496
+ N. main code   = 26864
+Debug Data Chunks: 16, shared 0+0, non-SP&apos;s elided 0
+PcDesc Statistics:  0 queries, nan comparisons per query
+  caches=0 queries=0/0, hits=0+0, tests=0+0, adds=0
+</statistics>
+<statistics type='opto'>
+--- Compiler Statistics ---
+Methods seen: 0  Methods parsed: 0  Nodes created: 1769
+Blocks parsed: 0  Blocks seen: 0
+0 made implicit ( 0%)
+CCP: 0  constants found: 0
+Total frameslots = 72, Max frameslots = 32
+Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
+Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
+Adjusted spill cost =       0.
+Conservatively coalesced 38 copies, 0 pairs, 0 post alloc.
+Average allocation trips 1.000000
+High Pressure Blocks = 0, Low Pressure Blocks = 0
+Nops added 0 bytes to total of 1950 bytes, for 0.00%
+Peephole: peephole rules applied: 0
+PhaseIdealLoop=0, sum _unique=0
+</statistics>
+<writer thread='16643'/>
+<destroy_vm stamp='0.776'/>
+<tty_done stamp='0.782'/>
+</tty>
+<hotspot_log_done stamp='0.782'/>
+</hotspot_log>

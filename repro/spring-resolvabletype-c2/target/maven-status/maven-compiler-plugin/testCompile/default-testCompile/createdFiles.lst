@@ -1,0 +1,7 @@
+repro/ForkedC2ReproRunner.class
+repro/ForkedC2ReproRunner$PerfCounterSampler.class
+repro/ForkedC2ReproRunner$PerfSnapshot.class
+repro/ForkedC2ReproRunner$StreamCollector.class
+sun/hotspot/WhiteBox.class
+repro/ForkedC2ReproRunner$1.class
+repro/ForkedC2ReproRunner$MethodStreak.class

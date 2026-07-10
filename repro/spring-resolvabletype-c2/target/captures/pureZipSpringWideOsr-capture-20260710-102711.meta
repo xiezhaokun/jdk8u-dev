@@ -1,0 +1,4 @@
+pid=20495
+target=pureZipSpringWideOsr
+target_method=org/springframework/core/ResolvableType forField
+match_any_fixed=0

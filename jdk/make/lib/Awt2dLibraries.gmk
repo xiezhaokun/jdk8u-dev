@@ -314,7 +314,7 @@ ifeq ($(OPENJDK_TARGET_OS), aix)
   LIBAWT_FILES += porting_aix.c
 endif
 
-ifeq ($(OPENJDK_TARGET_OS), macosx)
+ifeq ($(OPENJDK_TARGET_OS)-$(DISABLE_JNF_LIBS), macosx-)
   LIBAWT_FILES += awt_LoadLibrary.c
 endif
 
@@ -1150,7 +1150,13 @@ else # OPENJDK_TARGET_OS not windows
 
 endif # OPENJDK_TARGET_OS
 
-BUILD_LIBRARIES += $(BUILD_LIBJAWT)
+ifeq ($(DISABLE_JNF_LIBS), true)
+  ifneq ($(OPENJDK_TARGET_OS), macosx)
+    BUILD_LIBRARIES += $(BUILD_LIBJAWT)
+  endif
+else
+  BUILD_LIBRARIES += $(BUILD_LIBJAWT)
+endif
 
 ##########################################################################################
 
@@ -1331,7 +1337,7 @@ endif
 
 ##########################################################################################
 
-ifeq ($(OPENJDK_TARGET_OS), macosx)
+ifeq ($(OPENJDK_TARGET_OS)-$(DISABLE_JNF_LIBS), macosx-)
 
   LIBAWT_LWAWT_FILES := \
       awt.m \
@@ -1466,7 +1472,7 @@ endif
 
 ##########################################################################################
 
-ifeq ($(OPENJDK_TARGET_OS), macosx)
+ifeq ($(OPENJDK_TARGET_OS)-$(DISABLE_JNF_LIBS), macosx-)
 
   $(eval $(call SetupNativeCompilation,BUILD_LIBOSXUI, \
       LIBRARY := osxui, \

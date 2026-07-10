@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='8461' time_ms='1783299902026'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  4 2026 18:13:54 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=20 -XX:BackEdgeThreshold=30 -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+StressGCM -XX:+StressLCM -XX:+StressReflectiveCode -XX:+TraceDeoptimization -Drepro.iterations=90000 -Drepro.seconds=0 -Drepro.clearCacheEvery=97 -Drepro.deoptAfter=22000 -Drepro.target=mixedOsr 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=90000
+repro.seconds=0
+repro.clearCacheEvery=97
+repro.deoptAfter=22000
+repro.target=mixedOsr
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='32259'/>
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=4 final=1 eliminate_boxing=1 load=51:LoadN ld_adr=50:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=4 final=1 eliminate_boxing=1 load=51:LoadN ld_adr=50:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=70:LoadI ld_adr=69:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=70:LoadI ld_adr=69:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=84:LoadN ld_adr=83:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=84:LoadN ld_adr=83:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=111:LoadN ld_adr=83:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=111:LoadN ld_adr=83:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=360:LoadN ld_adr=83:AddP st=352:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=360:LoadN ld_adr=83:AddP st=352:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=363:LoadI ld_adr=69:AddP st=350:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=363:LoadI ld_adr=69:AddP st=350:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=385:LoadI ld_adr=69:AddP st=367:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=41 holder=364:CallStaticJava current=367:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=385:LoadI ld_adr=69:AddP st=367:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=41 holder=364:CallStaticJava current=367:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=385:LoadI ld_adr=69:AddP st=367:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=41 holder=364:CallStaticJava current=367:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=385:LoadI ld_adr=69:AddP st=367:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=41 holder=364:CallStaticJava current=367:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=363:LoadI ld_adr=69:AddP st=350:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=363:LoadI ld_adr=69:AddP st=350:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=70:LoadI ld_adr=69:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=70:LoadI ld_adr=69:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=385:LoadI ld_adr=69:AddP st=367:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=41 holder=364:CallStaticJava current=367:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=385:LoadI ld_adr=69:AddP st=367:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=41 holder=364:CallStaticJava current=367:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=363:LoadI ld_adr=69:AddP st=350:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=363:LoadI ld_adr=69:AddP st=350:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=360:LoadN ld_adr=83:AddP st=352:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=360:LoadN ld_adr=83:AddP st=352:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=70:LoadI ld_adr=69:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=84:LoadN ld_adr=83:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=4 final=1 eliminate_boxing=1 load=51:LoadN ld_adr=50:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=363:LoadI ld_adr=69:AddP st=350:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=360:LoadN ld_adr=83:AddP st=352:Phi
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=385:LoadI ld_adr=69:AddP st=367:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=41 holder=364:CallStaticJava current=367:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=4 final=1 eliminate_boxing=1 load=51:LoadN ld_adr=50:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=4 final=1 eliminate_boxing=1 load=51:LoadN ld_adr=50:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=4 final=1 eliminate_boxing=1 load=51:LoadN ld_adr=50:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=4 final=1 eliminate_boxing=1 load=51:LoadN ld_adr=50:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=401:LoadI ld_adr=69:AddP st=318:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=167 holder=316:MemBarStoreStore current=318:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=401:LoadI ld_adr=69:AddP st=318:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=167 holder=316:MemBarStoreStore current=318:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=402:LoadI ld_adr=69:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=402:LoadI ld_adr=69:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=404:LoadN ld_adr=83:AddP st=340:StoreN
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=404:LoadN ld_adr=83:AddP st=340:StoreN
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=405:LoadN ld_adr=83:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=7 final=0 eliminate_boxing=1 load=405:LoadN ld_adr=83:AddP st=7:Parm
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=401:LoadI ld_adr=69:AddP st=318:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=167 holder=316:MemBarStoreStore current=318:Proj
+C2_CSV enter compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append alias_idx=6 final=0 eliminate_boxing=1 load=401:LoadI ld_adr=69:AddP st=318:Proj
+C2_CSV probe compile_id=2 entry_bci=-1 osr=0 method= java.lang.AbstractStringBuilder::append step=1 opc=167 holder=316:MemBarStoreStore current=318:Proj
+C2_CSV enter compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars alias_idx=4 final=1 eliminate_boxing=1 load=41:LoadN ld_adr=40:AddP st=7:Parm
+C2_CSV probe compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars alias_idx=4 final=1 eliminate_boxing=1 load=41:LoadN ld_adr=40:AddP st=7:Parm
+C2_CSV probe compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars alias_idx=4 final=1 eliminate_boxing=1 load=85:LoadN ld_adr=40:AddP st=7:Parm
+C2_CSV probe compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars alias_idx=4 final=1 eliminate_boxing=1 load=85:LoadN ld_adr=40:AddP st=7:Parm
+C2_CSV probe compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars alias_idx=4 final=1 eliminate_boxing=1 load=41:LoadN ld_adr=40:AddP st=7:Parm
+C2_CSV probe compile_id=4 entry_bci=-1 osr=0 method= java.lang.String::getChars step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=134:LoadN ld_adr=133:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=134:LoadN ld_adr=133:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=153:LoadN ld_adr=152:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=153:LoadN ld_adr=152:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=178:LoadN ld_adr=133:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=178:LoadN ld_adr=133:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=181:LoadN ld_adr=152:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=181:LoadN ld_adr=152:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=134:LoadN ld_adr=133:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=153:LoadN ld_adr=152:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=153:LoadN ld_adr=152:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals alias_idx=7 final=1 eliminate_boxing=1 load=153:LoadN ld_adr=152:AddP st=7:Parm
+C2_CSV probe compile_id=5 entry_bci=-1 osr=0 method= java.lang.String::equals step=1 opc=224 holder=3:Start current=7:Parm
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=4 final=0 eliminate_boxing=1 load=36:LoadN ld_adr=35:AddP st=29:Proj
+C2_CSV probe compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get step=1 opc=161 holder=27:MemBarAcquireLock current=29:Proj
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=4 final=0 eliminate_boxing=1 load=36:LoadN ld_adr=35:AddP st=29:Proj
+C2_CSV probe compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get step=1 opc=161 holder=27:MemBarAcquireLock current=29:Proj
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=6 final=0 eliminate_boxing=1 load=98:LoadI ld_adr=97:AddP st=29:Proj
+C2_CSV probe compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get step=1 opc=161 holder=27:MemBarAcquireLock current=29:Proj
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=6 final=0 eliminate_boxing=1 load=98:LoadI ld_adr=97:AddP st=29:Proj
+C2_CSV probe compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get step=1 opc=161 holder=27:MemBarAcquireLock current=29:Proj
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=328:LoadN ld_adr=327:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=328:LoadN ld_adr=327:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=333:LoadN ld_adr=327:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=333:LoadN ld_adr=327:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=339:LoadN ld_adr=338:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=339:LoadN ld_adr=338:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=344:LoadN ld_adr=338:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=344:LoadN ld_adr=338:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=215:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=6 final=0 eliminate_boxing=1 load=98:LoadI ld_adr=97:AddP st=29:Proj
+C2_CSV probe compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get step=1 opc=161 holder=27:MemBarAcquireLock current=29:Proj
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=6 final=0 eliminate_boxing=1 load=98:LoadI ld_adr=97:AddP st=29:Proj
+C2_CSV probe compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get step=1 opc=161 holder=27:MemBarAcquireLock current=29:Proj
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=339:LoadN ld_adr=338:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=339:LoadN ld_adr=338:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=328:LoadN ld_adr=327:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=328:LoadN ld_adr=327:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=4 final=0 eliminate_boxing=1 load=36:LoadN ld_adr=35:AddP st=29:Proj
+C2_CSV probe compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get step=1 opc=161 holder=27:MemBarAcquireLock current=29:Proj
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=6 final=0 eliminate_boxing=1 load=98:LoadI ld_adr=97:AddP st=29:Proj
+C2_CSV probe compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get step=1 opc=161 holder=27:MemBarAcquireLock current=29:Proj
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=15 final=0 eliminate_boxing=1 load=366:LoadN ld_adr=365:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=9 final=1 eliminate_boxing=1 load=234:LoadI ld_adr=233:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=10 final=1 eliminate_boxing=1 load=244:LoadN ld_adr=243:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=16 final=0 eliminate_boxing=1 load=379:LoadN ld_adr=378:AddP st=114:Phi
+C2_CSV enter compile_id=6 entry_bci=-1 osr=0 method= java.util.Hashtable::get alias_idx=13 final=1 eliminate_boxing=1 load=328:LoadN ld_adr=327:AddP st=114:Phi
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+<writer thread='9731'/>
+<uncommon_trap thread='9731' reason='uninitialized' action='reinterpret' compile_id='37' compiler='C2' stamp='0.581'>
+Uncommon trap occurred in java.io.ObjectStreamField::getClassSignature (@0x00000001154c5138) thread=9731 reason=uninitialized action=reinterpret unloaded_class_index=-1
+<jvms bci='123' method='java/io/ObjectStreamField getClassSignature (Ljava/lang/Class;)Ljava/lang/String;' bytes='242' count='10' backedge_count='3' iicount='18'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007f93da019000 Compiled frame (sp=0x000000030d6f2060 unextended sp=0x000000030d6f2060, fp=0x0000000010200031, real_fp=0x000000030d6f2130, pc=0x00000001154c5138)
+     nmethod    581   37             java.io.ObjectStreamField::getClassSignature (242 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030d6f2060, unextended_sp=0x000000030d6f2060, fp=0x0000000010200031, pc=0x00000001154c5138)
+java.io.ObjectStreamField.getClassSignature(ObjectStreamField.java:310) - getstatic @ bci 123 
+     Created vframeArray 0x00007f93da02fc20
+DEOPT UNPACKING thread 0x00007f93da019000 vframeArray 0x00007f93da02fc20 mode 2
+     {method} {0x0000000111f7eeb8} &apos;getClassSignature&apos; &apos;(Ljava/lang/Class;)Ljava/lang/String;&apos; in &apos;java/io/ObjectStreamField&apos; - getstatic @ bci 123 sp = 0x000000030d6f20d0
+<uncommon_trap thread='9731' reason='unstable_if' action='reinterpret' compile_id='5' compiler='C2' stamp='0.645'>
+Uncommon trap occurred in java.lang.String::equals (@0x000000011547f274) thread=9731 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='66' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='10' backedge_count='10' iicount='251'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007f93da019000 Compiled frame (sp=0x000000030d6f0f20 unextended sp=0x000000030d6f0f20, fp=0x0000000000000031, real_fp=0x000000030d6f0f60, pc=0x000000011547f274)
+     nmethod    645    5             java.lang.String::equals (81 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030d6f0f20, unextended_sp=0x000000030d6f0f20, fp=0x0000000000000031, pc=0x000000011547f274)
+java.lang.String.equals(String.java:988) - if_icmpeq @ bci 66 
+     Created vframeArray 0x00007f93da83c620
+DEOPT UNPACKING thread 0x00007f93da019000 vframeArray 0x00007f93da83c620 mode 2
+     {method} {0x0000000111eb0488} &apos;equals&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;java/lang/String&apos; - if_icmpeq @ bci 66 sp = 0x000000030d6f0ed8
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/nio/ByteBuffer' x='java/nio/HeapByteBuffer' witness='java/nio/DirectByteBuffer' stamp='0.748'/>
+<writer thread='22019'/>
+<uncommon_trap thread='22019' reason='bimorphic' action='maybe_recompile' compile_id='6' compiler='C2' stamp='0.766'>
+Uncommon trap occurred in java.util.Hashtable::get (@0x0000000115480d80) thread=22019 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='6' method='java/util/Hashtable get (Ljava/lang/Object;)Ljava/lang/Object;' bytes='69' count='10' backedge_count='10' iicount='68'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007f93da02e800 Compiled frame (sp=0x000000030e426800 unextended sp=0x000000030e426800, fp=0x00000000f2ab6049, real_fp=0x000000030e426850, pc=0x0000000115480d80)
+     nmethod    765    6  s          java.util.Hashtable::get (69 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030e426800, unextended_sp=0x000000030e426800, fp=0x00000000f2ab6049, pc=0x0000000115480d80)
+java.util.Hashtable.get(Hashtable.java:364) - invokevirtual @ bci 6 
+     Created vframeArray 0x00007f93db041a20
+DEOPT UNPACKING thread 0x00007f93da02e800 vframeArray 0x00007f93db041a20 mode 2
+     {method} {0x0000000111eeee10} &apos;get&apos; &apos;(Ljava/lang/Object;)Ljava/lang/Object;&apos; in &apos;java/util/Hashtable&apos; - invokevirtual @ bci 6 sp = 0x000000030e4267c8
+<uncommon_trap thread='22019' reason='class_check' action='maybe_recompile' compile_id='6' compiler='C2' stamp='0.766'>
+Uncommon trap occurred in java.util.Hashtable::get (@0x0000000115480d70) thread=22019 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='45' method='java/util/Hashtable get (Ljava/lang/Object;)Ljava/lang/Object;' bytes='69' count='10' backedge_count='10' iicount='68' bimorphic_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007f93da02e800 Compiled frame (sp=0x000000030e426800 unextended sp=0x000000030e426800, fp=0x00000000f2ab637b, real_fp=0x000000030e426850, pc=0x0000000115480d70)
+     nmethod    766    6  s          java.util.Hashtable::get (69 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030e426800, unextended_sp=0x000000030e426800, fp=0x00000000f2ab637b, pc=0x0000000115480d70)
+java.util.Hashtable.get(Hashtable.java:367) - invokevirtual @ bci 45 
+     Created vframeArray 0x00007f93da02fc20
+DEOPT UNPACKING thread 0x00007f93da02e800 vframeArray 0x00007f93da02fc20 mode 2
+     {method} {0x0000000111eeee10} &apos;get&apos; &apos;(Ljava/lang/Object;)Ljava/lang/Object;&apos; in &apos;java/util/Hashtable&apos; - invokevirtual @ bci 45 sp = 0x000000030e4267c0
+<writer thread='23563'/>
+C1 Runtime statistics:
+ _resolve_invoke_virtual_cnt:     0
+ _resolve_invoke_opt_virtual_cnt: 12
+ _resolve_invoke_static_cnt:      7
+ _handle_wrong_method_cnt:        0
+ _ic_miss_cnt:                    0
+ _generic_arraycopy_cnt:          0
+ _generic_arraycopystub_cnt:      0
+ _byte_arraycopy_cnt:             0
+ _short_arraycopy_cnt:            0
+ _int_arraycopy_cnt:              0
+ _long_arraycopy_cnt:             0
+ _primitive_arraycopy_cnt:        0
+ _oop_arraycopy_cnt (C):          0
+ _oop_arraycopy_cnt (stub):       0
+ _arraycopy_slowcase_cnt:         0
+ _arraycopy_checkcast_cnt:        0
+ _arraycopy_checkcast_attempt_cnt:0
+ _new_type_array_slowcase_cnt:    0
+ _new_object_array_slowcase_cnt:  0
+ _new_instance_slowcase_cnt:      0
+ _new_multi_array_slowcase_cnt:   0
+ _monitorenter_slowcase_cnt:      0
+ _monitorexit_slowcase_cnt:       0
+ _patch_code_slowcase_cnt:        0
+ _throw_range_check_exception_count:            0:
+ _throw_index_exception_count:                  0:
+ _throw_div0_exception_count:                   0:
+ _throw_null_pointer_exception_count:           0:
+ _throw_class_cast_exception_count:             0:
+ _throw_incompatible_class_change_error_count:  0:
+ _throw_array_store_exception_count:            0:
+ _throw_count:                                  0:
+
+<statistics type='deoptimization'>
+Deoptimization traps recorded:
+     4 (100.0%) total
+  class_check/maybe_recompile/invokevirtual: 1 (25.0%)
+   bimorphic/maybe_recompile/invokevirtual: 1 (25.0%)
+       uninitialized/reinterpret/getstatic: 1 (25.0%)
+         unstable_if/reinterpret/if_icmpeq: 1 (25.0%)
+</statistics>
+<statistics type='SharedRuntime'>
+    0 inline cache miss in compiled
+    0 wrong method
+    7 unresolved static call site
+    0 unresolved virtual call site
+   12 unresolved opt virtual call site
+    5 slow partial subtype
+   12 byte array copies
+   71 short array copies
+   12 int array copies
+   35 long array copies
+AdapterHandlerTable: empty 188 longest 3 total 133 average 1.266667
+AdapterHandlerTable: lookups 5281 buckets 5107 equals 4873 hits 4873 compact 4873
+</statistics>
+<statistics type='nmethod'>
+Statistics for 8 native nmethods:
+ N. total size  = 8208
+ N. relocation  = 640
+ N. main code   = 5008
+Statistics for 67 bytecoded nmethods:
+ total in heap  = 140008
+ relocation     = 5464
+ constants      = 160
+ main code      = 52416
+ stub code      = 2736
+ oops           = 40
+ scopes data    = 16016
+ scopes pcs     = 35472
+ dependencies   = 536
+ handler table  = 3360
+ nul chk table  = 960
+Debug Data Chunks: 4300, shared 598+1596, non-SP&apos;s elided 20
+PcDesc Statistics:  64 queries, 9.75 comparisons per query
+  caches=67 queries=64/0, hits=0+3, tests=180+444, adds=61
+</statistics>
+<statistics type='opto'>
+--- Compiler Statistics ---
+Methods seen: 179  Methods parsed: 179  Nodes created: 61469
+Blocks parsed: 608  Blocks seen: 784
+586 original NULL checks - 421 elided (71%); optimizer leaves 164,
+84 made implicit (51%)
+CCP: 68  constants found: 4
+Total frameslots = 608, Max frameslots = 44
+Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
+Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
+Adjusted spill cost =       0.
+Conservatively coalesced 587 copies, 0 pairs, 1082 post alloc.
+Used cisc instruction  121,  remained in register 520
+Average allocation trips 1.783133
+High Pressure Blocks = 0, Low Pressure Blocks = 0
+Nops added 0 bytes to total of 53286 bytes, for 0.00%
+Peephole: peephole rules applied: 0
+PhaseIdealLoop=275, sum _unique=149559
+</statistics>
+<statistics type='intrinsic'>
+Compiler intrinsic usage:
+     1 ( 2.0%) _hashCode (worked,virtual)
+    17 (34.7%) _min (worked)
+    16 (32.7%) _arraycopy (worked)
+     2 ( 4.1%) _isArray (worked)
+     1 ( 2.0%) _isPrimitive (worked)
+     1 ( 2.0%) _getSuperclass (worked)
+     1 ( 2.0%) _getComponentType (worked)
+     5 (10.2%) _equals (worked)
+     2 ( 4.1%) _Reference_get (worked)
+     2 ( 4.1%) _getObjectVolatile (worked)
+     1 ( 2.0%) _compareAndSwapObject (worked)
+    49 (100.0%) total (worked,virtual)
+</statistics>
+<tty_done stamp='0.785'/>
+</tty>
+<hotspot_log_done stamp='0.785'/>
+</hotspot_log>

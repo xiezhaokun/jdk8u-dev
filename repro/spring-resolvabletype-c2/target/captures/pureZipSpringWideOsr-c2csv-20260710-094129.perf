@@ -1,0 +1,17 @@
+sample=001 method="" compiles=0 total=0 osr=0 time=0
+sample=002 method="" compiles=12 total=12 osr=1 time=3168
+sample=003 method="org/springframework/core/ResolvableType equals" compiles=28 total=27 osr=1 time=6584
+sample=004 method="org/springframework/core/ResolvableType equals" compiles=28 total=27 osr=1 time=6584
+sample=005 method="org/springframework/core/ResolvableType equals" compiles=28 total=27 osr=1 time=6584
+sample=006 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=007 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=008 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=009 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=010 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=011 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=012 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=013 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=014 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=015 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=016 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334
+sample=017 method="org/springframework/core/ResolvableType as" compiles=32 total=31 osr=1 time=7334

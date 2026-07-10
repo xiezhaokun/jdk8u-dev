@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='13813' time_ms='1783590316323'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  9 2026 17:01:08 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=1 -XX:BackEdgeThreshold=1 -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+PrintCompilation -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro::exerciseFieldObserveFatPinned -XX:CompileCommand=compileonly,repro/ResolvableTypeC2Repro::fatResolvableMix -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType::forField -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType::forType -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType::getNested -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType::as -XX:CompileCommand=compileonly,org/springframework/core/SerializableTypeWrapper::forTypeProvider -XX:CompileCommand=compileonly,org/springframework/core/SerializableTypeWrapper$FieldTypeProvider::&lt;init&gt; -XX:CompileCommand=compileonly,org/springframework/core/SerializableTypeWrapper$FieldTypeProvider::getType -XX:CompileCommand=compileonly,org/springframework/util/Assert::notNull -Drepro.iterations=20000 -Drepro.seconds=0 -Drepro.clearCacheEvery=0 -Drepro.deoptAfter=20001 -Drepro.target=fieldObserveFatPinned 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=20000
+repro.seconds=0
+repro.clearCacheEvery=0
+repro.deoptAfter=20001
+repro.target=fieldObserveFatPinned
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='8963'/>
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+<writer thread='22019'/>
+    501    1    b        org.springframework.util.Assert::notNull (14 bytes)
+<writer thread='8963'/>
+    645    2     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLL)L (native)   (static)
+    656    3     n       java.lang.invoke.MethodHandle::linkToStatic(LLLL)L (native)   (static)
+    659    4     n       java.lang.invoke.MethodHandle::linkToStatic(LL)L (native)   (static)
+    682    5     n       java.lang.invoke.MethodHandle::linkToStatic(LL)V (native)   (static)
+    684    6     n       java.lang.invoke.MethodHandle::linkToStatic(LL)J (native)   (static)
+    686    7     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)L (native)   (static)
+    688    8     n       java.lang.invoke.MethodHandle::linkToVirtual(LLL)L (native)   (static)
+    731    9     n       java.lang.invoke.MethodHandle::linkToStatic(IL)L (native)   (static)
+    736   10     n       java.lang.invoke.MethodHandle::linkToVirtual(LL)L (native)   (static)
+    743   11     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)V (native)   (static)
+    746   12     n       java.lang.invoke.MethodHandle::invokeBasic(L)L (native)   
+    746   13     n       java.lang.invoke.MethodHandle::linkToSpecial(LLL)L (native)   (static)
+    753   14     n       java.lang.invoke.MethodHandle::linkToStatic(L)L (native)   (static)
+    755   15     n       java.lang.invoke.MethodHandle::invokeBasic()L (native)   
+    755   16     n       java.lang.invoke.MethodHandle::linkToSpecial(LL)L (native)   (static)
+    761   17     n       java.lang.invoke.MethodHandle::invokeBasic(LL)L (native)   
+    761   18     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)L (native)   (static)
+    766   19     n       java.lang.invoke.MethodHandle::invokeBasic(LLL)L (native)   
+    766   20     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLL)L (native)   (static)
+    771   21     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)L (native)   (static)
+    774   22     n       java.lang.invoke.MethodHandle::invokeBasic(LLLL)L (native)   
+    774   23     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLL)L (native)   (static)
+    779   24     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)L (native)   (static)
+    781   25     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLL)L (native)   
+    782   26     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLL)L (native)   (static)
+    786   27     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLL)L (native)   
+    786   28     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLL)L (native)   (static)
+    792   29     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLL)L (native)   (static)
+    795   30     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLL)L (native)   
+    795   31     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLL)L (native)   (static)
+    799   32     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLL)L (native)   (static)
+    802   33     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLL)L (native)   
+    802   34     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLL)L (native)   (static)
+    808   35     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLL)L (native)   (static)
+    810   36     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLL)L (native)   
+    811   37     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLL)L (native)   (static)
+    815   38     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLL)L (native)   (static)
+    817   39     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLLL)L (native)   
+    818   40     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLLL)L (native)   (static)
+    827   41     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLL)L (native)   (static)
+    831   42     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLLL)L (native)   (static)
+    836   43     n       java.lang.invoke.MethodHandle::linkToStatic(LIL)V (native)   (static)
+    839   44     n       java.lang.invoke.MethodHandle::linkToStatic(ILL)I (native)   (static)
+    855   45     n       java.lang.invoke.MethodHandle::linkToStatic(ILLL)L (native)   (static)
+    858   46     n       java.lang.invoke.MethodHandle::invokeBasic(ILL)L (native)   
+    858   47     n       java.lang.invoke.MethodHandle::linkToSpecial(LILLL)L (native)   (static)
+    920   48     n       java.lang.invoke.MethodHandle::invokeBasic(I)L (native)   
+    920   49     n       java.lang.invoke.MethodHandle::linkToSpecial(LIL)L (native)   (static)
+<writer thread='22019'/>
+    965   50    b        org.springframework.core.ResolvableType::forType (7 bytes)
+    967   51    b        org.springframework.core.ResolvableType::forType (115 bytes)
+<writer thread='8963'/>
+    994   52     n       java.lang.invoke.MethodHandle::linkToSpecial(LLILILL)V (native)   (static)
+   1005   53     n       java.lang.invoke.MethodHandle::linkToStatic(LLILIL)L (native)   (static)
+   1008   54     n       java.lang.invoke.MethodHandle::invokeBasic(LLILI)L (native)   
+   1009   55     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLILIL)L (native)   (static)
+<writer thread='22019'/>
+   1029   56    b        org.springframework.core.ResolvableType::as (86 bytes)
+   1042   57    b        org.springframework.core.ResolvableType::forType (17 bytes)
+   1078   58    b        org.springframework.core.SerializableTypeWrapper$FieldTypeProvider::getType (8 bytes)
+   1080   59    b        org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)
+<writer thread='8963'/>
+   1101   60     n       java.lang.invoke.MethodHandle::linkToStatic(LL)I (native)   (static)
+<writer thread='22019'/>
+   1111   61    b        org.springframework.core.ResolvableType::forField (39 bytes)
+   1117   62    b        org.springframework.core.ResolvableType::forType (7 bytes)
+   1121   63    b        org.springframework.core.SerializableTypeWrapper$FieldTypeProvider::&lt;init&gt; (26 bytes)
+   1126   64    b        org.springframework.core.ResolvableType::getNested (7 bytes)
+   1127   65    b        org.springframework.core.ResolvableType::getNested (121 bytes)
+<writer thread='8963'/>
+   1160   59             org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)   made not entrant
+<writer thread='22019'/>
+   1160   66    b        org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)
+   1176   67    b        org.springframework.core.ResolvableType::forField (44 bytes)
+<writer thread='8963'/>
+   1190   66             org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)   made not entrant
+<writer thread='22019'/>
+   1191   68    b        org.springframework.core.SerializableTypeWrapper::forTypeProvider (191 bytes)
+   1208   69    b        repro.ResolvableTypeC2Repro::fatResolvableMix (463 bytes)
+  14143   70 %  b        repro.ResolvableTypeC2Repro::exerciseFieldObserveFatPinned @ 122 (310 bytes)
+<writer thread='8963'/>
+  78089   70 %           repro.ResolvableTypeC2Repro::exerciseFieldObserveFatPinned @ -2 (310 bytes)   made not entrant

@@ -1,0 +1,1392 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='20073' time_ms='1783159541335'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  4 2026 18:04:06 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=50 -XX:BackEdgeThreshold=100 -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+StressGCM -XX:+StressLCM -XX:+StressReflectiveCode -XX:+TraceDeoptimization -Drepro.iterations=60000 -Drepro.seconds=0 -Drepro.clearCacheEvery=257 -Drepro.deoptAfter=16000 -Drepro.target=osr 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=60000
+repro.seconds=0
+repro.clearCacheEvery=257
+repro.deoptAfter=16000
+repro.target=osr
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+<writer thread='9987'/>
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='6' compiler='C2' stamp='0.529'>
+Uncommon trap occurred in java.lang.String::equals (@0x0000000110c7e448) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='66' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='25' backedge_count='25' iicount='251'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x000000030470ff20 unextended sp=0x000000030470ff20, fp=0x0000000000000009, real_fp=0x000000030470ff60, pc=0x0000000110c7e448)
+     nmethod    529    6             java.lang.String::equals (81 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030470ff20, unextended_sp=0x000000030470ff20, fp=0x0000000000000009, pc=0x0000000110c7e448)
+java.lang.String.equals(String.java:988) - if_icmpeq @ bci 66 
+     Created vframeArray 0x00007fd64e83b620
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e83b620 mode 2
+     {method} {0x000000010d6b0488} &apos;equals&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;java/lang/String&apos; - if_icmpeq @ bci 66 sp = 0x000000030470fed8
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/nio/ByteBuffer' x='java/nio/HeapByteBuffer' witness='java/nio/DirectByteBuffer' stamp='0.592'/>
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='16' compiler='C2' stamp='0.761'>
+Uncommon trap occurred in java.lang.String::replace (@0x0000000110cb12f4) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='26' method='java/lang/String replace (CC)Ljava/lang/String;' bytes='127' count='12' backedge_count='52' iicount='12'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712650 unextended sp=0x0000000304712650, fp=0x0000000000000005, real_fp=0x00000003047126b0, pc=0x0000000110cb12f4)
+     nmethod    761   16             java.lang.String::replace (127 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712650, unextended_sp=0x0000000304712650, fp=0x0000000000000005, pc=0x0000000110cb12f4)
+java.lang.String.replace(String.java:2072) - if_icmpge @ bci 26 
+     Created vframeArray 0x00007fd65e835420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e835420 mode 2
+     {method} {0x000000010d6b27c8} &apos;replace&apos; &apos;(CC)Ljava/lang/String;&apos; in &apos;java/lang/String&apos; - if_icmpge @ bci 26 sp = 0x0000000304712628
+<uncommon_trap thread='9987' reason='loop_limit_check' action='maybe_recompile' compile_id='29' compiler='C2' stamp='0.827'>
+Uncommon trap occurred in java.lang.String::equals (@0x0000000110cb96bc) thread=9987 reason=loop_limit_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='56' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='20' backedge_count='25' iicount='270' decompiles='1' unstable_if_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711f40 unextended sp=0x0000000304711f40, fp=0x0000000000000000, real_fp=0x0000000304711f80, pc=0x0000000110cb96bc)
+     nmethod    827   29             java.lang.String::equals (81 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711f40, unextended_sp=0x0000000304711f40, fp=0x0000000000000000, pc=0x0000000110cb96bc)
+java.lang.String.equals(String.java:988) - aload @ bci 56 
+     Created vframeArray 0x00007fd65f83b420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f83b420 mode 2
+     {method} {0x000000010d6b0488} &apos;equals&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;java/lang/String&apos; - aload @ bci 56 sp = 0x0000000304711f08
+<uncommon_trap thread='9987' reason='predicate' action='maybe_recompile' compile_id='60' compiler='C2' stamp='0.950'>
+Uncommon trap occurred in sun.net.www.ParseUtil::encodePath (@0x0000000110cca650) thread=9987 reason=predicate action=maybe_recompile unloaded_class_index=-1
+<jvms bci='36' method='sun/net/www/ParseUtil encodePath (Ljava/lang/String;Z)Ljava/lang/String;' bytes='336' count='7' backedge_count='58' iicount='7'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047115e0 unextended sp=0x00000003047115e0, fp=0x00000007955f19b0, real_fp=0x0000000304711650, pc=0x0000000110cca650)
+     nmethod    950   60             sun.net.www.ParseUtil::encodePath (336 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047115e0, unextended_sp=0x00000003047115e0, fp=0x00000007955f19b0, pc=0x0000000110cca650)
+sun.net.www.ParseUtil.encodePath(ParseUtil.java:111) - aload @ bci 36 
+     Created vframeArray 0x00007fd65f859c20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f859c20 mode 2
+     {method} {0x000000010d88ae08} &apos;encodePath&apos; &apos;(Ljava/lang/String;Z)Ljava/lang/String;&apos; in &apos;sun/net/www/ParseUtil&apos; - aload @ bci 36 sp = 0x00000003047115c0
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='71' compiler='C2' stamp='0.960'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110cd0e1c) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='59' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711470 unextended sp=0x0000000304711470, fp=0x0000000001494fe6, real_fp=0x00000003047114b0, pc=0x0000000110cd0e1c)
+     nmethod    960   71             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711470, unextended_sp=0x0000000304711470, fp=0x0000000001494fe6, pc=0x0000000110cd0e1c)
+java.util.HashMap.getNode(HashMap.java:573) - invokevirtual @ bci 59 
+     Created vframeArray 0x00007fd65e835420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e835420 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - invokevirtual @ bci 59 sp = 0x0000000304711428
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='71' compiler='C2' count='1' state='class_check' stamp='1.028'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110cd0e1c) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='59' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='25' backedge_count='1' iicount='50' class_check_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x000000030470eba0 unextended sp=0x000000030470eba0, fp=0x0000000001494fe6, real_fp=0x000000030470ebe0, pc=0x0000000110cd0e1c)
+     nmethod   1028   71             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030470eba0, unextended_sp=0x000000030470eba0, fp=0x0000000001494fe6, pc=0x0000000110cd0e1c)
+java.util.HashMap.getNode(HashMap.java:573) - invokevirtual @ bci 59 
+     Created vframeArray 0x00007fd64e821220
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e821220 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - invokevirtual @ bci 59 sp = 0x000000030470eb58
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='71' compiler='C2' count='2' state='class_check' stamp='1.039'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110cd0e1c) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='59' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='25' backedge_count='1' iicount='50' class_check_traps='2'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711470 unextended sp=0x0000000304711470, fp=0x0000000001494fe6, real_fp=0x00000003047114b0, pc=0x0000000110cd0e1c)
+     nmethod   1039   71             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711470, unextended_sp=0x0000000304711470, fp=0x0000000001494fe6, pc=0x0000000110cd0e1c)
+java.util.HashMap.getNode(HashMap.java:573) - invokevirtual @ bci 59 
+     Created vframeArray 0x00007fd65f85a420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f85a420 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - invokevirtual @ bci 59 sp = 0x0000000304711428
+<dependency_failed type='leaf_type' ctxk='java/util/concurrent/ConcurrentHashMap$Node' witness='java/util/concurrent/ConcurrentHashMap$ForwardingNode' stamp='1.040'/>
+DEOPT PACKING thread 0x00007fd66000a800 Deoptimized frame (sp=0x00000003047122b0 unextended sp=0x00000003047122b0, fp=0x0000000000000000, real_fp=0x0000000304712380, pc=0x0000000110cd4f3c)
+     nmethod   1044   77   !         java.util.concurrent.ConcurrentHashMap::putVal (362 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047122b0, unextended_sp=0x00000003047122b0, fp=0x0000000000000000, pc=0x0000000110cd4f3c)
+java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1070) - invokespecial @ bci 357 
+     Created vframeArray 0x00007fd65f83b420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f83b420 mode 0
+     {method} {0x000000010d8a7e70} &apos;putVal&apos; &apos;(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object;&apos; in &apos;java/util/concurrent/ConcurrentHashMap&apos; - invokespecial @ bci 357 sp = 0x00000003047122c8
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='71' compiler='C2' count='3' state='class_check' stamp='1.084'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110cd0e1c) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='59' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='25' backedge_count='1' iicount='50' class_check_traps='3'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711470 unextended sp=0x0000000304711470, fp=0x0000000001494fe6, real_fp=0x00000003047114b0, pc=0x0000000110cd0e1c)
+     nmethod   1084   71             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711470, unextended_sp=0x0000000304711470, fp=0x0000000001494fe6, pc=0x0000000110cd0e1c)
+java.util.HashMap.getNode(HashMap.java:573) - invokevirtual @ bci 59 
+     Created vframeArray 0x00007fd64e821220
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e821220 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - invokevirtual @ bci 59 sp = 0x0000000304711428
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='116' compiler='C2' stamp='1.561'>
+Uncommon trap occurred in java.util.zip.ZipCoder::getBytes (@0x0000000110ce3964) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='4' method='java/util/zip/ZipCoder encoder ()Ljava/nio/charset/CharsetEncoder;' bytes='35' count='25' backedge_count='1' iicount='50'/>
+<jvms bci='1' method='java/util/zip/ZipCoder getBytes (Ljava/lang/String;)[B' bytes='192' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x000000030470fc30 unextended sp=0x000000030470fc30, fp=0x00000000f8000044, real_fp=0x000000030470fc80, pc=0x0000000110ce3964)
+     nmethod   1560  116             java.util.zip.ZipCoder::getBytes (192 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030470fc30, unextended_sp=0x000000030470fc30, fp=0x00000000f8000044, pc=0x0000000110ce3964)
+java.util.zip.ZipCoder.encoder(ZipCoder.java:152) - ifnonnull @ bci 4 
+        1 - frame( sp=0x000000030470fc30, unextended_sp=0x000000030470fc30, fp=0x00000000f8000044, pc=0x0000000110ce3964)
+java.util.zip.ZipCoder.getBytes(ZipCoder.java:77) - invokespecial @ bci 1 
+     Created vframeArray 0x00007fd64e859e20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e859e20 mode 2
+     {method} {0x000000010d920660} &apos;getBytes&apos; &apos;(Ljava/lang/String;)[B&apos; in &apos;java/util/zip/ZipCoder&apos; - invokespecial @ bci 1 sp = 0x000000030470fbe0
+     {method} {0x000000010d920c30} &apos;encoder&apos; &apos;()Ljava/nio/charset/CharsetEncoder;&apos; in &apos;java/util/zip/ZipCoder&apos; - ifnonnull @ bci 4 sp = 0x000000030470fb88
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='147' compiler='C2' stamp='1.562'>
+Uncommon trap occurred in java.util.jar.JarFile::getJarEntry (@0x0000000110cf83f8) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='7' method='java/util/jar/JarFile getEntry (Ljava/lang/String;)Ljava/util/zip/ZipEntry;' bytes='22' count='25' backedge_count='1' iicount='50'/>
+<jvms bci='2' method='java/util/jar/JarFile getJarEntry (Ljava/lang/String;)Ljava/util/jar/JarEntry;' bytes='9' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711540 unextended sp=0x0000000304711540, fp=0x0000000795646bf8, real_fp=0x0000000304711570, pc=0x0000000110cf83f8)
+     nmethod   1561  147             java.util.jar.JarFile::getJarEntry (9 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711540, unextended_sp=0x0000000304711540, fp=0x0000000795646bf8, pc=0x0000000110cf83f8)
+java.util.jar.JarFile.getEntry(JarFile.java:251) - ifnull @ bci 7 
+        1 - frame( sp=0x0000000304711540, unextended_sp=0x0000000304711540, fp=0x0000000795646bf8, pc=0x0000000110cf83f8)
+java.util.jar.JarFile.getJarEntry(JarFile.java:233) - invokevirtual @ bci 2 
+     Created vframeArray 0x00007fd66004a220
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd66004a220 mode 2
+     {method} {0x000000010d911530} &apos;getJarEntry&apos; &apos;(Ljava/lang/String;)Ljava/util/jar/JarEntry;&apos; in &apos;java/util/jar/JarFile&apos; - invokevirtual @ bci 2 sp = 0x0000000304711508
+     {method} {0x000000010d911610} &apos;getEntry&apos; &apos;(Ljava/lang/String;)Ljava/util/zip/ZipEntry;&apos; in &apos;java/util/jar/JarFile&apos; - ifnull @ bci 7 sp = 0x00000003047114b0
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='120' compiler='C2' stamp='1.564'>
+Uncommon trap occurred in java.net.URL::&lt;init&gt; (@0x0000000110cedd04) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='504' method='java/net/URL &lt;init&gt; (Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V' bytes='543' count='14' backedge_count='30' iicount='14'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047116d0 unextended sp=0x00000003047116d0, fp=0x00000000f8007362, real_fp=0x0000000304711740, pc=0x0000000110cedd04)
+     nmethod   1563  120   !         java.net.URL::&lt;init&gt; (543 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047116d0, unextended_sp=0x00000003047116d0, fp=0x00000000f8007362, pc=0x0000000110cedd04)
+java.net.URL.&lt;init&gt;(URL.java:640) - invokevirtual @ bci 504 
+     Created vframeArray 0x00007fd66004b620
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd66004b620 mode 2
+     {method} {0x000000010d753008} &apos;&lt;init&gt;&apos; &apos;(Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V&apos; in &apos;java/net/URL&apos; - invokevirtual @ bci 504 sp = 0x0000000304711658
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='1.565'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='1.565'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='1.565'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='sun/misc/Resource' x='sun/misc/URLClassPath$FileLoader$1' witness='sun/misc/URLClassPath$JarLoader$2' stamp='1.565'/>
+SAVED OOP RESULT 0x000000079564ace0 in thread 0x00007fd66000a800
+DEOPT PACKING thread 0x00007fd66000a800 Deoptimized frame (sp=0x0000000304711810 unextended sp=0x0000000304711810, fp=0x0000000795646280, real_fp=0x0000000304711850, pc=0x0000000110ce9954)
+     nmethod   1565  154   !         sun.misc.URLClassPath$JarLoader::getResource (85 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711810, unextended_sp=0x0000000304711810, fp=0x0000000795646280, pc=0x0000000110ce9954)
+sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1070) - invokevirtual @ bci 54 
+     Created vframeArray 0x00007fd65e83c820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e83c820 mode 0
+     {method} {0x000000010d9037f8} &apos;getResource&apos; &apos;(Ljava/lang/String;Z)Lsun/misc/Resource;&apos; in &apos;sun/misc/URLClassPath$JarLoader&apos; - invokevirtual @ bci 54 sp = 0x00000003047117d8
+SAVED OOP RESULT 0x000000079564ace0 in thread 0x00007fd66000a800
+DEOPT PACKING thread 0x00007fd66000a800 Deoptimized frame (sp=0x0000000304711850 unextended sp=0x0000000304711850, fp=0x0000000000000001, real_fp=0x00000003047118a0, pc=0x0000000110ce89d0)
+     nmethod   1565  132             sun.misc.URLClassPath::getResource (83 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711850, unextended_sp=0x0000000304711850, fp=0x0000000000000001, pc=0x0000000110ce89d0)
+sun.misc.URLClassPath.getResource(URLClassPath.java:250) - invokevirtual @ bci 62 
+     Created vframeArray 0x00007fd65f83b420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f83b420 mode 0
+     {method} {0x000000010d8d51b8} &apos;getResource&apos; &apos;(Ljava/lang/String;Z)Lsun/misc/Resource;&apos; in &apos;sun/misc/URLClassPath&apos; - invokevirtual @ bci 62 sp = 0x0000000304711818
+SAVED OOP RESULT 0x000000079564ace0 in thread 0x00007fd66000a800
+DEOPT PACKING thread 0x00007fd66000a800 Deoptimized frame (sp=0x00000003047118a0 unextended sp=0x00000003047118a0, fp=0x0000000795644ec0, real_fp=0x00000003047118d0, pc=0x0000000110cffd34)
+     nmethod   1566  181   !         java.net.URLClassLoader$1::run (81 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047118a0, unextended_sp=0x00000003047118a0, fp=0x0000000795644ec0, pc=0x0000000110cffd34)
+java.net.URLClassLoader$1.run(URLClassLoader.java:366) - invokevirtual @ bci 26 
+     Created vframeArray 0x00007fd64e859e20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e859e20 mode 0
+     {method} {0x000000010d8ff810} &apos;run&apos; &apos;()Ljava/lang/Class;&apos; in &apos;java/net/URLClassLoader$1&apos; - invokevirtual @ bci 26 sp = 0x0000000304711860
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='156' compiler='C2' state='class_check recompiled' stamp='1.702'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110cf950c) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='59' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='26' backedge_count='1' iicount='75' decompiles='1' class_check_traps='4'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047114d0 unextended sp=0x00000003047114d0, fp=0x00000000f59c21e1, real_fp=0x0000000304711510, pc=0x0000000110cf950c)
+     nmethod   1701  156             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047114d0, unextended_sp=0x00000003047114d0, fp=0x00000000f59c21e1, pc=0x0000000110cf950c)
+java.util.HashMap.getNode(HashMap.java:573) - invokevirtual @ bci 59 
+     Created vframeArray 0x00007fd65e83c820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e83c820 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - invokevirtual @ bci 59 sp = 0x0000000304711470
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='156' compiler='C2' count='1' state='#15' stamp='1.702'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110cf950c) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='59' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='26' backedge_count='1' iicount='75' decompiles='1' class_check_traps='4' bimorphic_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047114d0 unextended sp=0x00000003047114d0, fp=0x000000006499bd24, real_fp=0x0000000304711510, pc=0x0000000110cf950c)
+     nmethod   1702  156             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047114d0, unextended_sp=0x00000003047114d0, fp=0x000000006499bd24, pc=0x0000000110cf950c)
+java.util.HashMap.getNode(HashMap.java:573) - invokevirtual @ bci 59 
+     Created vframeArray 0x00007fd64e859e20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e859e20 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - invokevirtual @ bci 59 sp = 0x0000000304711470
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='120' compiler='C2' count='1' state='class_check' stamp='1.742'>
+Uncommon trap occurred in java.net.URL::&lt;init&gt; (@0x0000000110cedd04) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='504' method='java/net/URL &lt;init&gt; (Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V' bytes='543' count='14' backedge_count='30' iicount='14' class_check_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047110f0 unextended sp=0x00000003047110f0, fp=0x00000000f8007362, real_fp=0x0000000304711160, pc=0x0000000110cedd04)
+     nmethod   1741  120   !         java.net.URL::&lt;init&gt; (543 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047110f0, unextended_sp=0x00000003047110f0, fp=0x00000000f8007362, pc=0x0000000110cedd04)
+java.net.URL.&lt;init&gt;(URL.java:640) - invokevirtual @ bci 504 
+     Created vframeArray 0x00007fd64e821220
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e821220 mode 2
+     {method} {0x000000010d753008} &apos;&lt;init&gt;&apos; &apos;(Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V&apos; in &apos;java/net/URL&apos; - invokevirtual @ bci 504 sp = 0x0000000304711078
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='156' compiler='C2' count='2' state='#15' stamp='1.742'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110cf950c) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='59' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='26' backedge_count='1' iicount='75' decompiles='1' class_check_traps='4' bimorphic_traps='2'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710fa0 unextended sp=0x0000000304710fa0, fp=0x00000000f59c21e1, real_fp=0x0000000304710fe0, pc=0x0000000110cf950c)
+     nmethod   1742  156             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710fa0, unextended_sp=0x0000000304710fa0, fp=0x00000000f59c21e1, pc=0x0000000110cf950c)
+java.util.HashMap.getNode(HashMap.java:573) - invokevirtual @ bci 59 
+     Created vframeArray 0x00007fd64e859e20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e859e20 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - invokevirtual @ bci 59 sp = 0x0000000304710f40
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='156' compiler='C2' count='3' state='#15' stamp='1.743'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110cf950c) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='59' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='26' backedge_count='1' iicount='75' decompiles='1' class_check_traps='4' bimorphic_traps='3'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710fa0 unextended sp=0x0000000304710fa0, fp=0x000000006499bd24, real_fp=0x0000000304710fe0, pc=0x0000000110cf950c)
+     nmethod   1742  156             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710fa0, unextended_sp=0x0000000304710fa0, fp=0x000000006499bd24, pc=0x0000000110cf950c)
+java.util.HashMap.getNode(HashMap.java:573) - invokevirtual @ bci 59 
+     Created vframeArray 0x00007fd66004ae20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd66004ae20 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - invokevirtual @ bci 59 sp = 0x0000000304710f40
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='157' compiler='C2' stamp='1.946'>
+Uncommon trap occurred in java.lang.ClassLoader::loadClass (@0x0000000110cfab78) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='28' method='java/lang/ClassLoader getClassLoadingLock (Ljava/lang/String;)Ljava/lang/Object;' bytes='35' count='25' backedge_count='1' iicount='50'/>
+<jvms bci='2' method='java/lang/ClassLoader loadClass (Ljava/lang/String;Z)Ljava/lang/Class;' bytes='122' count='25' backedge_count='1' iicount='50' throwouts='18'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x000000030470ff50 unextended sp=0x000000030470ff50, fp=0x00000007955c4f70, real_fp=0x000000030470ffb0, pc=0x0000000110cfab78)
+     nmethod   1946  157   !         java.lang.ClassLoader::loadClass (122 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030470ff50, unextended_sp=0x000000030470ff50, fp=0x00000007955c4f70, pc=0x0000000110cfab78)
+java.lang.ClassLoader.getClassLoadingLock(ClassLoader.java:458) - ifnonnull @ bci 28 
+        1 - frame( sp=0x000000030470ff50, unextended_sp=0x000000030470ff50, fp=0x00000007955c4f70, pc=0x0000000110cfab78)
+java.lang.ClassLoader.loadClass(ClassLoader.java:398) - invokevirtual @ bci 2 
+     Created vframeArray 0x00007fd65e83c820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e83c820 mode 2
+     {method} {0x000000010d6c3d60} &apos;loadClass&apos; &apos;(Ljava/lang/String;Z)Ljava/lang/Class;&apos; in &apos;java/lang/ClassLoader&apos; - invokevirtual @ bci 2 sp = 0x000000030470fef0
+     {method} {0x000000010d6c3e58} &apos;getClassLoadingLock&apos; &apos;(Ljava/lang/String;)Ljava/lang/Object;&apos; in &apos;java/lang/ClassLoader&apos; - ifnonnull @ bci 28 sp = 0x000000030470fe98
+<uncommon_trap thread='9987' reason='uninitialized' action='reinterpret' compile_id='277' compiler='C2' stamp='2.099'>
+Uncommon trap occurred in java.lang.invoke.LambdaForm::normalize (@0x0000000110d3b6f0) thread=9987 reason=uninitialized action=reinterpret unloaded_class_index=-1
+<jvms bci='176' method='java/lang/invoke/LambdaForm normalize ()I' bytes='322' count='13' backedge_count='31' iicount='13'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x000000030470ef70 unextended sp=0x000000030470ef70, fp=0x000000079568af10, real_fp=0x000000030470eff0, pc=0x0000000110d3b6f0)
+     nmethod   2098  277             java.lang.invoke.LambdaForm::normalize (322 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030470ef70, unextended_sp=0x000000030470ef70, fp=0x000000079568af10, pc=0x0000000110d3b6f0)
+java.lang.invoke.LambdaForm.normalize(LambdaForm.java:431) - getstatic @ bci 176 
+     Created vframeArray 0x00007fd65f85fc20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f85fc20 mode 2
+     {method} {0x000000010d720d08} &apos;normalize&apos; &apos;()I&apos; in &apos;java/lang/invoke/LambdaForm&apos; - getstatic @ bci 176 sp = 0x000000030470ef60
+<uncommon_trap thread='9987' reason='uninitialized' action='reinterpret' compile_id='299' compiler='C2' stamp='2.194'>
+Uncommon trap occurred in java.lang.invoke.LambdaForm::argument (@0x0000000110d429b0) thread=9987 reason=uninitialized action=reinterpret unloaded_class_index=-1
+<jvms bci='16' method='java/lang/invoke/LambdaForm argument (ILjava/lang/invoke/LambdaForm$BasicType;)Ljava/lang/invoke/LambdaForm$Name;' bytes='27' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x000000030470f040 unextended sp=0x000000030470f040, fp=0x0000000000000002, real_fp=0x000000030470f070, pc=0x0000000110d429b0)
+     nmethod   2193  299             java.lang.invoke.LambdaForm::argument (27 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030470f040, unextended_sp=0x000000030470f040, fp=0x0000000000000002, pc=0x0000000110d429b0)
+java.lang.invoke.LambdaForm.argument(LambdaForm.java:1649) - getstatic @ bci 16 
+     Created vframeArray 0x00007fd66004b620
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd66004b620 mode 2
+     {method} {0x000000010d724a10} &apos;argument&apos; &apos;(ILjava/lang/invoke/LambdaForm$BasicType;)Ljava/lang/invoke/LambdaForm$Name;&apos; in &apos;java/lang/invoke/LambdaForm&apos; - getstatic @ bci 16 sp = 0x000000030470f020
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='271' compiler='C2' stamp='2.421'>
+Uncommon trap occurred in java.lang.invoke.MemberName::isInvocable (@0x0000000110d2e408) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='6' method='java/lang/invoke/MemberName testAnyFlags (I)Z' bytes='15' count='25' backedge_count='1' iicount='50'/>
+<jvms bci='3' method='java/lang/invoke/MemberName isInvocable ()Z' bytes='7' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x000000030470ffb0 unextended sp=0x000000030470ffb0, fp=0x0000000000000001, real_fp=0x000000030470ffd0, pc=0x0000000110d2e408)
+     nmethod   2421  271             java.lang.invoke.MemberName::isInvocable (7 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x000000030470ffb0, unextended_sp=0x000000030470ffb0, fp=0x0000000000000001, pc=0x0000000110d2e408)
+java.lang.invoke.MemberName.testAnyFlags(MemberName.java:340) - ifne @ bci 6 
+        1 - frame( sp=0x000000030470ffb0, unextended_sp=0x000000030470ffb0, fp=0x0000000000000001, pc=0x0000000110d2e408)
+java.lang.invoke.MemberName.isInvocable(MemberName.java:443) - invokespecial @ bci 3 
+     Created vframeArray 0x00007fd65e83c820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e83c820 mode 2
+     {method} {0x000000010d7165c8} &apos;isInvocable&apos; &apos;()Z&apos; in &apos;java/lang/invoke/MemberName&apos; - invokespecial @ bci 3 sp = 0x000000030470ff70
+     {method} {0x000000010d715a58} &apos;testAnyFlags&apos; &apos;(I)Z&apos; in &apos;java/lang/invoke/MemberName&apos; - ifne @ bci 6 sp = 0x000000030470ff18
+<uncommon_trap thread='9987' reason='uninitialized' action='reinterpret' compile_id='404' compiler='C2' stamp='3.150'>
+Uncommon trap occurred in java.lang.invoke.LambdaForm::signatureArity (@0x0000000110d7b83c) thread=9987 reason=uninitialized action=reinterpret unloaded_class_index=-1
+<jvms bci='0' method='java/lang/invoke/LambdaForm signatureArity (Ljava/lang/String;)I' bytes='28' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711ad0 unextended sp=0x0000000304711ad0, fp=0x00000007956bec20, real_fp=0x0000000304711af0, pc=0x0000000110d7b83c)
+     nmethod   3150  404             java.lang.invoke.LambdaForm::signatureArity (28 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711ad0, unextended_sp=0x0000000304711ad0, fp=0x00000007956bec20, pc=0x0000000110d7b83c)
+java.lang.invoke.LambdaForm.signatureArity(LambdaForm.java:538) - getstatic @ bci 0 
+     Created vframeArray 0x00007fd65e84ee20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e84ee20 mode 2
+     {method} {0x000000010d721760} &apos;signatureArity&apos; &apos;(Ljava/lang/String;)I&apos; in &apos;java/lang/invoke/LambdaForm&apos; - getstatic @ bci 0 sp = 0x0000000304711aa0
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='388' compiler='C2' stamp='3.159'>
+Uncommon trap occurred in java.lang.invoke.MethodType::equals (@0x0000000110d75514) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='8' method='java/lang/invoke/MethodType equals (Ljava/lang/invoke/MethodType;)Z' bytes='31' count='25' backedge_count='1' iicount='50'/>
+<jvms bci='17' method='java/lang/invoke/MethodType equals (Ljava/lang/Object;)Z' bytes='29' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711ab0 unextended sp=0x0000000304711ab0, fp=0x00000000f2ab00df, real_fp=0x0000000304711af0, pc=0x0000000110d75514)
+     nmethod   3158  388             java.lang.invoke.MethodType::equals (29 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711ab0, unextended_sp=0x0000000304711ab0, fp=0x00000000f2ab00df, pc=0x0000000110d75514)
+java.lang.invoke.MethodType.equals(MethodType.java:760) - if_acmpne @ bci 8 
+        1 - frame( sp=0x0000000304711ab0, unextended_sp=0x0000000304711ab0, fp=0x00000000f2ab00df, pc=0x0000000110d75514)
+java.lang.invoke.MethodType.equals(MethodType.java:756) - invokespecial @ bci 17 
+     Created vframeArray 0x00007fd65e83c820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e83c820 mode 2
+     {method} {0x000000010d72abb8} &apos;equals&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;java/lang/invoke/MethodType&apos; - invokespecial @ bci 17 sp = 0x0000000304711a90
+     {method} {0x000000010d72ac98} &apos;equals&apos; &apos;(Ljava/lang/invoke/MethodType;)Z&apos; in &apos;java/lang/invoke/MethodType&apos; - if_acmpne @ bci 8 sp = 0x0000000304711a30
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='450' compiler='C2' stamp='3.415'>
+Uncommon trap occurred in java.lang.Class::getEnclosingClass (@0x0000000110d4ffbc) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='6' method='java/lang/Class getDeclaringClass ()Ljava/lang/Class;' bytes='22' count='25' backedge_count='1' iicount='50'/>
+<jvms bci='10' method='java/lang/Class getEnclosingClass ()Ljava/lang/Class;' bytes='60' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047117d0 unextended sp=0x00000003047117d0, fp=0x000000079567b958, real_fp=0x0000000304711800, pc=0x0000000110d4ffbc)
+     nmethod   3414  450             java.lang.Class::getEnclosingClass (60 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047117d0, unextended_sp=0x00000003047117d0, fp=0x000000079567b958, pc=0x0000000110d4ffbc)
+java.lang.Class.getDeclaringClass(Class.java:1237) - ifnull @ bci 6 
+        1 - frame( sp=0x00000003047117d0, unextended_sp=0x00000003047117d0, fp=0x000000079567b958, pc=0x0000000110d4ffbc)
+java.lang.Class.getEnclosingClass(Class.java:1277) - invokevirtual @ bci 10 
+     Created vframeArray 0x00007fd65f865c20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f865c20 mode 2
+     {method} {0x000000010d6bb600} &apos;getEnclosingClass&apos; &apos;()Ljava/lang/Class;&apos; in &apos;java/lang/Class&apos; - invokevirtual @ bci 10 sp = 0x0000000304711780
+     {method} {0x000000010d6bb400} &apos;getDeclaringClass&apos; &apos;()Ljava/lang/Class;&apos; in &apos;java/lang/Class&apos; - ifnull @ bci 6 sp = 0x0000000304711728
+<dependency_failed type='unique_concrete_method' ctxk='java/lang/invoke/MethodHandle' x='java/lang/invoke/MethodHandle intrinsicName ()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;' witness='java/lang/invoke/MethodHandleImpl$IntrinsicMethodHandle' stamp='3.490'/>
+<uncommon_trap thread='9987' reason='loop_limit_check' action='maybe_recompile' compile_id='474' compiler='C2' stamp='3.534'>
+Uncommon trap occurred in java.lang.invoke.LambdaForm$Name::useCount (@0x0000000110da660c) thread=9987 reason=loop_limit_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='24' method='java/lang/invoke/LambdaForm$Name useCount (Ljava/lang/invoke/LambdaForm$Name;)I' bytes='42' count='15' backedge_count='26' iicount='15'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710440 unextended sp=0x0000000304710440, fp=0x0000000000000001, real_fp=0x0000000304710480, pc=0x0000000110da660c)
+     nmethod   3535  474             java.lang.invoke.LambdaForm$Name::useCount (42 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710440, unextended_sp=0x0000000304710440, fp=0x0000000000000001, pc=0x0000000110da660c)
+java.lang.invoke.LambdaForm$Name.useCount(LambdaForm.java:1582) - fast_aaccess_0 @ bci 24 
+     Created vframeArray 0x00007fd64e87a620
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e87a620 mode 2
+     {method} {0x000000010da0d4e0} &apos;useCount&apos; &apos;(Ljava/lang/invoke/LambdaForm$Name;)I&apos; in &apos;java/lang/invoke/LambdaForm$Name&apos; - aload_0 @ bci 24 sp = 0x0000000304710420
+<uncommon_trap thread='9987' reason='loop_limit_check' action='maybe_recompile' compile_id='421' compiler='C2' stamp='3.576'>
+Uncommon trap occurred in java.lang.invoke.LambdaForm::shortenSignature (@0x0000000110d8a3b8) thread=9987 reason=loop_limit_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='97' method='java/lang/invoke/LambdaForm shortenSignature (Ljava/lang/String;)Ljava/lang/String;' bytes='166' count='9' backedge_count='29' iicount='9'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710850 unextended sp=0x0000000304710850, fp=0x0000000000000000, real_fp=0x00000003047108d0, pc=0x0000000110d8a3b8)
+     nmethod   3576  421             java.lang.invoke.LambdaForm::shortenSignature (166 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710850, unextended_sp=0x0000000304710850, fp=0x0000000000000000, pc=0x0000000110d8a3b8)
+java.lang.invoke.LambdaForm.shortenSignature(LambdaForm.java:1360) - aload @ bci 97 
+     Created vframeArray 0x00007fd65f865c20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f865c20 mode 2
+     {method} {0x000000010d7245d8} &apos;shortenSignature&apos; &apos;(Ljava/lang/String;)Ljava/lang/String;&apos; in &apos;java/lang/invoke/LambdaForm&apos; - aload @ bci 97 sp = 0x0000000304710838
+<uncommon_trap thread='9987' reason='loop_limit_check' action='maybe_recompile' compile_id='531' compiler='C2' stamp='3.732'>
+Uncommon trap occurred in java.lang.invoke.LambdaForm::useCount (@0x0000000110db387c) thread=9987 reason=loop_limit_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='74' method='java/lang/invoke/LambdaForm useCount (Ljava/lang/invoke/LambdaForm$Name;)I' bytes='99' count='25' backedge_count='26' iicount='26'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710b80 unextended sp=0x0000000304710b80, fp=0x00000007957a8028, real_fp=0x0000000304710bc0, pc=0x0000000110db387c)
+     nmethod   3731  531             java.lang.invoke.LambdaForm::useCount (99 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710b80, unextended_sp=0x0000000304710b80, fp=0x00000007957a8028, pc=0x0000000110db387c)
+java.lang.invoke.LambdaForm.useCount(LambdaForm.java:1638) - fast_iload @ bci 74 
+     Created vframeArray 0x00007fd660053620
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd660053620 mode 2
+     {method} {0x000000010d724878} &apos;useCount&apos; &apos;(Ljava/lang/invoke/LambdaForm$Name;)I&apos; in &apos;java/lang/invoke/LambdaForm&apos; - iload @ bci 74 sp = 0x0000000304710b40
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='435' compiler='C2' stamp='3.838'>
+Uncommon trap occurred in java.lang.invoke.LambdaForm::argument (@0x0000000110d9215c) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='3' method='java/lang/invoke/LambdaForm argument (ILjava/lang/invoke/LambdaForm$BasicType;)Ljava/lang/invoke/LambdaForm$Name;' bytes='27' count='25' backedge_count='1' iicount='98' decompiles='1' uninitialized_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047108e0 unextended sp=0x00000003047108e0, fp=0x000000000000000b, real_fp=0x0000000304710910, pc=0x0000000110d9215c)
+     nmethod   3837  435             java.lang.invoke.LambdaForm::argument (27 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047108e0, unextended_sp=0x00000003047108e0, fp=0x000000000000000b, pc=0x0000000110d9215c)
+java.lang.invoke.LambdaForm.argument(LambdaForm.java:1647) - if_icmplt @ bci 3 
+     Created vframeArray 0x00007fd660054c20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd660054c20 mode 2
+     {method} {0x000000010d724a10} &apos;argument&apos; &apos;(ILjava/lang/invoke/LambdaForm$BasicType;)Ljava/lang/invoke/LambdaForm$Name;&apos; in &apos;java/lang/invoke/LambdaForm&apos; - if_icmplt @ bci 3 sp = 0x00000003047108a0
+<uncommon_trap thread='9987' reason='predicate' action='maybe_recompile' compile_id='565' compiler='C2' stamp='4.190'>
+Uncommon trap occurred in java.util.Arrays::fill (@0x0000000110dccee0) thread=9987 reason=predicate action=maybe_recompile unloaded_class_index=-1
+<jvms bci='10' method='java/util/Arrays fill ([Ljava/lang/Object;Ljava/lang/Object;)V' bytes='21' count='11' backedge_count='35' iicount='11'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710ed0 unextended sp=0x0000000304710ed0, fp=0x00000007957e77e8, real_fp=0x0000000304710f00, pc=0x0000000110dccee0)
+     nmethod   4190  565             java.util.Arrays::fill (21 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710ed0, unextended_sp=0x0000000304710ed0, fp=0x00000007957e77e8, pc=0x0000000110dccee0)
+java.util.Arrays.fill(Arrays.java:3130) - fast_aload_0 @ bci 10 
+     Created vframeArray 0x00007fd64e866420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e866420 mode 2
+     {method} {0x000000010d7fa220} &apos;fill&apos; &apos;([Ljava/lang/Object;Ljava/lang/Object;)V&apos; in &apos;java/util/Arrays&apos; - aload_0 @ bci 10 sp = 0x0000000304710ea0
+<uncommon_trap thread='9987' reason='unloaded' action='reinterpret' index='11' compile_id='455' compiler='C2' unresolved='1' name='java/lang/StringBuilder' stamp='4.192'>
+Uncommon trap occurred in java.lang.Class::getSimpleName (@0x0000000110d96e18) thread=9987 reason=unloaded action=reinterpret unloaded_class_index=11 unresolved class: java/lang/StringBuilder
+<jvms bci='7' method='java/lang/Class getSimpleName ()Ljava/lang/String;' bytes='120' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710c50 unextended sp=0x0000000304710c50, fp=0x0000000795584090, real_fp=0x0000000304710c80, pc=0x0000000110d96e18)
+     nmethod   4191  455             java.lang.Class::getSimpleName (120 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710c50, unextended_sp=0x0000000304710c50, fp=0x0000000795584090, pc=0x0000000110d96e18)
+java.lang.Class.getSimpleName(Class.java:1307) - new @ bci 7 
+     Created vframeArray 0x00007fd65e858a20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e858a20 mode 2
+     {method} {0x000000010d6bb770} &apos;getSimpleName&apos; &apos;()Ljava/lang/String;&apos; in &apos;java/lang/Class&apos; - new @ bci 7 sp = 0x0000000304710c18
+<uncommon_trap thread='9987' reason='null_assert' action='make_not_entrant' compile_id='426' compiler='C2' stamp='4.192'>
+Uncommon trap occurred in java.lang.invoke.MemberName$Factory::resolveOrFail (@0x0000000110d8dfe4) thread=9987 reason=null_assert action=make_not_entrant unloaded_class_index=-1
+<jvms bci='29' method='java/lang/invoke/MemberName$Factory resolveOrFail (BLjava/lang/invoke/MemberName;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MemberName;' bytes='52' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710ea0 unextended sp=0x0000000304710ea0, fp=0x0000000795676cb0, real_fp=0x0000000304710ed0, pc=0x0000000110d8dfe4)
+     nmethod   4192  426             java.lang.invoke.MemberName$Factory::resolveOrFail (52 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710ea0, unextended_sp=0x0000000304710ea0, fp=0x0000000795676cb0, pc=0x0000000110d8dfe4)
+java.lang.invoke.MemberName$Factory.resolveOrFail(MemberName.java:1004) - instanceof @ bci 29 
+     Created vframeArray 0x00007fd65f865c20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f865c20 mode 2
+     {method} {0x000000010d8f40a0} &apos;resolveOrFail&apos; &apos;(BLjava/lang/invoke/MemberName;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MemberName;&apos; in &apos;java/lang/invoke/MemberName$Factory&apos; - instanceof @ bci 29 sp = 0x0000000304710e68
+<uncommon_trap thread='9987' reason='null_check' action='make_not_entrant' compile_id='386' compiler='C2' stamp='4.193'>
+Uncommon trap occurred in java.util.ArrayList::add (@0x0000000110d7640c) thread=9987 reason=null_check action=make_not_entrant unloaded_class_index=-1
+<jvms bci='26' method='java/util/ArrayList add (Ljava/lang/Object;)Z' bytes='29' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711030 unextended sp=0x0000000304711030, fp=0x00000000f2afd20e, real_fp=0x0000000304711060, pc=0x0000000110d7640c)
+     nmethod   4193  386             java.util.ArrayList::add (29 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711030, unextended_sp=0x0000000304711030, fp=0x00000000f2afd20e, pc=0x0000000110d7640c)
+java.util.ArrayList.add(ArrayList.java:465) - aastore @ bci 26 
+     Created vframeArray 0x00007fd65f86e420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f86e420 mode 2
+     {method} {0x000000010d7a2970} &apos;add&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;java/util/ArrayList&apos; - aastore @ bci 26 sp = 0x0000000304710ff8
+<uncommon_trap thread='9987' reason='array_check' action='maybe_recompile' compile_id='601' compiler='C2' stamp='4.218'>
+Uncommon trap occurred in java.util.Arrays::fill (@0x0000000110dd6a18) thread=9987 reason=array_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='13' method='java/util/Arrays fill ([Ljava/lang/Object;Ljava/lang/Object;)V' bytes='21' count='12' backedge_count='35' iicount='12' decompiles='1' predicate_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710eb0 unextended sp=0x0000000304710eb0, fp=0x000000000000000b, real_fp=0x0000000304710f00, pc=0x0000000110dd6a18)
+     nmethod   4218  601             java.util.Arrays::fill (21 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710eb0, unextended_sp=0x0000000304710eb0, fp=0x000000000000000b, pc=0x0000000110dd6a18)
+java.util.Arrays.fill(Arrays.java:3130) - aastore @ bci 13 
+     Created vframeArray 0x00007fd64e866420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e866420 mode 2
+     {method} {0x000000010d7fa220} &apos;fill&apos; &apos;([Ljava/lang/Object;Ljava/lang/Object;)V&apos; in &apos;java/util/Arrays&apos; - aastore @ bci 13 sp = 0x0000000304710e88
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='480' compiler='C2' stamp='4.253'>
+Uncommon trap occurred in java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (@0x0000000110dab0f0) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='17' method='java/lang/invoke/LambdaForm$NamedFunction intrinsicName ()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;' bytes='21' count='32' iicount='32'/>
+<jvms bci='180' method='java/lang/invoke/InvokerBytecodeGenerator generateCustomizedCodeBytes ()[B' bytes='604' count='24' backedge_count='27' iicount='24' decompiles='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047109f0 unextended sp=0x00000003047109f0, fp=0x0000000000000003, real_fp=0x0000000304710a60, pc=0x0000000110dab0f0)
+     nmethod   4253  480             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047109f0, unextended_sp=0x00000003047109f0, fp=0x0000000000000003, pc=0x0000000110dab0f0)
+java.lang.invoke.LambdaForm$NamedFunction.intrinsicName(LambdaForm.java:1328) - invokevirtual @ bci 17 
+        1 - frame( sp=0x00000003047109f0, unextended_sp=0x00000003047109f0, fp=0x0000000000000003, pc=0x0000000110dab0f0)
+java.lang.invoke.InvokerBytecodeGenerator.generateCustomizedCodeBytes(InvokerBytecodeGenerator.java:668) - invokevirtual @ bci 180 
+     Created vframeArray 0x00007fd660056020
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd660056020 mode 2
+     {method} {0x000000010da338b8} &apos;generateCustomizedCodeBytes&apos; &apos;()[B&apos; in &apos;java/lang/invoke/InvokerBytecodeGenerator&apos; - invokevirtual @ bci 180 sp = 0x00000003047109d8
+     {method} {0x000000010da12310} &apos;intrinsicName&apos; &apos;()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;&apos; in &apos;java/lang/invoke/LambdaForm$NamedFunction&apos; - invokevirtual @ bci 17 sp = 0x0000000304710980
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='480' compiler='C2' count='1' state='#7' stamp='4.265'>
+Uncommon trap occurred in java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (@0x0000000110dab0f0) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='17' method='java/lang/invoke/LambdaForm$NamedFunction intrinsicName ()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;' bytes='21' count='33' iicount='33' bimorphic_traps='1'/>
+<jvms bci='180' method='java/lang/invoke/InvokerBytecodeGenerator generateCustomizedCodeBytes ()[B' bytes='604' count='24' backedge_count='29' iicount='24' decompiles='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710aa0 unextended sp=0x0000000304710aa0, fp=0x0000000000000002, real_fp=0x0000000304710b10, pc=0x0000000110dab0f0)
+     nmethod   4264  480             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710aa0, unextended_sp=0x0000000304710aa0, fp=0x0000000000000002, pc=0x0000000110dab0f0)
+java.lang.invoke.LambdaForm$NamedFunction.intrinsicName(LambdaForm.java:1328) - invokevirtual @ bci 17 
+        1 - frame( sp=0x0000000304710aa0, unextended_sp=0x0000000304710aa0, fp=0x0000000000000002, pc=0x0000000110dab0f0)
+java.lang.invoke.InvokerBytecodeGenerator.generateCustomizedCodeBytes(InvokerBytecodeGenerator.java:668) - invokevirtual @ bci 180 
+     Created vframeArray 0x00007fd64e866420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e866420 mode 2
+     {method} {0x000000010da338b8} &apos;generateCustomizedCodeBytes&apos; &apos;()[B&apos; in &apos;java/lang/invoke/InvokerBytecodeGenerator&apos; - invokevirtual @ bci 180 sp = 0x0000000304710a88
+     {method} {0x000000010da12310} &apos;intrinsicName&apos; &apos;()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;&apos; in &apos;java/lang/invoke/LambdaForm$NamedFunction&apos; - invokevirtual @ bci 17 sp = 0x0000000304710a30
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='480' compiler='C2' count='2' state='#7' stamp='4.279'>
+Uncommon trap occurred in java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (@0x0000000110dab0f0) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='17' method='java/lang/invoke/LambdaForm$NamedFunction intrinsicName ()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;' bytes='21' count='33' iicount='33' bimorphic_traps='2'/>
+<jvms bci='180' method='java/lang/invoke/InvokerBytecodeGenerator generateCustomizedCodeBytes ()[B' bytes='604' count='24' backedge_count='29' iicount='24' decompiles='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710230 unextended sp=0x0000000304710230, fp=0x0000000000000001, real_fp=0x00000003047102a0, pc=0x0000000110dab0f0)
+     nmethod   4279  480             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710230, unextended_sp=0x0000000304710230, fp=0x0000000000000001, pc=0x0000000110dab0f0)
+java.lang.invoke.LambdaForm$NamedFunction.intrinsicName(LambdaForm.java:1328) - invokevirtual @ bci 17 
+        1 - frame( sp=0x0000000304710230, unextended_sp=0x0000000304710230, fp=0x0000000000000001, pc=0x0000000110dab0f0)
+java.lang.invoke.InvokerBytecodeGenerator.generateCustomizedCodeBytes(InvokerBytecodeGenerator.java:668) - invokevirtual @ bci 180 
+     Created vframeArray 0x00007fd65e858a20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e858a20 mode 2
+     {method} {0x000000010da338b8} &apos;generateCustomizedCodeBytes&apos; &apos;()[B&apos; in &apos;java/lang/invoke/InvokerBytecodeGenerator&apos; - invokevirtual @ bci 180 sp = 0x0000000304710218
+     {method} {0x000000010da12310} &apos;intrinsicName&apos; &apos;()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;&apos; in &apos;java/lang/invoke/LambdaForm$NamedFunction&apos; - invokevirtual @ bci 17 sp = 0x00000003047101c0
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='556' compiler='C2' stamp='4.288'>
+Uncommon trap occurred in java.lang.invoke.InvokerBytecodeGenerator::emitReferenceCast (@0x0000000110dc40f0) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='3' method='java/lang/invoke/InvokerBytecodeGenerator emitReferenceCast (Ljava/lang/Class;Ljava/lang/Object;)V' bytes='184' count='26' backedge_count='1' iicount='51'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047109b0 unextended sp=0x00000003047109b0, fp=0x0000000795804f48, real_fp=0x00000003047109f0, pc=0x0000000110dc40f0)
+     nmethod   4288  556             java.lang.invoke.InvokerBytecodeGenerator::emitReferenceCast (184 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047109b0, unextended_sp=0x00000003047109b0, fp=0x0000000795804f48, pc=0x0000000110dc40f0)
+java.lang.invoke.InvokerBytecodeGenerator.emitReferenceCast(InvokerBytecodeGenerator.java:558) - instanceof @ bci 3 
+     Created vframeArray 0x00007fd65f86e420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f86e420 mode 2
+     {method} {0x000000010da330c0} &apos;emitReferenceCast&apos; &apos;(Ljava/lang/Class;Ljava/lang/Object;)V&apos; in &apos;java/lang/invoke/InvokerBytecodeGenerator&apos; - instanceof @ bci 3 sp = 0x0000000304710988
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='480' compiler='C2' count='3' state='#7' stamp='4.297'>
+Uncommon trap occurred in java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (@0x0000000110dab0f0) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='17' method='java/lang/invoke/LambdaForm$NamedFunction intrinsicName ()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;' bytes='21' count='36' iicount='36' bimorphic_traps='3'/>
+<jvms bci='180' method='java/lang/invoke/InvokerBytecodeGenerator generateCustomizedCodeBytes ()[B' bytes='604' count='24' backedge_count='34' iicount='24' decompiles='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711a90 unextended sp=0x0000000304711a90, fp=0x0000000000000001, real_fp=0x0000000304711b00, pc=0x0000000110dab0f0)
+     nmethod   4297  480             java.lang.invoke.InvokerBytecodeGenerator::generateCustomizedCodeBytes (604 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711a90, unextended_sp=0x0000000304711a90, fp=0x0000000000000001, pc=0x0000000110dab0f0)
+java.lang.invoke.LambdaForm$NamedFunction.intrinsicName(LambdaForm.java:1328) - invokevirtual @ bci 17 
+        1 - frame( sp=0x0000000304711a90, unextended_sp=0x0000000304711a90, fp=0x0000000000000001, pc=0x0000000110dab0f0)
+java.lang.invoke.InvokerBytecodeGenerator.generateCustomizedCodeBytes(InvokerBytecodeGenerator.java:668) - invokevirtual @ bci 180 
+     Created vframeArray 0x00007fd64e866420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e866420 mode 2
+     {method} {0x000000010da338b8} &apos;generateCustomizedCodeBytes&apos; &apos;()[B&apos; in &apos;java/lang/invoke/InvokerBytecodeGenerator&apos; - invokevirtual @ bci 180 sp = 0x0000000304711a78
+     {method} {0x000000010da12310} &apos;intrinsicName&apos; &apos;()Ljava/lang/invoke/MethodHandleImpl$Intrinsic;&apos; in &apos;java/lang/invoke/LambdaForm$NamedFunction&apos; - invokevirtual @ bci 17 sp = 0x0000000304711a20
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='556' compiler='C2' count='1' state='class_check' stamp='4.298'>
+Uncommon trap occurred in java.lang.invoke.InvokerBytecodeGenerator::emitReferenceCast (@0x0000000110dc40f0) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='3' method='java/lang/invoke/InvokerBytecodeGenerator emitReferenceCast (Ljava/lang/Class;Ljava/lang/Object;)V' bytes='184' count='26' backedge_count='1' iicount='51' class_check_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047119a0 unextended sp=0x00000003047119a0, fp=0x0000000795817840, real_fp=0x00000003047119e0, pc=0x0000000110dc40f0)
+     nmethod   4298  556             java.lang.invoke.InvokerBytecodeGenerator::emitReferenceCast (184 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047119a0, unextended_sp=0x00000003047119a0, fp=0x0000000795817840, pc=0x0000000110dc40f0)
+java.lang.invoke.InvokerBytecodeGenerator.emitReferenceCast(InvokerBytecodeGenerator.java:558) - instanceof @ bci 3 
+     Created vframeArray 0x00007fd65f86e420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f86e420 mode 2
+     {method} {0x000000010da330c0} &apos;emitReferenceCast&apos; &apos;(Ljava/lang/Class;Ljava/lang/Object;)V&apos; in &apos;java/lang/invoke/InvokerBytecodeGenerator&apos; - instanceof @ bci 3 sp = 0x0000000304711978
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='578' compiler='C2' stamp='4.347'>
+Uncommon trap occurred in jdk.internal.org.objectweb.asm.ClassWriter::visitMethod (@0x0000000110ddd3ac) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='61' method='jdk/internal/org/objectweb/asm/MethodWriter &lt;init&gt; (Ljdk/internal/org/objectweb/asm/ClassWriter;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;ZZ)V' bytes='268' count='25' backedge_count='1' iicount='50'/>
+<jvms bci='20' method='jdk/internal/org/objectweb/asm/ClassWriter visitMethod (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljdk/internal/org/objectweb/asm/MethodVisitor;' bytes='24' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711f10 unextended sp=0x0000000304711f10, fp=0x0000000795822408, real_fp=0x0000000304711fc0, pc=0x0000000110ddd3ac)
+     nmethod   4347  578             jdk.internal.org.objectweb.asm.ClassWriter::visitMethod (24 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711f10, unextended_sp=0x0000000304711f10, fp=0x0000000795822408, pc=0x0000000110ddd3ac)
+jdk.internal.org.objectweb.asm.MethodWriter.&lt;init&gt;(MethodWriter.java:494) - ifeq @ bci 61 
+        1 - frame( sp=0x0000000304711f10, unextended_sp=0x0000000304711f10, fp=0x0000000795822408, pc=0x0000000110ddd3ac)
+jdk.internal.org.objectweb.asm.ClassWriter.visitMethod(ClassWriter.java:822) - invokespecial @ bci 20 
+     Created vframeArray 0x00007fd64e866420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e866420 mode 2
+     {method} {0x000000010da3b888} &apos;visitMethod&apos; &apos;(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljdk/internal/org/objectweb/asm/MethodVisitor;&apos; in &apos;jdk/internal/org/objectweb/asm/ClassWriter&apos; - invokespecial @ bci 20 sp = 0x0000000304711f18
+     {method} {0x000000010da45ca0} &apos;&lt;init&gt;&apos; &apos;(Ljdk/internal/org/objectweb/asm/ClassWriter;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;ZZ)V&apos; in &apos;jdk/internal/org/objectweb/asm/MethodWriter&apos; - ifeq @ bci 61 sp = 0x0000000304711ec0
+<uncommon_trap thread='9987' reason='null_assert' action='make_not_entrant' compile_id='369' compiler='C2' stamp='4.352'>
+Uncommon trap occurred in jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (@0x0000000110d78008) thread=9987 reason=null_assert action=make_not_entrant unloaded_class_index=-1
+<jvms bci='35' method='jdk/internal/org/objectweb/asm/ClassWriter toByteArray ()[B' bytes='1289' count='18' backedge_count='27' iicount='18'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711f80 unextended sp=0x0000000304711f80, fp=0x00000000f2b04382, real_fp=0x0000000304711fe0, pc=0x0000000110d78008)
+     nmethod   4352  369             jdk.internal.org.objectweb.asm.ClassWriter::toByteArray (1289 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711f80, unextended_sp=0x0000000304711f80, fp=0x00000000f2b04382, pc=0x0000000110d78008)
+jdk.internal.org.objectweb.asm.ClassWriter.toByteArray(ClassWriter.java:846) - astore_3 @ bci 35 
+     Created vframeArray 0x00007fd65f86e420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f86e420 mode 2
+     {method} {0x000000010da3bff8} &apos;toByteArray&apos; &apos;()[B&apos; in &apos;jdk/internal/org/objectweb/asm/ClassWriter&apos; - astore_3 @ bci 35 sp = 0x0000000304711f40
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/util/HashMap$HashIterator' x='java/util/HashMap$ValueIterator' witness='java/util/HashMap$EntryIterator' stamp='4.382'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/util/HashMap$HashIterator' x='java/util/HashMap$ValueIterator' witness='java/util/HashMap$EntryIterator' stamp='4.382'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='java/util/HashMap$HashIterator' x='java/util/HashMap$ValueIterator' witness='java/util/HashMap$EntryIterator' stamp='4.382'/>
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='296' compiler='C2' stamp='4.389'>
+Uncommon trap occurred in java.util.Arrays::equals (@0x0000000110d4a5cc) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='62' method='java/util/Arrays equals ([Ljava/lang/Object;[Ljava/lang/Object;)Z' bytes='78' count='17' backedge_count='28' iicount='17'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047124e0 unextended sp=0x00000003047124e0, fp=0x0000000795801558, real_fp=0x0000000304712520, pc=0x0000000110d4a5cc)
+     nmethod   4388  296             java.util.Arrays::equals (78 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047124e0, unextended_sp=0x00000003047124e0, fp=0x0000000795801558, pc=0x0000000110d4a5cc)
+java.util.Arrays.equals(Arrays.java:2829) - invokevirtual @ bci 62 
+     Created vframeArray 0x00007fd65f870820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f870820 mode 2
+     {method} {0x000000010d7f91b0} &apos;equals&apos; &apos;([Ljava/lang/Object;[Ljava/lang/Object;)Z&apos; in &apos;java/util/Arrays&apos; - invokevirtual @ bci 62 sp = 0x00000003047124a0
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='418' compiler='C2' stamp='4.389'>
+Uncommon trap occurred in java.lang.invoke.LambdaForm::normalize (@0x0000000110d88954) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='35' method='java/lang/invoke/LambdaForm normalize ()I' bytes='322' count='7' backedge_count='31' iicount='19' decompiles='1' uninitialized_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712370 unextended sp=0x0000000304712370, fp=0x0000000000000001, real_fp=0x00000003047123c0, pc=0x0000000110d88954)
+     nmethod   4389  418             java.lang.invoke.LambdaForm::normalize (322 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712370, unextended_sp=0x0000000304712370, fp=0x0000000000000001, pc=0x0000000110d88954)
+java.lang.invoke.LambdaForm.normalize(LambdaForm.java:412) - ifne @ bci 35 
+     Created vframeArray 0x00007fd64e866420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e866420 mode 2
+     {method} {0x000000010d720d08} &apos;normalize&apos; &apos;()I&apos; in &apos;java/lang/invoke/LambdaForm&apos; - ifne @ bci 35 sp = 0x0000000304712320
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='296' compiler='C2' count='1' state='class_check' stamp='4.467'>
+Uncommon trap occurred in java.util.Arrays::equals (@0x0000000110d4a5cc) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='62' method='java/util/Arrays equals ([Ljava/lang/Object;[Ljava/lang/Object;)Z' bytes='78' count='17' backedge_count='29' iicount='17' class_check_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047125b0 unextended sp=0x00000003047125b0, fp=0x000000079581da08, real_fp=0x00000003047125f0, pc=0x0000000110d4a5cc)
+     nmethod   4467  296             java.util.Arrays::equals (78 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047125b0, unextended_sp=0x00000003047125b0, fp=0x000000079581da08, pc=0x0000000110d4a5cc)
+java.util.Arrays.equals(Arrays.java:2829) - invokevirtual @ bci 62 
+     Created vframeArray 0x00007fd65e858a20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e858a20 mode 2
+     {method} {0x000000010d7f91b0} &apos;equals&apos; &apos;([Ljava/lang/Object;[Ljava/lang/Object;)Z&apos; in &apos;java/util/Arrays&apos; - invokevirtual @ bci 62 sp = 0x0000000304712570
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='296' compiler='C2' count='2' state='class_check' stamp='4.561'>
+Uncommon trap occurred in java.util.Arrays::equals (@0x0000000110d4a5cc) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='62' method='java/util/Arrays equals ([Ljava/lang/Object;[Ljava/lang/Object;)Z' bytes='78' count='17' backedge_count='30' iicount='17' class_check_traps='2'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047125b0 unextended sp=0x00000003047125b0, fp=0x0000000795833f18, real_fp=0x00000003047125f0, pc=0x0000000110d4a5cc)
+     nmethod   4561  296             java.util.Arrays::equals (78 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047125b0, unextended_sp=0x00000003047125b0, fp=0x0000000795833f18, pc=0x0000000110d4a5cc)
+java.util.Arrays.equals(Arrays.java:2829) - invokevirtual @ bci 62 
+     Created vframeArray 0x00007fd65f870820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f870820 mode 2
+     {method} {0x000000010d7f91b0} &apos;equals&apos; &apos;([Ljava/lang/Object;[Ljava/lang/Object;)Z&apos; in &apos;java/util/Arrays&apos; - invokevirtual @ bci 62 sp = 0x0000000304712570
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='296' compiler='C2' count='3' state='class_check' stamp='4.561'>
+Uncommon trap occurred in java.util.Arrays::equals (@0x0000000110d4a5cc) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='62' method='java/util/Arrays equals ([Ljava/lang/Object;[Ljava/lang/Object;)Z' bytes='78' count='17' backedge_count='31' iicount='17' class_check_traps='3'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047125b0 unextended sp=0x00000003047125b0, fp=0x0000000795834198, real_fp=0x00000003047125f0, pc=0x0000000110d4a5cc)
+     nmethod   4561  296             java.util.Arrays::equals (78 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047125b0, unextended_sp=0x00000003047125b0, fp=0x0000000795834198, pc=0x0000000110d4a5cc)
+java.util.Arrays.equals(Arrays.java:2829) - invokevirtual @ bci 62 
+     Created vframeArray 0x00007fd64e866420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e866420 mode 2
+     {method} {0x000000010d7f91b0} &apos;equals&apos; &apos;([Ljava/lang/Object;[Ljava/lang/Object;)Z&apos; in &apos;java/util/Arrays&apos; - invokevirtual @ bci 62 sp = 0x0000000304712570
+<uncommon_trap thread='9987' reason='predicate' action='maybe_recompile' compile_id='650' compiler='C2' stamp='4.636'>
+Uncommon trap occurred in java.util.Arrays::fill (@0x0000000110e0af78) thread=9987 reason=predicate action=maybe_recompile unloaded_class_index=-1
+<jvms bci='16' method='java/util/Arrays fill ([Ljava/lang/Object;IILjava/lang/Object;)V' bytes='28' count='25' backedge_count='26' iicount='26'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712530 unextended sp=0x0000000304712530, fp=0x000000079585ede0, real_fp=0x0000000304712580, pc=0x0000000110e0af78)
+     nmethod   4635  650             java.util.Arrays::fill (28 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712530, unextended_sp=0x0000000304712530, fp=0x000000079585ede0, pc=0x0000000110e0af78)
+java.util.Arrays.fill(Arrays.java:3155) - fast_aload_0 @ bci 16 
+     Created vframeArray 0x00007fd65f870820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f870820 mode 2
+     {method} {0x000000010d7fa320} &apos;fill&apos; &apos;([Ljava/lang/Object;IILjava/lang/Object;)V&apos; in &apos;java/util/Arrays&apos; - aload_0 @ bci 16 sp = 0x0000000304712528
+<uncommon_trap thread='9987' reason='array_check' action='maybe_recompile' compile_id='601' compiler='C2' count='1' state='array_check' stamp='4.679'>
+Uncommon trap occurred in java.util.Arrays::fill (@0x0000000110dd6a18) thread=9987 reason=array_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='13' method='java/util/Arrays fill ([Ljava/lang/Object;Ljava/lang/Object;)V' bytes='21' count='12' backedge_count='46' iicount='12' decompiles='1' array_check_traps='1' predicate_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304711f90 unextended sp=0x0000000304711f90, fp=0x000000000000000a, real_fp=0x0000000304711fe0, pc=0x0000000110dd6a18)
+     nmethod   4678  601             java.util.Arrays::fill (21 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304711f90, unextended_sp=0x0000000304711f90, fp=0x000000000000000a, pc=0x0000000110dd6a18)
+java.util.Arrays.fill(Arrays.java:3130) - aastore @ bci 13 
+     Created vframeArray 0x00007fd65f871c20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f871c20 mode 2
+     {method} {0x000000010d7fa220} &apos;fill&apos; &apos;([Ljava/lang/Object;Ljava/lang/Object;)V&apos; in &apos;java/util/Arrays&apos; - aastore @ bci 13 sp = 0x0000000304711f58
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<dependency_failed type='abstract_with_unique_concrete_subtype' ctxk='jdk/internal/org/objectweb/asm/MethodVisitor' x='jdk/internal/org/objectweb/asm/MethodWriter' witness='java/lang/invoke/TypeConvertingMethodAdapter' stamp='4.689'/>
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='120' compiler='C2' count='2' state='class_check' stamp='4.836'>
+Uncommon trap occurred in java.net.URL::&lt;init&gt; (@0x0000000110cedd04) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='504' method='java/net/URL &lt;init&gt; (Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V' bytes='543' count='7' backedge_count='30' iicount='14' class_check_traps='2'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047112b0 unextended sp=0x00000003047112b0, fp=0x00000000f8007362, real_fp=0x0000000304711320, pc=0x0000000110cedd04)
+     nmethod   4835  120   !         java.net.URL::&lt;init&gt; (543 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047112b0, unextended_sp=0x00000003047112b0, fp=0x00000000f8007362, pc=0x0000000110cedd04)
+java.net.URL.&lt;init&gt;(URL.java:640) - invokevirtual @ bci 504 
+     Created vframeArray 0x00007fd65f870820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f870820 mode 2
+     {method} {0x000000010d753008} &apos;&lt;init&gt;&apos; &apos;(Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V&apos; in &apos;java/net/URL&apos; - invokevirtual @ bci 504 sp = 0x0000000304711238
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='120' compiler='C2' count='3' state='class_check' stamp='4.842'>
+Uncommon trap occurred in java.net.URL::&lt;init&gt; (@0x0000000110cedd04) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='504' method='java/net/URL &lt;init&gt; (Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V' bytes='543' count='7' backedge_count='30' iicount='14' class_check_traps='3'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304710440 unextended sp=0x0000000304710440, fp=0x00000000f8007362, real_fp=0x00000003047104b0, pc=0x0000000110cedd04)
+     nmethod   4841  120   !         java.net.URL::&lt;init&gt; (543 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304710440, unextended_sp=0x0000000304710440, fp=0x00000000f8007362, pc=0x0000000110cedd04)
+java.net.URL.&lt;init&gt;(URL.java:640) - invokevirtual @ bci 504 
+     Created vframeArray 0x00007fd64e866420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e866420 mode 2
+     {method} {0x000000010d753008} &apos;&lt;init&gt;&apos; &apos;(Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V&apos; in &apos;java/net/URL&apos; - invokevirtual @ bci 504 sp = 0x00000003047103c8
+<uncommon_trap thread='9987' reason='null_check' action='make_not_entrant' compile_id='414' compiler='C2' stamp='5.032'>
+Uncommon trap occurred in java.lang.reflect.Array::newInstance (@0x0000000110d81dbc) thread=9987 reason=null_check action=make_not_entrant unloaded_class_index=-1
+<jvms bci='2' method='java/lang/reflect/Array newInstance (Ljava/lang/Class;I)Ljava/lang/Object;' bytes='6' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712c60 unextended sp=0x0000000304712c60, fp=0x00000007958dda48, real_fp=0x0000000304712c90, pc=0x0000000110d81dbc)
+     nmethod   5032  414             java.lang.reflect.Array::newInstance (6 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712c60, unextended_sp=0x0000000304712c60, fp=0x00000007958dda48, pc=0x0000000110d81dbc)
+java.lang.reflect.Array.newInstance(Array.java:75) - invokestatic @ bci 2 
+     Created vframeArray 0x00007fd64e87d620
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e87d620 mode 2
+     {method} {0x000000010da03f70} &apos;newInstance&apos; &apos;(Ljava/lang/Class;I)Ljava/lang/Object;&apos; in &apos;java/lang/reflect/Array&apos; - invokestatic @ bci 2 sp = 0x0000000304712c30
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='702' compiler='C2' stamp='5.082'>
+Uncommon trap occurred in sun.reflect.generics.parser.SignatureParser::skipIdentifier (@0x0000000110e301b8) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='32' method='sun/reflect/generics/parser/SignatureParser skipIdentifier ()V' bytes='67' count='6' backedge_count='29' iicount='6'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712ce0 unextended sp=0x0000000304712ce0, fp=0x00000007955bde98, real_fp=0x0000000304712d10, pc=0x0000000110e301b8)
+     nmethod   5082  702             sun.reflect.generics.parser.SignatureParser::skipIdentifier (67 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712ce0, unextended_sp=0x0000000304712ce0, fp=0x00000007955bde98, pc=0x0000000110e301b8)
+sun.reflect.generics.parser.SignatureParser.skipIdentifier(SignatureParser.java:262) - if_icmpeq @ bci 32 
+     Created vframeArray 0x00007fd65f870820
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f870820 mode 2
+     {method} {0x000000010db429b0} &apos;skipIdentifier&apos; &apos;()V&apos; in &apos;sun/reflect/generics/parser/SignatureParser&apos; - if_icmpeq @ bci 32 sp = 0x0000000304712ca8
+<uncommon_trap thread='9987' reason='unloaded' action='reinterpret' index='37' compile_id='543' compiler='C2' unresolved='1' name='java/lang/invoke/DirectMethodHandle$Special' stamp='5.259'>
+Uncommon trap occurred in java.lang.invoke.DirectMethodHandle::make (@0x0000000110dc5908) thread=9987 reason=unloaded action=reinterpret unloaded_class_index=37 unresolved class: java/lang/invoke/DirectMethodHandle$Special
+<jvms bci='103' method='java/lang/invoke/DirectMethodHandle make (BLjava/lang/Class;Ljava/lang/invoke/MemberName;)Ljava/lang/invoke/DirectMethodHandle;' bytes='242' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047124b0 unextended sp=0x00000003047124b0, fp=0x000000079591ca70, real_fp=0x0000000304712510, pc=0x0000000110dc5908)
+     nmethod   5259  543             java.lang.invoke.DirectMethodHandle::make (242 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047124b0, unextended_sp=0x00000003047124b0, fp=0x000000079591ca70, pc=0x0000000110dc5908)
+java.lang.invoke.DirectMethodHandle.make(DirectMethodHandle.java:82) - new @ bci 103 
+     Created vframeArray 0x00007fd64e87e420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e87e420 mode 2
+     {method} {0x000000010d70be40} &apos;make&apos; &apos;(BLjava/lang/Class;Ljava/lang/invoke/MemberName;)Ljava/lang/invoke/DirectMethodHandle;&apos; in &apos;java/lang/invoke/DirectMethodHandle&apos; - new @ bci 103 sp = 0x0000000304712498
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='681' compiler='C2' stamp='5.353'>
+Uncommon trap occurred in java.util.HashMap::getNode (@0x0000000110e1d728) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='49' method='java/util/HashMap getNode (ILjava/lang/Object;)Ljava/util/HashMap$Node;' bytes='148' count='26' backedge_count='1' iicount='136' decompiles='2' class_check_traps='4' bimorphic_traps='4' overflow_recompiles='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712ef0 unextended sp=0x0000000304712ef0, fp=0x000000006c5e6e2c, real_fp=0x0000000304712f30, pc=0x0000000110e1d728)
+     nmethod   5353  681             java.util.HashMap::getNode (148 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712ef0, unextended_sp=0x0000000304712ef0, fp=0x000000006c5e6e2c, pc=0x0000000110e1d728)
+java.util.HashMap.getNode(HashMap.java:572) - if_acmpeq @ bci 49 
+     Created vframeArray 0x00007fd65e864220
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e864220 mode 2
+     {method} {0x000000010d7c0dc8} &apos;getNode&apos; &apos;(ILjava/lang/Object;)Ljava/util/HashMap$Node;&apos; in &apos;java/util/HashMap&apos; - if_acmpeq @ bci 49 sp = 0x0000000304712e90
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='754' compiler='C2' stamp='5.381'>
+Uncommon trap occurred in java.util.HashMap::putVal (@0x0000000110e4fa44) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='284' method='java/util/HashMap putVal (ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;' bytes='300' count='25' backedge_count='1' iicount='73'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712de0 unextended sp=0x0000000304712de0, fp=0x0000000795958f38, real_fp=0x0000000304712e80, pc=0x0000000110e4fa44)
+     nmethod   5381  754             java.util.HashMap::putVal (300 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712de0, unextended_sp=0x0000000304712de0, fp=0x0000000795958f38, pc=0x0000000110e4fa44)
+java.util.HashMap.putVal(HashMap.java:663) - if_icmple @ bci 284 
+     Created vframeArray 0x00007fd66005ea20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd66005ea20 mode 2
+     {method} {0x000000010d7c1238} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos; - if_icmple @ bci 284 sp = 0x0000000304712db8
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='773' compiler='C2' stamp='5.483'>
+Uncommon trap occurred in sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::equals (@0x0000000110e53d2c) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='1' method='sun/misc/ProxyGenerator$ConstantPool$IndirectEntry equals (Ljava/lang/Object;)Z' bytes='49' count='26' backedge_count='1' iicount='51'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712e90 unextended sp=0x0000000304712e90, fp=0x0000000795963408, real_fp=0x0000000304712ec0, pc=0x0000000110e53d2c)
+     nmethod   5483  773             sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::equals (49 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712e90, unextended_sp=0x0000000304712e90, fp=0x0000000795963408, pc=0x0000000110e53d2c)
+sun.misc.ProxyGenerator$ConstantPool$IndirectEntry.equals(ProxyGenerator.java:2019) - instanceof @ bci 1 
+     Created vframeArray 0x00007fd65e864220
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e864220 mode 2
+     {method} {0x000000010db891f0} &apos;equals&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;sun/misc/ProxyGenerator$ConstantPool$IndirectEntry&apos; - instanceof @ bci 1 sp = 0x0000000304712e50
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='773' compiler='C2' count='1' state='class_check' stamp='5.484'>
+Uncommon trap occurred in sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::equals (@0x0000000110e53d2c) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='1' method='sun/misc/ProxyGenerator$ConstantPool$IndirectEntry equals (Ljava/lang/Object;)Z' bytes='49' count='26' backedge_count='1' iicount='51' class_check_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712ea0 unextended sp=0x0000000304712ea0, fp=0x0000000795963408, real_fp=0x0000000304712ed0, pc=0x0000000110e53d2c)
+     nmethod   5483  773             sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::equals (49 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712ea0, unextended_sp=0x0000000304712ea0, fp=0x0000000795963408, pc=0x0000000110e53d2c)
+sun.misc.ProxyGenerator$ConstantPool$IndirectEntry.equals(ProxyGenerator.java:2019) - instanceof @ bci 1 
+     Created vframeArray 0x00007fd65f879a20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f879a20 mode 2
+     {method} {0x000000010db891f0} &apos;equals&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;sun/misc/ProxyGenerator$ConstantPool$IndirectEntry&apos; - instanceof @ bci 1 sp = 0x0000000304712e60
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='773' compiler='C2' count='2' state='class_check' stamp='5.493'>
+Uncommon trap occurred in sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::equals (@0x0000000110e53d2c) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='1' method='sun/misc/ProxyGenerator$ConstantPool$IndirectEntry equals (Ljava/lang/Object;)Z' bytes='49' count='26' backedge_count='1' iicount='51' class_check_traps='2'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304712e40 unextended sp=0x0000000304712e40, fp=0x0000000795965600, real_fp=0x0000000304712e70, pc=0x0000000110e53d2c)
+     nmethod   5493  773             sun.misc.ProxyGenerator$ConstantPool$IndirectEntry::equals (49 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304712e40, unextended_sp=0x0000000304712e40, fp=0x0000000795965600, pc=0x0000000110e53d2c)
+sun.misc.ProxyGenerator$ConstantPool$IndirectEntry.equals(ProxyGenerator.java:2019) - instanceof @ bci 1 
+     Created vframeArray 0x00007fd66005ea20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd66005ea20 mode 2
+     {method} {0x000000010db891f0} &apos;equals&apos; &apos;(Ljava/lang/Object;)Z&apos; in &apos;sun/misc/ProxyGenerator$ConstantPool$IndirectEntry&apos; - instanceof @ bci 1 sp = 0x0000000304712e00
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='778' compiler='C2' stamp='5.494'>
+Uncommon trap occurred in java.io.DataOutputStream::writeShort (@0x0000000110e56984) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='12' method='java/io/DataOutputStream writeShort (I)V' bytes='35' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304713100 unextended sp=0x0000000304713100, fp=0x000000000000008b, real_fp=0x0000000304713130, pc=0x0000000110e56984)
+     nmethod   5493  778             java.io.DataOutputStream::writeShort (35 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304713100, unextended_sp=0x0000000304713100, fp=0x000000000000008b, pc=0x0000000110e56984)
+java.io.DataOutputStream.writeShort(DataOutputStream.java:167) - invokevirtual @ bci 12 
+     Created vframeArray 0x00007fd660060a20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd660060a20 mode 2
+     {method} {0x000000010db87aa0} &apos;writeShort&apos; &apos;(I)V&apos; in &apos;java/io/DataOutputStream&apos; - invokevirtual @ bci 12 sp = 0x00000003047130d0
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='769' compiler='C2' stamp='5.494'>
+Uncommon trap occurred in java.io.DataOutputStream::writeByte (@0x0000000110e49f04) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='5' method='java/io/DataOutputStream writeByte (I)V' bytes='14' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047130a0 unextended sp=0x00000003047130a0, fp=0x0000000795965f80, real_fp=0x00000003047130d0, pc=0x0000000110e49f04)
+     nmethod   5494  769             java.io.DataOutputStream::writeByte (14 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047130a0, unextended_sp=0x00000003047130a0, fp=0x0000000795965f80, pc=0x0000000110e49f04)
+java.io.DataOutputStream.writeByte(DataOutputStream.java:153) - invokevirtual @ bci 5 
+     Created vframeArray 0x00007fd66005ea20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd66005ea20 mode 2
+     {method} {0x000000010db879b8} &apos;writeByte&apos; &apos;(I)V&apos; in &apos;java/io/DataOutputStream&apos; - invokevirtual @ bci 5 sp = 0x0000000304713070
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='769' compiler='C2' count='1' state='class_check' stamp='5.494'>
+Uncommon trap occurred in java.io.DataOutputStream::writeByte (@0x0000000110e49f04) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='5' method='java/io/DataOutputStream writeByte (I)V' bytes='14' count='25' backedge_count='1' iicount='50' class_check_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047130a0 unextended sp=0x00000003047130a0, fp=0x0000000795965f80, real_fp=0x00000003047130d0, pc=0x0000000110e49f04)
+     nmethod   5494  769             java.io.DataOutputStream::writeByte (14 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047130a0, unextended_sp=0x00000003047130a0, fp=0x0000000795965f80, pc=0x0000000110e49f04)
+java.io.DataOutputStream.writeByte(DataOutputStream.java:153) - invokevirtual @ bci 5 
+     Created vframeArray 0x00007fd65e864220
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e864220 mode 2
+     {method} {0x000000010db879b8} &apos;writeByte&apos; &apos;(I)V&apos; in &apos;java/io/DataOutputStream&apos; - invokevirtual @ bci 5 sp = 0x0000000304713070
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='769' compiler='C2' count='2' state='class_check' stamp='5.495'>
+Uncommon trap occurred in java.io.DataOutputStream::writeByte (@0x0000000110e49f04) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='5' method='java/io/DataOutputStream writeByte (I)V' bytes='14' count='25' backedge_count='1' iicount='50' class_check_traps='2'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047130a0 unextended sp=0x00000003047130a0, fp=0x0000000795965f80, real_fp=0x00000003047130d0, pc=0x0000000110e49f04)
+     nmethod   5494  769             java.io.DataOutputStream::writeByte (14 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047130a0, unextended_sp=0x00000003047130a0, fp=0x0000000795965f80, pc=0x0000000110e49f04)
+java.io.DataOutputStream.writeByte(DataOutputStream.java:153) - invokevirtual @ bci 5 
+     Created vframeArray 0x00007fd64e87e420
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e87e420 mode 2
+     {method} {0x000000010db879b8} &apos;writeByte&apos; &apos;(I)V&apos; in &apos;java/io/DataOutputStream&apos; - invokevirtual @ bci 5 sp = 0x0000000304713070
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='769' compiler='C2' count='3' state='class_check' stamp='5.523'>
+Uncommon trap occurred in java.io.DataOutputStream::writeByte (@0x0000000110e49f04) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='5' method='java/io/DataOutputStream writeByte (I)V' bytes='14' count='25' backedge_count='1' iicount='50' class_check_traps='3'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047130a0 unextended sp=0x00000003047130a0, fp=0x0000000795965f80, real_fp=0x00000003047130d0, pc=0x0000000110e49f04)
+     nmethod   5522  769             java.io.DataOutputStream::writeByte (14 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047130a0, unextended_sp=0x00000003047130a0, fp=0x0000000795965f80, pc=0x0000000110e49f04)
+java.io.DataOutputStream.writeByte(DataOutputStream.java:153) - invokevirtual @ bci 5 
+     Created vframeArray 0x00007fd65e864220
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e864220 mode 2
+     {method} {0x000000010db879b8} &apos;writeByte&apos; &apos;(I)V&apos; in &apos;java/io/DataOutputStream&apos; - invokevirtual @ bci 5 sp = 0x0000000304713070
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='778' compiler='C2' count='1' state='class_check' stamp='5.523'>
+Uncommon trap occurred in java.io.DataOutputStream::writeShort (@0x0000000110e56984) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='12' method='java/io/DataOutputStream writeShort (I)V' bytes='35' count='25' backedge_count='1' iicount='50' class_check_traps='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047130a0 unextended sp=0x00000003047130a0, fp=0x0000000000000005, real_fp=0x00000003047130d0, pc=0x0000000110e56984)
+     nmethod   5523  778             java.io.DataOutputStream::writeShort (35 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047130a0, unextended_sp=0x00000003047130a0, fp=0x0000000000000005, pc=0x0000000110e56984)
+java.io.DataOutputStream.writeShort(DataOutputStream.java:167) - invokevirtual @ bci 12 
+     Created vframeArray 0x00007fd66005ea20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd66005ea20 mode 2
+     {method} {0x000000010db87aa0} &apos;writeShort&apos; &apos;(I)V&apos; in &apos;java/io/DataOutputStream&apos; - invokevirtual @ bci 12 sp = 0x0000000304713070
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='778' compiler='C2' count='2' state='class_check' stamp='5.524'>
+Uncommon trap occurred in java.io.DataOutputStream::writeShort (@0x0000000110e56984) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='12' method='java/io/DataOutputStream writeShort (I)V' bytes='35' count='25' backedge_count='1' iicount='50' class_check_traps='2'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047130a0 unextended sp=0x00000003047130a0, fp=0x0000000000000001, real_fp=0x00000003047130d0, pc=0x0000000110e56984)
+     nmethod   5523  778             java.io.DataOutputStream::writeShort (35 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047130a0, unextended_sp=0x00000003047130a0, fp=0x0000000000000001, pc=0x0000000110e56984)
+java.io.DataOutputStream.writeShort(DataOutputStream.java:167) - invokevirtual @ bci 12 
+     Created vframeArray 0x00007fd65f879a20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f879a20 mode 2
+     {method} {0x000000010db87aa0} &apos;writeShort&apos; &apos;(I)V&apos; in &apos;java/io/DataOutputStream&apos; - invokevirtual @ bci 12 sp = 0x0000000304713070
+<uncommon_trap thread='9987' reason='class_check' action='maybe_recompile' compile_id='778' compiler='C2' count='3' state='class_check' stamp='5.524'>
+Uncommon trap occurred in java.io.DataOutputStream::writeShort (@0x0000000110e56984) thread=9987 reason=class_check action=maybe_recompile unloaded_class_index=-1
+<jvms bci='12' method='java/io/DataOutputStream writeShort (I)V' bytes='35' count='25' backedge_count='1' iicount='50' class_check_traps='3'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047130a0 unextended sp=0x00000003047130a0, fp=0x0000000000000002, real_fp=0x00000003047130d0, pc=0x0000000110e56984)
+     nmethod   5524  778             java.io.DataOutputStream::writeShort (35 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047130a0, unextended_sp=0x00000003047130a0, fp=0x0000000000000002, pc=0x0000000110e56984)
+java.io.DataOutputStream.writeShort(DataOutputStream.java:167) - invokevirtual @ bci 12 
+     Created vframeArray 0x00007fd64e87fe20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd64e87fe20 mode 2
+     {method} {0x000000010db87aa0} &apos;writeShort&apos; &apos;(I)V&apos; in &apos;java/io/DataOutputStream&apos; - invokevirtual @ bci 12 sp = 0x0000000304713070
+<uncommon_trap thread='9987' reason='bimorphic' action='maybe_recompile' compile_id='672' compiler='C2' stamp='6.374'>
+Uncommon trap occurred in java.util.WeakHashMap::hash (@0x0000000110df1da8) thread=9987 reason=bimorphic action=maybe_recompile unloaded_class_index=-1
+<jvms bci='1' method='java/util/WeakHashMap hash (Ljava/lang/Object;)I' bytes='28' count='25' backedge_count='1' iicount='50'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x00000003047114d0 unextended sp=0x00000003047114d0, fp=0x0000000795582558, real_fp=0x00000003047114f0, pc=0x0000000110df1da8)
+     nmethod   6373  672             java.util.WeakHashMap::hash (28 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x00000003047114d0, unextended_sp=0x00000003047114d0, fp=0x0000000795582558, pc=0x0000000110df1da8)
+java.util.WeakHashMap.hash(WeakHashMap.java:298) - invokevirtual @ bci 1 
+     Created vframeArray 0x00007fd65e834c20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65e834c20 mode 2
+     {method} {0x000000010d7eacf8} &apos;hash&apos; &apos;(Ljava/lang/Object;)I&apos; in &apos;java/util/WeakHashMap&apos; - invokevirtual @ bci 1 sp = 0x0000000304711490
+<writer thread='32259'/>
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=14 final=1 eliminate_boxing=1 load=579:LoadN ld_adr=578:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=14 final=1 eliminate_boxing=1 load=579:LoadN ld_adr=578:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=605:LoadI ld_adr=604:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=605:LoadI ld_adr=604:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=15 final=1 eliminate_boxing=1 load=610:LoadN ld_adr=609:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=15 final=1 eliminate_boxing=1 load=610:LoadN ld_adr=609:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=636:LoadL ld_adr=635:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=636:LoadL ld_adr=635:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=17 final=1 eliminate_boxing=1 load=643:LoadN ld_adr=642:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=17 final=1 eliminate_boxing=1 load=643:LoadN ld_adr=642:AddP st=572:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=570:MemBarReleaseLock current=572:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=570:MemBarReleaseLock mem=568:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=14 final=1 eliminate_boxing=1 load=761:LoadN ld_adr=760:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=14 final=1 eliminate_boxing=1 load=761:LoadN ld_adr=760:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=787:LoadI ld_adr=786:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=787:LoadI ld_adr=786:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=15 final=1 eliminate_boxing=1 load=790:LoadN ld_adr=789:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=15 final=1 eliminate_boxing=1 load=790:LoadN ld_adr=789:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=816:LoadL ld_adr=815:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=816:LoadL ld_adr=815:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=20 final=1 eliminate_boxing=1 load=823:LoadN ld_adr=822:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=20 final=1 eliminate_boxing=1 load=823:LoadN ld_adr=822:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=22 final=0 eliminate_boxing=1 load=918:LoadI ld_adr=917:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=22 final=0 eliminate_boxing=1 load=918:LoadI ld_adr=917:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=929:LoadN ld_adr=928:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=929:LoadN ld_adr=928:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=955:LoadN ld_adr=928:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=955:LoadN ld_adr=928:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=958:LoadN ld_adr=928:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=958:LoadN ld_adr=928:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=1043:LoadN ld_adr=928:AddP st=1007:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=1043:LoadN ld_adr=928:AddP st=1007:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1087:LoadI ld_adr=1086:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1087:LoadI ld_adr=1086:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=25 final=1 eliminate_boxing=1 load=1188:LoadN ld_adr=1187:AddP st=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=25 final=1 eliminate_boxing=1 load=1188:LoadN ld_adr=1187:AddP st=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=14 final=1 eliminate_boxing=1 load=1263:LoadN ld_adr=1262:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=14 final=1 eliminate_boxing=1 load=1263:LoadN ld_adr=1262:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1289:LoadI ld_adr=1288:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1289:LoadI ld_adr=1288:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=15 final=1 eliminate_boxing=1 load=1293:LoadN ld_adr=1292:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=15 final=1 eliminate_boxing=1 load=1293:LoadN ld_adr=1292:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=1319:LoadL ld_adr=1318:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=1319:LoadL ld_adr=1318:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=20 final=1 eliminate_boxing=1 load=1326:LoadN ld_adr=1325:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=20 final=1 eliminate_boxing=1 load=1326:LoadN ld_adr=1325:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=605:LoadI ld_adr=604:AddP st=338:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=605:LoadI ld_adr=604:AddP st=338:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=636:LoadL ld_adr=635:AddP st=338:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=636:LoadL ld_adr=635:AddP st=338:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=787:LoadI ld_adr=786:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=787:LoadI ld_adr=786:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=816:LoadL ld_adr=815:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=816:LoadL ld_adr=815:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=1319:LoadL ld_adr=1318:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=1319:LoadL ld_adr=1318:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=22 final=0 eliminate_boxing=1 load=918:LoadI ld_adr=917:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=22 final=0 eliminate_boxing=1 load=918:LoadI ld_adr=917:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1289:LoadI ld_adr=1288:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1289:LoadI ld_adr=1288:AddP st=1207:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=165 holder=1205:MemBarReleaseLock current=1207:Proj
+C2_CSV step compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=1205:MemBarReleaseLock opc=165 current=1207:Proj merge=1182:MergeMem base=1152:Phi slice=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1087:LoadI ld_adr=1086:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1087:LoadI ld_adr=1086:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=25 final=1 eliminate_boxing=1 load=1188:LoadN ld_adr=1187:AddP st=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=25 final=1 eliminate_boxing=1 load=1188:LoadN ld_adr=1187:AddP st=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=1043:LoadN ld_adr=928:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=23 final=1 eliminate_boxing=1 load=1043:LoadN ld_adr=928:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=605:LoadI ld_adr=604:AddP st=338:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=605:LoadI ld_adr=604:AddP st=338:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=636:LoadL ld_adr=635:AddP st=338:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=636:LoadL ld_adr=635:AddP st=338:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=787:LoadI ld_adr=786:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=787:LoadI ld_adr=786:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=816:LoadL ld_adr=815:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=816:LoadL ld_adr=815:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=1319:LoadL ld_adr=1318:AddP st=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=1319:LoadL ld_adr=1318:AddP st=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=22 final=0 eliminate_boxing=1 load=918:LoadI ld_adr=917:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=22 final=0 eliminate_boxing=1 load=918:LoadI ld_adr=917:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=816:LoadL ld_adr=815:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=16 final=1 eliminate_boxing=1 load=816:LoadL ld_adr=815:AddP st=699:Proj
+C2_CSV probe compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 opc=159 holder=697:MemBarAcquire current=699:Proj
+C2_CSV membar-no-mergemem compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop step=1 membar=697:MemBarAcquire mem=679:Proj
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1289:LoadI ld_adr=1288:AddP st=1152:Phi
+C2_CSV enter compile_id=903 entry_bci=78 osr=1 method= repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop alias_idx=9 final=1 eliminate_boxing=1 load=1289:LoadI ld_adr=1288:AddP st=1152:Phi
+<writer thread='9987'/>
+<uncommon_trap thread='9987' reason='unstable_if' action='reinterpret' compile_id='903' compile_kind='osr' compiler='C2' stamp='6.562'>
+Uncommon trap occurred in repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop (@0x0000000110ea8d98) thread=9987 reason=unstable_if action=reinterpret unloaded_class_index=-1
+<jvms bci='83' method='repro/ResolvableTypeC2Repro exerciseOsrMemBarLoop (II)V' bytes='485' count='1' backedge_count='1039' iicount='1'/>
+</uncommon_trap>
+DEOPT PACKING thread 0x00007fd66000a800 Compiled frame (sp=0x0000000304713800 unextended sp=0x0000000304713800, fp=0x0000000000000000, real_fp=0x00000003047138b0, pc=0x0000000110ea8d98)
+     nmethod   6562  903 % !         repro.ResolvableTypeC2Repro::exerciseOsrMemBarLoop @ -2 (485 bytes)
+
+     Virtual frames (innermost first):
+        0 - frame( sp=0x0000000304713800, unextended_sp=0x0000000304713800, fp=0x0000000000000000, pc=0x0000000110ea8d98)
+repro.ResolvableTypeC2Repro.exerciseOsrMemBarLoop(ResolvableTypeC2Repro.java:329) - if_icmpge @ bci 83 
+     Created vframeArray 0x00007fd65f879a20
+DEOPT UNPACKING thread 0x00007fd66000a800 vframeArray 0x00007fd65f879a20 mode 2
+     {method} {0x000000010daaece8} &apos;exerciseOsrMemBarLoop&apos; &apos;(II)V&apos; in &apos;repro/ResolvableTypeC2Repro&apos; - if_icmpge @ bci 83 sp = 0x00000003047137e8
+<dependency_failed type='unique_concrete_method' ctxk='java/lang/ThreadLocal' x='java/lang/ThreadLocal initialValue ()Ljava/lang/Object;' witness='jdk/internal/misc/TerminatingThreadLocal$1' stamp='6.567'/>
+C1 Runtime statistics:
+ _resolve_invoke_virtual_cnt:     21
+ _resolve_invoke_opt_virtual_cnt: 995
+ _resolve_invoke_static_cnt:      700
+ _handle_wrong_method_cnt:        23
+ _ic_miss_cnt:                    15
+ _generic_arraycopy_cnt:          0
+ _generic_arraycopystub_cnt:      0
+ _byte_arraycopy_cnt:             0
+ _short_arraycopy_cnt:            0
+ _int_arraycopy_cnt:              0
+ _long_arraycopy_cnt:             0
+ _primitive_arraycopy_cnt:        0
+ _oop_arraycopy_cnt (C):          0
+ _oop_arraycopy_cnt (stub):       0
+ _arraycopy_slowcase_cnt:         0
+ _arraycopy_checkcast_cnt:        0
+ _arraycopy_checkcast_attempt_cnt:0
+ _new_type_array_slowcase_cnt:    0
+ _new_object_array_slowcase_cnt:  0
+ _new_instance_slowcase_cnt:      0
+ _new_multi_array_slowcase_cnt:   0
+ _monitorenter_slowcase_cnt:      0
+ _monitorexit_slowcase_cnt:       0
+ _patch_code_slowcase_cnt:        0
+ _throw_range_check_exception_count:            0:
+ _throw_index_exception_count:                  0:
+ _throw_div0_exception_count:                   0:
+ _throw_null_pointer_exception_count:           0:
+ _throw_class_cast_exception_count:             0:
+ _throw_incompatible_class_change_error_count:  0:
+ _throw_array_store_exception_count:            0:
+ _throw_count:                                  0:
+
+<statistics type='deoptimization'>
+Deoptimization traps recorded:
+    71 (100.0%) total
+       null_check/make_not_entrant/aastore: 1 (1.4%)
+  null_check/make_not_entrant/invokestatic: 1 (1.4%)
+   null_assert/make_not_entrant/instanceof: 1 (1.4%)
+     null_assert/make_not_entrant/astore_3: 1 (1.4%)
+  class_check/maybe_recompile/invokevirtual: 20 (28.2%)
+    class_check/maybe_recompile/instanceof: 5 (7.0%)
+       array_check/maybe_recompile/aastore: 2 (2.8%)
+   bimorphic/maybe_recompile/invokevirtual: 9 (12.7%)
+                  unloaded/reinterpret/new: 2 (2.8%)
+       uninitialized/reinterpret/getstatic: 3 (4.2%)
+                       constraint/none/nop: 4 (5.6%)
+           predicate/maybe_recompile/aload: 1 (1.4%)
+         predicate/maybe_recompile/aload_0: 2 (2.8%)
+    loop_limit_check/maybe_recompile/aload: 2 (2.8%)
+  loop_limit_check/maybe_recompile/aload_0: 1 (1.4%)
+    loop_limit_check/maybe_recompile/iload: 1 (1.4%)
+         unstable_if/reinterpret/if_icmpeq: 2 (2.8%)
+         unstable_if/reinterpret/if_icmpge: 2 (2.8%)
+         unstable_if/reinterpret/ifnonnull: 2 (2.8%)
+               unstable_if/reinterpret/nop: 9 (12.7%)
+</statistics>
+<statistics type='SharedRuntime'>
+    4 new array requires GC
+   15 inline cache miss in compiled
+   23 wrong method
+  700 unresolved static call site
+   21 unresolved virtual call site
+  995 unresolved opt virtual call site
+  179 slow partial subtype
+  927 byte array copies
+ 7898 short array copies
+  730 int array copies
+ 1827 long array copies
+   36 checkcast array copies
+   88 find exception handler
+   78 rethrow handler
+AdapterHandlerTable: empty 155 longest 3 total 184 average 1.333333
+AdapterHandlerTable: lookups 9043 buckets 9424 equals 8584 hits 8584 compact 8584
+</statistics>
+<statistics type='nmethod'>
+Statistics for 97 native nmethods:
+ N. total size  = 92912
+ N. relocation  = 8016
+ N. main code   = 54176
+Statistics for 809 bytecoded nmethods:
+ total in heap  = 1861248
+ relocation     = 92512
+ constants      = 3360
+ main code      = 657472
+ stub code      = 53136
+ oops           = 1912
+ scopes data    = 223064
+ scopes pcs     = 455264
+ dependencies   = 6944
+ handler table  = 73448
+ nul chk table  = 13376
+Debug Data Chunks: 50584, shared 7196+14452, non-SP&apos;s elided 221
+PcDesc Statistics:  3469 queries, 8.57 comparisons per query
+  caches=809 queries=3469/0, hits=0+746, tests=12618+17100, adds=2723
+</statistics>
+<statistics type='opto'>
+--- Compiler Statistics ---
+Methods seen: 2548  Methods parsed: 2548  Nodes created: 685172
+Blocks parsed: 8528  Blocks seen: 9385
+10748 original NULL checks - 7879 elided (73%); optimizer leaves 2998,
+1235 made implicit (41%)
+CCP: 809  constants found: 9
+Total frameslots = 5560, Max frameslots = 84
+Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
+Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
+Adjusted spill cost =       0.
+Conservatively coalesced 8769 copies, 0 pairs, 12783 post alloc.
+Used cisc instruction  589,  remained in register 3647
+Average allocation trips 1.756364
+High Pressure Blocks = 0, Low Pressure Blocks = 0
+Nops added 0 bytes to total of 646930 bytes, for 0.00%
+Peephole: peephole rules applied: 0
+PhaseIdealLoop=2798, sum _unique=1523903
+</statistics>
+<statistics type='intrinsic'>
+Compiler intrinsic usage:
+    18 ( 6.0%) _hashCode (worked,virtual,nonvirtual)
+    23 ( 7.6%) _getClass (worked)
+    15 ( 5.0%) _clone (worked)
+    20 ( 6.6%) _min (worked)
+    12 ( 4.0%) _max (worked)
+     9 ( 3.0%) _nanoTime (worked)
+    32 (10.6%) _arraycopy (worked)
+     1 ( 0.3%) _isInterrupted (worked)
+     8 ( 2.7%) _currentThread (worked)
+     6 ( 2.0%) _isAssignableFrom (worked)
+     2 ( 0.7%) _getModifiers (worked)
+    10 ( 3.3%) _isInterface (worked)
+    12 ( 4.0%) _isArray (worked)
+    17 ( 5.6%) _isPrimitive (worked)
+     2 ( 0.7%) _getSuperclass (worked)
+     5 ( 1.7%) _getComponentType (worked)
+     1 ( 0.3%) _getClassAccessFlags (worked)
+    10 ( 3.3%) _getCallerClass (worked,failed)
+     5 ( 1.7%) _newArray (worked)
+     3 ( 1.0%) _copyOf (worked)
+     2 ( 0.7%) _copyOfRange (worked)
+     8 ( 2.7%) _indexOf (worked)
+    43 (14.3%) _equals (worked)
+     0 ( 0.0%) _checkIndex (disabled)
+    15 ( 5.0%) _Reference_get (worked)
+     8 ( 2.7%) _getObjectVolatile (worked)
+     1 ( 0.3%) _putObjectVolatile (worked)
+     3 ( 1.0%) _getLong_raw (worked)
+     2 ( 0.7%) _putLong_raw (worked)
+     3 ( 1.0%) _compareAndSwapObject (worked)
+     1 ( 0.3%) _compareAndSwapLong (worked)
+     4 ( 1.3%) _compareAndSwapInt (worked)
+   301 (100.0%) total (worked,failed,disabled,virtual,nonvirtual)
+</statistics>
+<writer thread='16899'/>
+<destroy_vm stamp='6.578'/>
+<tty_done stamp='6.593'/>
+</tty>
+<hotspot_log_done stamp='6.593'/>
+</hotspot_log>

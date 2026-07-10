@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='82425' time_ms='1783587939512'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+25.512-b00-fastdebug
+</release>
+<info>
+OpenJDK 64-Bit Server VM (25.512-b00-fastdebug) for bsd-amd64 JRE (1.8.0_512-internal-xiezhaokun_2026_07_04_16_29-b00), built on Jul  9 2026 17:01:08 by &quot;xiezhaokun&quot; with gcc Apple LLVM 16.0.0 (clang-1600.0.26.6)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Xbatch -XX:CompileThreshold=3 -XX:BackEdgeThreshold=4 -XX:-TieredCompilation -XX:CICompilerCount=1 -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=quiet -XX:+PrintCompilation -XX:CompileCommand=compileonly,org/springframework/core/ResolvableType.forField -Xbatch -XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining -XX:+StressGCM -XX:+StressLCM -XX:+StressReflectiveCode -XX:-LoopUnswitching -XX:-PartialPeelLoop -XX:LoopOptsCount=18 -Drepro.iterations=4000 -Drepro.seconds=0 -Drepro.clearCacheEvery=0 -Drepro.deoptAfter=96 -Drepro.target=fieldObservePinned 
+</args>
+<command>
+repro.ResolvableTypeC2Repro
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.512-b00-fastdebug
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=/Users/xiezhaokun/Library/Java/Extensions:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.endorsed.dirs=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/endorsed
+sun.boot.library.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib
+java.library.path=/Users/xiezhaokun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk
+java.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/classes:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-core-5.3.31.jar:/Users/xiezhaokun/workspace/jdk8u-dev/repro/spring-resolvabletype-c2/target/dependency/spring-jcl-5.3.31.jar
+sun.boot.class.path=/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/resources.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/rt.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/sunrsasign.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jsse.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jce.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/charsets.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jfr.jar:/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+repro.iterations=4000
+repro.seconds=0
+repro.clearCacheEvery=0
+repro.deoptAfter=96
+repro.target=fieldObservePinned
+sun.java.command=repro.ResolvableTypeC2Repro
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='8707'/>
+<blob name='MethodHandlesAdapterBlob' size='182000'>
+<sect index='1' size='182000' free='177710'/>
+</blob>
+    705    1     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLL)L (native)   (static)
+    714    2     n       java.lang.invoke.MethodHandle::linkToStatic(LLLL)L (native)   (static)
+    717    3     n       java.lang.invoke.MethodHandle::linkToStatic(LL)L (native)   (static)
+    733    4     n       java.lang.invoke.MethodHandle::linkToStatic(LL)V (native)   (static)
+    735    5     n       java.lang.invoke.MethodHandle::linkToStatic(LL)J (native)   (static)
+    737    6     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)L (native)   (static)
+    739    7     n       java.lang.invoke.MethodHandle::linkToVirtual(LLL)L (native)   (static)
+    769    8     n       java.lang.invoke.MethodHandle::linkToStatic(IL)L (native)   (static)
+    771    9     n       java.lang.invoke.MethodHandle::linkToVirtual(LL)L (native)   (static)
+    775   10     n       java.lang.invoke.MethodHandle::linkToStatic(LLL)V (native)   (static)
+    776   11     n       java.lang.invoke.MethodHandle::invokeBasic(L)L (native)   
+    777   12     n       java.lang.invoke.MethodHandle::linkToSpecial(LLL)L (native)   (static)
+    781   13     n       java.lang.invoke.MethodHandle::linkToStatic(L)L (native)   (static)
+    782   14     n       java.lang.invoke.MethodHandle::invokeBasic()L (native)   
+    783   15     n       java.lang.invoke.MethodHandle::linkToSpecial(LL)L (native)   (static)
+    785   16     n       java.lang.invoke.MethodHandle::invokeBasic(LL)L (native)   
+    786   17     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)L (native)   (static)
+    789   18     n       java.lang.invoke.MethodHandle::invokeBasic(LLL)L (native)   
+    790   19     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLL)L (native)   (static)
+    795   20     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)L (native)   (static)
+    796   21     n       java.lang.invoke.MethodHandle::invokeBasic(LLLL)L (native)   
+    796   22     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLL)L (native)   (static)
+    800   23     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)L (native)   (static)
+    802   24     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLL)L (native)   
+    802   25     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLL)L (native)   (static)
+    807   26     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLL)L (native)   
+    807   27     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLL)L (native)   (static)
+    812   28     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLL)L (native)   (static)
+    814   29     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLL)L (native)   
+    815   30     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLL)L (native)   (static)
+    820   31     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLL)L (native)   (static)
+    822   32     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLL)L (native)   
+    823   33     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLL)L (native)   (static)
+    828   34     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLL)L (native)   (static)
+    831   35     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLL)L (native)   
+    831   36     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLL)L (native)   (static)
+    836   37     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLL)L (native)   (static)
+    838   38     n       java.lang.invoke.MethodHandle::invokeBasic(LLLLLLLLLL)L (native)   
+    838   39     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLLLLLL)L (native)   (static)
+    849   40     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLL)L (native)   (static)
+    852   41     n       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLLLLLLLL)L (native)   (static)
+    858   42     n       java.lang.invoke.MethodHandle::linkToStatic(LIL)V (native)   (static)
+    861   43     n       java.lang.invoke.MethodHandle::linkToStatic(ILL)I (native)   (static)
+    876   44     n       java.lang.invoke.MethodHandle::linkToStatic(ILLL)L (native)   (static)
+    879   45     n       java.lang.invoke.MethodHandle::invokeBasic(ILL)L (native)   
+    879   46     n       java.lang.invoke.MethodHandle::linkToSpecial(LILLL)L (native)   (static)
+    949   47     n       java.lang.invoke.MethodHandle::invokeBasic(I)L (native)   
+    949   48     n       java.lang.invoke.MethodHandle::linkToSpecial(LIL)L (native)   (static)
+    995   49     n       java.lang.invoke.MethodHandle::linkToSpecial(LLILILL)V (native)   (static)
+   1004   50     n       java.lang.invoke.MethodHandle::linkToStatic(LLILIL)L (native)   (static)
+   1008   51     n       java.lang.invoke.MethodHandle::invokeBasic(LLILI)L (native)   
+   1008   52     n       java.lang.invoke.MethodHandle::linkToSpecial(LLLILIL)L (native)   (static)
+   1068   53     n       java.lang.invoke.MethodHandle::linkToStatic(LL)I (native)   (static)
+<writer thread='32515'/>
+   1135   54    b        org.springframework.core.ResolvableType::forField (39 bytes)
+                            @ 3   org.springframework.util.Assert::notNull (14 bytes)   failed initial checks
+                            @ 7   org.springframework.core.ResolvableType::forType (7 bytes)   failed initial checks
+                            @ 11   java.lang.reflect.Field::getDeclaringClass (5 bytes)   failed initial checks
+                            @ 14   org.springframework.core.ResolvableType::as (86 bytes)   failed initial checks
+                            @ 24   org.springframework.core.SerializableTypeWrapper$FieldTypeProvider::&lt;init&gt; (26 bytes)   failed initial checks
+                            @ 28   org.springframework.core.ResolvableType::asVariableResolver (18 bytes)   failed initial checks
+                            @ 31   org.springframework.core.ResolvableType::forType (115 bytes)   failed initial checks
+                            @ 35   org.springframework.core.ResolvableType::getNested (7 bytes)   failed initial checks
+   1175   55    b        org.springframework.core.ResolvableType::forField (44 bytes)
+                            @ 3   org.springframework.util.Assert::notNull (14 bytes)   failed initial checks
+                            @ 20   java.lang.reflect.Field::getDeclaringClass (5 bytes)   failed initial checks
+                            @ 23   org.springframework.core.ResolvableType::as (86 bytes)   failed initial checks
+                            @ 33   org.springframework.core.SerializableTypeWrapper$FieldTypeProvider::&lt;init&gt; (26 bytes)   failed initial checks
+                            @ 37   org.springframework.core.ResolvableType::asVariableResolver (18 bytes)   failed initial checks
+                            @ 40   org.springframework.core.ResolvableType::forType (115 bytes)   failed initial checks
+<writer thread='8707'/>
+C1 Runtime statistics:
+ _resolve_invoke_virtual_cnt:     0
+ _resolve_invoke_opt_virtual_cnt: 9
+ _resolve_invoke_static_cnt:      5
+ _handle_wrong_method_cnt:        0
+ _ic_miss_cnt:                    0
+ _generic_arraycopy_cnt:          0
+ _generic_arraycopystub_cnt:      0
+ _byte_arraycopy_cnt:             0
+ _short_arraycopy_cnt:            0
+ _int_arraycopy_cnt:              0
+ _long_arraycopy_cnt:             0
+ _primitive_arraycopy_cnt:        0
+ _oop_arraycopy_cnt (C):          0
+ _oop_arraycopy_cnt (stub):       0
+ _arraycopy_slowcase_cnt:         0
+ _arraycopy_checkcast_cnt:        0
+ _arraycopy_checkcast_attempt_cnt:0
+ _new_type_array_slowcase_cnt:    0
+ _new_object_array_slowcase_cnt:  0
+ _new_instance_slowcase_cnt:      0
+ _new_multi_array_slowcase_cnt:   0
+ _monitorenter_slowcase_cnt:      0
+ _monitorexit_slowcase_cnt:       0
+ _patch_code_slowcase_cnt:        0
+ _throw_range_check_exception_count:            0:
+ _throw_index_exception_count:                  0:
+ _throw_div0_exception_count:                   0:
+ _throw_null_pointer_exception_count:           0:
+ _throw_class_cast_exception_count:             0:
+ _throw_incompatible_class_change_error_count:  0:
+ _throw_array_store_exception_count:            0:
+ _throw_count:                                  0:
+
+<statistics type='SharedRuntime'>
+   15 new instance requires GC
+    0 inline cache miss in compiled
+    0 wrong method
+    5 unresolved static call site
+    0 unresolved virtual call site
+    9 unresolved opt virtual call site
+1552578 slow partial subtype
+   12 byte array copies
+   12 short array copies
+   12 int array copies
+   12 long array copies
+AdapterHandlerTable: empty 143 longest 3 total 202 average 1.346667
+AdapterHandlerTable: lookups 10242 buckets 10814 equals 9765 hits 9765 compact 9765
+</statistics>
+<statistics type='nmethod'>
+Statistics for 53 native nmethods:
+ N. total size  = 48000
+ N. relocation  = 4496
+ N. main code   = 26864
+Statistics for 2 bytecoded nmethods:
+ total in heap  = 3856
+ relocation     = 256
+ main code      = 928
+ stub code      = 256
+ oops           = 16
+ scopes data    = 416
+ scopes pcs     = 848
+ dependencies   = 24
+ handler table  = 384
+Debug Data Chunks: 101, shared 14+7, non-SP&apos;s elided 0
+PcDesc Statistics:  23 queries, 7.78 comparisons per query
+  caches=2 queries=23/0, hits=0+0, tests=97+82, adds=23
+</statistics>
+<statistics type='opto'>
+--- Compiler Statistics ---
+Methods seen: 2  Methods parsed: 2  Nodes created: 3109
+Blocks parsed: 5  Blocks seen: 5
+10 original NULL checks - 3 elided (30%); optimizer leaves 23,
+0 made implicit ( 0%)
+CCP: 2  constants found: 0
+Total frameslots = 84, Max frameslots = 32
+Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
+Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
+Adjusted spill cost =       0.
+Conservatively coalesced 79 copies, 0 pairs, 7 post alloc.
+Used cisc instruction  0,  remained in register 2
+Average allocation trips 1.111111
+High Pressure Blocks = 0, Low Pressure Blocks = 0
+Nops added 0 bytes to total of 2844 bytes, for 0.00%
+Peephole: peephole rules applied: 0
+PhaseIdealLoop=4, sum _unique=882
+</statistics>
+<writer thread='16643'/>
+<destroy_vm stamp='46.698'/>
+<tty_done stamp='46.713'/>
+</tty>
+<hotspot_log_done stamp='46.713'/>
+</hotspot_log>

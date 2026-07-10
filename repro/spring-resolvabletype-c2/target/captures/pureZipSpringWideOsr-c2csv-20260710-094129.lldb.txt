@@ -1,0 +1,312 @@
+(lldb) process attach --pid 59698
+warning: libobjc.A.dylib is being read from process memory. This indicates that LLDB could not read from the host's in-memory shared cache. This will likely reduce debugging performance.
+
+Process 59698 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = signal SIGSTOP
+    frame #0: 0x00007ff80249408e libsystem_kernel.dylib`mach_msg2_trap + 10
+libsystem_kernel.dylib`mach_msg2_trap:
+->  0x7ff80249408e <+10>: retq   
+    0x7ff80249408f <+11>: nop    
+
+libsystem_kernel.dylib`macx_swapon:
+    0x7ff802494090 <+0>:  movq   %rcx, %r10
+    0x7ff802494093 <+3>:  movl   $0x1000030, %eax          ; imm = 0x1000030 
+Target 0: (java) stopped.
+Executable module set to "/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/bin/java".
+Architecture set to: x86_64-apple-macosx-.
+(lldb) thread list
+error: libjvm.dylib debug map object file "/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/hotspot/bsd_amd64_compiler2/fastdebug/memnode.o" changed (actual: 0x6a4f6c49, debug map: 0x6a4f62ee) since this executable was linked, debug info will not be loaded
+error: libjvm.dylib debug map object file "/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/hotspot/bsd_amd64_compiler2/fastdebug/vm_version.o" changed (actual: 0x6a5049fb, debug map: 0x6a4f6355) since this executable was linked, debug info will not be loaded
+Process 59698 stopped
+* thread #1: tid = 0x1657097, 0x00007ff80249408e libsystem_kernel.dylib`mach_msg2_trap + 10, queue = 'com.apple.main-thread', stop reason = signal SIGSTOP
+  thread #2: tid = 0x16570b5, 0x00007ff802495846 libsystem_kernel.dylib`__ulock_wait + 10
+  thread #3: tid = 0x16570b7, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+  thread #4: tid = 0x16570c1, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: GC task thread#0 (ParallelGC)'
+  thread #5: tid = 0x16570c2, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: GC task thread#1 (ParallelGC)'
+  thread #6: tid = 0x16570c3, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: GC task thread#2 (ParallelGC)'
+  thread #7: tid = 0x16570c4, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: GC task thread#3 (ParallelGC)'
+  thread #8: tid = 0x16570c5, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: GC task thread#4 (ParallelGC)'
+  thread #9: tid = 0x16570c6, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: GC task thread#5 (ParallelGC)'
+  thread #10: tid = 0x16570c7, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: GC task thread#6 (ParallelGC)'
+  thread #11: tid = 0x16570c8, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: GC task thread#7 (ParallelGC)'
+  thread #12: tid = 0x16570ca, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: VM Thread'
+  thread #13: tid = 0x16570cb, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: Reference Handler'
+  thread #14: tid = 0x16570cd, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: Finalizer'
+  thread #15: tid = 0x16570d0, 0x00007ff8024957b6 libsystem_kernel.dylib`__workq_kernreturn + 10
+  thread #16: tid = 0x165777b, 0x00007ff80249ae46 libsystem_kernel.dylib`__accept + 10, name = 'Java: Attach Listener'
+  thread #17: tid = 0x16570f3, 0x00007ff80249400a libsystem_kernel.dylib`semaphore_wait_trap + 10, name = 'Java: Signal Dispatcher'
+  thread #18: tid = 0x16570f5, 0x00007ff802505dd7 libsystem_platform.dylib`_platform_memset$VARIANT$Rosetta + 108, name = 'Java: C2 CompilerThread0'
+  thread #19: tid = 0x16570fa, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: Service Thread'
+  thread #20: tid = 0x16570fd, 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10, name = 'Java: VM Periodic Task Thread'
+(lldb) thread backtrace all
+* thread #1, queue = 'com.apple.main-thread', stop reason = signal SIGSTOP
+  * frame #0: 0x00007ff80249408e libsystem_kernel.dylib`mach_msg2_trap + 10
+    frame #1: 0x00007ff8024a29e9 libsystem_kernel.dylib`mach_msg2_internal + 453
+    frame #2: 0x00007ff80249b178 libsystem_kernel.dylib`mach_msg_overwrite + 653
+    frame #3: 0x00007ff80249437d libsystem_kernel.dylib`mach_msg + 19
+    frame #4: 0x00007ff8025b1909 CoreFoundation`__CFRunLoopServiceMachPort + 143
+    frame #5: 0x00007ff8025b037c CoreFoundation`__CFRunLoopRun + 1371
+    frame #6: 0x00007ff8025af859 CoreFoundation`CFRunLoopRunSpecific + 557
+    frame #7: 0x0000000104b7f483 java`CreateExecutionEnvironment [inlined] ParkEventLoop at java_md_macosx.c:333:18 [opt]
+    frame #8: 0x0000000104b7f421 java`CreateExecutionEnvironment [inlined] MacOSXStartup(argc=28, argv=0x00007fd0d5806d90) at java_md_macosx.c:366:5 [opt]
+    frame #9: 0x0000000104b7f3d0 java`CreateExecutionEnvironment(pargc=0x000000030d95dbac, pargv=0x000000030d95db88, jrepath="/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk", so_jrepath=1024, jvmpath="/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/server/libjvm.dylib", so_jvmpath=1024, jvmcfg="/Users/xiezhaokun/workspace/jdk8u-dev/build/codex-fastdebug-x86_64/jdk/lib/jvm.cfg", so_jvmcfg=1024) at java_md_macosx.c:491:9 [opt]
+    frame #10: 0x0000000104b7bc1e java`JLI_Launch(argc=27, argv=0x00007fd0d5a0bfa0, jargc=1, jargv=0x0000000000000000, appclassc=1, appclassv=0x0000000000000000, fullversion="1.8.0_512-internal-fastdebug-xiezhaokun_2026_07_04_16_29-b00", dotversion="1.8", pname="java", lname="openjdk", javaargs='\0', cpwildcard='\x01', javaw='\0', ergo=0) at java.c:237:5 [opt]
+    frame #11: 0x0000000104b81b57 java`main(argc=<unavailable>, argv=<unavailable>) at main.c:125:12 [opt]
+    frame #12: 0x0000000204d04345 dyld`start + 1909
+  thread #2
+    frame #0: 0x00007ff802495846 libsystem_kernel.dylib`__ulock_wait + 10
+    frame #1: 0x00007ff8024d59f1 libsystem_pthread.dylib`_pthread_join + 348
+    frame #2: 0x0000000104b7fbd7 java`ContinueInNewThread0(continuation=(java`JavaMain at java.c:355), stack_size=1048576, args=0x000000030d9dfdb0) at java_md_macosx.c:883:7 [opt]
+    frame #3: 0x0000000104b7e2de java`ContinueInNewThread(ifn=0x000000030d9dfe60, threadStackSize=<unavailable>, argc=0, argv=0x00007fd0d5a0c998, mode=1, what=<unavailable>, ret=0) at java.c:2033:14 [opt]
+    frame #4: 0x0000000104b7fde8 java`JVMInit(ifn=<unavailable>, threadStackSize=<unavailable>, argc=<unavailable>, argv=<unavailable>, mode=<unavailable>, what=<unavailable>, ret=<no summary available>) at java_md_macosx.c:1060:16 [opt] [artificial]
+    frame #5: 0x0000000104b7c7ab java`JLI_Launch(argc=<unavailable>, argv=<unavailable>, jargc=1, jargv=0x0000000000000000, appclassc=1, appclassv=<unavailable>, fullversion="1.8.0_512-internal-fastdebug-xiezhaokun_2026_07_04_16_29-b00", dotversion="1.8", pname="java", lname="openjdk", javaargs='\0', cpwildcard='\x01', javaw='\0', ergo=0) at java.c:304:12 [opt]
+    frame #6: 0x0000000104b81b57 java`main(argc=<unavailable>, argv=<unavailable>) at main.c:125:12 [opt]
+    frame #7: 0x0000000104b801e5 java`apple_main(arg=0x000000030d95da80) at java_md_macosx.c:319:10 [opt]
+    frame #8: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #9: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #3
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f3e8b0, Self=0x00007fd0d700e800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137132d2 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f3e8b0, no_safepoint_check=<unavailable>, timeout=0, as_suspend_equivalent=<unavailable>) at mutex.cpp:1116:19 [opt]
+    frame #6: 0x00000001132a0eaa libjvm.dylib`CompileBroker::wait_for_completion(task=0x00007fd0d4f3e7f0) at compileBroker.cpp:1621:21 [opt]
+    frame #7: 0x00000001132a0920 libjvm.dylib`CompileBroker::compile_method_base(method=<unavailable>, osr_bci=-1, comp_level=4, hot_method=<unavailable>, hot_count=9450, comment="count", thread=0x00007fd0d700e800) at compileBroker.cpp:1327:5 [opt]
+    frame #8: 0x00000001132a1733 libjvm.dylib`CompileBroker::compile_method(method=methodHandle @ 0x000000030dae3100, osr_bci=-1, comp_level=<unavailable>, hot_method=methodHandle @ 0x000000030dae30e8, hot_count=9450, comment=<unavailable>, __the_thread__=0x00007fd0d700e800) at compileBroker.cpp:1435:5 [opt]
+    frame #9: 0x000000011328db32 libjvm.dylib`SimpleCompPolicy::method_invocation_event(this=<unavailable>, m=methodHandle @ 0x000000030dae31b8, thread=0x00007fd0d700e800) at compilationPolicy.cpp:473:7 [opt]
+    frame #10: 0x000000011328d573 libjvm.dylib`NonTieredCompPolicy::event(this=0x00007fd0d581aa40, method=methodHandle @ 0x000000030dae3330, inlinee=<unavailable>, branch_bci=<unavailable>, bci=<unavailable>, comp_level=<unavailable>, nm=<unavailable>, thread=0x00007fd0d700e800) at compilationPolicy.cpp:391:7 [opt]
+    frame #11: 0x00000001134921f4 libjvm.dylib`InterpreterRuntime::frequency_counter_overflow_inner(thread=0x00007fd0d700e800, branch_bcp=<unavailable>) at interpreterRuntime.cpp:901:50 [opt]
+    frame #12: 0x0000000113491eec libjvm.dylib`InterpreterRuntime::frequency_counter_overflow(thread=0x00007fd0d700e800, branch_bcp=0x0000000000000000) at interpreterRuntime.cpp:864:17 [opt]
+    frame #13: 0x0000000115941d68
+    frame #14: 0x0000000115925040
+    frame #15: 0x0000000115925040
+    frame #16: 0x0000000115925040
+    frame #17: 0x0000000115925040
+    frame #18: 0x0000000115924d00
+    frame #19: 0x00000001159252bd
+    frame #20: 0x000000011591d671
+    frame #21: 0x000000011349c188 libjvm.dylib`JavaCalls::call_helper(result=<unavailable>, m=<unavailable>, args=<unavailable>, __the_thread__=<unavailable>) at javaCalls.cpp:397:7 [opt]
+    frame #22: 0x000000011351a425 libjvm.dylib`jni_invoke_static(env=0x00007fd0d700eaa8, result=0x000000030dae3e68, receiver=<unavailable>, call_type=<unavailable>, method_id=0x00007fd0d5857b58, args=0x000000030dae3d60, __the_thread__=0x00007fd0d700e800) at jni.cpp:1332:3 [opt]
+    frame #23: 0x0000000113520414 libjvm.dylib`jni_CallStaticVoidMethod(env=0x00007fd0d700eaa8, cls=<unavailable>, methodID=0x00007fd0d5857b58) at jni.cpp:2526:3 [opt]
+    frame #24: 0x0000000104b7d4ad java`JavaMain(_args=<unavailable>) at java.c:478:5 [opt]
+    frame #25: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #26: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #4, name = 'Java: GC task thread#0 (ParallelGC)'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f0d550, Self=0x00007fd0d7012800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f0d550, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001133b9d2c libjvm.dylib`GCTaskManager::get_task(this=0x00007fd0d4f0d4a0, which=0) at gcTaskManager.cpp:655:16 [opt]
+    frame #7: 0x00000001133bb3a6 libjvm.dylib`GCTaskThread::run(this=0x00007fd0d7012800) at gcTaskThread.cpp:128:33 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d7012800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #5, name = 'Java: GC task thread#1 (ParallelGC)'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f0d550, Self=0x00007fd0d600a800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f0d550, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001133b9d2c libjvm.dylib`GCTaskManager::get_task(this=0x00007fd0d4f0d4a0, which=1) at gcTaskManager.cpp:655:16 [opt]
+    frame #7: 0x00000001133bb3a6 libjvm.dylib`GCTaskThread::run(this=0x00007fd0d600a800) at gcTaskThread.cpp:128:33 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d600a800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #6, name = 'Java: GC task thread#2 (ParallelGC)'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f0d550, Self=0x00007fd0d7013800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f0d550, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001133b9d2c libjvm.dylib`GCTaskManager::get_task(this=0x00007fd0d4f0d4a0, which=2) at gcTaskManager.cpp:655:16 [opt]
+    frame #7: 0x00000001133bb3a6 libjvm.dylib`GCTaskThread::run(this=0x00007fd0d7013800) at gcTaskThread.cpp:128:33 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d7013800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #7, name = 'Java: GC task thread#3 (ParallelGC)'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f0d550, Self=0x00007fd0d500b800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f0d550, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001133b9d2c libjvm.dylib`GCTaskManager::get_task(this=0x00007fd0d4f0d4a0, which=3) at gcTaskManager.cpp:655:16 [opt]
+    frame #7: 0x00000001133bb3a6 libjvm.dylib`GCTaskThread::run(this=0x00007fd0d500b800) at gcTaskThread.cpp:128:33 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d500b800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #8, name = 'Java: GC task thread#4 (ParallelGC)'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f0d550, Self=0x00007fd0d500c800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f0d550, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001133b9d2c libjvm.dylib`GCTaskManager::get_task(this=0x00007fd0d4f0d4a0, which=4) at gcTaskManager.cpp:655:16 [opt]
+    frame #7: 0x00000001133bb3a6 libjvm.dylib`GCTaskThread::run(this=0x00007fd0d500c800) at gcTaskThread.cpp:128:33 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d500c800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #9, name = 'Java: GC task thread#5 (ParallelGC)'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f0d550, Self=0x00007fd0d500d800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f0d550, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001133b9d2c libjvm.dylib`GCTaskManager::get_task(this=0x00007fd0d4f0d4a0, which=5) at gcTaskManager.cpp:655:16 [opt]
+    frame #7: 0x00000001133bb3a6 libjvm.dylib`GCTaskThread::run(this=0x00007fd0d500d800) at gcTaskThread.cpp:128:33 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d500d800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #10, name = 'Java: GC task thread#6 (ParallelGC)'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f0d550, Self=0x00007fd0d600b800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f0d550, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001133b9d2c libjvm.dylib`GCTaskManager::get_task(this=0x00007fd0d4f0d4a0, which=6) at gcTaskManager.cpp:655:16 [opt]
+    frame #7: 0x00000001133bb3a6 libjvm.dylib`GCTaskThread::run(this=0x00007fd0d600b800) at gcTaskThread.cpp:128:33 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d600b800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #11, name = 'Java: GC task thread#7 (ParallelGC)'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d4f0d550, Self=0x00007fd0d600c800, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d4f0d550, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001133b9d2c libjvm.dylib`GCTaskManager::get_task(this=0x00007fd0d4f0d4a0, which=7) at gcTaskManager.cpp:655:16 [opt]
+    frame #7: 0x00000001133bb3a6 libjvm.dylib`GCTaskThread::run(this=0x00007fd0d600c800) at gcTaskThread.cpp:128:33 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d600c800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #12, name = 'Java: VM Thread'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375c5bb libjvm.dylib`os::PlatformEvent::park(long) [inlined] os::Bsd::safe_cond_timedwait(_cond=0x00007fd0d5a27170, _mutex=0x00007fd0d5a27130, _abstime=0x000000030e3fea68) at os_bsd.cpp:3903:10 [opt]
+    frame #3: 0x000000011375c5a5 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>, millis=<unavailable>) at os_bsd.cpp:4488:14 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d59087f0, Self=0x00007fd0d602c800, timo=1000) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d59087f0, no_safepoint_check=true, timeout=1000, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x0000000113915494 libjvm.dylib`VMThread::loop(this=<unavailable>) at vmThread.cpp:447:34 [opt]
+    frame #7: 0x00000001139151f3 libjvm.dylib`VMThread::run(this=0x00007fd0d602c800) at vmThread.cpp:279:9 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d602c800) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #13, name = 'Java: Reference Handler'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113744159 libjvm.dylib`ObjectMonitor::wait(this=0x00007fd0d6824378, millis=0, interruptible=true, __the_thread__=0x00007fd0d6822000) at objectMonitor.cpp:1563:31 [opt]
+    frame #4: 0x000000011386012c libjvm.dylib`ObjectSynchronizer::wait(obj=Handle @ 0x000000030e5014b0, millis=0, __the_thread__=0x00007fd0d6822000) at synchronizer.cpp:403:12 [opt]
+    frame #5: 0x000000011356ac5b libjvm.dylib`JVM_MonitorWait(env=<unavailable>, handle=<unavailable>, ms=0) at jvm.cpp:580:3 [opt]
+    frame #6: 0x000000011594c98e
+    frame #7: 0x00000001159252bd
+    frame #8: 0x00000001159252bd
+    frame #9: 0x0000000115924a90
+    frame #10: 0x000000011591d671
+    frame #11: 0x000000011349c188 libjvm.dylib`JavaCalls::call_helper(result=<unavailable>, m=<unavailable>, args=<unavailable>, __the_thread__=<unavailable>) at javaCalls.cpp:397:7 [opt]
+    frame #12: 0x000000011349aa01 libjvm.dylib`JavaCalls::call_virtual(result=0x000000030e501df8, spec_klass=KlassHandle @ 0x000000030e501cf0, name=0x00007fd0b800a910, signature=0x00007fd0b800c3e0, args=0x000000030e501d00, __the_thread__=0x00007fd0d6822000) at javaCalls.cpp:204:3 [opt]
+    frame #13: 0x000000011349ac47 libjvm.dylib`JavaCalls::call_virtual(result=<unavailable>, receiver=<unavailable>, spec_klass=KlassHandle @ 0x000000030e501e08, name=<unavailable>, signature=<unavailable>, __the_thread__=0x00007fd0d6822000) at javaCalls.cpp:210:3 [opt]
+    frame #14: 0x000000011358641a libjvm.dylib`thread_entry(thread=<unavailable>, __the_thread__=0x00007fd0d6822000) at jvm.cpp:3091:3 [opt]
+    frame #15: 0x0000000113892e9a libjvm.dylib`JavaThread::thread_main_inner(this=0x00007fd0d6822000) at thread.cpp:1711:5 [opt]
+    frame #16: 0x0000000113892c08 libjvm.dylib`JavaThread::run(this=0x00007fd0d6822000) at thread.cpp:1691:3 [opt]
+    frame #17: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d6822000) at os_bsd.cpp:752:11 [opt]
+    frame #18: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #19: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #14, name = 'Java: Finalizer'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113744159 libjvm.dylib`ObjectMonitor::wait(this=0x00007fd0d6825978, millis=0, interruptible=true, __the_thread__=0x00007fd0d6009000) at objectMonitor.cpp:1563:31 [opt]
+    frame #4: 0x000000011386012c libjvm.dylib`ObjectSynchronizer::wait(obj=Handle @ 0x000000030e604480, millis=0, __the_thread__=0x00007fd0d6009000) at synchronizer.cpp:403:12 [opt]
+    frame #5: 0x000000011356ac5b libjvm.dylib`JVM_MonitorWait(env=<unavailable>, handle=<unavailable>, ms=0) at jvm.cpp:580:3 [opt]
+    frame #6: 0x000000011594c98e
+    frame #7: 0x00000001159252bd
+    frame #8: 0x0000000115925040
+    frame #9: 0x0000000115925040
+    frame #10: 0x000000011591d671
+    frame #11: 0x000000011349c188 libjvm.dylib`JavaCalls::call_helper(result=<unavailable>, m=<unavailable>, args=<unavailable>, __the_thread__=<unavailable>) at javaCalls.cpp:397:7 [opt]
+    frame #12: 0x000000011349aa01 libjvm.dylib`JavaCalls::call_virtual(result=0x000000030e604df8, spec_klass=KlassHandle @ 0x000000030e604cf0, name=0x00007fd0b800a910, signature=0x00007fd0b800c3e0, args=0x000000030e604d00, __the_thread__=0x00007fd0d6009000) at javaCalls.cpp:204:3 [opt]
+    frame #13: 0x000000011349ac47 libjvm.dylib`JavaCalls::call_virtual(result=<unavailable>, receiver=<unavailable>, spec_klass=KlassHandle @ 0x000000030e604e08, name=<unavailable>, signature=<unavailable>, __the_thread__=0x00007fd0d6009000) at javaCalls.cpp:210:3 [opt]
+    frame #14: 0x000000011358641a libjvm.dylib`thread_entry(thread=<unavailable>, __the_thread__=0x00007fd0d6009000) at jvm.cpp:3091:3 [opt]
+    frame #15: 0x0000000113892e9a libjvm.dylib`JavaThread::thread_main_inner(this=0x00007fd0d6009000) at thread.cpp:1711:5 [opt]
+    frame #16: 0x0000000113892c08 libjvm.dylib`JavaThread::run(this=0x00007fd0d6009000) at thread.cpp:1691:3 [opt]
+    frame #17: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d6009000) at os_bsd.cpp:752:11 [opt]
+    frame #18: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #19: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #15
+    frame #0: 0x00007ff8024957b6 libsystem_kernel.dylib`__workq_kernreturn + 10
+    frame #1: 0x00007ff8024d0bdd libsystem_pthread.dylib`_pthread_wqthread + 416
+    frame #2: 0x00007ff8024cfacf libsystem_pthread.dylib`start_wqthread + 15
+  thread #16, name = 'Java: Attach Listener'
+    frame #0: 0x00007ff80249ae46 libsystem_kernel.dylib`__accept + 10
+    frame #1: 0x00000001131370a9 libjvm.dylib`BsdAttachListener::dequeue() at attachListener_bsd.cpp:344:5 [opt]
+    frame #2: 0x0000000113137325 libjvm.dylib`AttachListener::dequeue() at attachListener_bsd.cpp:438:25 [opt]
+    frame #3: 0x0000000113135d22 libjvm.dylib`attach_listener_thread_entry(thread=<unavailable>, __the_thread__=<unavailable>) at attachListener.cpp:427:27 [opt]
+    frame #4: 0x0000000113892e9a libjvm.dylib`JavaThread::thread_main_inner(this=0x00007fd0d6059000) at thread.cpp:1711:5 [opt]
+    frame #5: 0x0000000113892c08 libjvm.dylib`JavaThread::run(this=0x00007fd0d6059000) at thread.cpp:1691:3 [opt]
+    frame #6: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d6059000) at os_bsd.cpp:752:11 [opt]
+    frame #7: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #8: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #17, name = 'Java: Signal Dispatcher'
+    frame #0: 0x00007ff80249400a libsystem_kernel.dylib`semaphore_wait_trap + 10
+    frame #1: 0x000000011375b4f3 libjvm.dylib`check_pending_signals(wait=true) at os_bsd.cpp:2128:7 [opt]
+    frame #2: 0x00000001137556b2 libjvm.dylib`signal_thread_entry(thread=<unavailable>, __the_thread__=0x00007fd0d6030000) at os.cpp:268:13 [opt]
+    frame #3: 0x0000000113892e9a libjvm.dylib`JavaThread::thread_main_inner(this=0x00007fd0d6030000) at thread.cpp:1711:5 [opt]
+    frame #4: 0x0000000113892c08 libjvm.dylib`JavaThread::run(this=0x00007fd0d6030000) at thread.cpp:1691:3 [opt]
+    frame #5: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d6030000) at os_bsd.cpp:752:11 [opt]
+    frame #6: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #7: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #18, name = 'Java: C2 CompilerThread0'
+    frame #0: 0x00007ff802505dd7 libsystem_platform.dylib`_platform_memset$VARIANT$Rosetta + 108
+    frame #1: 0x000000011310a86b libjvm.dylib`Chunk::chop(this=<unavailable>) at allocation.cpp:417:26 [opt]
+    frame #2: 0x000000011310a898 libjvm.dylib`Chunk::next_chop(this=0x00007fd0d94a0020) at allocation.cpp:424:10 [opt]
+    frame #3: 0x00000001138cb6f3 libjvm.dylib`ResourceMark::reset_to_mark() + 115
+    frame #4: 0x00000001132274b2 libjvm.dylib`ResourceMark::~ResourceMark(this=0x000000030e99ff88) at resourceArea.hpp:163:5 [opt]
+    frame #5: 0x0000000113292ea1 libjvm.dylib`Compile::Optimize() [inlined] ResourceMark::~ResourceMark(this=0x000000030e99ff88) at resourceArea.hpp:160:19 [opt]
+    frame #6: 0x0000000113292e9c libjvm.dylib`Compile::Optimize(this=0x000000030e9a0da0) at compile.cpp:2325:1 [opt]
+    frame #7: 0x0000000113291ed5 libjvm.dylib`Compile::Compile(this=0x000000030e9a0da0, ci_env=<unavailable>, compiler=0x00007fd0d4f2ee70, target=0x00007fd0d9560c30, osr_bci=<unavailable>, subsume_loads=<unavailable>, do_escape_analysis=<unavailable>, eliminate_boxing=<unavailable>) at compile.cpp:862:3 [opt]
+    frame #8: 0x00000001131fbd83 libjvm.dylib`C2Compiler::compile_method(this=0x00007fd0d4f2ee70, env=0x000000030e9a1a50, target=0x00007fd0d9560c30, entry_bci=-1) at c2compiler.cpp:118:13 [opt]
+    frame #9: 0x00000001132a2c32 libjvm.dylib`CompileBroker::invoke_compiler_on_method(task=0x00007fd0d4f3e7f0) at compileBroker.cpp:2012:13 [opt]
+    frame #10: 0x00000001132a2092 libjvm.dylib`CompileBroker::compiler_thread_loop() at compileBroker.cpp:1817:9 [opt]
+    frame #11: 0x0000000113892e9a libjvm.dylib`JavaThread::thread_main_inner(this=0x00007fd0d6031000) at thread.cpp:1711:5 [opt]
+    frame #12: 0x0000000113892c08 libjvm.dylib`JavaThread::run(this=0x00007fd0d6031000) at thread.cpp:1691:3 [opt]
+    frame #13: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d6031000) at os_bsd.cpp:752:11 [opt]
+    frame #14: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #15: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #19, name = 'Java: Service Thread'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375f110 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>) at os_bsd.cpp:4432:18 [opt]
+    frame #3: 0x0000000113711c75 libjvm.dylib`ParkCommon(ev=<unavailable>, timo=<unavailable>) at mutex.cpp:414:9 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d59076e0, Self=0x00007fd0d701a000, timo=0) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d59076e0, no_safepoint_check=true, timeout=0, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x00000001137fddf4 libjvm.dylib`ServiceThread::service_thread_entry(jt=0x00007fd0d701a000, __the_thread__=0x00007fd0d701a000) at serviceThread.cpp:112:23 [opt]
+    frame #7: 0x0000000113892e9a libjvm.dylib`JavaThread::thread_main_inner(this=0x00007fd0d701a000) at thread.cpp:1711:5 [opt]
+    frame #8: 0x0000000113892c08 libjvm.dylib`JavaThread::run(this=0x00007fd0d701a000) at thread.cpp:1691:3 [opt]
+    frame #9: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d701a000) at os_bsd.cpp:752:11 [opt]
+    frame #10: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #11: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+  thread #20, name = 'Java: VM Periodic Task Thread'
+    frame #0: 0x00007ff802496c3a libsystem_kernel.dylib`__psynch_cvwait + 10
+    frame #1: 0x00007ff8024d46f3 libsystem_pthread.dylib`_pthread_cond_wait + 1211
+    frame #2: 0x000000011375c5bb libjvm.dylib`os::PlatformEvent::park(long) [inlined] os::Bsd::safe_cond_timedwait(_cond=0x00007fd0d5831570, _mutex=0x00007fd0d5831530, _abstime=0x000000030eba7c88) at os_bsd.cpp:3903:10 [opt]
+    frame #3: 0x000000011375c5a5 libjvm.dylib`os::PlatformEvent::park(this=<unavailable>, millis=<unavailable>) at os_bsd.cpp:4488:14 [opt]
+    frame #4: 0x0000000113712417 libjvm.dylib`Monitor::IWait(this=0x00007fd0d5909d10, Self=0x00007fd0d5036000, timo=50) at mutex.cpp:792:15 [opt]
+    frame #5: 0x00000001137131b0 libjvm.dylib`Monitor::wait(this=0x00007fd0d5909d10, no_safepoint_check=true, timeout=50, as_suspend_equivalent=false) at mutex.cpp:1101:19 [opt]
+    frame #6: 0x000000011389197d libjvm.dylib`WatcherThread::sleep(this=0x00007fd0d5036000) const at thread.cpp:1289:40 [opt]
+    frame #7: 0x0000000113891b29 libjvm.dylib`WatcherThread::run(this=0x00007fd0d5036000) at thread.cpp:1335:23 [opt]
+    frame #8: 0x0000000113759d16 libjvm.dylib`java_start(thread=0x00007fd0d5036000) at os_bsd.cpp:752:11 [opt]
+    frame #9: 0x00007ff8024d418b libsystem_pthread.dylib`_pthread_start + 99
+    frame #10: 0x00007ff8024cfae3 libsystem_pthread.dylib`thread_start + 15
+(lldb) detach
+Process 59698 detached
+(lldb) quit

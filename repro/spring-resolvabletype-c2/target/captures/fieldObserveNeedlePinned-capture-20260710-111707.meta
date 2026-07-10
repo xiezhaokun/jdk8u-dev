@@ -1,0 +1,5 @@
+pid=86171
+target=fieldObserveNeedlePinned
+target_method=org/springframework/core/ResolvableType forField
+match_any_fixed=0
+trigger sample=242 method=org/springframework/core/ResolvableType forField same=8 attach_fail=0

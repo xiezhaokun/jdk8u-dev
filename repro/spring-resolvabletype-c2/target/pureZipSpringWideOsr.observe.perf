@@ -1,0 +1,158 @@
+pid=37924
+=== sample 1 t=1783646284337 ===
+sun.ci.compilerThread.0.compiles=0
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=0
+sun.ci.osrCompiles=0
+sun.ci.totalCompiles=0
+=== sample 2 t=1783646285323 ===
+sun.ci.compilerThread.0.compiles=11
+sun.ci.compilerThread.0.method="java/lang/String replace"
+sun.ci.compilerThread.0.time=2707
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=10
+=== sample 3 t=1783646285697 ===
+sun.ci.compilerThread.0.compiles=25
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=4664
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=25
+=== sample 4 t=1783646286045 ===
+sun.ci.compilerThread.0.compiles=44
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType forType"
+sun.ci.compilerThread.0.time=7870
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=43
+=== sample 5 t=1783646286447 ===
+sun.ci.compilerThread.0.compiles=51
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType getGenerics"
+sun.ci.compilerThread.0.time=8497
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=50
+=== sample 6 t=1783646286797 ===
+sun.ci.compilerThread.0.compiles=55
+sun.ci.compilerThread.0.method="org/springframework/core/SerializableTypeWrapper$TypeProxyInvocationHandler invoke"
+sun.ci.compilerThread.0.time=8707
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=54
+=== sample 7 t=1783646287162 ===
+sun.ci.compilerThread.0.compiles=71
+sun.ci.compilerThread.0.method="org/springframework/core/SerializableTypeWrapper$MethodInvokeTypeProvider getType"
+sun.ci.compilerThread.0.time=10791
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=70
+=== sample 8 t=1783646287558 ===
+sun.ci.compilerThread.0.compiles=110
+sun.ci.compilerThread.0.method="org/springframework/util/ConcurrentReferenceHashMap$1 execute"
+sun.ci.compilerThread.0.time=20209
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=109
+=== sample 9 t=1783646287920 ===
+sun.ci.compilerThread.0.compiles=140
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType forClassWithGenerics"
+sun.ci.compilerThread.0.time=24376
+sun.ci.osrCompiles=1
+sun.ci.totalCompiles=139
+=== sample 10 t=1783646288290 ===
+sun.ci.compilerThread.0.compiles=152
+sun.ci.compilerThread.0.method="repro/ResolvableTypeC2Repro hotWrapperThree"
+sun.ci.compilerThread.0.time=26208
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=151
+=== sample 11 t=1783646288713 ===
+sun.ci.compilerThread.0.compiles=152
+sun.ci.compilerThread.0.method="repro/ResolvableTypeC2Repro hotWrapperThree"
+sun.ci.compilerThread.0.time=26208
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=151
+=== sample 12 t=1783646289083 ===
+sun.ci.compilerThread.0.compiles=153
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType forField"
+sun.ci.compilerThread.0.time=26458
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=152
+=== sample 13 t=1783646289479 ===
+sun.ci.compilerThread.0.compiles=154
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType forType"
+sun.ci.compilerThread.0.time=27042
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=153
+=== sample 14 t=1783646289871 ===
+sun.ci.compilerThread.0.compiles=166
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType resolveGenerics"
+sun.ci.compilerThread.0.time=28917
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=165
+=== sample 15 t=1783646290386 ===
+sun.ci.compilerThread.0.compiles=179
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=30752
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=179
+=== sample 16 t=1783646290820 ===
+sun.ci.compilerThread.0.compiles=185
+sun.ci.compilerThread.0.method="org/springframework/core/SerializableTypeWrapper$TypeProxyInvocationHandler invoke"
+sun.ci.compilerThread.0.time=31587
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=184
+=== sample 17 t=1783646291197 ===
+sun.ci.compilerThread.0.compiles=190
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=32213
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=190
+=== sample 18 t=1783646291573 ===
+sun.ci.compilerThread.0.compiles=206
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType$SyntheticParameterizedType hashCode"
+sun.ci.compilerThread.0.time=34296
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=205
+=== sample 19 t=1783646291928 ===
+sun.ci.compilerThread.0.compiles=220
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=35880
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=220
+=== sample 20 t=1783646292313 ===
+sun.ci.compilerThread.0.compiles=221
+sun.ci.compilerThread.0.method="repro/ResolvableTypeC2Repro$PseudoZip loopPhiResolvableClose"
+sun.ci.compilerThread.0.time=36088
+sun.ci.osrCompiles=2
+sun.ci.totalCompiles=220
+=== sample 21 t=1783646292721 ===
+sun.ci.compilerThread.0.compiles=226
+sun.ci.compilerThread.0.method="repro/ResolvableTypeC2Repro$PseudoZip loopPhiResolvableClose"
+sun.ci.compilerThread.0.time=36796
+sun.ci.osrCompiles=3
+sun.ci.totalCompiles=225
+=== sample 22 t=1783646293101 ===
+sun.ci.compilerThread.0.compiles=227
+sun.ci.compilerThread.0.method="repro/ResolvableTypeC2Repro$PseudoZip loopPhiResolvableClose"
+sun.ci.compilerThread.0.time=37004
+sun.ci.osrCompiles=4
+sun.ci.totalCompiles=226
+=== sample 23 t=1783646293461 ===
+sun.ci.compilerThread.0.compiles=228
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=37046
+sun.ci.osrCompiles=4
+sun.ci.totalCompiles=228
+=== sample 24 t=1783646293816 ===
+sun.ci.compilerThread.0.compiles=234
+sun.ci.compilerThread.0.method="org/springframework/util/ConcurrentReferenceHashMap$Segment restructure"
+sun.ci.compilerThread.0.time=38588
+sun.ci.osrCompiles=5
+sun.ci.totalCompiles=233
+=== sample 25 t=1783646294181 ===
+sun.ci.compilerThread.0.compiles=238
+sun.ci.compilerThread.0.method="org/springframework/core/ResolvableType toString"
+sun.ci.compilerThread.0.time=39254
+sun.ci.osrCompiles=6
+sun.ci.totalCompiles=237
+=== sample 26 t=1783646294563 ===
+sun.ci.compilerThread.0.compiles=243
+sun.ci.compilerThread.0.method=""
+sun.ci.compilerThread.0.time=40254
+sun.ci.osrCompiles=6
+sun.ci.totalCompiles=243
+process-exited sample=27

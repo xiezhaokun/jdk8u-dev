@@ -1,0 +1,3 @@
+sample=001 method="" compiles=0 total=0 osr=0
+sample=002 method="java/lang/String replace" compiles=11 total=10 osr=1
+sample=003 method="" compiles= total= osr=

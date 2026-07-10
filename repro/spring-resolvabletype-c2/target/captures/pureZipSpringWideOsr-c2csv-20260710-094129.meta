@@ -1,0 +1,2 @@
+pid=59698
+trigger sample=17 method=org/springframework/core/ResolvableType as same_method=12 same_state=12

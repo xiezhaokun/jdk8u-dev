@@ -1,0 +1,1 @@
+target=pureZipSpringWideOsr fieldObservePinned fieldObserveFatPinned compilerMethodFocusedOsr compilerMethodStagedOsr finalCpuLiteSpringCascadeOsr triggered=0 fixed_method=<none> enter=0 probe=0 step=0 max_probe_step=0 max_step_step=0 repeats=0 deep_current=0
